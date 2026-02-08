@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button, Drawer } from "antd";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "../theme/ThemeToggle";
+import Link from "next/link";
 
 const navItems = [
   { label: "Forside", href: "/" },
@@ -25,35 +26,34 @@ export const Header = () => {
         borderColor: "var(--color-border)",
       }}
     >
-      <div className="max-w-8xl mx-auto  px-20 h-20 flex items-center justify-between">
+      <div className="max-w-8xl mx-auto  px-4 md:px-10  xl:px-20  h-20 flex items-center justify-between">
         <a
           href="#home"
           className="text-lg font-semibold tracking-tight"
           style={{ color: "var(--color-text)" }}
         >
-          <img src="/logo.png" alt="Lønbæks Køreskole logo" className="w-10 h-10 mr-2 inline-block" />
           Lønbæks<span style={{ color: "var(--color-yellow)" }}> Køreskole</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium transition-opacity opacity-70 hover:opacity-100"
+              className="text-md font-medium transition-opacity  hover:opacity-100"
               style={{ color: "var(--color-text)" }}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-4">
           <ThemeToggle />
 
-          <Button
+      {    <Button
             type="primary"
-            className="hidden md:inline-flex"
+            className="!hidden md:!flex"
             style={{
               backgroundColor: "var(--color-yellow)",
               borderColor: "var(--color-yellow)",
@@ -61,7 +61,7 @@ export const Header = () => {
             }}
           >
             Tilmeld dig
-          </Button>
+          </Button>}
 
           <button
             className="md:hidden"

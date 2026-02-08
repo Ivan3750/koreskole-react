@@ -29,7 +29,7 @@ const Instructors = () => {
                     className="text-5xl font-display font-bold"
                     style={{ color: "var(--color-bg)" }}
                   >
-                    JB
+                    A
                   </span>
                 </div>
 

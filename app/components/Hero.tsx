@@ -2,139 +2,117 @@
 
 import Image from "next/image";
 import { Button } from "antd";
-import { ArrowRight, Users, Award, Star } from "lucide-react";
+import { Users, Award, Star } from "lucide-react";
 import heroImage from "@/app/assets/hero-driving.jpg";
 
 export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-28 md:pt-32 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
       style={{ backgroundColor: "var(--color-bg-layout)" }}
     >
-      {/* Background image – desktop only */}
-      <div className="absolute inset-0 z-0 hidden lg:block">
+      {/* Background image (desktop only) */}
+      <div className="absolute inset-0 hidden lg:block">
         <Image
           src={heroImage}
           alt="Moderne køreskole i Vejle"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover scale-105"
         />
+
+        {/* Theme-aware overlay */}
         <div
           className="absolute inset-0"
           style={{
-            background:
-              "linear-gradient(90deg, var(--color-bg-layout) 0%, rgba(0,0,0,0) 100%)",
+            background: `
+              linear-gradient(
+                to bottom,
+                color-mix(in srgb, var(--color-bg-layout) 45%, transparent),
+                var(--color-bg-layout)
+              )
+            `,
           }}
         />
       </div>
 
-      {/* Mobile / tablet background */}
-      <div
-        className="absolute inset-0 z-0 lg:hidden"
-        style={{
-          background:
-            "linear-gradient(135deg, var(--color-bg-layout), var(--color-bg-elevated))",
-        }}
-      />
+      {/* Content */}
+      <div className="relative z-10 max-w-3xl w-full text-center space-y-8 mt-24 md:mt-0" >
+        {/* Badge */}
+        <div
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mx-auto"
+          style={{
+            backgroundColor: "var(--color-yellow-bg)",
+            borderColor: "var(--color-yellow-border)",
+            color: "var(--color-yellow)",
+          }}
+        >
+          <Award className="w-4 h-4" />
+          <span className="text-sm font-semibold ">
+            Kørelærer i Vejle siden 1984
+          </span>
+        </div>
 
-      <div className="relative z-10 container mx-auto px-6">
-        <div className="max-w-3xl space-y-10">
-          {/* Badge */}
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-sm"
+        {/* Title */}
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight"
+          style={{ color: "var(--color-text)" }}
+        >
+          Køreskole i Vejle <br />
+          <span style={{ color: "var(--color-yellow)" }}>
+            Sikker og tryg kørsel
+          </span>
+        </h1>
+
+        {/* Description */}
+        <p
+          className="text-lg md:text-xl leading-relaxed mx-auto max-w-2xl"
+          style={{ color: "var(--color-text-secondary)" }}
+        >
+          Personlig undervisning, fleksible køretimer og høj beståelsesrate.
+          Vi forbereder dig trygt til både teori- og køreprøven.
+        </p>
+
+        {/* CTA */}
+        <div className="flex flex-row justify-center items-center gap-4 pt-6">
+          <Button
+            size="large"
+            className="px-10 h-[52px] font-semibold rounded-xl transition-all"
             style={{
-              backgroundColor: "var(--color-yellow-bg)",
-              borderColor: "var(--color-yellow-border)",
-              color: "var(--color-yellow)",
+              backgroundColor: "var(--color-yellow)",
+              borderColor: "var(--color-yellow)",
+              color: "var(--color-bg)",
             }}
           >
-            <Award className="w-4 h-4" />
-            <span className="text-sm font-semibold">
-              Kørelærer i Vejle siden 1984
-            </span>
-          </div>
+            Kom i gang
+          </Button>
 
-          {/* Headline */}
-          <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1]"
-            style={{ color: "var(--color-text)" }}
+          <Button
+            size="large"
+            className="px-10 h-[52px] font-medium rounded-xl transition-all"
+            style={{
+              backgroundColor: "transparent",
+              border: "1px solid var(--color-border)",
+              color: "var(--color-text)",
+            }}
           >
-            Køreskole i Vejle med fokus på sikker og tryg kørsel
-            <span className="relative inline-block">
-              <span
-                className="relative z-10 bg-clip-text text-transparent"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(90deg, var(--color-yellow), var(--color-yellow-6))",
-                }}
-              >
-                sikker kørsel
-              </span>
-              <span
-                className="absolute left-0 bottom-2 h-3 w-full -z-0"
-                style={{ backgroundColor: "var(--color-yellow-bg)" }}
-              />
-            </span>
-          </h1>
+            Se priser
+          </Button>
+        </div>
 
-          {/* Description */}
-          <p
-            className="text-lg md:text-xl max-w-2xl leading-relaxed"
-            style={{ color: "var(--color-text-secondary)" }}
-          >
-            En struktureret og menneskelig tilgang til køreundervisning.
-            Fleksible tider, erfarne instruktører og høj beståelsesrate.
-          </p>
-
-          {/* CTA */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="large"
-              className="flex items-center gap-2 font-semibold rounded-2xl px-10 py-6 shadow-lg transition-transform hover:scale-[1.04]"
-              style={{
-                backgroundColor: "var(--color-yellow)",
-                borderColor: "var(--color-yellow)",
-                color: "var(--color-bg)",
-              }}
-            >
-              Kom i gang
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-
-            <Button
-              size="large"
-              type="text"
-              className="font-medium"
-              style={{ color: "var(--color-text)" }}
-            >
-              Se priser
-            </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
-            <Stat icon={<Users />} value="3000+" label="Elever" />
-            <Stat icon={<Award />} value="95%" label="Bestået" />
-            <Stat
-              icon={<Star className="fill-current" />}
-              value="4.9"
-              label="Anmeldelser"
-            />
-          </div>
+        {/* Stats */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-10">
+          <Stat icon={<Users />} value="3000+" label="Elever" />
+          <Stat icon={<Award />} value="95%" label="Bestået" />
+          <Stat
+            icon={<Star className="fill-current" />}
+            value="4.9"
+            label="Anmeldelser"
+          />
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-32 hidden lg:block"
-        style={{
-          background:
-            "linear-gradient(to top, var(--color-bg-layout), transparent)",
-        }}
-      />
     </section>
   );
 };
@@ -149,14 +127,15 @@ const Stat = ({
   label: string;
 }) => (
   <div
-    className="flex items-center gap-4 rounded-2xl p-4 backdrop-blur-sm transition-colors"
+    className="flex items-center gap-4 px-5 py-4 rounded-xl"
     style={{
-      backgroundColor: "color-mix(in srgb, var(--color-bg) 70%, transparent)",
+      backgroundColor:
+        "color-mix(in srgb, var(--color-bg) 85%, transparent)",
       border: "1px solid var(--color-border)",
     }}
   >
     <div
-      className="w-12 h-12 rounded-xl flex items-center justify-center"
+      className="w-10 h-10 flex items-center justify-center rounded-lg"
       style={{
         backgroundColor: "var(--color-yellow-bg)",
         color: "var(--color-yellow)",
@@ -165,9 +144,9 @@ const Stat = ({
       {icon}
     </div>
 
-    <div>
+    <div className="text-left">
       <div
-        className="text-xl font-semibold"
+        className="text-lg font-semibold leading-none"
         style={{ color: "var(--color-text)" }}
       >
         {value}

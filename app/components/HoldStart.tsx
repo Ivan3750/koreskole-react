@@ -107,7 +107,7 @@ const Holdstart = () => {
           {holds.map((hold) => (
             <div
               key={hold.id}
-              className="rounded-2xl border-2 p-6 flex flex-col justify-between hover:shadow-lg transition-all"
+              className="rounded-2xl border-2 p-6 flex flex-col justify-between "
               style={{
                 backgroundColor: "var(--color-bg-elevated)",
                 borderColor: "var(--color-border)",
@@ -165,7 +165,7 @@ const Holdstart = () => {
               {/* CTA */}
               <a
                 href={`#booking?hold=${hold.id}`}
-                className="mt-6 inline-flex justify-center items-center px-6 py-3 rounded-xl font-semibold transition hover:-translate-y-0.5"
+                className="mt-6 inline-flex justify-center items-center px-4 py-2 rounded-xl font-semibold transition hover:-translate-y-0.5"
                 style={{
                   backgroundColor: "var(--color-yellow)",
                   color: "var(--color-bg)",

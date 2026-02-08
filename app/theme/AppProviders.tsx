@@ -16,7 +16,12 @@ export const AppProviders = ({ children }: { children: React.ReactNode }) => {
           algorithm: themeMode === "dark" ? darkAlgorithm : defaultAlgorithm,
           token: {
             colorPrimary: "#F2B705",
-            borderRadius: 6,
+            borderRadius: 20,
+          },
+          components: {
+            Button: {
+              borderRadius: 20,
+            },
           },
         }}
       >
