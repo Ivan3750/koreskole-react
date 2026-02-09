@@ -39,9 +39,9 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl w-full text-center space-y-8 mt-24 md:mt-0" >
+      <div className="relative z-10 max-w-3xl w-full text-center space-y-8 mt-28 md:mt-0" >
         {/* Badge */}
-        <div
+ {/*        <div
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mx-auto"
           style={{
             backgroundColor: "var(--color-yellow-bg)",
@@ -53,7 +53,7 @@ export const Hero = () => {
           <span className="text-sm font-semibold ">
             Kørelærer i Vejle siden 1984
           </span>
-        </div>
+        </div> */}
 
         {/* Title */}
         <h1
