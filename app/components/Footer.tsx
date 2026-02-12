@@ -21,7 +21,7 @@ const Footer = () => {
                 <span className="font-bold text-xl" style={{ color: "var(--color-bg)" }}>LK</span>
               </div>
               <div>
-                <span className="font-semibold text-lg" style={{ color: "var(--color-text)" }}>Nørretorv</span>
+                <span className="font-semibold text-lg" style={{ color: "var(--color-text)" }}>Lønbæks</span>
                 <span className="text-sm block -mt-1" style={{ color: "var(--color-text-secondary)" }}>
                   Køreskole
                 </span>
