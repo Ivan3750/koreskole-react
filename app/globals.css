@@ -6,10 +6,11 @@
 }
 
 @theme inline {
-  --color-background: var(--color-bg); 
+  --color-background: var(--background); 
   --color-foreground: var(--foreground);
-  --font-inter: var(--font-inter);
+  --font-sans: var(--font-albert);
 }
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +23,8 @@
 body {
   background: var(--color-bg);
   color: var(--foreground);
+    font-family: var(--font-albert), sans-serif;
+
  }
 
 
@@ -29,3 +32,11 @@ body {
  button{
   border-radius: 20px;
  }
+
+
+.normal-text{
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+ 

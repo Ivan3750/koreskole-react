@@ -101,7 +101,7 @@ const Instructors = () => {
             </h2>
 
             <p
-              className="leading-relaxed mb-6"
+              className="normal-text mb-6"
               style={{ color: "var(--color-text-secondary)" }}
             >
               Anna Marie Lønbærk har været kørelærer i Vejle siden 1984. Med over 40
@@ -110,7 +110,7 @@ const Instructors = () => {
             </p>
 
             <p
-              className="leading-relaxed mb-8"
+              className="normal-text mb-8"
               style={{ color: "var(--color-text-secondary)" }}
             >
               Huns filosofi er enkel: Undervisningen skal være både lærerig og
@@ -132,13 +132,13 @@ const Instructors = () => {
                 </div>
                 <div>
                   <p
-                    className="font-semibold"
+                    className="font-semibold text-[20px]"
                     style={{ color: "var(--color-text)" }}
                   >
                     Personlig Tilgang
                   </p>
                   <p
-                    className="text-sm"
+                    className="normal-text"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
                     Undervisning tilpasset den enkelte elev
@@ -159,13 +159,13 @@ const Instructors = () => {
                 </div>
                 <div>
                   <p
-                    className="font-semibold"
+                    className="font-semibold text-[20px]"
                     style={{ color: "var(--color-text)" }}
                   >
                     Fleksible Tider
                   </p>
                   <p
-                    className="text-sm"
+                    className="normal-text"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
                     Hverdage og weekender efter aftale

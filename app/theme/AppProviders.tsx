@@ -12,19 +12,20 @@ export const AppProviders = ({ children }: { children: React.ReactNode }) => {
   return (
     <AntApp>
       <ConfigProvider
-        theme={{
-          algorithm: themeMode === "dark" ? darkAlgorithm : defaultAlgorithm,
-          token: {
-            colorPrimary: "#F2B705",
-            borderRadius: 20,
-          },
-          components: {
-            Button: {
-              borderRadius: 20,
-            },
-          },
-        }}
-      >
+  theme={{
+    algorithm: themeMode === "dark" ? darkAlgorithm : defaultAlgorithm,
+    token: {
+      colorPrimary: "#F2B705",
+      borderRadius: 20,
+ fontFamily: "Albert Sans, sans-serif",    },
+    components: {
+      Button: {
+        borderRadius: 20,
+      },
+    },
+  }}
+>
+
         <ThemeProvider>{children}</ThemeProvider>
       </ConfigProvider>
     </AntApp>

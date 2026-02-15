@@ -2,7 +2,9 @@
 
 import React from "react";
 import { Users, Calendar, Clock, Globe } from "lucide-react";
-
+import { img } from "framer-motion/client";
+import en from "@/app/assets/denmark-flag.png";
+import da from "@/app/assets/great-britain-flag.png";
 const Holdstart = () => {
   const holds = [
     {
@@ -95,7 +97,7 @@ const Holdstart = () => {
             Vælg dit hold
           </h2>
           <p
-            className="leading-relaxed"
+            className="normal-text"
             style={{ color: "var(--color-text-secondary)" }}
           >
             Se kommende hold og vælg det der passer bedst til dig.
@@ -125,15 +127,22 @@ const Holdstart = () => {
                   </h3>
 
                   <div
-                    className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold"
-                    style={{
-                      backgroundColor: "var(--color-bg)",
-                      color: "var(--color-text-secondary)",
-                      border: "1px solid var(--color-border)",
-                    }}
+                    className="inline-flex items-center   "
+                
                   >
-                    <Globe className="w-3 h-3" />
-                    {hold.lang}
+                    {hold.lang === "EN" ? (
+                      <img
+                        src={en.src}
+                        alt="English flag"
+                        className=" h-5 rounded-2xl"
+                      />
+                    ) : (
+                      <img
+                        src={da.src}
+                        alt="Danish flag"
+                        className=" h-5 rounded-2xl"
+                      />
+                    )}
                   </div>
                 </div>
 

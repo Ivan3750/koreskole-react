@@ -100,7 +100,7 @@ const faqs = [
                   className="w-full flex items-center justify-between gap-6 px-4 py-2 text-left"
                 >
                   <span
-                    className="text-sm md:text-md font-medium"
+                    className="normal-text font-medium"
                     style={{ color: "var(--color-text)" }}
                   >
                     {faq.question}
@@ -129,7 +129,7 @@ const faqs = [
                 >
                   <div className="overflow-hidden">
                     <p
-                      className="px-4 pb-4 text-md leading-relaxed"
+                      className="px-4 pb-4 normal-text leading-relaxed"
                       style={{ color: "var(--color-text-secondary)" }}
                     >
                       {faq.answer}

@@ -1,18 +1,19 @@
  
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeContextProvider, useTheme } from "./theme/ThemeContext";
 import { Header } from "./components/Header";
 import { AppProviders } from "./theme/AppProviders";
 import Footer from "./components/Footer";
 
-const inter = Inter({
+const albertSans = Albert_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-albert",
   display: "swap",
 });
+
 
 export const metadata: Metadata = {
   title: "Lønbæks Køreskole i Vejle – Kørekort med erfaren kørelærer",
@@ -52,7 +53,7 @@ export default function RootLayout({
 }) {
    return (
     <html lang="da">
-      <body className={`${inter.variable} antialiased`}>
+<body className={`${albertSans.className} antialiased`}>
         <ThemeContextProvider>
           <AppProviders>
             <Header />

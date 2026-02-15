@@ -12,14 +12,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div
-                className="w-11 h-11 rounded-xl flex items-center justify-center"
-                style={{
-                  background: "linear-gradient(135deg, var(--color-yellow-4), var(--color-yellow-6))",
-                }}
-              >
-                <span className="font-bold text-xl" style={{ color: "var(--color-bg)" }}>LK</span>
-              </div>
+             
               <div>
                 <span className="font-semibold text-lg" style={{ color: "var(--color-text)" }}>Lønbæks</span>
                 <span className="text-sm block -mt-1" style={{ color: "var(--color-text-secondary)" }}>

@@ -47,7 +47,7 @@ const Services = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-2 mb-4" style={{ color: "var(--color-text)" }}>
             Alt hvad du behøver til dit kørekort
           </h2>
-          <p className="leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+          <p className="normal-text" >
             Vi tilbyder en komplet køreuddannelse med fokus på sikkerhed, kvalitet og personlig vejledning.
           </p>
         </div>

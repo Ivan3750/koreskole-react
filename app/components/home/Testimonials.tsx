@@ -64,14 +64,12 @@ const testimonials = [
             Hvad vores elever siger
           </h2>
           <p
-            className="leading-relaxed"
-            style={{ color: "var(--color-text-secondary)" }}
-          >
+            className="normal-text"
+           >
             Ærlige oplevelser fra elever, der har taget kørekort hos os.
           </p>
         </div>
 
-        {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div
@@ -82,13 +80,11 @@ const testimonials = [
                 borderColor: "var(--color-border)",
               }}
             >
-              {/* Quote icon */}
               <Quote
                 className="w-8 h-8 absolute top-5 right-5 opacity-20"
                 style={{ color: "var(--color-yellow)" }}
               />
 
-              {/* Rating */}
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
@@ -99,7 +95,6 @@ const testimonials = [
                 ))}
               </div>
 
-              {/* Text */}
               <p
                 className="text-sm leading-relaxed mb-6"
                 style={{ color: "var(--color-text-secondary)" }}
@@ -107,7 +102,6 @@ const testimonials = [
                 “{testimonial.text}”
               </p>
 
-              {/* Author */}
               <div className="flex items-center gap-3">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm"
@@ -125,7 +119,7 @@ const testimonials = [
                   >
                     {testimonial.name}
                   </div>
-                  <div
+                  <div  
                     className="text-xs"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
