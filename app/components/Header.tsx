@@ -10,10 +10,10 @@ const navItems = [
   {
     label: "Kørekort B",
     children: [
-      { label: "Kørekort", href: "/koerekort-vejle" },
-      { label: "Teoriprøve", href: "/teoriproeve-vejle" },
-      { label: "Køreprøve", href: "/koereproeve-vejle" },
-      { label: "Priser", href: "/priser" },
+      { label: "Kørekort", href: "/koerekort-b/koerekort-vejle" },
+      { label: "Teoriprøve", href: "/koerekort-b/teoriproeve-vejle" },
+      { label: "Køreprøve", href: "/koerekort-b/koereproeve-vejle" },
+      { label: "Priser", href: "/koerekort-b/priser" },
     ],
   },
   { label: "Holdstart", href: "/holdstart-vejle" },

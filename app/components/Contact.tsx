@@ -126,7 +126,7 @@ const Contact = () => {
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Nørretorv Køreskole"
+                title="Lønbæks Køreskole"
               />
             </div>
 

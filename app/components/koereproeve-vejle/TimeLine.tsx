@@ -7,108 +7,128 @@ const Timeline = () => {
     {
       number: "01",
       title: "Intromøde og tilmelding",
-      description: "Du starter med et uforpligtende intromøde, hvor du hører om forløbet og undervisningen. Efter tilmelding vælger du kørelærer og får udleveret lektionsplan.",
+      description:
+        "Start med et uforpligtende møde, hvor du lærer forløbet at kende. Efter tilmelding får du din lektionsplan og kørelærer.",
     },
     {
       number: "02",
       title: "Teoriundervisning",
-      description: "Teorien foregår én gang om ugen i vores lokaler i Vejle. Du har ubegrænset teori, så vi sikrer, at du føler dig tryg og godt forberedt.",
+      description:
+        "Teori én gang om ugen med ubegrænset adgang — så du kan blive helt tryg og klar til prøven.",
     },
     {
       number: "03",
       title: "Førstehjælp & lægeerklæring",
-      description: "Inden teoriprøven skal du gennemføre 8 timers færdselsrelateret førstehjælp samt have en lægeerklæring.",
+      description:
+        "8 timers færdselsrelateret førstehjælp samt lægeerklæring inden teoriprøven.",
     },
     {
       number: "04",
-      title: "Manøvregård – første kørsel",
-      description: "Du får 4 lektioner på manøvregård, hvor du lærer grundlæggende betjening af bilen i trygge omgivelser.",
+      title: "Manøvregård",
+      description:
+        "Første kørsel på lukket bane, hvor du lærer bilens grundlæggende kontrol.",
     },
     {
       number: "05",
-      title: "Køretimer på vej",
-      description: "Herefter kører du i trafikken sammen med din kørelærer. Teori og kørsel følger hinanden, så du bruger det lærte i praksis.",
+      title: "Køretimer i trafikken",
+      description:
+        "Du kører i rigtig trafik og omsætter teori til praksis sammen med din lærer.",
     },
     {
       number: "06",
       title: "Køreteknisk anlæg",
-      description: "Du får 4 lektioner på køreteknisk anlæg, hvor du træner bremsning, risiko og bilkontrol i forskellige situationer.",
+      description:
+        "Træn bremsning, kontrol og risikosituationer i sikre omgivelser.",
     },
     {
       number: "07",
-      title: "Teoriprøve & Sidste køretime",
-      description: "Du øver via online teoriprøver og går derefter til teoriprøve hos politiet i Vejle. Til sidst gennemgår vi det sidste træningsforløb, så du er helt klar til køreprøven.",
+      title: "Teoriprøve",
+      description:
+        "Online øvelser og afsluttende prøve hos politiet.",
     },
     {
       number: "08",
-      title: "Praktisk køreprøve",
-      description: "Du kører med en sagkyndig, som vurderer dine færdigheder i trafikken. Når du består — får du dit kørekort.",
-    }
+      title: "Køreprøve",
+      description:
+        "Den sidste test — bestå og få dit kørekort i hånden.",
+    },
   ];
 
   return (
     <section
-      className="py-20 md:py-28 lg:py-40"
-      style={{ backgroundColor: "var(--color-bg-layout)" }}
+      className="py-20"
+      style={{ background: "var(--color-bg-layout)" }}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="max-w-6xl mx-auto px-6">
+
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
           <h2
-            className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+            className="text-4xl font-bold mb-4"
             style={{ color: "var(--color-text)" }}
           >
             Din vej til kørekortet
           </h2>
-          
+
           <p
-            className="text-lg leading-relaxed"
+            className="text-lg"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            Fra første intromøde til kørekort i hånden – følg med i de 8 trin, 
-            der gør dig til en sikker og selvsikker bilist.
+            8 klare trin fra første møde til kørekortet i hånden.
           </p>
         </div>
 
-        {/* Steps Grid - 2 rows x 4 columns */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="relative rounded-2xl border-2 p-6"
-              style={{ 
-                borderColor: "var(--color-border)",
-                backgroundColor: "var(--color-bg)"
-              }}
-            >
-              {/* Number badge */}
-              <div
-                className="w-14 h-14 rounded-xl flex items-center justify-center
-                font-display font-bold text-xl mb-4"
-                style={{ 
-                  backgroundColor: "var(--color-yellow)",
-                  color: "white"
-                }}
-              >
-                {step.number}
+        {/* Timeline */}
+        <div className="relative">
+
+          {/* Vertical line */}
+          <div
+            className="absolute left-5 top-0 bottom-0 w-px"
+            style={{ background: "var(--color-border)" }}
+          />
+
+          <div className="space-y-10">
+            {steps.map((step, i) => (
+              <div key={i} className="relative pl-16">
+
+                {/* Dot */}
+                <div
+                  className="absolute left-0 top-1 w-10 h-10 rounded-xl flex items-center justify-center font-bold"
+                  style={{
+                    background: "var(--color-yellow)",
+                    color: "white",
+                  }}
+                >
+                  {step.number}
+                </div>
+
+                {/* Card */}
+                <div
+                  className="p-6 rounded-2xl border"
+                  style={{
+                    background: "var(--color-bg)",
+                    borderColor: "var(--color-border)",
+                  }}
+                >
+                  <h3
+                    className="font-semibold text-lg mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    {step.title}
+                  </h3>
+
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
+                    {step.description}
+                  </p>
+                </div>
+
               </div>
+            ))}
+          </div>
 
-              {/* Content */}
-              <h3
-                className="font-semibold text-lg mb-3 leading-tight"
-                style={{ color: "var(--color-text)" }}
-              >
-                {step.title}
-              </h3>
-
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
-                {step.description}
-              </p>
-            </div>
-          ))}
         </div>
 
       </div>

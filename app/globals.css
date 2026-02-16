@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+    --ant-font-family: var(--font-albert);
+
+}
+* {
+  --ant-font-family: var(--font-albert);
 }
 
 @theme inline {
@@ -23,7 +28,7 @@
 body {
   background: var(--color-bg);
   color: var(--foreground);
-    font-family: var(--font-albert), sans-serif;
+    font-family: var(--font-albert), sans-serif!important;
 
  }
 
@@ -39,4 +44,25 @@ body {
   line-height: 1.6;
   color: var(--color-text-secondary);
 }
- 
+ .ant-typography,
+.ant-btn,
+.ant-table,
+.ant-tag,
+.ant-card {
+  font-family: var(--font-albert) !important;
+}
+:root {
+  --font-family: system-ui;
+  --radius: 20px;
+
+  --color-bg: #fff;
+  --color-bg-elevated: #fafafa;
+  --color-text: #111;
+  --color-border: rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--color-bg);
+  color: var(--color-text);
+}

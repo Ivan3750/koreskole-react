@@ -1,33 +1,20 @@
 "use client";
 
-import { ConfigProvider, theme as antTheme, App as AntApp } from "antd";
 import { useTheme } from "./ThemeContext";
 import ThemeProvider from "./ThemeProvider";
 
-const { defaultAlgorithm, darkAlgorithm } = antTheme;
-
-export const AppProviders = ({ children }: { children: React.ReactNode }) => {
+export const AppProviders = ({
+  children,
+  fontFamily,
+}: {
+  children: React.ReactNode;
+  fontFamily: string;
+}) => {
   const { themeMode } = useTheme();
 
   return (
-    <AntApp>
-      <ConfigProvider
-  theme={{
-    algorithm: themeMode === "dark" ? darkAlgorithm : defaultAlgorithm,
-    token: {
-      colorPrimary: "#F2B705",
-      borderRadius: 20,
- fontFamily: "Albert Sans, sans-serif",    },
-    components: {
-      Button: {
-        borderRadius: 20,
-      },
-    },
-  }}
->
-
-        <ThemeProvider>{children}</ThemeProvider>
-      </ConfigProvider>
-    </AntApp>
+    <ThemeProvider fontFamily={fontFamily} themeMode={themeMode}>
+      {children}
+    </ThemeProvider>
   );
 };

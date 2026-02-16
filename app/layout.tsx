@@ -1,65 +1,35 @@
- 
-
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeContextProvider, useTheme } from "./theme/ThemeContext";
-import { Header } from "./components/Header";
+import { ThemeContextProvider } from "./theme/ThemeContext";
 import { AppProviders } from "./theme/AppProviders";
+import { Header } from "./components/Header";
 import Footer from "./components/Footer";
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
-  variable: "--font-albert",
   display: "swap",
+  variable: "--font-albert",
 });
-
 
 export const metadata: Metadata = {
   title: "Lønbæks Køreskole i Vejle – Kørekort med erfaren kørelærer",
   description:
-    "Lønbæks Køreskole i Vejle tilbyder professionel teori- og køreundervisning med fokus på sikkerhed, tryghed og personlig vejledning.",
-
-  keywords: [
-    "Lønbæks Køreskole",
-    "køreskole Vejle",
-    "kørekort Vejle",
-    "kørelærer Vejle",
-    "teoriundervisning Vejle",
-    "køreundervisning Vejle",
-    "køreskole Vejle centrum",
-  ],
-
-  openGraph: {
-    title: "Lønbæks Køreskole i Vejle – Tag dit kørekort med tryghed",
-    description:
-      "Tag dit kørekort hos Lønbæks Køreskole i Vejle. Personlig undervisning, fleksible tider og fokus på sikker kørsel.",
-    locale: "da_DK",
-    type: "website",
-    siteName: "Lønbæks Køreskole",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
+    "Lønbæks Køreskole i Vejle tilbyder professionel teori- og køreundervisning med fokus på sikkerhed.",
 };
-
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-   return (
-    <html lang="da">
-<body className={`${albertSans.className} antialiased`}>
+  return (
+<html lang="da" className={albertSans.variable}>
+  <body className={albertSans.className}>
         <ThemeContextProvider>
-          <AppProviders>
+          <AppProviders fontFamily="var(--font-albert)">
             <Header />
-            <main>
-            {children}
-            </main>
+            <main>{children}</main>
             <Footer />
           </AppProviders>
         </ThemeContextProvider>

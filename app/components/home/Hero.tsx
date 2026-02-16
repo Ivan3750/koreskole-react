@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "antd";
 import heroImage from "@/app/assets/hero-driving.jpg";
 
 const Hero = () => {
@@ -40,9 +39,8 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <Button
-              size="large"
-              className="h-[54px] px-10 rounded-lg font-semibold"
+            <button
+               className="h-[54px] px-10 rounded-lg font-semibold"
               style={{
                 backgroundColor: "#facc15",
                 borderColor: "#facc15",
@@ -50,11 +48,10 @@ const Hero = () => {
               }}
             >
               Tilmeld hold
-            </Button>
+            </button>
 
-            <Button
-              size="large"
-              className="h-[54px] px-10 rounded-lg font-medium"
+            <button
+               className="h-[54px] px-10 rounded-lg font-medium"
               style={{
                 border: "1px solid rgba(255,255,255,0.4)",
                 color: "white",
@@ -62,7 +59,7 @@ const Hero = () => {
               }}
             >
               Se priser
-            </Button>
+            </button>
           </div>
 
         </div>

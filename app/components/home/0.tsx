@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "antd";
 import { Users, Award, Star } from "lucide-react";
 import heroImage from "@/app/assets/hero-driving.jpg";
 
@@ -77,8 +76,7 @@ export const Hero = () => {
 
         {/* CTA */}
         <div className="flex flex-row justify-center items-center gap-4 pt-6">
-          <Button
-            size="large"
+          <button
             className="px-10 h-[52px] font-semibold rounded-xl transition-all"
             style={{
               backgroundColor: "var(--color-yellow)",
@@ -87,10 +85,9 @@ export const Hero = () => {
             }}
           >
             Kom i gang
-          </Button>
+          </button>
 
-          <Button
-            size="large"
+          <button
             className="px-10 h-[52px] font-medium rounded-xl transition-all"
             style={{
               backgroundColor: "transparent",
@@ -99,7 +96,7 @@ export const Hero = () => {
             }}
           >
             Se priser
-          </Button>
+          </button>
         </div>
 
         {/* Stats */}

@@ -91,7 +91,7 @@ const Footer = () => {
           className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
           style={{ borderColor: "var(--color-border)", color: "var(--color-text-secondary)" }}
         >
-          <p className="text-sm">© {new Date().getFullYear()} Nørretorv Køreskole. Alle rettigheder forbeholdes.</p>
+          <p className="text-sm">© {new Date().getFullYear()} Lønbæks Køreskole. Alle rettigheder forbeholdes.</p>
           <p className="text-sm">Kørelærer i Vejle siden 1984</p>
         </div>
       </div>
