@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "Hvad sker der, hvis jeg ikke består første gang?",
     answer:
-      "Ingen panik! Du kan tilmelde dig omprøven, og vi tilbyder ekstra lektioner for at sikre, at du er klar næste gang.",
+      "Ingen panik! Du kan tilmelde dig omprøven,  vi tilbyder ekstra lektioner for at sikre, at du er klar næste gang.",
   },
   {
     question: "Tilbyder I kørelektioner i weekenden?",

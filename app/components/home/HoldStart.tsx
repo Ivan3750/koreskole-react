@@ -1,11 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Users, Calendar, Clock, Globe } from "lucide-react";
 import { img } from "framer-motion/client";
 import en from "@/app/assets/denmark-flag.png";
 import da from "@/app/assets/great-britain-flag.png";
+import BookingForm from "../BookingForm";
 const Holdstart = () => {
+  const [selectedHold, setSelectedHold] = useState<null | (typeof holds)[0]>(
+    null,
+  );
+
   const holds = [
     {
       id: 1,
@@ -18,7 +23,7 @@ const Holdstart = () => {
     {
       id: 2,
       date: "20/03/2026",
-      days: { da: "Tirsdag og Torsdag", en: "Tuesday & Thursday" },
+      days: { da: "Tirsdag & Torsdag", en: "Tuesday & Thursday" },
       time: "18:00",
       spots: 10,
       lang: "EN",
@@ -26,7 +31,7 @@ const Holdstart = () => {
     {
       id: 3,
       date: "20/03/2026",
-      days: { da: "Tirsdag og Torsdag", en: "Tuesday & Thursday" },
+      days: { da: "Tirsdag & Torsdag", en: "Tuesday & Thursday" },
       time: "18:00",
       spots: 10,
       lang: "DA",
@@ -100,7 +105,7 @@ const Holdstart = () => {
             className="normal-text"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            Se kommende hold og vælg det der passer bedst til dig.
+            Se kommende hold der passer bedst til dig.
           </p>
         </div>
 
@@ -126,10 +131,7 @@ const Holdstart = () => {
                     {hold.days.da}
                   </h3>
 
-                  <div
-                    className="inline-flex items-center   "
-                
-                  >
+                  <div className="inline-flex items-center   ">
                     {hold.lang === "EN" ? (
                       <img
                         src={en.src}
@@ -172,8 +174,8 @@ const Holdstart = () => {
               </div>
 
               {/* CTA */}
-              <a
-                href={`#booking?hold=${hold.id}`}
+              <button
+                onClick={() => setSelectedHold(hold)}
                 className="mt-6 inline-flex justify-center items-center px-4 py-2 rounded-xl font-semibold transition hover:-translate-y-0.5"
                 style={{
                   backgroundColor: "var(--color-yellow)",
@@ -181,11 +183,20 @@ const Holdstart = () => {
                 }}
               >
                 Vælg hold
-              </a>
+              </button>
             </div>
           ))}
         </div>
       </div>
+      {selectedHold && (
+        <BookingForm
+          holdId={selectedHold.id}
+          holdDate={selectedHold.date}
+          holdTime={selectedHold.time}
+          holdDays={selectedHold.days.da}
+          onClose={() => setSelectedHold(null)}
+        />
+      )}
     </section>
   );
 };

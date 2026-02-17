@@ -1,128 +1,191 @@
 "use client";
 
-import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function TeoriproevePage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const proveDetails = [
-    { title: "25 spørgsmål", description: "Forskellige emner fra færdselsloven" },
-    { title: "Max 5 fejl", description: "Du skal have mindst 20 rigtige" },
-    { title: "20 minutter", description: "Tid nok til at tænke over svarene" },
-    { title: "Multiple choice", description: "Vælg det korrekte svar" },
-  ];
-
-  const tips = [
-    "Læs hvert spørgsmål grundigt",
-    "Øv online prøver mindst 1-2 uger",
-    "Fokusér på skilte og vigepligt",
-    "Forstå regler — lær ikke udenad",
-    "Kom i god tid til prøven",
-    "Sov godt natten før",
-  ];
-
-  const faqs = [
-    {
-      question: "Hvad koster teoriprøven?",
-      answer: "Prøven koster 170 kr. og er inkluderet første gang.",
-    },
-    {
-      question: "Hvornår kan jeg tage prøven?",
-      answer: "Når du har gennemført teorien og føler dig klar.",
-    },
-    {
-      question: "Får jeg svar med det samme?",
-      answer: "Ja — du får resultatet lige efter prøven.",
-    },
-  ];
-
   return (
-    <div style={{ backgroundColor: "var(--color-bg)" }}>
+    <>
+      <Head>
+        <title>Teoriprøve i Vejle | Kørekort B | Bestå første gang</title>
+        <meta
+          name="description"
+          content="Teoriprøve i Vejle – komplet guide til kørekort B. Læs hvordan teoriprøven foregår, hvor den afholdes, fejlgrænse, krav og hvordan du består første gang."
+        />
+        <meta
+          name="keywords"
+          content="teoriprøve Vejle, kørekort B Vejle, bestå teoriprøve, Borgerservice Vejle, teoriprøve kørekort"
+        />
+      </Head>
 
-      {/* HERO */}
-      <section className="py-24 text-center max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl font-bold mb-6" style={{ color: "var(--color-text)" }}>
-          Teoriprøve i Vejle
-        </h1>
-        <p className="text-lg" style={{ color: "var(--color-text-secondary)" }}>
-          Alt du skal vide for at bestå første gang.
-        </p>
-      </section>
+      <div style={{ background: "var(--color-bg)" }}>
+        <div className="max-w-7xl mx-auto px-6 py-20 space-y-24">
 
-      {/* MAIN CONTENT FLOW */}
-      <section className="max-w-6xl mx-auto px-6 space-y-16 pb-24">
+          <section className="grid lg:grid-cols-2 gap-14 items-center">
 
-        {/* INFO GRID */}
-        <div className="grid md:grid-cols-4 gap-6">
-          {proveDetails.map((item, i) => (
-            <div key={i} className="rounded-2xl border p-6 text-center"
-              style={{ borderColor: "var(--color-border)" }}>
-              <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-              <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
-                {item.description}
+            <div className="space-y-6">
+
+              <span
+                className="px-4 py-1 rounded-full text-sm font-semibold"
+                style={{
+                  background: "var(--color-yellow-2)",
+                  color: "var(--color-yellow-8)",
+                }}
+              >
+                Teoriprøve i Vejle
+              </span>
+
+              <h1 className="text-4xl font-bold" style={{ color: "var(--color-text)" }}>
+                Sådan består du teoriprøven i Vejle
+              </h1>
+
+              <p className="text-lg leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+                Skal du tage teoriprøve til kørekort B i Vejle? Her får du en
+                komplet guide til prøvens opbygning, fejlgrænse og de bedste
+                strategier til at bestå første gang.
               </p>
+
+              <p className="text-base leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+                Teoriprøven er en vigtig del af dit kørekortforløb.
+                Med korrekt forberedelse, realistiske øveprøver og forståelse
+                for færdselsloven øger du markant dine chancer for succes.
+              </p>
+
+              <Link
+                href="/koerekort-b/"
+                className="inline-block px-8 py-3 rounded-xl font-semibold transition hover:scale-[1.03]"
+                style={{
+                  background: "var(--color-yellow)",
+                  color: "white",
+                }}
+              >
+                Læs mere om kørekort B forløbet →
+              </Link>
+
             </div>
-          ))}
-        </div>
 
-        {/* LOCATION */}
-        <div className="rounded-2xl border p-8"
-          style={{ borderColor: "var(--color-border)" }}>
-          <h2 className="text-2xl font-bold mb-4">Hvor foregår prøven?</h2>
-          <p style={{ color: "var(--color-text-secondary)" }}>
-            Borgerservice Vejle — Kirketorvet 10, 7100 Vejle.
-          </p>
-        </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative h-64 rounded-2xl overflow-hidden">
+                <Image src="/images/teori-class.jpg" alt="" fill className="object-cover" />
+              </div>
+              <div className="relative h-64 rounded-2xl overflow-hidden">
+                <Image src="/images/traffic-sign.jpg" alt="" fill className="object-cover" />
+              </div>
+              <div className="relative h-44 rounded-2xl overflow-hidden col-span-2">
+                <Image src="/images/vejle-city.jpg" alt="" fill className="object-cover" />
+              </div>
+            </div>
 
-        {/* TIPS */}
-        <div>
-          <h2 className="text-2xl font-bold mb-6">Gode råd</h2>
-          <div className="grid md:grid-cols-2 gap-5">
-            {tips.map((tip, i) => (
-              <div key={i} className="flex gap-3 border rounded-xl p-4"
-                style={{ borderColor: "var(--color-border)" }}>
-                <div className="font-bold">{i + 1}</div>
-                <p>{tip}</p>
+          </section>
+
+          <section className="grid lg:grid-cols-4 gap-8">
+
+            {[
+              ["25 spørgsmål", "Spørgsmål om skilte, placering og risikovurdering."],
+              ["Max 5 fejl", "Du skal have mindst 20 rigtige svar."],
+              ["20 minutter", "Prøven varer cirka 20 minutter."],
+              ["Digital eksamen", "Multiple choice med billeder."],
+            ].map(([title, text]) => (
+              <div
+                key={title}
+                className="p-6 rounded-2xl space-y-3"
+                style={{
+                  background: "var(--color-bg-elevated)",
+                  border: "1px solid var(--color-border)",
+                }}
+              >
+                <h3 className="font-bold">{title}</h3>
+                <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                  {text}
+                </p>
               </div>
             ))}
-          </div>
-        </div>
 
-        {/* FAQ */}
-        <div>
-          <h2 className="text-2xl font-bold mb-6">FAQ</h2>
-          <div className="space-y-3">
-            {faqs.map((faq, i) => (
-              <div key={i} className="border rounded-xl"
-                style={{ borderColor: "var(--color-border)" }}>
-                <button
-                  className="w-full p-5 text-left font-semibold"
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                >
-                  {faq.question}
-                </button>
-                {openFaq === i && (
-                  <p className="px-5 pb-5 text-sm"
-                    style={{ color: "var(--color-text-secondary)" }}>
-                    {faq.answer}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+          </section>
 
-        {/* CTA */}
-        <div className="text-center">
-          <Link href="/koerekort-b"
-            className="px-10 py-4 rounded-full font-bold inline-block"
-            style={{ backgroundColor: "var(--color-yellow)", color: "white" }}>
-            Se kørekort B forløb
-          </Link>
-        </div>
+          <section
+            className="p-10 rounded-2xl space-y-6"
+            style={{
+              background: "var(--color-bg-elevated)",
+              border: "1px solid var(--color-border)",
+            }}
+          >
+            <h2 className="text-2xl font-bold">
+              Hvordan foregår teoriprøven i Vejle?
+            </h2>
 
-      </section>
-    </div>
+            <p style={{ color: "var(--color-text-secondary)" }}>
+              Når du skal til teoriprøven i Vejle, skal du medbringe din ansøgning, lektionsplan og gyldigt billed-ID (pas anbefales). Prøven er digital og varer ca. 45 minutter. Du logger ind med MitID på en PC og besvarer spørgsmål til 25 billeder.
+            </p>
+
+            <p style={{ color: "var(--color-text-secondary)" }}>
+              Du må maksimalt have 5 fejl for at bestå. Resultatet vises straks på skærmen, så du med det samme kan se, om du har bestået.
+            </p>
+
+            <p style={{ color: "var(--color-text-secondary)" }}>
+Vi anbefaler at øve dig online og gennemgå lektionsplanen grundigt. Elever, der følger undervisningen, har høj beståelsesrate og er godt forberedte til teoriprøven.
+            </p>
+
+          
+          </section>
+
+          <section className="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold">Hvor foregår prøven?</h2>
+
+              <p style={{ color: "var(--color-text-secondary)" }}>
+                Teoriprøven afholdes i Vejle på Kirketorvet 10.
+                Mød op i god tid og medbring gyldig legitimation.
+              </p>
+
+              <p style={{ color: "var(--color-text-secondary)" }}>
+                Når du har bestået teoriprøven, kan du fortsætte
+                mod den praktiske køreprøve.
+              </p>
+
+           
+
+            </div>
+
+            <div className="relative h-72 rounded-2xl overflow-hidden">
+              <Image src="/images/location-modern.jpg" alt="" fill className="object-cover" />
+            </div>
+
+          </section>
+
+          <section
+            className="p-12 rounded-2xl text-center space-y-6"
+            style={{
+              background: "var(--color-yellow-1)",
+              border: "1px solid var(--color-yellow-3)",
+            }}
+          >
+            <h2 className="text-2xl font-bold">
+              Klar til at starte dit kørekort i Vejle?
+            </h2>
+
+            <p style={{ color: "var(--color-text-secondary)" }}>
+              Vores strukturerede kørekort B forløb hjælper dig sikkert gennem
+              både teori og praksis. Vi fokuserer på høj beståelsesrate
+              og personlig undervisning.
+            </p>
+
+            <Link
+              href="/koerekort-b/"
+              className="inline-block px-10 py-4 rounded-xl font-semibold transition hover:scale-[1.03]"
+              style={{
+                background: "var(--color-yellow)",
+                color: "white",
+              }}
+            >
+              Læs mere om kørekort B forløbet →
+            </Link>
+          </section>
+
+        </div>
+      </div>
+    </>
   );
 }

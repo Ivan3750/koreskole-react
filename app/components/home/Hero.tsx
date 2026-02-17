@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import heroImage from "@/app/assets/hero-driving.jpg";
-
+import vejle from "@/app/assets/vejle.png";
 const Hero = () => {
   return (
     <section className="relative h-[88vh] min-h-[620px] flex items-center overflow-hidden">
       
       <Image
-        src={heroImage}
+        src={vejle}
         alt="Driving school"
         fill
         priority
@@ -39,8 +39,8 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <button
-               className="h-[54px] px-10 rounded-lg font-semibold"
+            <a href="#holdstart"
+               className="py-3 px-10 rounded-lg font-semibold "
               style={{
                 backgroundColor: "#facc15",
                 borderColor: "#facc15",
@@ -48,10 +48,10 @@ const Hero = () => {
               }}
             >
               Tilmeld hold
-            </button>
+            </a>
 
-            <button
-               className="h-[54px] px-10 rounded-lg font-medium"
+            <a href="#priser"
+               className="py-3 px-10 rounded-lg font-medium "
               style={{
                 border: "1px solid rgba(255,255,255,0.4)",
                 color: "white",
@@ -59,7 +59,7 @@ const Hero = () => {
               }}
             >
               Se priser
-            </button>
+            </a>
           </div>
 
         </div>

@@ -31,7 +31,7 @@ const AboutSection = () => {
               className="normal-text mb-6"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Hos <strong>Lønbæks Køreskole i Vejle</strong> får du en tryg og
+              Hos <strong>Lønbæks Køreskole i Vejle</strong> får du en 
               personlig køreuddannelse med fokus på både læring og trivsel.
               Undervisningen foregår i et roligt tempo, så du føler dig godt
               forberedt til både <strong>teori- og køreprøven</strong>.

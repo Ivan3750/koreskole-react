@@ -10,7 +10,7 @@ interface Props {
 
 export const PageHero = ({ title, subtitle, image }: Props) => {
   return (
-    <section className="relative h-[340px] md:h-[420px] flex items-center overflow-hidden">
+    <section className="relative h-[420px] md:h-[500px] flex items-center overflow-hidden">
       
       {image && (
         <Image

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-
+import mistake from "@/app/assets/mistake.jpg"
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
@@ -57,7 +57,7 @@ const Blog = () => {
       title: "10 typiske teoriprøve-fejl (og hvordan du undgår dem)",
       description: "Lær de mest almindelige fejl, elever laver til teoriprøven, og hvordan du sikrer dig success.",
       date: "2026-02-10",
-      image: "/blog-image-1.jpg",
+      image: mistake.src,
       slug: "/blog/teoriproeve-tips/10-typiske-fejl"
     },
     {

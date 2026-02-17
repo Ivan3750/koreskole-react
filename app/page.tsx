@@ -2,7 +2,7 @@ import Image from "next/image";
 import Hero  from "./components/home/Hero";
 import Services from "./components/home/Services";
 import HoldStart from "./components/home/HoldStart";
-import Testimonials from "./components/home/Testimonials";
+import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import FAQ from "./components/FAQ";
 import Instructors from "./components/home/Instructors";

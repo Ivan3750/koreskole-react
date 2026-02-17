@@ -10,10 +10,10 @@ const navItems = [
   {
     label: "Kørekort B",
     children: [
-      { label: "Kørekort", href: "/koerekort-b/koerekort-vejle" },
-      { label: "Teoriprøve", href: "/koerekort-b/teoriproeve-vejle" },
-      { label: "Køreprøve", href: "/koerekort-b/koereproeve-vejle" },
       { label: "Priser", href: "/koerekort-b/priser" },
+      { label: "Kørekort", href: "/koerekort-b/koerekort" },
+      { label: "Teoriprøve", href: "/koerekort-b/teoriproeve" },
+      { label: "Køreprøve", href: "/koerekort-b/koereproeve" },
     ],
   },
   { label: "Holdstart", href: "/holdstart-vejle" },
@@ -70,14 +70,16 @@ export const Header = () => {
                 return (
                   <div key={index} className="relative group">
                     <span
-                      className="cursor-pointer font-medium"
+                      className="cursor-pointer font-medium flex items-center"
                       style={{ color: "var(--color-white)" }}
                     >
-                      {item.label}
+                      {item.label} <ChevronDown
+                          className={`h-4 w-4 ml-1`}
+                        />
                     </span>
 
-                    <div className="absolute top-full left-0 mt-4 w-60 bg-black/90 backdrop-blur-xl border rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                      <div className="flex flex-col py-4">
+                    <div className="absolute top-full left-0 mt-2 w-40 bg-black/90 backdrop-blur-xl border rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                      <div className="flex flex-col py-2">
                         {item.children?.map((child) => (
                           <Link
                             key={child.href}
@@ -85,7 +87,7 @@ export const Header = () => {
                             className="px-6 py-3 hover:bg-white/5 transition-colors"
                             style={{ color: "var(--color-white)" }}
                           >
-                            {child.label}
+                            {child.label} 
                           </Link>
                         ))}
                       </div>
@@ -115,7 +117,7 @@ export const Header = () => {
               onClick={() => setOpen(true)}
               style={{ color: "var(--color-text)" }}
             >
-              <Menu className="w-7 h-7" />
+              <Menu className="w-7 h-7 var(--color-text)" />
             </button>
           </div>
         </div>
