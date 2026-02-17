@@ -78,7 +78,7 @@ export const Header = () => {
 
                     <div className="absolute top-full left-0 mt-4 w-60 bg-black/90 backdrop-blur-xl border rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                       <div className="flex flex-col py-4">
-                        {item.children.map((child) => (
+                        {item.children?.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
@@ -174,7 +174,7 @@ export const Header = () => {
                             exit={{ height: 0, opacity: 0 }}
                             className="flex flex-col gap-4 pl-4 text-lg"
                           >
-                            {item.children.map((child) => (
+                            {item.children?.map((child) => (
                               <Link
                                 key={child.href}
                                 href={child.href}

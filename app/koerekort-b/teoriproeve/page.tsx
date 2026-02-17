@@ -2,8 +2,8 @@
 
 import PageHero from "../../components/PageHero";
 import heroImage from "../../assets/hero-driving.jpg";
-import Fejl from "../../components/Fejl";
-import TeoriproevePage from "../../components/TeoriproevePage";
+/* import Fejl from "../../components/Fejl";
+ */import TeoriproevePage from "../../components/TeoriproevePage";
 
 export default function OmOs() {
   return (
@@ -14,8 +14,8 @@ export default function OmOs() {
               fra prøveforløb til typiske ruter og hvordan du består første gang."
   image={heroImage}
 />
-<Fejl></Fejl>
-<TeoriproevePage></TeoriproevePage>
+{/* <Fejl></Fejl>
+ */}<TeoriproevePage></TeoriproevePage>
     </>
   );
 }
