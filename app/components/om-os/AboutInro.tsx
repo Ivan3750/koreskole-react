@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import car from "@/app/assets/gulbil.png";
+import img from "@/app/assets/small-school.png";
+
 const AboutIntro = () => {
   return (
     <section
@@ -11,7 +12,7 @@ const AboutIntro = () => {
       <div className="px-6">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
-          {/* CONTENT (on mobile first) */}
+          {/* TEXT */}
           <div className="max-w-xl mx-auto lg:mx-0 order-1 lg:order-2 text-center lg:text-left">
             <span
               className="font-semibold text-sm uppercase tracking-widest"
@@ -31,10 +32,10 @@ const AboutIntro = () => {
               className="normal-text mb-6"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Hos <strong>Lønbæks Køreskole i Vejle</strong> får du en 
-              personlig køreuddannelse med fokus på både læring og trivsel.
-              Undervisningen foregår i et roligt tempo, så du føler dig godt
-              forberedt til både <strong>teori- og køreprøven</strong>.
+              Hos <strong>Lønbæks Køreskole i Vejle</strong> får du en personlig
+              køreuddannelse med fokus på både læring og trivsel. Undervisningen
+              foregår i et roligt tempo, så du føler dig godt forberedt til både
+              <strong> teori- og køreprøven</strong>.
             </p>
 
             <p
@@ -58,27 +59,13 @@ const AboutIntro = () => {
             </p>
           </div>
 
-          {/* IMAGES */}
+          {/* IMAGE */}
           <div className="order-2 lg:order-1">
-            <div className="grid grid-cols-2 gap-5 md:gap-8 items-start">
-              
-              {/* Image 1 */}
-              <div
-                className="rounded-3xl overflow-hidden border-2 shadow-xl 
-                h-[260px] sm:h-[320px] md:h-[420px] lg:h-[520px]
-               "
-                style={{ borderColor: "var(--color-border)" }}
-              >
-                <img
-                  src={car.src}
-                  alt="Køreundervisning"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Image 2 */}
-           
-            </div>
+            <img
+              src={img.src}
+              alt="Køreundervisning"
+              className="w-full h-full max-h-[500px] object-cover rounded-2xl"
+            />
           </div>
 
         </div>

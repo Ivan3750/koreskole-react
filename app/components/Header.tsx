@@ -115,9 +115,9 @@ export const Header = () => {
             <button
               className="lg:hidden"
               onClick={() => setOpen(true)}
-              style={{ color: "var(--color-text)" }}
+              style={{ color: "var(--color-white)" }}
             >
-              <Menu className="w-7 h-7 var(--color-text)" />
+              <Menu className="w-7 h-7 " />
             </button>
           </div>
         </div>
@@ -204,13 +204,15 @@ export const Header = () => {
                 );
               })}
 
+ <Link href="/holdstart-vejle" >
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.95 }}
-                className="mt-10 bg-yellow-400 text-black rounded-full py-4 text-lg font-semibold"
+                className="mt-10 bg-yellow-400 text-black rounded-full py-4 text-md font-semibold px-4"
               >
                 Tilmeld hold
               </motion.button>
+              </Link>
             </motion.nav>
           </motion.div>
         )}
@@ -220,6 +222,8 @@ export const Header = () => {
 };
 
 const CTAButton = () => (
+   <Link href="/holdstart-vejle" className="self-start">
+
   <motion.button
     whileHover={{ y: -2 }}
     whileTap={{ scale: 0.96 }}
@@ -234,4 +238,5 @@ const CTAButton = () => (
       <ArrowUpRight size={16} />
     </motion.div>
   </motion.button>
+  </Link>
 );
