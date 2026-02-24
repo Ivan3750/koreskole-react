@@ -1,6 +1,6 @@
 import PageHero from "../components/PageHero";
 import heroImage from "../assets/hero-driving.jpg";
-import HoldStartPage from "../components/HoldStartPage";
+import HoldStart from "../components/home/HoldStart";
 import Contact from "../components/Contact";
 export default function OmOs() {
   return (
@@ -13,7 +13,7 @@ export default function OmOs() {
       />
   
  
- <HoldStartPage></HoldStartPage>
+ <HoldStart></HoldStart>
        <Contact />
 
     </>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-
+import car from "@/app/assets/gulbil.png";
 const cars = [
   {
     name: "Skoda Octavia",
@@ -12,11 +12,11 @@ const cars = [
       "Skoda Octavia er vores mest populære undervisningsbil. Komfortabel, sikker og nem at håndtere for elever. Perfekt til at lære de grundlæggende kørefærdigheder. Med dual-kontrol og moderne sikkerhedssystemer er det det ideelle valg for nye bilister. Skoda Octavia kombinerer pålidelighed med en behagelig køreoplevelse, hvilket gør det til det foretrukne valg for mange af vores elever. Den er rummelig, hvilket giver både elever og instruktører god plads under køretimerne, og dens responsive håndtering gør det nemt at navigere i både bytrafik og på landeveje.",
   },
   {
-    name: "VW Golf",
-    year: "2023",
-    image: "/path-to-golf-image.png", // Замініть на реальний шлях
+    name: "Volkswagen Taigo",
+    year: "2025",
+    image: car.src,  
     description:
-      "VW Golf tilbyder moderne teknologi, dual-kontrol og en sikker køreoplevelse. Perfekt til nybegyndere. Med sin kompakte størrelse og responsive håndtering er Golf ideel til at lære at navigere i bytrafik og på landeveje. Den er udstyret med avancerede sikkerhedsfunktioner, der giver både elever og instruktører ekstra tryghed under køretimerne. VW Golf er et populært valg for elever, der ønsker en bil, der kombinerer komfort, sikkerhed og moderne teknologi i deres køretimer.",
+      "VW Taigo tilbyder moderne teknologi, dual-kontrol og en sikker køreoplevelse. Perfekt til nybegyndere. Med sin kompakte størrelse og responsive håndtering er Taigo ideel til at lære at navigere i bytrafik og på landeveje. Den er udstyret med avancerede sikkerhedsfunktioner, der giver både elever og instruktører ekstra tryghed under køretimerne. VW Taigo er et populært valg for elever, der ønsker en bil, der kombinerer komfort, sikkerhed og moderne teknologi i deres køretimer.",
   },
 ];
 
@@ -71,7 +71,7 @@ const CarsAlternating = () => {
                     backgroundColor: "var(--color-bg)",
                   }}
                 >
-                  <div className="aspect-video w-full flex items-center justify-center p-8">
+                  <div className="aspect-video w-full flex items-center justify-center ">
                     <img
                       src={car.image}
                       alt={`${car.name} ${car.year}`}

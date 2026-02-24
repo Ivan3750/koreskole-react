@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import car from "@/app/assets/gulbil.png";
 
 const Info = () => {
   return (
@@ -108,14 +109,14 @@ const Info = () => {
                     className="font-semibold mb-1"
                     style={{ color: "var(--color-text)" }}
                   >
-                    Minimumskrav: 18 år
+                    Minimumskrav: 16 år og 9 måneder
                   </h3>
                   <p 
                     className="text-sm"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
-                    Du skal være fyldt 18 år for at tage kørekort B, men kan 
-                    starte uddannelsen allerede som 17-årig.
+                    Du skal være fyldt 17 år for at tage kørekort B, men kan 
+                    starte uddannelsen allerede som 16 år og 9 måneder.
                   </p>
                 </div>
               </div>
@@ -141,7 +142,7 @@ const Info = () => {
                 style={{ borderColor: "var(--color-border)" }}
               >
                 <img
-                  src="https://askproject.net/roadry/wp-content/uploads/sites/245/2025/08/transportation-view-on-the-car-from-the-air-car-EDQZB5E.jpg"
+                  src={car.src}
                   alt="Kørekort B uddannelse"
                   className="w-full h-full object-cover"
                 />

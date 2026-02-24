@@ -19,12 +19,29 @@ export const Instructors = () => {
   return (
     <section className="py-28">
       <div className="max-w-7xl mx-auto px-6">
-        <h2
-          className="text-4xl font-bold text-center mb-20"
-          style={{ color: "var(--color-text)" }}
-        >
-          Mød vores kørelærere
-        </h2>
+           <div className="text-center max-w-3xl mx-auto mb-16">
+          <span
+            className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4"
+            style={{
+              color: "var(--color-yellow)",
+              backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
+            }}
+          >
+    Kørelærere
+          </span>
+          <h2
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+            style={{ color: "var(--color-text)" }}
+          >
+    Mød vores kørelærere
+          </h2>
+          <p
+            className="text-lg leading-relaxed"
+            style={{ color: "var(--color-text-secondary)" }}
+          >
+    Vores kørelærere er erfarne, tålmodige og dedikerede til at give dig den bedst mulige undervisning.  
+    Du får personlig vejledning og tryg støtte gennem hele dit kørekortforløb.          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-14">
           {instructors.map((p, i) => (

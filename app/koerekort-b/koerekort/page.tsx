@@ -12,6 +12,9 @@ import Contact from "@/app/components/Contact";
 import { CTA } from "@/app/components/om-os/CTA";
 import HoldStart from "@/app/components/home/HoldStart";
 import Priser from "@/app/components/koereproeve-vejle/Priser";
+
+
+
 export default function OmOs() {
   return (
     <>
@@ -27,7 +30,6 @@ export default function OmOs() {
       <TimeLine></TimeLine>
       <HoldStart></HoldStart>
       <PassStrategySection></PassStrategySection>
-      <Cars></Cars>
       <FAQ></FAQ>
       <Contact></Contact>
     </>

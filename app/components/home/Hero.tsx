@@ -3,12 +3,14 @@
 import Image from "next/image";
 import heroImage from "@/app/assets/hero-driving.jpg";
 import vejle from "@/app/assets/vejle.png";
+
+import school from "@/app/assets/image.png";
 const Hero = () => {
   return (
     <section className="relative h-[88vh] min-h-[620px] flex items-center overflow-hidden">
       
       <Image
-        src={vejle}
+        src={school}
         alt="Driving school"
         fill
         priority

@@ -84,7 +84,7 @@ export default function TeoriproevePage() {
             {[
               ["25 spørgsmål", "Spørgsmål om skilte, placering og risikovurdering."],
               ["Max 5 fejl", "Du skal have mindst 20 rigtige svar."],
-              ["20 minutter", "Prøven varer cirka 20 minutter."],
+              ["25 minutter", "Prøven varer 25 minutter."],
               ["Digital eksamen", "Multiple choice med billeder."],
             ].map(([title, text]) => (
               <div
@@ -116,7 +116,7 @@ export default function TeoriproevePage() {
             </h2>
 
             <p style={{ color: "var(--color-text-secondary)" }}>
-              Når du skal til teoriprøven i Vejle, skal du medbringe din ansøgning, lektionsplan og gyldigt billed-ID (pas anbefales). Prøven er digital og varer ca. 45 minutter. Du logger ind med MitID på en PC og besvarer spørgsmål til 25 billeder.
+              Når du skal til teoriprøven i Vejle, skal du medbringe din ansøgning, lektionsplan og gyldigt billed-ID (pas anbefales). Prøven er digital og varer 25 minutter. Du logger ind med MitID på en PC og besvarer spørgsmål til 25 billeder.
             </p>
 
             <p style={{ color: "var(--color-text-secondary)" }}>
@@ -136,7 +136,7 @@ Vi anbefaler at øve dig online og gennemgå lektionsplanen grundigt. Elever, de
               <h2 className="text-2xl font-bold">Hvor foregår prøven?</h2>
 
               <p style={{ color: "var(--color-text-secondary)" }}>
-                Teoriprøven afholdes i Vejle på Kirketorvet 10.
+                Teoriprøven foregår hos politiet.
                 Mød op i god tid og medbring gyldig legitimation.
               </p>
 

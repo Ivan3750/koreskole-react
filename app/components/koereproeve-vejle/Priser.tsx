@@ -47,7 +47,7 @@ export default function PriserPage() {
 
             <ul className="space-y-2 text-base">
               {[
-                "28 lektioner teori",
+                "29+ lektioner teori",
                 "24 kørelektioner",
                 "Manøvrebane & glatbane",
                 "1 køreprøve inkluderet",

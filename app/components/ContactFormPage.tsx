@@ -117,8 +117,10 @@ export default function ContactFormPage() {
           <div>
             <form
               onSubmit={handleSubmit}
-              className="space-y-6 bg-white/60 backdrop-blur-sm p-10 rounded-3xl border"
-              style={{ borderColor: "var(--color-border)" }}
+              className="space-y-6  backdrop-blur-sm p-10 rounded-3xl border"
+              style={{ borderColor: "var(--color-border)",
+                backgroundColor: "var(--color-bg-elevated)",
+             }}
             >
               {success && (
                 <div className="text-green-600 font-semibold mb-4">

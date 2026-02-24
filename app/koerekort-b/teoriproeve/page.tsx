@@ -9,9 +9,9 @@ export default function OmOs() {
   return (
     <>
   <PageHero
-  title="  Køreprøve i Vejle — hvad skal du vide?"
-  subtitle=" Alt du behøver at vide om den praktiske køreprøve i Vejle — 
-              fra prøveforløb til typiske ruter og hvordan du består første gang."
+  title="Teoriprøve i Vejle — sådan består du første gang"
+subtitle="Få overblik over hvordan teoriprøven foregår i Vejle, 
+hvor mange fejl du må have, og hvad du skal være særligt opmærksom på for at bestå."
   image={heroImage}
 />
 {/* <Fejl></Fejl>

@@ -14,12 +14,12 @@ import KoereproevePage from "@/app/components/koereproeve-vejle/KoereproevePage"
 export default function OmOs() {
   return (
     <>
-      <PageHero
-        title=" Kørekort B i Vejle — din vej til kørekortet"
-        subtitle=" Drømmer du om frihed på vejene? Hos Køreskole Vejle hjælper vi dig med at tage kørekort B hurtigt, sikkert og til en fair pris. Med over 15 års erfaring i Vejle kender vi de lokale forhold og ved præcis, hvad der skal til for at bestå første gang.
-"
-        image={heroImage}
-      />
+     <PageHero
+  title="  Køreprøve i Vejle — hvad skal du vide?"
+  subtitle=" Alt du behøver at vide om den praktiske køreprøve i Vejle — 
+              fra prøveforløb til typiske ruter og hvordan du består første gang."
+  image={heroImage}
+/>
   
 <KoereproevePage></KoereproevePage>
  <FAQ></FAQ>
