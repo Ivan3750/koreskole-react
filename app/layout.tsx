@@ -5,7 +5,7 @@ import { ThemeContextProvider } from "./theme/ThemeContext";
 import { AppProviders } from "./theme/AppProviders";
 import { Header } from "./components/Header";
 import Footer from "./components/Footer";
-
+import './i18n';
 const albertSans = Albert_Sans({
   subsets: ["latin"],
   display: "swap",

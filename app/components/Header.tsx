@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
 import ThemeToggle from "../theme/ThemeToggle";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import SwitchLanguage from "../i18n/SwitchLanguage";
 
 const navItems = [
   {
@@ -111,6 +112,7 @@ export const Header = () => {
 
           <div className="flex items-center gap-4">
             <ThemeToggle />
+            <SwitchLanguage></SwitchLanguage>
             <CTAButton />
             <button
               className="lg:hidden"
