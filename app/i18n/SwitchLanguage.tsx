@@ -28,8 +28,7 @@ export default function SwitchLanguage() {
         <Image src={currentLang.flag} alt={currentLang.code} width={24} height={16} className="rounded-sm" />
       </button>
 
-      {/* Dropdown */}
-      {open && (
+       {open && (
         <div className="absolute mt-2 right-0 flex flex-col bg-white/10 backdrop-blur-md border border-white/20 rounded-md shadow-lg z-50 overflow-hidden">
           {languages
             .filter((l) => l.code !== currentLang.code)
@@ -37,7 +36,7 @@ export default function SwitchLanguage() {
               <button
                 key={lang.code}
                 onClick={() => {
-                  i18n.changeLanguage(lang.code); // ✅ useTranslation() завжди дає changeLanguage
+                  i18n.changeLanguage(lang.code);  
                   setOpen(false);
                 }}
                 className="p-2 flex items-center justify-center hover:bg-white/20 transition"
