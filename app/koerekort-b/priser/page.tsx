@@ -6,7 +6,7 @@ import Priser from "../../components/koereproeve-vejle/Priser";
 import Info from "../../components/koereproeve-vejle/Info";
 import TimeLine from "../../components/koereproeve-vejle/TimeLine";
 import TheoryClassesSection from "../../components/koereproeve-vejle/TheoryClassesSection";
-import Cars from "../../components/koereproeve-vejle/Cars";
+import Cars from "../../components/om-os/Cars";
 import PassStrategySection from "../../components/koereproeve-vejle/PassStrategySection";
 import FAQ from "../../components/FAQ";
 import PriserPage from "../../components/PriserPage";

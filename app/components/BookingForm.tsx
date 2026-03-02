@@ -29,7 +29,6 @@ const BookingForm: React.FC<BookingFormProps> = ({ holdId, holdDate, holdTime, h
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // базова валідація
     if (!formData.name || !formData.email) {
       setStatus("error");
       setMessage("Заповніть обовʼязкові поля: імʼя та email.");

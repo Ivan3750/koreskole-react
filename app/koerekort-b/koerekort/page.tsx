@@ -1,19 +1,12 @@
-import Image from "next/image";
 import PageHero from "../../components/PageHero";
 import heroImage from "../../assets/hero-driving.jpg";
-import KoerekortB from "../../components/koerekort-b";
 import Info from "../../components/koereproeve-vejle/Info";
 import TimeLine from "../../components/koereproeve-vejle/TimeLine";
-import TheoryClassesSection from "../../components/koereproeve-vejle/TheoryClassesSection";
-import Cars from "../../components/koereproeve-vejle/Cars";
 import PassStrategySection from "../../components/koereproeve-vejle/PassStrategySection";
 import FAQ from "../../components/FAQ";
 import Contact from "@/app/components/Contact";
-import { CTA } from "@/app/components/om-os/CTA";
 import HoldStart from "@/app/components/home/HoldStart";
 import Priser from "@/app/components/koereproeve-vejle/Priser";
-
-
 
 export default function OmOs() {
   return (

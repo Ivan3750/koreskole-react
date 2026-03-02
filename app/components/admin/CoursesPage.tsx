@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 type Course = {
   id: number;
@@ -8,7 +8,6 @@ type Course = {
   start_datetime: string;
   rescheduled_datetime?: string | null;
   days_of_week?: string;
-  location?: string;
 };
 
 export default function CoursesPage() {
@@ -20,18 +19,30 @@ export default function CoursesPage() {
     start_datetime: "",
     rescheduled_datetime: null,
     days_of_week: "",
- 
   });
 
-  const addCourse = () => {
+  const API_URL = "http://localhost:8000/get-courses.php";
+
+   useEffect(() => {
+    fetch(API_URL)
+      .then((res) => res.json())
+      .then((data) => setCourses(data));
+  }, []);
+
+   const addCourse = async () => {
     if (!newCourse.name || !newCourse.start_datetime) return;
 
-    setCourses([
-      ...courses,
-      { ...newCourse, id: Date.now() }, // простий id для фронтенду
-    ]);
+    await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newCourse),
+    });
 
-    // Очистити форму
+    // Reload after insert
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    setCourses(data);
+
     setNewCourse({
       id: 0,
       name: "",
@@ -39,13 +50,18 @@ export default function CoursesPage() {
       start_datetime: "",
       rescheduled_datetime: null,
       days_of_week: "",
- 
     });
   };
 
-  const deleteCourse = (id: number) => {
+  // ✅ Delete course
+  const deleteCourse = async (id: number) => {
+    await fetch(`${API_URL}?id=${id}`, {
+      method: "DELETE",
+    });
+
     setCourses(courses.filter((c) => c.id !== id));
   };
+
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
