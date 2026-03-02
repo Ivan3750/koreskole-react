@@ -1,10 +1,143 @@
 {
-  "": {
-    "title": "Tag dit kørekort",
-    "subtitle": "hurtigt og sikkert"
+  "home": {
+  "driving_school": "Køreskole i Vejle",
+  "get_license": "Tag dit kørekort",
+  "quick_and_safe": "hurtigt og sikkert",
+  "description": "Moderne køreskole med personlig undervisning, fleksible tider og høj beståelsesrate. Vi guider dig hele vejen til bestået prøve.",
+  "sign_up": "Tilmeld hold",
+  "see_prices": "Se priser",
+  "about_title_label": "Om os",
+    "about_heading": "Lønbæks Køreskole – Din køreskole i Vejle",
+    "about_paragraph1": "Hos Lønbæks Køreskole i Vejle får du en personlig køreuddannelse med fokus på både læring og trivsel. Undervisningen foregår i et roligt tempo, så du føler dig godt forberedt til både teori- og køreprøven.",
+    "about_paragraph2": "Vi har mange års erfaring i Vejle og lokalområdet og har hjulpet mange elever sikkert gennem deres kørekortforløb. Vores lokalkendskab og personlige vejledning giver dig de bedste forudsætninger for at bestå.",
+    "about_paragraph3": "Bliv en sikker og selvsikker bilist med Lønbæks Køreskole i Vejle. Tilmeld dig i dag og start din køreuddannelse med det samme!"
   },
-  "om-os": {
-    "title": "Tag dit kørekort",
-    "subtitle": "hurtigt og sikkert"
+  "holdstart": {
+    "title_label": "Holdstart",
+    "heading": "Vælg dit hold",
+    "description": "Se kommende hold der passer bedst til dig.",
+    "start_label": "Start",
+    "time_label": "Kl.",
+    "spots_label": "ledige pladser",
+    "select_button": "Vælg hold",
+    "loading": "Indlæser..."
+  },
+  "instructors": {
+    "label": "Mød Din Kørelærer",
+    "heading": "En Passioneret Kørelærer Med Hjerte for Sikkerhed",
+    "paragraph1": "Anna Marie Lønbærk har været kørelærer i Vejle siden 1984. Med over 40 års erfaring har hun uddannet tusindvis af elever og hjulpet dem med at blive sikre, ansvarsbevidste bilister.",
+    "paragraph2": "Huns filosofi er enkel: Undervisningen skal være både lærerig og hyggelig. En afslappet atmosfære skaber de bedste betingelser for læring.",
+    "feature1_title": "Personlig Tilgang",
+    "feature1_desc": "Undervisning tilpasset den enkelte elev",
+    "feature2_title": "Fleksible Tider",
+    "feature2_desc": "Hverdage og weekender efter aftale",
+    "experience_years": "40+ år",
+    "experience_label": "erfaring"
+  },
+  "services": {
+    "label": "Vores Ydelser",
+    "heading": "Alt hvad du behøver til dit kørekort",
+    "description": "Vi tilbyder en komplet køreuddannelse med fokus på sikkerhed, kvalitet og personlig vejledning.",
+    "items": [
+      {
+        "title": "Teoriundervisning",
+        "description": "Grundig teoretisk undervisning med moderne materialer og engagerende formidling."
+      },
+      {
+        "title": "Køreundervisning",
+        "description": "Praktisk køreundervisning i moderne biler med erfaren instruktør."
+      },
+      {
+        "title": "Glatførekursus",
+        "description": "Obligatorisk kursus på køreteknisk anlæg for sikker kørsel i alle vejrforhold."
+      },
+      {
+        "title": "Førstehjælpskursus",
+        "description": "Livsvigtig førstehjælp - lær at handle rigtigt i nødsituationer."
+      },
+      {
+        "title": "Fleksible Tider",
+        "description": "Vi tilpasser undervisningen efter din hverdag med fleksible mødetider."
+      },
+      {
+        "title": "Høj Beståelsesrate",
+        "description": "Kvalitetsundervisning der giver dig de bedste forudsætninger for at bestå."
+      }
+    ]
+  },
+   "bookingForm": {
+    "heading": "Book hold",
+    "name": "Navn",
+    "email": "Email",
+    "phone": "Telefon",
+    "birthday": "Fødselsdag",
+    "nameRequired": "Udfyld venligst dit navn.",
+    "emailRequired": "Udfyld venligst din email.",
+    "submit": "Tilmeld hold",
+    "success": "Booking lykkedes!",
+    "error": "Noget gik galt.",
+    "serverError": "Serverfejl."
+  },
+   "contact": {
+    "label": "Kontakt",
+    "heading": "Lad os tage en snak",
+    "description": "Har du spørgsmål om køreuddannelse, priser eller tilmelding? Ring eller skriv — vi svarer hurtigt og ærligt.",
+    "phone": "Telefon",
+    "email": "Email",
+    "address": "Adresse",
+    "callNow": "Ring nu",
+    "hoursTitle": "Åbningstider",
+    "hours": {
+      "theory": "Efter aftale",
+      "driving": "Fleksible tider",
+      "phone": "08:00 – 20:00"
+    }
+  },
+     "footer": {
+    "logo": "Lønbæks",
+    "description": "Din partner i tryg og sikker køreuddannelse i Vejle. Med over 40 års erfaring guider vi dig hele vejen til kørekortet.",
+    "navigation": "Navigation",
+    "korekrtB": "Kørekort B",
+    "contact": "Kontakt",
+    "phone": "24 00 00 00",
+    "email": "lønbæks@gmail.com",
+    "address": "Vestre Engvej 7\n7100 Vejle",
+    "copyright": "Alle rettigheder forbeholdes.",
+    "tagline": "Kørelærer i Vejle siden 1984",
+    "navItems": [
+      { "label": "Holdstart", "href": "/holdstart-vejle" },
+      { "label": "Om os", "href": "/om-os" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Kontakt", "href": "/kontakt" }
+    ],
+    "footerItems": [
+      { "label": "Priser", "href": "/koerekort-b/priser" },
+      { "label": "Kørekort", "href": "/koerekort-b/koerekort" },
+      { "label": "Teoriprøve", "href": "/koerekort-b/teoriproeve" },
+      { "label": "Køreprøve", "href": "/koerekort-b/koereproeve" }
+    ]
   }
+  ,
+   "header": {
+    "logo": "Lønbæks",
+    "school": "Køreskole",
+    "navItems": [
+      {
+        "label": "Kørekort B",
+        "children": [
+          { "label": "Priser", "href": "/koerekort-b/priser" },
+          { "label": "Kørekort", "href": "/koerekort-b/koerekort" },
+          { "label": "Teoriprøve", "href": "/koerekort-b/teoriproeve" },
+          { "label": "Køreprøve", "href": "/koerekort-b/koereproeve" }
+        ]
+      },
+      { "label": "Holdstart", "href": "/holdstart-vejle" },
+      { "label": "Om os", "href": "/om-os" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Kontakt", "href": "/kontakt" }
+    ],
+    "cta": "Tilmeld hold",
+    "menu": "Menu"
+  }
+
 }

@@ -1,6 +1,142 @@
 {
-  "hero": {
-    "title": "Tag dit kørekort",
-    "subtitle": "hurtigt og sikkert"
+  "home": {
+  "driving_school": "Driving school in Vejle",
+  "get_license": "Get your driving license",
+  "quick_and_safe": "quickly and safely",
+  "description": "Modern driving school with personal instruction, flexible schedules, and a high pass rate. We guide you all the way to passing your test.",
+  "sign_up": "Sign up for a class",
+  "see_prices": "See prices",
+  "about_title_label": "About us",
+    "about_heading": "Lønbæks Driving School – Your driving school in Vejle",
+    "about_paragraph1": "At Lønbæks Driving School in Vejle, you get a personal driving education focused on both learning and well-being. Lessons proceed at a calm pace so you feel well-prepared for both theory and driving tests.",
+    "about_paragraph2": "We have many years of experience in Vejle and the surrounding area and have helped many students safely through their driving license journey. Our local knowledge and personal guidance give you the best conditions for success.",
+    "about_paragraph3": "Become a safe and confident driver with Lønbæks Driving School in Vejle. Sign up today and start your driving education immediately!"
+},
+"holdstart": {
+    "title_label": "Course start",
+    "heading": "Choose your course",
+    "description": "See upcoming courses that fit you best.",
+    "start_label": "Start",
+    "time_label": "At",
+    "spots_label": "spots available",
+    "select_button": "Select course",
+    "loading": "Loading..."
+  },
+  "instructors": {
+    "label": "Meet Your Instructor",
+    "heading": "A Passionate Driving Instructor With Heart for Safety",
+    "paragraph1": "Anna Marie Lønbærk has been a driving instructor in Vejle since 1984. With over 40 years of experience, she has trained thousands of students and helped them become safe, responsible drivers.",
+    "paragraph2": "Her philosophy is simple: lessons should be both educational and enjoyable. A relaxed atmosphere creates the best conditions for learning.",
+    "feature1_title": "Personal Approach",
+    "feature1_desc": "Teaching tailored to each individual student",
+    "feature2_title": "Flexible Schedule",
+    "feature2_desc": "Weekdays and weekends by appointment",
+    "experience_years": "40+ years",
+    "experience_label": "experience"
+  },
+  "services": {
+    "label": "Our Services",
+    "heading": "Everything you need for your driving license",
+    "description": "We offer a complete driving education with a focus on safety, quality, and personal guidance.",
+    "items": [
+      {
+        "title": "Theory Lessons",
+        "description": "Comprehensive theoretical lessons with modern materials and engaging teaching."
+      },
+      {
+        "title": "Driving Lessons",
+        "description": "Practical driving lessons in modern cars with an experienced instructor."
+      },
+      {
+        "title": "Skid Control Course",
+        "description": "Mandatory course at a driving facility for safe driving in all weather conditions."
+      },
+      {
+        "title": "First Aid Course",
+        "description": "Vital first aid – learn how to act correctly in emergencies."
+      },
+      {
+        "title": "Flexible Schedule",
+        "description": "We adapt lessons to your daily life with flexible meeting times."
+      },
+      {
+        "title": "High Pass Rate",
+        "description": "Quality teaching giving you the best conditions to pass."
+      }
+    ]
+  },
+   "bookingForm": {
+    "heading": "Book Course",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "birthday": "Birthday",
+    "nameRequired": "Please fill in your name.",
+    "emailRequired": "Please fill in your email.",
+    "submit": "Join Course",
+    "success": "Booking successful!",
+    "error": "Something went wrong.",
+    "serverError": "Server error."
+  },
+   "contact": {
+    "label": "Contact",
+    "heading": "Let's have a chat",
+    "description": "Do you have questions about driving lessons, prices, or registration? Call or write — we respond quickly and honestly.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "callNow": "Call now",
+    "hoursTitle": "Opening Hours",
+    "hours": {
+      "theory": "By appointment",
+      "driving": "Flexible times",
+      "phone": "08:00 – 20:00"
+    }
+  },
+  "footer": {
+    "logo": "Lønbæks",
+    "description": "Your partner in safe and reliable driving education in Vejle. With over 40 years of experience, we guide you all the way to your driving license.",
+    "navigation": "Navigation",
+    "korekrtB": "Driving License B",
+    "contact": "Contact",
+    "phone": "24 00 00 00",
+    "email": "loenbaeks@gmail.com",
+    "address": "Vestre Engvej 7\n7100 Vejle",
+    "copyright": "All rights reserved.",
+    "tagline": "Driving school in Vejle since 1984",
+    "navItems": [
+      { "label": "Course Start", "href": "/holdstart-vejle" },
+      { "label": "About Us", "href": "/om-os" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contact", "href": "/kontakt" }
+    ],
+    "footerItems": [
+      { "label": "Prices", "href": "/koerekort-b/priser" },
+      { "label": "Driving License", "href": "/koerekort-b/koerekort" },
+      { "label": "Theory Exam", "href": "/koerekort-b/teoriproeve" },
+      { "label": "Driving Test", "href": "/koerekort-b/koereproeve" }
+    ]
+  },
+  "header": {
+    "logo": "Lønbæks",
+    "school": "Driving School",
+    "navItems": [
+      {
+        "label": "Driving License B",
+        "children": [
+          { "label": "Prices", "href": "/koerekort-b/priser" },
+          { "label": "Driving License", "href": "/koerekort-b/koerekort" },
+          { "label": "Theory Exam", "href": "/koerekort-b/teoriproeve" },
+          { "label": "Driving Test", "href": "/koerekort-b/koereproeve" }
+        ]
+      },
+      { "label": "Course Start", "href": "/holdstart-vejle" },
+      { "label": "About Us", "href": "/om-os" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contact", "href": "/kontakt" }
+    ],
+    "cta": "Sign up for a class",
+    "menu": "Menu"
   }
+
 }

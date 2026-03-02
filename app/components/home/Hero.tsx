@@ -1,11 +1,13 @@
 "use client";
-
+import { useTranslation } from "react-i18next";
+import "@/app/i18n";
 import Image from "next/image";
-import heroImage from "@/app/assets/hero-driving.jpg";
-import vejle from "@/app/assets/vejle.png";
+ 
 
 import school from "@/app/assets/image.png";
 const Hero = () => {
+    const { t } = useTranslation();
+
   return (
     <section className="relative h-[88vh] min-h-[620px] flex items-center overflow-hidden">
       
@@ -23,21 +25,20 @@ const Hero = () => {
         <div className="max-w-3xl space-y-6">
 
           <p className="text-sm font-semibold tracking-widest text-white/70 uppercase">
-            Køreskole i Vejle
+               {t("home.driving_school")}
           </p>
 
           <h1 className="text-4xl md:text-6xl font-semibold text-white leading-tight">
-            Tag dit kørekort
+            {t("home.get_license")}
             <br />
             <span className="text-yellow-400">
-              hurtigt og sikkert
+              {t("home.quick_and_safe")}
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-white/80 max-w-xl">
-            Moderne køreskole med personlig undervisning,
-            fleksible tider og høj beståelsesrate.
-            Vi guider dig hele vejen til bestået prøve.
+              {t("home.description")}
+
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -49,7 +50,7 @@ const Hero = () => {
                 color: "#000",
               }}
             >
-              Tilmeld hold
+              {t("home.sign_up")}
             </a>
 
             <a href="#priser"
@@ -60,7 +61,7 @@ const Hero = () => {
                 background: "transparent",
               }}
             >
-              Se priser
+              {t("home.see_prices")}
             </a>
           </div>
 
