@@ -26,8 +26,9 @@ export async function generateMetadata({
   const t = translations[locale];
 
   return {
-    title: t?.contact_hero?.title,
-    description: t?.contact_hero?.subtitle,
+   title: t?.seo.koerekort_b_teoriproeve?.title,
+    description: t?.seo.koerekort_b_teoriproeve?.description,
+    keywords: t?.seo.koerekort_b_teoriproeve?.keywords,
     alternates: {
       languages: {
         en: "/en/koerekort-b/teoriproeve",

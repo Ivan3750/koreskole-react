@@ -616,6 +616,61 @@
   "aboutHero": {
     "title": "About Lønbæks Driving School",
     "subtitle": "We have trained thousands of students since 1984 and offer personalized instruction."
-  }
+  },
+    "seo": {
+    "home": {
+      "title": "Driving School Vejle – Get Your Car License B Safely",
+      "description": "Welcome to Driving School Vejle. We offer driving license B courses with high pass rates and personalized lessons.",
+      "keywords": "driving school Vejle, driving license B, driving lessons, theory classes"
+    },
+    "holdstart-vejle": {
+      "title": "Start Dates in Vejle – Enroll for Driving License B",
+      "description": "Check all upcoming start dates for driving license B in Vejle. Find a suitable time and start your driving journey.",
+      "keywords": "start dates Vejle, driving license B Vejle, driving lessons"
+    },
+    "koerekort_b_koerekort": {
+      "title": "Driving License B in Vejle – Complete Guide",
+      "description": "Everything you need to know about driving license B in Vejle – theory, driving lessons, and practical exams.",
+      "keywords": "driving license B Vejle, car license, driving lessons"
+    },
+    "koerekort_b_koereproeve": {
+      "title": "Practical Driving Test in Vejle – Pass First Time",
+      "description": "Get a complete guide to the practical driving test in Vejle. Learn what is tested and how to pass the first time.",
+      "keywords": "driving test Vejle, practical driving test B, pass driving test"
+    },
+    "koerekort_b_teoriproeve": {
+      "title": "Theory Test in Vejle – Driving License B Guide",
+      "description": "How to pass the theory test in Vejle. Read about mistakes allowed, question types, and best strategies.",
+      "keywords": "theory test Vejle, driving license B theory, pass theory test"
+    },
+    "koerekort_b_priser": {
+      "title": "Prices for Driving License B in Vejle",
+      "description": "See prices for driving license B at Driving School Vejle. Overview of packages, extra lessons, and installments.",
+      "keywords": "driving license B prices, driving school Vejle prices, driving lesson cost"
+    },
+    "kontakt": {
+      "title": "Contact Driving School Vejle",
+      "description": "Contact us for questions, registration or information about driving license B. We help you reach your goal safely.",
+      "keywords": "contact driving school Vejle, register driving license, questions driving license"
+    },
+    "om_os": {
+      "title": "About Lønbæks Driving School in Vejle",
+      "description": "We have trained thousands of students since 1984 and offer personalized lessons with high pass rates.",
+      "keywords": "about us, driving school Vejle, Lønbæks Driving School, driving license B"
+    },
+    "blog": {
+      "title": "Blog – Tips and Guides for Driving License B",
+      "description": "Read our blog with tips, advice, and guides to pass driving license B and drive safely on the road.",
+      "keywords": "blog driving license B, driving tips, driving lessons, traffic safety"
+    }
+  },
+  "blog": {
+      "title": "Driving Tips and News – Driving License B in Vejle",
+      "subtitle": "Get insights on theory tests, practical driving tests, traffic rules, and local conditions in Vejle. Tips, guides, and news for your journey to Driving License B."
+     },
+     "priser_hero": {
+      "title": "Prices for Driving License B in Vejle",
+      "subtitle": "See our competitive prices for driving license B. We offer packages, extra lessons, and flexible payment options to fit your needs."
+     }
 
 }

@@ -24,8 +24,9 @@ export async function generateMetadata({
   const t = translations[locale];
 
   return {
-    title: t?.contact_hero?.title,
-    description: t?.contact_hero?.subtitle,
+title: t?.seo.koerekort_b_priser?.title,
+    description: t?.seo.koerekort_b_priser?.description,
+    keywords: t?.seo.koerekort_b_priser?.keywords,
     alternates: {
       languages: {
         en: "/en/koerekort-b/priser",
@@ -47,8 +48,8 @@ export default async function Priser({
   return (
     <>
       <PageHero
-        title={t?.theoryHero?.title}
-        subtitle={t?.theoryHero?.subtitle}
+        title={t?.priser_hero?.title}
+        subtitle={t?.priser_hero?.subtitle}
         image={heroImage}
       />
 
@@ -59,11 +60,4 @@ export default async function Priser({
 }
 
  
-
-
-     /*    title=" Pris på kørekort i Vejle — hvad koster det?"
-        subtitle=" Gennemsigtighed er vigtigt. Derfor finder du her alle vores priser uden skjulte omkostninger." */
-
-
-
 

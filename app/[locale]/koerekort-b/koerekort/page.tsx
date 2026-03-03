@@ -1,4 +1,3 @@
-
 import PageHero from "../../../components/PageHero";
 import heroImage from "../../../assets/hero-driving.jpg";
 import Info from "../../../components/koereproeve-vejle/Info";
@@ -30,8 +29,9 @@ export async function generateMetadata({
   const t = translations[locale];
 
   return {
-    title: t?.contact_hero?.title,
-    description: t?.contact_hero?.subtitle,
+    title: t?.seo.koerekort_b_koerekort?.title,
+    description: t?.seo.koerekort_b_koerekort?.description,
+    keywords: t?.seo.koerekort_b_koerekort?.keywords,
     alternates: {
       languages: {
         en: "/en/koerekort-b/koerekort",
@@ -58,7 +58,7 @@ export default async function Koerekort({
         image={heroImage}
       />
 
- <Info></Info>
+      <Info></Info>
       <Priser></Priser>
       <TimeLine></TimeLine>
       <HoldStart></HoldStart>
@@ -68,5 +68,3 @@ export default async function Koerekort({
     </>
   );
 }
-
- 

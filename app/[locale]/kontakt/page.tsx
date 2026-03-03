@@ -24,11 +24,12 @@ export async function generateMetadata({
   const t = translations[locale];
 
   return {
-    title: t?.contact_hero?.title,
-    description: t?.contact_hero?.subtitle,
+title: t?.seo.kontakt?.title,
+    description: t?.seo.kontakt?.description,
+    keywords: t?.seo.kontakt?.keywords,
     alternates: {
       languages: {
-        en: "/en/kontact",
+        en: "/en/kontakt",
         da: "/da/kontakt",
       },
     },

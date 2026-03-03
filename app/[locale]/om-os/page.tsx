@@ -27,8 +27,9 @@ export async function generateMetadata({
   const t = translations[locale];
 
   return {
-    title: t?.holdstart_hero?.title,
-    description: t?.holdstart_hero?.subtitle,
+  title: t?.seo.om_os?.title,
+    description: t?.seo.om_os?.description,
+    keywords: t?.seo.om_os?.keywords,
     alternates: {
       languages: {
         en: "/en/om-os",

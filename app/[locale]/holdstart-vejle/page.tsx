@@ -24,8 +24,9 @@ export async function generateMetadata({
   const t = translations[locale];
 
   return {
-    title: t?.holdstart_hero?.title,
-    description: t?.holdstart_hero?.subtitle,
+    title: t?.seo.holdstart?.title,
+    description: t?.seo.holdstart?.description,
+    keywords: t?.seo.holdstart?.keywords,
     alternates: {
       languages: {
         en: "/en/holdstart-vejle",

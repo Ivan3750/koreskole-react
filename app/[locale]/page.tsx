@@ -31,12 +31,13 @@ export async function generateMetadata({
   const t = translations[locale];
 
   return {
-    title: t?.home?.driving_school,
-    description: t?.home?.get_license,
+  title: t?.seo.home?.title,
+    description: t?.seo.home?.description,
+    keywords: t?.seo.home?.keywords,
     alternates: {
       languages: {
-        en: "/en/home",
-        da: "/da/home",
+        en: "/en/",
+        da: "/da/",
       },
     },
   };

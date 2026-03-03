@@ -581,6 +581,63 @@
     "aboutHero": {
     "title": "Om Lønbæks Køreskole",
     "subtitle": "Vi har uddannet tusindvis af elever siden 1984 og tilbyder personlig undervisning."
-  }
+  },
+ 
+  "seo": {
+    "home": {
+      "title": "Køreskole Vejle – Tag kørekort B hurtigt og sikkert",
+      "description": "Velkommen til Køreskole Vejle. Vi tilbyder kørekort B kurser med høj beståelsesrate og personlig undervisning.",
+      "keywords": "køreskole Vejle, kørekort B, kørelektioner, teoriundervisning"
+    },
+    "holdstart-vejle": {
+      "title": "Holdstart i Vejle – Tilmeld dig kørekort B",
+      "description": "Se alle kommende holdstartdatoer for kørekort B i Vejle. Find en tid der passer dig og start din kørekortrejse.",
+      "keywords": "holdstart Vejle, kørekort B Vejle, kørelektioner"
+    },
+    "koerekort_b_koerekort": {
+      "title": "Kørekort B i Vejle – Komplett guide",
+      "description": "Alt hvad du skal vide om kørekort B i Vejle – teori, kørelektioner og praktiske prøver.",
+      "keywords": "kørekort B Vejle, bilkørekort, kørelektioner"
+    },
+    "koerekort_b_koereproeve": {
+      "title": "Køreprøve i Vejle – Bestå første gang",
+      "description": "Få en komplet guide til køreprøven i Vejle. Læs hvad du bliver testet i og hvordan du består første gang.",
+      "keywords": "køreprøve Vejle, praktisk prøve kørekort B, bestå køreprøve"
+    },
+    "koerekort_b_teoriproeve": {
+      "title": "Teoriprøve i Vejle – Guide til kørekort B",
+      "description": "Sådan består du teoriprøven i Vejle. Læs om fejlgrænse, spørgsmålstyper og bedste strategier.",
+      "keywords": "teoriprøve Vejle, kørekort B teori, bestå teoriprøve"
+    },
+    "koerekort_b_priser": {
+      "title": "Priser på kørekort B i Vejle",
+      "description": "Se priser på kørekort B hos Køreskole Vejle. Oversigt over pakker, ekstra lektioner og afbetaling.",
+      "keywords": "kørekort B priser, køreskole Vejle priser, kørelektioner pris"
+    },
+    "kontakt": {
+      "title": "Kontakt Køreskole Vejle",
+      "description": "Kontakt os for spørgsmål, tilmelding eller information om kørekort B. Vi hjælper dig sikkert i mål.",
+      "keywords": "kontakt køreskole Vejle, tilmelding kørekort, spørgsmål kørekort"
+    },
+    "om_os": {
+      "title": "Om Lønbæks Køreskole i Vejle",
+      "description": "Vi har uddannet tusindvis af elever siden 1984 og tilbyder personlig undervisning og høj beståelsesrate.",
+      "keywords": "om os, køreskole Vejle, Lønbæks Køreskole, kørekort B"
+    },
+    "blog": {
+      "title": "Blog – Tips og guides til kørekort B",
+      "description": "Læs vores blog med tips, råd og guides til at bestå kørekort B og køre sikkert i trafikken.",
+      "keywords": "blog kørekort B, tips kørekort, kørelektioner, trafik sikkerhed"
+    }
+  },
+    "blog": {
+      "title": "Tips og nyheder om kørsel – Kørekort B i Vejle",
+      "description": "Få indsigt i teoriprøven, køreprøven, trafikregler og lokale forhold i Vejle. Tips, guides og nyheder for dig på vej til kørekort B."
+            },
+            "priser_hero": {
+              "title": "Priser på kørekort B i Vejle",
+              "subtitle": "Se vores konkurrencedygtige priser på kørekort B forløb, ekstra lektioner og afbetalingsmuligheder."
+            }
+ 
 
 }

@@ -25,12 +25,13 @@ export async function generateMetadata({
   const t = translations[locale];
 
   return {
-    title: t?.contact_hero?.title,
-    description: t?.contact_hero?.subtitle,
+    title: t?.seo.blog?.title,
+    description: t?.seo.blog?.description,
+    keywords: t?.seo.blog?.keywords,
     alternates: {
       languages: {
-        en: "/en/koerekort-b/blog",
-        da: "/da/koerekort-b/teoriproeve",
+        en: "/en/blog",
+        da: "/da/blog",
       },
     },
   };
@@ -48,8 +49,8 @@ export default async function BlogPage({
   return (
     <>
       <PageHero
-        title={t?.theoryHero?.title}
-        subtitle={t?.theoryHero?.subtitle}
+        title={t?.blog?.title}
+        subtitle={t?.blog?.subtitle}
         image={heroImage}
       />
 
@@ -64,10 +65,4 @@ export default async function BlogPage({
 
 
 
-
  
-/*         title="            Tips og nyheder om kørsel
-"
-        subtitle=" Få indsigt i teoriprøven, køreprøven, trafikregler og lokale forhold i Vejle.
-" */
-   
