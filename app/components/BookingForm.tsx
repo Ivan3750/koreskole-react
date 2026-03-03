@@ -35,7 +35,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ holdId, holdDate, holdTime, h
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/book", {
+      const res = await fetch("http://localhost:8000/book.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ hold_id: holdId, ...formData }),

@@ -1,9 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import "@/app/i18n";
 
 export default function ContactFormPage() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,19 +19,19 @@ export default function ContactFormPage() {
   const contactInfo = [
     {
       icon: Phone,
-      label: "Telefon",
+      label: t("contact_page.phoneLabel"),
       value: "25 00 00 00",
       href: "tel:25000000",
     },
     {
       icon: Mail,
-      label: "Email",
+      label: t("contact_page.emailLabel"),
       value: "lønbæks@gmail.com",
       href: "mailto:lønbæks@gmail.com",
     },
     {
       icon: MapPin,
-      label: "Adresse",
+      label: t("contact_page.addressLabel"),
       value: "Vestre Engvej 7\n7100 Vejle",
       href: "https://maps.google.com/?q=Vestre+Engvej+7,+7100+Vejle",
     },
@@ -58,22 +62,21 @@ export default function ContactFormPage() {
               className="font-semibold text-sm uppercase tracking-wider"
               style={{ color: "var(--color-yellow)" }}
             >
-              Kontakt
+              {t("contact_page.heading")}
             </span>
 
             <h2
               className="font-display text-3xl md:text-4xl font-bold mt-2 mb-6"
               style={{ color: "var(--color-text)" }}
             >
-              Lad os tage en snak
+              {t("contact_page.subheading")}
             </h2>
 
             <p
               className="leading-relaxed mb-10"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Har du spørgsmål om køreuddannelse, priser eller tilmelding?
-              Ring eller skriv — vi svarer hurtigt og ærligt.
+              {t("contact_page.description")}
             </p>
 
             <div className="space-y-6">
@@ -118,13 +121,14 @@ export default function ContactFormPage() {
             <form
               onSubmit={handleSubmit}
               className="space-y-6  backdrop-blur-sm p-10 rounded-3xl border"
-              style={{ borderColor: "var(--color-border)",
+              style={{
+                borderColor: "var(--color-border)",
                 backgroundColor: "var(--color-bg-elevated)",
-             }}
+              }}
             >
               {success && (
                 <div className="text-green-600 font-semibold mb-4">
-                  Tak! Din besked er sendt.
+                  {t("contact_page.successMessage")}
                 </div>
               )}
 
@@ -133,14 +137,14 @@ export default function ContactFormPage() {
                   className="block mb-2 font-semibold"
                   style={{ color: "var(--color-text)" }}
                 >
-                  Navn
+                  {t("contact_page.nameLabel")}
                 </label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Dit navn"
+                  placeholder={t("contact_page.namePlaceholder")}
                   required
                   className="w-full p-4 rounded-xl border"
                   style={{
@@ -155,14 +159,14 @@ export default function ContactFormPage() {
                   className="block mb-2 font-semibold"
                   style={{ color: "var(--color-text)" }}
                 >
-                  E-mail
+                  {t("contact_page.emailLabel")}
                 </label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Din e-mail"
+                  placeholder={t("contact_page.emailPlaceholder")}
                   required
                   className="w-full p-4 rounded-xl border"
                   style={{
@@ -177,13 +181,13 @@ export default function ContactFormPage() {
                   className="block mb-2 font-semibold"
                   style={{ color: "var(--color-text)" }}
                 >
-                  Besked
+                  {t("contact_page.messageLabel")}
                 </label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Skriv din besked her"
+                  placeholder={t("contact_page.messagePlaceholder")}
                   required
                   className="w-full p-4 rounded-xl border h-40"
                   style={{
@@ -198,7 +202,7 @@ export default function ContactFormPage() {
                 className="w-full py-4 rounded-full font-semibold hover:scale-[1.02] transition"
                 style={{ backgroundColor: "var(--color-yellow)", color: "white" }}
               >
-                Send besked
+                {t("contact_page.submitButton")}
               </button>
             </form>
           </div>

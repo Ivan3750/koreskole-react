@@ -1,20 +1,21 @@
 "use client";
 
 import React from "react";
-import car from "@/app/assets/gulbil.png";
+import gulbil from "@/app/assets/gulbil.png";
+import golf from "@/app/assets/car_2.jpeg";
 
 const cars = [
   {
-    name: "Skoda Octavia",
-    year: "2024",
-    image: "/path-to-skoda-image.png",
+    name: "Volkswagen Golf GTI",
+    year: "2021",
+    image: golf.src,
     description:
-      "Skoda Octavia er en komfortabel og sikker undervisningsbil, perfekt til nye elever. Den er let at håndtere, rummelig og udstyret med moderne sikkerhedssystemer samt dual-kontrol, hvilket giver tryghed under hele køreforløbet.",
+      "Volkswagen Golf GTI er en komfortabel og sikker undervisningsbil, perfekt til nye elever. Den er let at håndtere, rummelig og udstyret med moderne sikkerhedssystemer samt dual-kontrol, hvilket giver tryghed under hele køreforløbet.",
   },
   {
     name: "Volkswagen Taigo",
     year: "2025",
-    image: car.src,
+    image: gulbil.src,
     description:
       "Volkswagen Taigo kombinerer moderne teknologi, sikkerhed og nem manøvrering. Den kompakte størrelse gør den ideel til bykørsel, mens dual-kontrol og avancerede assistentsystemer sikrer en tryg læringsoplevelse.",
   },

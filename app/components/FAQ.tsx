@@ -2,53 +2,17 @@
 
 import React, { useState } from "react";
 import { Plus } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import "@/app/i18n";
 
 const FAQ = () => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
-const faqs = [
-  {
-    question: "Hvor lang tid tager det at tage kørekort?",
-    answer:
-      "Det afhænger af hvor hurtigt du gennemfører teori- og kørelektioner, men de fleste får kørekort på 3–6 måneder.",
-  },
-  {
-    question: "Tilbyder I både manuel og automatgear?",
-    answer:
-      "Ja, vi har undervisning i både manuel gear og automatgear",
-  },
-  {
-    question: "Kan jeg tage kørekort, hvis jeg er under 18?",
-    answer:
-      "Ja, du kan starte med teori og kørelektioner fra 17 år, men den praktiske prøve kan først tages ved 18 år.",
-  },
-  {
-    question: "Hvilke dokumenter skal jeg medbringe til første lektion?",
-    answer:
-      "Medbring gyldigt ID, et billede til kørekortet og dit sundhedskort. Hvis du har tidligere kørekort eller certifikater, tag dem også med.",
-  },
-  {
-    question: "Hvordan fungerer prøverne?",
-    answer:
-      "Du skal bestå både en teoretisk prøve og en praktisk køreprøve. Vi hjælper dig med forberedelse til begge dele.",
-  },
-  {
-    question: "Kan jeg betale i rater?",
-    answer:
-      "Ja, vi tilbyder fleksible betalingsplaner, så du kan betale kørekortet over flere rater uden ekstra gebyr.",
-  },
-  {
-    question: "Hvad sker der, hvis jeg ikke består første gang?",
-    answer:
-      "Ingen panik! Du kan tilmelde dig omprøven,  vi tilbyder ekstra lektioner for at sikre, at du er klar næste gang.",
-  },
-  {
-    question: "Tilbyder I kørelektioner i weekenden?",
-    answer:
-      "Ja, vi har weekendhold, så du kan tage lektioner, selvom du har skole eller arbejde i hverdagen.",
-  },
-];
-
+  const faqs = t("faq.items", { returnObjects: true }) as {
+    question: string;
+    answer: string;
+  }[];
 
   return (
     <section
@@ -56,27 +20,32 @@ const faqs = [
       style={{ backgroundColor: "var(--color-bg)" }}
     >
       <div className="max-w-6xl mx-auto px-6">
-         <div className="text-center max-w-2xl mx-auto mb-20">
+
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-20">
           <span
             className="text-sm font-semibold uppercase tracking-wider"
             style={{ color: "var(--color-yellow)" }}
           >
-            FAQ
+            {t("faq.badge")}
           </span>
+
           <h2
             className="mt-4 text-4xl md:text-5xl font-bold"
             style={{ color: "var(--color-text)" }}
           >
-            Ofte stillede spørgsmål
+            {t("faq.title")}
           </h2>
+
           <p
             className="mt-6 text-lg"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            Hurtige svar på de mest almindelige spørgsmål.
+            {t("faq.subtitle")}
           </p>
         </div>
 
+        {/* FAQ List */}
         <div className="max-w-6xl mx-auto space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index;
@@ -92,15 +61,12 @@ const faqs = [
                     : "var(--color-border)",
                 }}
               >
-                {/* Header */}
                 <button
-                  onClick={() =>
-                    setActiveIndex(isOpen ? null : index)
-                  }
-                  className="w-full flex items-center justify-between gap-6 px-4 py-2 text-left"
+                  onClick={() => setActiveIndex(isOpen ? null : index)}
+                  className="w-full flex items-center justify-between gap-6 px-4 py-4 text-left"
                 >
                   <span
-                    className="normal-text font-medium"
+                    className="font-medium"
                     style={{ color: "var(--color-text)" }}
                   >
                     {faq.question}
@@ -119,7 +85,6 @@ const faqs = [
                   </span>
                 </button>
 
-                {/* Content */}
                 <div
                   className={`grid transition-all duration-300 ease-in-out ${
                     isOpen
@@ -129,17 +94,19 @@ const faqs = [
                 >
                   <div className="overflow-hidden">
                     <p
-                      className="px-4 pb-4 normal-text leading-relaxed"
+                      className="px-4 pb-4 leading-relaxed"
                       style={{ color: "var(--color-text-secondary)" }}
                     >
                       {faq.answer}
                     </p>
                   </div>
                 </div>
+
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

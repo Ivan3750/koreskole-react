@@ -1,58 +1,17 @@
 "use client";
 
 import React from "react";
+import { useTranslation } from "react-i18next";
+import "@/app/i18n";
 
 const Timeline = () => {
-  const steps = [
-    {
-      number: "01",
-      title: "Intromøde og tilmelding",
-      description:
-        "Start med et uforpligtende møde, hvor du lærer forløbet at kende. Efter tilmelding får du din lektionsplan og kørelærer.",
-    },
-    {
-      number: "02",
-      title: "Teoriundervisning",
-      description:
-        "Teori én gang om ugen med ubegrænset adgang — så du kan blive helt tryg og klar til prøven.",
-    },
-    {
-      number: "03",
-      title: "Førstehjælp & lægeerklæring",
-      description:
-        "8 timers færdselsrelateret førstehjælp samt lægeerklæring inden teoriprøven.",
-    },
-    {
-      number: "04",
-      title: "Manøvregård",
-      description:
-        "Første kørsel på lukket bane, hvor du lærer bilens grundlæggende kontrol.",
-    },
-    {
-      number: "05",
-      title: "Køretimer i trafikken",
-      description:
-        "Du kører i rigtig trafik og omsætter teori til praksis sammen med din lærer.",
-    },
-    {
-      number: "06",
-      title: "Køreteknisk anlæg",
-      description:
-        "Træn bremsning, kontrol og risikosituationer i sikre omgivelser.",
-    },
-    {
-      number: "07",
-      title: "Teoriprøve",
-      description:
-        "Online øvelser og afsluttende prøve hos politiet.",
-    },
-    {
-      number: "08",
-      title: "Køreprøve",
-      description:
-        "Den sidste test — bestå og få dit kørekort i hånden.",
-    },
-  ];
+  const { t } = useTranslation();
+
+  const steps = t("timeline.steps", { returnObjects: true }) as {
+    number: string;
+    title: string;
+    description: string;
+  }[];
 
   return (
     <section
@@ -67,14 +26,14 @@ const Timeline = () => {
             className="text-4xl font-bold mb-4"
             style={{ color: "var(--color-text)" }}
           >
-            Din vej til kørekortet
+            {t("timeline.title")}
           </h2>
 
           <p
             className="text-lg"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            8 klare trin fra første møde til kørekortet i hånden.
+            {t("timeline.subtitle")}
           </p>
         </div>
 
@@ -91,7 +50,7 @@ const Timeline = () => {
             {steps.map((step, i) => (
               <div key={i} className="relative pl-16">
 
-                {/* Dot */}
+                {/* Number */}
                 <div
                   className="absolute left-0 top-1 w-10 h-10 rounded-xl flex items-center justify-center font-bold"
                   style={{

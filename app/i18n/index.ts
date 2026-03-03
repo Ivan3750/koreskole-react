@@ -9,10 +9,10 @@ import en from './locales/en/translation.json';
 import da from './locales/da/translation.json';
 
 i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
+   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
+    lng: "da",  
+    fallbackLng: "en",
     debug: false,
     interpolation: {
       escapeValue: false,
