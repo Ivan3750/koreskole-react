@@ -3,44 +3,79 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useParams } from "next/navigation";
 import "@/app/i18n";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const params = useParams();
+  const locale = params?.locale as string;
 
-  const navItems = t("footer.navItems", { returnObjects: true }) as Array<{ label: string; href: string }>;
-  const footerItems = t("footer.footerItems", { returnObjects: true }) as Array<{ label: string; href: string }>;
+  const withLocale = (path: string) => {
+    if (!locale) return path;
+    return `/${locale}${path.startsWith("/") ? path : `/${path}`}`;
+  };
+
+  const navItems = t("footer.navItems", {
+    returnObjects: true,
+  }) as Array<{ label: string; href: string }>;
+
+  const footerItems = t("footer.footerItems", {
+    returnObjects: true,
+  }) as Array<{ label: string; href: string }>;
 
   return (
-    <footer className="py-16" style={{ backgroundColor: "var(--color-bg-layout)" }}>
+    <footer
+      className="py-16"
+      style={{ backgroundColor: "var(--color-bg-layout)" }}
+    >
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12">
+          
           {/* Logo + description */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div>
-                <span className="font-semibold text-lg" style={{ color: "var(--color-text)" }}>
+                <span
+                  className="font-semibold text-lg"
+                  style={{ color: "var(--color-text)" }}
+                >
                   {t("footer.logo")}
                 </span>
-                <span className="text-sm block -mt-1" style={{ color: "var(--color-text-secondary)" }}>
-                  Køreskole
+                <span
+                  className="text-sm block -mt-1"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  {t("footer.school")}
                 </span>
               </div>
             </div>
-            <p className="leading-relaxed max-w-md" style={{ color: "var(--color-text-secondary)" }}>
+
+            <p
+              className="leading-relaxed max-w-md"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
               {t("footer.description")}
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="font-semibold mb-4" style={{ color: "var(--color-yellow)" }}>
+            <h4
+              className="font-semibold mb-4"
+              style={{ color: "var(--color-yellow)" }}
+            >
               {t("footer.navigation")}
             </h4>
+
             <ul className="space-y-3">
-              {navItems.map((item: any) => (
+              {navItems.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="block hover:text-yellow-hover" style={{ color: "var(--color-text-secondary)" }}>
+                  <Link
+                    href={withLocale(item.href)}
+                    className="block hover:text-yellow-hover transition-colors"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
                     {item.label}
                   </Link>
                 </li>
@@ -50,13 +85,21 @@ const Footer = () => {
 
           {/* Kørekort B links */}
           <div>
-            <h4 className="font-semibold mb-4" style={{ color: "var(--color-yellow)" }}>
-              {t("footer.korekrtB")}
+            <h4
+              className="font-semibold mb-4"
+              style={{ color: "var(--color-yellow)" }}
+            >
+              {t("footer.korekortB")}
             </h4>
+
             <ul className="space-y-3">
-              {footerItems.map((item: any) => (
+              {footerItems.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="block hover:text-yellow-hover" style={{ color: "var(--color-text-secondary)" }}>
+                  <Link
+                    href={withLocale(item.href)}
+                    className="block hover:text-yellow-hover transition-colors"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
                     {item.label}
                   </Link>
                 </li>
@@ -66,20 +109,36 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4" style={{ color: "var(--color-yellow)" }}>
+            <h4
+              className="font-semibold mb-4"
+              style={{ color: "var(--color-yellow)" }}
+            >
               {t("footer.contact")}
             </h4>
+
             <ul className="space-y-3">
               <li>
-                <a href={`tel:${t("footer.phone").replace(/\s/g,"")}`} className="flex items-center gap-2 hover:text-yellow-hover" style={{ color: "var(--color-text-secondary)" }}>
-                  <Phone className="w-4 h-4" /> {t("footer.phone")}
+                <a
+                  href={`tel:${t("footer.phone").replace(/\s/g, "")}`}
+                  className="flex items-center gap-2 hover:text-yellow-hover transition-colors"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  <Phone className="w-4 h-4" />
+                  {t("footer.phone")}
                 </a>
               </li>
+
               <li>
-                <a href={`mailto:${t("footer.email")}`} className="flex items-center gap-2 hover:text-yellow-hover" style={{ color: "var(--color-text-secondary)" }}>
-                  <Mail className="w-4 h-4" /> {t("footer.email")}
+                <a
+                  href={`mailto:${t("footer.email")}`}
+                  className="flex items-center gap-2 hover:text-yellow-hover transition-colors"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  <Mail className="w-4 h-4" />
+                  {t("footer.email")}
                 </a>
               </li>
+
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5" />
                 <span style={{ color: "var(--color-text-secondary)" }}>
@@ -91,11 +150,22 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style={{ borderColor: "var(--color-border)" }}>
-          <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
-            © {new Date().getFullYear()} {t("footer.logo")} Køreskole. {t("footer.copyright")}
+        <div
+          className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          style={{ borderColor: "var(--color-border)" }}
+        >
+          <p
+            className="text-sm"
+            style={{ color: "var(--color-text-secondary)" }}
+          >
+            © {new Date().getFullYear()} {t("footer.logo")}{" "}
+            {t("footer.school")}. {t("footer.copyright")}
           </p>
-          <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
+
+          <p
+            className="text-sm"
+            style={{ color: "var(--color-text-secondary)" }}
+          >
             {t("footer.tagline")}
           </p>
         </div>
