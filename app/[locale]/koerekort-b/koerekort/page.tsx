@@ -59,8 +59,8 @@ export default async function Koerekort({
       />
 
       <Info></Info>
-      <Priser></Priser>
-      <TimeLine></TimeLine>
+   {/*    <Priser></Priser>
+      <TimeLine></TimeLine> */}
       <HoldStart></HoldStart>
       <PassStrategySection></PassStrategySection>
       <FAQ></FAQ>
