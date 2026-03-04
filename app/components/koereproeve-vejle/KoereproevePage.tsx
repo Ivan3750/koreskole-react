@@ -2,33 +2,27 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Head from "next/head";
-import { useTranslation } from "react-i18next";
+ import { useTranslation } from "react-i18next";
 import "@/app/i18n";
+import { useParams } from "next/navigation";
 
 export default function KoereproevePage() {
   const { t } = useTranslation();
-
+    const params = useParams();
+    const locale = params?.locale as string;
+  
+ const withLocale = (path: string) => {
+    if (!locale) return path;
+    return `/${locale}${path.startsWith("/") ? path : `/${path}`}`;
+  };
   return (
     <>
-      <Head>
-        <title>{t("koereproeve.title")}</title>
-        <meta
-          name="description"
-          content={t("koereproeve.description")}
-        />
-        <meta
-          name="keywords"
-          content={t("koereproeve.keywords")}
-        />
-      </Head>
+       
 
       <div style={{ background: "var(--color-bg)" }}>
         <div className="max-w-7xl mx-auto px-6 py-20 space-y-24">
-
           {/* Hero Section */}
           <section className="grid lg:grid-cols-2 gap-14 items-center">
-
             <div className="space-y-6">
               <span
                 className="px-4 py-1 rounded-full text-sm font-semibold"
@@ -40,25 +34,31 @@ export default function KoereproevePage() {
                 {t("koereproeve.tag")}
               </span>
 
-              <h1 className="text-4xl font-bold" style={{ color: "var(--color-text)" }}>
+              <h1
+                className="text-4xl font-bold"
+                style={{ color: "var(--color-text)" }}
+              >
                 {t("koereproeve.heading")}
               </h1>
 
-              <p className="text-lg leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+              <p
+                className="text-lg leading-relaxed"
+                style={{ color: "var(--color-text-secondary)" }}
+              >
                 {t("koereproeve.intro")}
               </p>
 
-              <p className="text-base leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+              <p
+                className="text-base leading-relaxed"
+                style={{ color: "var(--color-text-secondary)" }}
+              >
                 {t("koereproeve.note")}
               </p>
 
               <Link
-                href="/koerekort-b/"
-                className="inline-block px-8 py-3 rounded-xl font-semibold transition hover:scale-[1.03]"
-                style={{
-                  background: "var(--color-yellow)",
-                  color: "white",
-                }}
+                href={withLocale("/koerekort-b/koerekort/")}
+                className="px-6 py-3 rounded-xl font-semibold"
+                style={{ background: "var(--color-yellow)", color: "#000" }}
               >
                 {t("koereproeve.cta")}
               </Link>
@@ -66,16 +66,30 @@ export default function KoereproevePage() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image src="/images/driving-modern.jpg" alt="" fill className="object-cover" />
+                <Image
+                  src="/images/driving-modern.jpg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image src="/images/car-interior.jpg" alt="" fill className="object-cover" />
+                <Image
+                  src="/images/car-interior.jpg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="relative h-44 rounded-2xl overflow-hidden col-span-2">
-                <Image src="/images/vejle-city.jpg" alt="" fill className="object-cover" />
+                <Image
+                  src="/images/vejle-city.jpg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
-
           </section>
 
           {/* Info Cards Section */}
@@ -95,7 +109,10 @@ export default function KoereproevePage() {
                 }}
               >
                 <h3 className="font-bold">{t(`koereproeve.cards.${key}`)}</h3>
-                <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                <p
+                  className="text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
                   {t(`koereproeve.cards.${descKey}`)}
                 </p>
               </div>
@@ -123,9 +140,9 @@ export default function KoereproevePage() {
             </p>
 
             <Link
-              href="/koerekort-b/"
-              className="font-semibold"
-              style={{ color: "var(--color-yellow)" }}
+                href={withLocale("/koerekort-b/koerekort/")}
+              className="px-6 py-3 rounded-xl font-semibold"
+              style={{ background: "var(--color-yellow)", color: "#000" }}
             >
               {t("koereproeve.cta")}
             </Link>
@@ -133,9 +150,10 @@ export default function KoereproevePage() {
 
           {/* Location Section */}
           <section className="grid lg:grid-cols-2 gap-16 items-center">
-
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold">{t("koereproeve.where.heading")}</h2>
+              <h2 className="text-2xl font-bold">
+                {t("koereproeve.where.heading")}
+              </h2>
 
               <p style={{ color: "var(--color-text-secondary)" }}>
                 {t("koereproeve.where.step1")}
@@ -145,46 +163,19 @@ export default function KoereproevePage() {
                 {t("koereproeve.where.step2")}
               </p>
 
-              <Link
-                href="/koerekort-b/"
-                className="font-semibold"
-                style={{ color: "var(--color-yellow)" }}
-              >
-                {t("koereproeve.cta")}
-              </Link>
             </div>
 
             <div className="relative h-72 rounded-2xl overflow-hidden">
-              <Image src="/images/driving-test.jpg" alt="" fill className="object-cover" />
+              <Image
+                src="/images/driving-test.jpg"
+                alt=""
+                fill
+                className="object-cover"
+              />
             </div>
           </section>
 
-          {/* CTA Section */}
-          <section
-            className="p-12 rounded-2xl text-center space-y-6"
-            style={{
-              background: "var(--color-yellow-1)",
-              border: "1px solid var(--color-yellow-3)",
-            }}
-          >
-            <h2 className="text-2xl font-bold">{t("koereproeve.ready.heading")}</h2>
-
-            <p style={{ color: "var(--color-text-secondary)" }}>
-              {t("koereproeve.ready.text")}
-            </p>
-
-            <Link
-              href="/koerekort-b/"
-              className="inline-block px-10 py-4 rounded-xl font-semibold transition hover:scale-[1.03]"
-              style={{
-                background: "var(--color-yellow)",
-                color: "white",
-              }}
-            >
-              {t("koereproeve.cta")}
-            </Link>
-          </section>
-
+       
         </div>
       </div>
     </>

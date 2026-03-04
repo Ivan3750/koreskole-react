@@ -8,7 +8,7 @@ import Contact from "@/app/components/Contact";
 import HoldStart from "@/app/components/home/HoldStart";
 import Priser from "@/app/components/koereproeve-vejle/Priser";
 import type { Metadata } from "next";
-
+import hero from "../../../assets/steering-wheel.jpeg";
 import en from "../../../i18n/locales/en/translation.json";
 import da from "../../../i18n/locales/da/translation.json";
 

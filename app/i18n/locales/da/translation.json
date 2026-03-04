@@ -7,7 +7,7 @@
     "sign_up": "Tilmeld hold",
     "see_prices": "Se priser",
     "about_title_label": "Om os",
-    "about_heading": "Lønbæks Køreskole – Din køreskole i Vejle",
+    "about_heading": "Lønbæks Køreskole - Din køreskole i Vejle",
     "about_paragraph1": "Hos Lønbæks Køreskole i Vejle får du en personlig køreuddannelse med fokus på både læring og trivsel. Undervisningen foregår i et roligt tempo, så du føler dig godt forberedt til både teori- og køreprøven.",
     "about_paragraph2": "Vi har mange års erfaring i Vejle og lokalområdet og har hjulpet mange elever sikkert gennem deres kørekortforløb. Vores lokalkendskab og personlige vejledning giver dig de bedste forudsætninger for at bestå.",
     "about_paragraph3": "Bliv en sikker og selvsikker bilist med Lønbæks Køreskole i Vejle. Tilmeld dig i dag og start din køreuddannelse med det samme!"
@@ -22,17 +22,31 @@
     "select_button": "Vælg hold",
     "loading": "Indlæser..."
   },
-  "instructors": {
-    "label": "Mød Din Kørelærer",
-    "heading": "En Passioneret Kørelærer Med Hjerte for Sikkerhed",
-    "paragraph1": "Anna Marie Lønbærk har været kørelærer i Vejle siden 1984. Med over 40 års erfaring har hun uddannet tusindvis af elever og hjulpet dem med at blive sikre, ansvarsbevidste bilister.",
-    "paragraph2": "Huns filosofi er enkel: Undervisningen skal være både lærerig og hyggelig. En afslappet atmosfære skaber de bedste betingelser for læring.",
-    "feature1_title": "Personlig Tilgang",
-    "feature1_desc": "Undervisning tilpasset den enkelte elev",
-    "feature2_title": "Fleksible Tider",
-    "feature2_desc": "Hverdage og weekender efter aftale",
-    "experience_years": "40+ år",
-    "experience_label": "erfaring"
+ "instructors": {
+    "anna": {
+      "label": "Mød Din Kørelærer",
+      "heading": "En Passioneret Kørelærer Med Hjerte for Sikkerhed",
+      "paragraph1": "Anna Marie Lønbæk har været kørelærer i Vejle siden 1984. Med over 40 års erfaring har hun uddannet tusindvis af elever og hjulpet dem med at blive sikre, ansvarsbevidste bilister.",
+      "paragraph2": "Hendes filosofi er enkel: Undervisningen skal være både lærerig og hyggelig. En afslappet atmosfære skaber de bedste betingelser for læring.",
+      "feature1_title": "Personlig Tilgang",
+      "feature1_desc": "Undervisning tilpasset den enkelte elev",
+      "feature2_title": "Fleksible Tider",
+      "feature2_desc": "Hverdage og weekender efter aftale",
+      "experience_years": "40+ år",
+      "experience_label": "Erfaring"
+    },
+    "michael": {
+      "label": "Mød Din Kørelærer",
+      "heading": "Erfaren Kørelærer med Fokus på Tryghed",
+      "paragraph1": "Michael Lønbæk har undervist i Vejle siden 1990 og har hjulpet hundreder af elever med at opnå kørekortet trygt og sikkert.",
+      "paragraph2": "Michael tror på, at en rolig og struktureret undervisning giver de bedste resultater, samtidig med at eleverne føler sig trygge bag rattet.",
+      "feature1_title": "Erfaren Vejleder",
+      "feature1_desc": "Praktisk og teoretisk støtte til alle niveauer",
+      "feature2_title": "Tilpasset Undervisning",
+      "feature2_desc": "Fleksible lektioner efter behov",
+      "experience_years": "30+ år",
+      "experience_label": "Erfaring"
+    }
   },
   "services": {
     "label": "Vores Ydelser",
@@ -90,7 +104,7 @@
     "hours": {
       "theory": "Efter aftale",
       "driving": "Fleksible tider",
-      "phone": "08:00 – 20:00"
+      "phone": "08:00 - 20:00"
     }
   },
   "footer": {
@@ -197,7 +211,7 @@
     },
     "package": {
       "badge": "Populær pakke",
-      "title": "Lovpakke – komplet kørekort",
+      "title": "Lovpakke - komplet kørekort",
       "description": "Med vores lovpakke får du alt inkluderet fra start til slut. Ingen skjulte gebyrer — kun en tryg og struktureret vej til dit kørekort.",
       "price": "15.500 kr.",
       "cta": "Tilmeld dig i dag",
@@ -295,7 +309,7 @@
         "text": "Du skal være fyldt 17 år for at tage kørekort B, men kan starte uddannelsen allerede som 16 år og 9 måneder."
       }
     ],
-    "closing": "Hos Lønbæks Køreskole guider vi dig sikkert igennem hele forløbet – fra teoriundervisning til den dag, du får dit kørekort i hånden. Start din rejse mod kørekort B i dag!",
+    "closing": "Hos Lønbæks Køreskole guider vi dig sikkert igennem hele forløbet - fra teoriundervisning til den dag, du får dit kørekort i hånden. Start din rejse mod kørekort B i dag!",
     "imageAltMain": "Kørekort B uddannelse",
     "imageAltSecondary": "Personbil kørekort"
   },
@@ -378,7 +392,7 @@
     "items": [
       {
         "question": "Hvor lang tid tager det at tage kørekort?",
-        "answer": "Det afhænger af hvor hurtigt du gennemfører teori- og kørelektioner, men de fleste får kørekort på 3–6 måneder."
+        "answer": "Det afhænger af hvor hurtigt du gennemfører teori- og kørelektioner, men de fleste får kørekort på 3-6 måneder."
       },
       {
         "question": "Tilbyder I både manuel og automatgear?",
@@ -419,7 +433,7 @@
   "prices_section": {
     "package": {
       "badge": "Mest populære pakke",
-      "title": "Lovpakke – komplet kørekort",
+      "title": "Lovpakke - komplet kørekort",
       "description": "Med vores lovpakke får du alt inkluderet fra start til slut. Ingen skjulte gebyrer, ingen uforudsete omkostninger — kun en tryg og struktureret vej til dit kørekort.",
       "price": "Fra 15.500 kr.",
       "cta": "Læs mere",
@@ -471,7 +485,7 @@
   "theory": {
     "meta": {
       "title": "Teoriprøve i Vejle | Kørekort B | Bestå første gang",
-      "description": "Teoriprøve i Vejle – komplet guide til kørekort B. Læs hvordan teoriprøven foregår, hvor den afholdes, fejlgrænse, krav og hvordan du består første gang.",
+      "description": "Teoriprøve i Vejle - komplet guide til kørekort B. Læs hvordan teoriprøven foregår, hvor den afholdes, fejlgrænse, krav og hvordan du består første gang.",
       "keywords": "teoriprøve Vejle, kørekort B Vejle, bestå teoriprøve, Borgerservice Vejle, teoriprøve kørekort"
     },
     "hero": {
@@ -522,13 +536,13 @@
   },
     "koereproeve": {
     "title": "Køreprøve i Vejle | Praktisk prøve | Kørekort B",
-    "description": "Køreprøve i Vejle – komplet guide til den praktiske prøve til kørekort B. Læs hvad du bliver testet i, hvor prøven foregår og hvordan du består første gang.",
+    "description": "Køreprøve i Vejle - komplet guide til den praktiske prøve til kørekort B. Læs hvad du bliver testet i, hvor prøven foregår og hvordan du består første gang.",
     "keywords": "køreprøve Vejle, praktisk prøve Vejle, kørekort B Vejle, bestå køreprøve, køreskole Vejle",
     "tag": "Køreprøve i Vejle",
     "heading": "Sådan består du køreprøven første gang",
     "intro": "Skal du til køreprøve i Vejle? Her får du en komplet guide...",
     "note": "Køreprøven er den sidste del af dit kørekortforløb...",
-    "cta": "Læs mere om kørekort B forløbet →",
+    "cta": "Læs mere",
     "cards": {
       "duration": "30-45 minutter",
       "durationText": "Den praktiske prøve varer typisk op til 45 minutter.",
@@ -585,27 +599,27 @@
  
   "seo": {
     "home": {
-      "title": "Køreskole Vejle – Tag kørekort B hurtigt og sikkert",
+      "title": "Køreskole Vejle - Tag kørekort B hurtigt og sikkert",
       "description": "Velkommen til Køreskole Vejle. Vi tilbyder kørekort B kurser med høj beståelsesrate og personlig undervisning.",
       "keywords": "køreskole Vejle, kørekort B, kørelektioner, teoriundervisning"
     },
     "holdstart-vejle": {
-      "title": "Holdstart i Vejle – Tilmeld dig kørekort B",
+      "title": "Holdstart i Vejle - Tilmeld dig kørekort B",
       "description": "Se alle kommende holdstartdatoer for kørekort B i Vejle. Find en tid der passer dig og start din kørekortrejse.",
       "keywords": "holdstart Vejle, kørekort B Vejle, kørelektioner"
     },
     "koerekort_b_koerekort": {
-      "title": "Kørekort B i Vejle – Komplett guide",
-      "description": "Alt hvad du skal vide om kørekort B i Vejle – teori, kørelektioner og praktiske prøver.",
+      "title": "Kørekort B i Vejle - Komplett guide",
+      "description": "Alt hvad du skal vide om kørekort B i Vejle - teori, kørelektioner og praktiske prøver.",
       "keywords": "kørekort B Vejle, bilkørekort, kørelektioner"
     },
     "koerekort_b_koereproeve": {
-      "title": "Køreprøve i Vejle – Bestå første gang",
+      "title": "Køreprøve i Vejle - Bestå første gang",
       "description": "Få en komplet guide til køreprøven i Vejle. Læs hvad du bliver testet i og hvordan du består første gang.",
       "keywords": "køreprøve Vejle, praktisk prøve kørekort B, bestå køreprøve"
     },
     "koerekort_b_teoriproeve": {
-      "title": "Teoriprøve i Vejle – Guide til kørekort B",
+      "title": "Teoriprøve i Vejle - Guide til kørekort B",
       "description": "Sådan består du teoriprøven i Vejle. Læs om fejlgrænse, spørgsmålstyper og bedste strategier.",
       "keywords": "teoriprøve Vejle, kørekort B teori, bestå teoriprøve"
     },
@@ -625,13 +639,13 @@
       "keywords": "om os, køreskole Vejle, Lønbæks Køreskole, kørekort B"
     },
     "blog": {
-      "title": "Blog – Tips og guides til kørekort B",
+      "title": "Blog - Tips og guides til kørekort B",
       "description": "Læs vores blog med tips, råd og guides til at bestå kørekort B og køre sikkert i trafikken.",
       "keywords": "blog kørekort B, tips kørekort, kørelektioner, trafik sikkerhed"
     }
   },
     "blog": {
-      "title": "Tips og nyheder om kørsel – Kørekort B i Vejle",
+      "title": "Tips og nyheder om kørsel - Kørekort B i Vejle",
       "description": "Få indsigt i teoriprøven, køreprøven, trafikregler og lokale forhold i Vejle. Tips, guides og nyheder for dig på vej til kørekort B."
             },
             "priser_hero": {

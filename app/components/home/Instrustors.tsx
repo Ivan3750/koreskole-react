@@ -4,7 +4,8 @@ import Image from "next/image";
 import Anna_Marie_Lønbæk_img from "../../assets/Anna-Marie_Lønbæk.jpeg";
 import Michael_Lønbæk_img from "../../assets/Michael_Lønbæk.jpeg";
 
-export const Instructors = () => {
+
+const Instructors = () => {
   const instructors = [
     {
       name: "Anna Marie Lønbæk",
@@ -53,7 +54,8 @@ export const Instructors = () => {
           {instructors.map((p, i) => (
             <div
               key={i}
-              className="group rounded-3xl overflow-hidden bg-white  transition-all duration-500 hover:-translate-y-2"
+      style={{ backgroundColor: "var(--color-bg-layout)" }}
+              className="group rounded-3xl overflow-hidden   transition-all duration-500 hover:-translate-y-2"
             >
               {/* IMAGE */}
               <div className="relative aspect-[4/5] overflow-hidden">
@@ -85,3 +87,6 @@ export const Instructors = () => {
     </section>
   );
 };
+
+
+export default Instructors

@@ -19,7 +19,7 @@ const Hero = () => {
         className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-black/75" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
         <div className="max-w-3xl space-y-6">

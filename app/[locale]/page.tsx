@@ -3,7 +3,7 @@ import AboutSection from "../components/home/AboutSection";
 import Services from "../components/home/Services";
 import HoldStart from "../components/home/HoldStart";
 import Testimonials from "../components/Testimonials";
-import Instructors from "../components/home/Instructors";
+import Instructors from "../components/home/Instrustors";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 

@@ -3,12 +3,11 @@
 import { useEffect, useState } from "react";
 import CoursesPage from "../components/admin/CoursesPage";
 import BlogPage from "../components/admin/BlogPage";
-import { Contact } from "lucide-react";
 import ContactsPage from "../components/admin/ContactsPage";
 import PasswordPage from "../components/admin/PasswordPage";
 
 const API = "http://localhost:8000";
-
+ 
 type Page = "courses" | "blog" | "contacts" | "password";
 
 export default function Page() {
@@ -56,7 +55,6 @@ export default function Page() {
     await fetch(`${API}/logout.php`, {
       credentials: "include",
     });
-
     setLoggedIn(false);
   };
 
@@ -71,8 +69,7 @@ export default function Page() {
 
   /* ======================================================
       LOGIN VIEW
-     ====================================================== */
-
+  ====================================================== */
   if (!loggedIn) {
     return (
       <div className="flex h-screen items-center justify-center bg-gray-100">
@@ -109,19 +106,18 @@ export default function Page() {
 
   /* ======================================================
       ADMIN PANEL VIEW
-     ====================================================== */
-
+  ====================================================== */
   const renderPage = () => {
     switch (activePage) {
       case "courses":
         return <CoursesPage />;
-        case "blog":
+      case "blog":
         return <BlogPage />;
-        case "contacts":
-        return <ContactsPage></ContactsPage>
-        case "password":
-      return <PasswordPage/>
-      }
+      case "contacts":
+        return <ContactsPage />;
+      case "password":
+        return <PasswordPage />;
+    }
   };
 
   return (

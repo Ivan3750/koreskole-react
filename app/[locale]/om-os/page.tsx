@@ -1,6 +1,6 @@
 import PageHero from "../../components/PageHero";
 import heroImage from "../../assets/hero-driving.jpg";
-import { Instructors } from "../../components/om-os/Instrustors";
+import Instructors  from "../../components/om-os/Instructors";
 import AboutIntro from "../../components/om-os/AboutInro";
 import Testimonials from "../../components/Testimonials";
 import FAQ from "../../components/FAQ";

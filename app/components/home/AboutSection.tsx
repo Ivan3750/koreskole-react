@@ -2,7 +2,8 @@
 
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";  
-
+import school from "../../assets/school_1.jpeg";
+import school_inside from "../../assets/school_inside_1.jpeg";
 const AboutSection = () => {
   const { t } = useTranslation();
 
@@ -22,7 +23,7 @@ const AboutSection = () => {
             </span>
 
             <h2
-              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-6 leading-tight"
+              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-6 leading-tight text-balance"
               style={{ color: "var(--color-text)" }}
             >
               {t("home.about_heading")}
@@ -65,7 +66,7 @@ const AboutSection = () => {
                 style={{ borderColor: "var(--color-border)" }}
               >
                 <img
-                  src="https://askproject.net/roadry/wp-content/uploads/sites/245/2025/08/transportation-view-on-the-car-from-the-air-car-EDQZB5E.jpg"
+                  src={school.src}
                   alt="Køreundervisning"
                   className="w-full h-full object-cover"
                 />
@@ -80,7 +81,7 @@ const AboutSection = () => {
                 style={{ borderColor: "var(--color-border)" }}
               >
                 <img
-                  src="https://askproject.net/roadry/wp-content/uploads/sites/245/2025/08/transportation-view-on-the-car-from-the-air-car-EDQZB5E.jpg"
+                  src={school_inside.src}
                   alt="Elev i køreskole"
                   className="w-full h-full object-cover"
                 />

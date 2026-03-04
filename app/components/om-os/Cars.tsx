@@ -52,7 +52,10 @@ const CarsAlternating = () => {
                   <p className="text-sm font-medium text-yellow-500">
                     Årgang {car.year}
                   </p>
-                  <p className="text-lg text-neutral-600 leading-relaxed">
+                  <p
+          className="normal-text mb-6"
+          style={{ color: "var(--color-text-secondary)" }}
+        >
                     {car.description}
                   </p>
                 </div>

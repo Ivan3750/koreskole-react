@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import img from "@/app/assets/small-school.png";
+import img from "@/app/assets/school_1.jpeg";
 
 const AboutIntro = () => {
   return (
@@ -25,7 +25,7 @@ const AboutIntro = () => {
               className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-6 leading-tight"
               style={{ color: "var(--color-text)" }}
             >
-              Lønbæks Køreskole – Din køreskole i Vejle
+              Lønbæks Køreskole - Din køreskole i Vejle
             </h2>
 
             <p
