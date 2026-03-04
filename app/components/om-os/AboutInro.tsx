@@ -1,9 +1,13 @@
 "use client";
 
 import React from "react";
+import { useTranslation } from "react-i18next";
+import "@/app/i18n";
 import img from "@/app/assets/school_1.jpeg";
 
 const AboutIntro = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="py-20 md:py-28 lg:py-40 max-w-7xl mx-auto"
@@ -18,44 +22,35 @@ const AboutIntro = () => {
               className="font-semibold text-sm uppercase tracking-widest"
               style={{ color: "var(--color-yellow)" }}
             >
-              Om os
+              {t("about.label")}
             </span>
 
             <h2
               className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-6 leading-tight"
               style={{ color: "var(--color-text)" }}
             >
-              Lønbæks Køreskole - Din køreskole i Vejle
+              {t("about.heading")}
             </h2>
 
             <p
               className="normal-text mb-6"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Hos <strong>Lønbæks Køreskole i Vejle</strong> får du en personlig
-              køreuddannelse med fokus på både læring og trivsel. Undervisningen
-              foregår i et roligt tempo, så du føler dig godt forberedt til både
-              <strong> teori- og køreprøven</strong>.
+              {t("about.paragraph1")}
             </p>
 
             <p
               className="normal-text mb-6"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Vi har mange års erfaring i Vejle og lokalområdet og har hjulpet
-              mange elever sikkert gennem deres kørekortforløb. Vores{" "}
-              <strong>lokalkendskab</strong> og{" "}
-              <strong>personlige vejledning</strong> giver dig de bedste
-              forudsætninger for at bestå.
+              {t("about.paragraph2")}
             </p>
 
             <p
               className="normal-text"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Bliv en sikker og selvsikker bilist med{" "}
-              <strong>Lønbæks Køreskole i Vejle</strong>. Tilmeld dig i dag og
-              start din køreuddannelse med det samme!
+              {t("about.paragraph3")}
             </p>
           </div>
 
@@ -63,7 +58,7 @@ const AboutIntro = () => {
           <div className="order-2 lg:order-1">
             <img
               src={img.src}
-              alt="Køreundervisning"
+              alt={t("about.label")}
               className="w-full h-full max-h-[500px] object-cover rounded-2xl"
             />
           </div>

@@ -426,8 +426,8 @@
   },
   "licenseB": {
     "hero": {
-      "title": "Driving license category B in Vejle — your road to freedom",
-      "subtitle": "Dreaming of freedom on the road? At Køreskole Vejle, we help you get your Category B license quickly, safely, and at a fair price. With more than 15 years of experience in Vejle, we know the local routes and exactly what it takes to pass the first time."
+      "title": "Driving license category B — your road to freedom",
+      "subtitle": "Dreaming of freedom on the road? At Køreskole Vejle, we help you get your Category B license quickly, safely, and at a fair price."
     }
   },
   "prices_section": {
@@ -531,7 +531,7 @@
     }
   },
   "theoryHero": {
-    "title": "Theory Test in Vejle — How to Pass the First Time",
+    "title": "Theory Test - How to Pass the First Time",
     "subtitle": "Get a clear overview of how the theory test works in Vejle, how many mistakes are allowed, and what you should focus on to pass successfully."
   },
    
@@ -646,12 +646,33 @@
     }
   },
   "blog": {
-      "title": "Driving Tips and News - Driving License B in Vejle",
+      "title": "Driving Tips and News",
       "subtitle": "Get insights on theory tests, practical driving tests, traffic rules, and local conditions in Vejle. Tips, guides, and news for your journey to Driving License B."
      },
      "priser_hero": {
       "title": "Prices for Driving License B in Vejle",
       "subtitle": "See our competitive prices for driving license B. We offer packages, extra lessons, and flexible payment options to fit your needs."
-     }
+     },
+      "about": {
+    "label": "About Us",
+    "heading": "Lønbæks Driving School – Your Driving School in Vejle",
+    "paragraph1": "At Lønbæks Driving School in Vejle, you receive personalized driver training focused on both learning and confidence. Lessons are conducted at a calm pace, ensuring you are well prepared for both the theory and driving test.",
+    "paragraph2": "With many years of experience in Vejle and the surrounding area, we have helped numerous students safely complete their driving license journey. Our local knowledge and personal guidance give you the best conditions to succeed.",
+    "paragraph3": "Become a safe and confident driver with Lønbæks Driving School in Vejle. Enroll today and start your driving education right away!"
+  },
+   "cars": {
+    "golf": {
+      "name": "Volkswagen Golf GTI",
+      "year_label": "Model Year",
+      "year": "2021",
+      "description": "The Volkswagen Golf GTI is a modern and dynamic training vehicle offering high comfort and advanced safety systems. It is stable on the road, easy to maneuver, and equipped with dual controls to ensure maximum safety for both student and instructor throughout the entire training process."
+    },
+    "taigo": {
+      "name": "Volkswagen Taigo",
+      "year_label": "Model Year",
+      "year": "2025",
+      "description": "The Volkswagen Taigo is a stylish and technologically advanced training vehicle. Its compact size makes it perfect for both city driving and longer trips, while modern assist systems and dual controls provide a safe and comfortable learning experience."
+    }
+  }
 
 }

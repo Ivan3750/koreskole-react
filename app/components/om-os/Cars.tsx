@@ -1,27 +1,25 @@
 "use client";
 
 import React from "react";
+import { useTranslation } from "react-i18next";
+import "@/app/i18n";
 import gulbil from "@/app/assets/gulbil.png";
 import golf from "@/app/assets/car_2.jpeg";
 
-const cars = [
-  {
-    name: "Volkswagen Golf GTI",
-    year: "2021",
-    image: golf.src,
-    description:
-      "Volkswagen Golf GTI er en komfortabel og sikker undervisningsbil, perfekt til nye elever. Den er let at håndtere, rummelig og udstyret med moderne sikkerhedssystemer samt dual-kontrol, hvilket giver tryghed under hele køreforløbet.",
-  },
-  {
-    name: "Volkswagen Taigo",
-    year: "2025",
-    image: gulbil.src,
-    description:
-      "Volkswagen Taigo kombinerer moderne teknologi, sikkerhed og nem manøvrering. Den kompakte størrelse gør den ideel til bykørsel, mens dual-kontrol og avancerede assistentsystemer sikrer en tryg læringsoplevelse.",
-  },
-];
-
 const CarsAlternating = () => {
+  const { t } = useTranslation();
+
+  const cars = [
+    {
+      key: "golf",
+      image: golf.src,
+    },
+    {
+      key: "taigo",
+      image: gulbil.src,
+    },
+  ];
+
   return (
     <section className="py-20 md:py-28 lg:py-40 max-w-7xl mx-auto">
       <div className="px-6">
@@ -35,28 +33,30 @@ const CarsAlternating = () => {
                   !isEven ? "md:flex-row-reverse" : ""
                 }`}
               >
-                {/* Image */}
                 <div className="w-full md:w-1/2 rounded-3xl border-2 border-amber-50 overflow-hidden">
                   <div className="w-full h-[260px] md:h-[320px] lg:h-[380px]">
                     <img
                       src={car.image}
-                      alt={`${car.name} ${car.year}`}
+                      alt={t(`cars.${car.key}.name`)}
                       className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </div>
 
-                {/* Text */}
                 <div className="w-full md:w-1/2 space-y-4">
-                  <h3 className="font-bold text-2xl">{car.name}</h3>
+                  <h3 className="font-bold text-2xl">
+                    {t(`cars.${car.key}.name`)}
+                  </h3>
+
                   <p className="text-sm font-medium text-yellow-500">
-                    Årgang {car.year}
+                    {t(`cars.${car.key}.year_label`)} {t(`cars.${car.key}.year`)}
                   </p>
+
                   <p
-          className="normal-text mb-6"
-          style={{ color: "var(--color-text-secondary)" }}
-        >
-                    {car.description}
+                    className="normal-text mb-6"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
+                    {t(`cars.${car.key}.description`)}
                   </p>
                 </div>
               </div>

@@ -427,7 +427,7 @@
   "licenseB": {
     "hero": {
       "title": "Kørekort B i Vejle — din vej til kørekortet",
-      "subtitle": "Drømmer du om frihed på vejene? Hos Køreskole Vejle hjælper vi dig med at tage kørekort B hurtigt, sikkert og til en fair pris. Med over 15 års erfaring i Vejle kender vi de lokale forhold og ved præcis, hvad der skal til for at bestå første gang."
+      "subtitle": "Drømmer du om frihed på vejene? Hos Køreskole Vejle hjælper vi dig med at tage kørekort B hurtigt, sikkert og til en fair pris."
     }
   },
   "prices_section": {
@@ -531,7 +531,7 @@
     }
   },
   "theoryHero": {
-    "title": "Teoriprøve i Vejle — sådan består du første gang",
+    "title": "Teoriprøve - sådan består du første gang",
     "subtitle": "Få overblik over hvordan teoriprøven foregår i Vejle, hvor mange fejl du må have, og hvad du skal være særligt opmærksom på for at bestå."
   },
     "koereproeve": {
@@ -639,7 +639,7 @@
       "keywords": "om os, køreskole Vejle, Lønbæks Køreskole, kørekort B"
     },
     "blog": {
-      "title": "Blog - Tips og guides til kørekort B",
+      "title": "Blog - Tips og guides",
       "description": "Læs vores blog med tips, råd og guides til at bestå kørekort B og køre sikkert i trafikken.",
       "keywords": "blog kørekort B, tips kørekort, kørelektioner, trafik sikkerhed"
     }
@@ -651,7 +651,28 @@
             "priser_hero": {
               "title": "Priser på kørekort B i Vejle",
               "subtitle": "Se vores konkurrencedygtige priser på kørekort B forløb, ekstra lektioner og afbetalingsmuligheder."
-            }
+            },
+            "about": {
+    "label": "Om os",
+    "heading": "Lønbæks Køreskole - Din køreskole i Vejle",
+    "paragraph1": "Hos Lønbæks Køreskole i Vejle får du en personlig køreuddannelse med fokus på både læring og trivsel. Undervisningen foregår i et roligt tempo, så du føler dig godt forberedt til både teori- og køreprøven.",
+    "paragraph2": "Vi har mange års erfaring i Vejle og lokalområdet og har hjulpet mange elever sikkert gennem deres kørekortforløb. Vores lokalkendskab og personlige vejledning giver dig de bedste forudsætninger for at bestå.",
+    "paragraph3": "Bliv en sikker og selvsikker bilist med Lønbæks Køreskole i Vejle. Tilmeld dig i dag og start din køreuddannelse med det samme!"
+  },
+  "cars": {
+    "golf": {
+      "name": "Volkswagen Golf GTI",
+      "year_label": "Årgang",
+      "year": "2021",
+      "description": "Volkswagen Golf GTI er en moderne og dynamisk undervisningsbil med høj komfort og avancerede sikkerhedssystemer. Den er stabil på vejen, nem at manøvrere og udstyret med dobbeltbetjening, hvilket giver maksimal tryghed for både elev og kørelærer under hele uddannelsesforløbet."
+    },
+    "taigo": {
+      "name": "Volkswagen Taigo",
+      "year_label": "Årgang",
+      "year": "2025",
+      "description": "Volkswagen Taigo er en stilfuld og teknologisk opdateret undervisningsbil. Den kompakte størrelse gør den perfekt til både bykørsel og længere ture, mens moderne assistentsystemer og dobbeltbetjening sikrer en sikker og behagelig læringsoplevelse."
+    }
+  }
  
 
 }

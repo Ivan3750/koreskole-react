@@ -1,12 +1,22 @@
 "use client";
+
 import { useTranslation } from "react-i18next";
+import { useParams } from "next/navigation";
 import "@/app/i18n";
 import Image from "next/image";
- 
+import Link from "next/link";
 
 import school from "@/app/assets/image.png";
+
 const Hero = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
+  const params = useParams();
+  const locale = params?.locale as string;
+
+  const withLocale = (path: string) => {
+    if (!locale) return path;
+    return `/${locale}${path.startsWith("/") ? path : `/${path}`}`;
+  };
 
   return (
     <section className="relative h-[88vh] min-h-[620px] flex items-center overflow-hidden">
@@ -25,7 +35,7 @@ const Hero = () => {
         <div className="max-w-3xl space-y-6">
 
           <p className="text-sm font-semibold tracking-widest text-white/70 uppercase">
-               {t("home.driving_school")}
+            {t("home.driving_school")}
           </p>
 
           <h1 className="text-4xl md:text-6xl font-semibold text-white leading-tight">
@@ -37,24 +47,27 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-white/80 max-w-xl">
-              {t("home.description")}
-
+            {t("home.description")}
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <a href="#holdstart"
-               className="py-3 px-10 rounded-lg font-semibold "
+            
+            {/* SIGN UP */}
+            <Link
+              href={withLocale("/koerekort-b/koerkort")}
+              className="py-3 px-10 rounded-lg font-semibold"
               style={{
                 backgroundColor: "#facc15",
-                borderColor: "#facc15",
                 color: "#000",
               }}
             >
               {t("home.sign_up")}
-            </a>
+            </Link>
 
-            <a href="#priser"
-               className="py-3 px-10 rounded-lg font-medium "
+            {/* SEE PRICES */}
+            <Link
+              href={withLocale("/koerekort-b/priser")}
+              className="py-3 px-10 rounded-lg font-medium"
               style={{
                 border: "1px solid rgba(255,255,255,0.4)",
                 color: "white",
@@ -62,7 +75,8 @@ const Hero = () => {
               }}
             >
               {t("home.see_prices")}
-            </a>
+            </Link>
+
           </div>
 
         </div>
