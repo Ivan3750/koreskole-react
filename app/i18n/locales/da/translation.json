@@ -481,9 +481,9 @@
       "keywords": "teoriprøve Vejle, kørekort B Vejle, bestå teoriprøve, Borgerservice Vejle, teoriprøve kørekort"
     },
     "hero": {
-      "badge": "Teoriprøve i Vejle",
+      "badge": "Teoriprøve",
       "title": "Sådan består du teoriprøven",
-      "paragraph1": "Skal du tage teoriprøve til kørekort B i Vejle? Her får du en komplet guide til prøvens opbygning, fejlgrænse og de bedste strategier til at bestå første gang.",
+      "paragraph1": "Skal du tage teoriprøve til kørekort B i Vejle? I undervisningen på køreskolen får du en komplet guide til prøvens opbygning, fejlgrænse og de bedste strategier til at bestå første gang",
       "paragraph2": "Teoriprøven er en vigtig del af dit kørekortforløb. Med korrekt forberedelse, realistiske øveprøver og forståelse for færdselsloven øger du markant dine chancer for succes.",
       "cta": "Læs mere om kørekort B forløbet →"
     },
@@ -509,11 +509,11 @@
       "title": "Hvordan foregår teoriprøven?",
       "p1": "Når du skal til teoriprøven, skal du medbringe din ansøgning, lektionsplan og gyldigt billed-ID (pas anbefales). Prøven er digital og varer 25 minutter.",
       "p2": "Du må maksimalt have 5 fejl for at bestå. Resultatet vises straks på skærmen, så du med det samme kan se, om du har bestået.",
-      "p3": "Vi anbefaler at øve dig online og gennemgå lektionsplanen grundigt. Elever, der følger undervisningen, har høj beståelsesrate og er godt forberedte til teoriprøven."
+      "p3": "Vi anbefaler at øve dig online og gennemgå lektionsplanen grundigt. Elever, der følger undervisningen, har først og fremmest høj 'forståelsesprocent' og dermed høj beståelsesprocent. "
     },
     "location": {
       "title": "Hvor foregår prøven?",
-      "p1": "Teoriprøven foregår hos politiet. Mød op i god tid og medbring gyldig legitimation.",
+      "p1": "Teoriprøven foregår hos Færdselsstyrelsen. Mød op i god tid og medbring gyldig legitimation.",
       "p2": "Når du har bestået teoriprøven, kan du fortsætte mod den praktiske køreprøve."
     },
     "cta": {
@@ -653,10 +653,10 @@
   },
   "cars": {
     "golf": {
-      "name": "Volkswagen Golf GTI",
+      "name": "Volkswagen Golf GTE",
       "year_label": "Årgang",
       "year": "2021",
-      "description": "Volkswagen Golf GTI er en moderne og dynamisk undervisningsbil med høj komfort og avancerede sikkerhedssystemer. Den er stabil på vejen, nem at manøvrere og udstyret med dobbeltbetjening, hvilket giver maksimal tryghed for både elev og kørelærer under hele uddannelsesforløbet."
+      "description": "Volkswagen Golf GTE er en moderne og dynamisk undervisningsbil med høj komfort og avancerede sikkerhedssystemer. Den er stabil på vejen, nem at manøvrere og udstyret med dobbeltbetjening, hvilket giver maksimal tryghed for både elev og kørelærer under hele uddannelsesforløbet."
     },
     "taigo": {
       "name": "Volkswagen Taigo",
