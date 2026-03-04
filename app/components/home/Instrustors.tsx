@@ -9,12 +9,12 @@ const Instructors = () => {
   const instructors = [
     {
       name: "Anna Marie Lønbæk",
-      exp: "20 års erfaring som kørelærer i Vejle",
+      exp: "29 års erfaring som kørelærer i Vejle",
       img: Anna_Marie_Lønbæk_img,
     },
     {
       name: "Michael Lønbæk",
-      exp: "15 års erfaring med kørekort B",
+      exp: "39 års erfaring med kørekort B",
       img: Michael_Lønbæk_img,
     },
   ];

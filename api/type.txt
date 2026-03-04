@@ -53,3 +53,5 @@ CREATE TABLE login_attempts (
     INDEX(ip),
     INDEX(attempt_time)
 );
+
+29 39

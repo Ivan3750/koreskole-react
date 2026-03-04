@@ -24,23 +24,36 @@ const Holdstart = () => {
   const [selectedHold, setSelectedHold] = useState<Hold | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchHolds = async () => {
-      try {
-        const res = await fetch("http://localhost:8000/get-courses.php", {
-          method: "GET",
-          credentials: "include",
-        });
-        const data = await res.json();
-        setHolds(data);
-      } catch (err) {
-        console.error("Failed to fetch holds", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchHolds();
-  }, []);
+ const temporaryHolds: Hold[] = [
+  {
+    id: 1,
+    name: "Mandag & Onsdag",
+    language: "DA",
+    start_datetime: "2026-03-18T17:00:00",
+    days_of_week: "Mandag & Onsdag",
+    spots: 8,
+  },
+  {
+    id: 2,
+    name: "Tuesday & Thursday",
+    language: "EN",
+    start_datetime: "2026-03-20T16:30:00",
+    days_of_week: "Tuesday & Thursday",
+    spots: 4,
+  },
+  {
+    id: 3,
+    name: "Weekend Hold",
+    language: "DA",
+    start_datetime: "2026-03-22T10:00:00",
+    days_of_week: "Lørdag & Søndag",
+    spots: 2,
+  },
+];
+useEffect(() => {
+  setHolds(temporaryHolds);
+  setLoading(false);
+}, []);
 
   const getSpotStyle = (spots: number) => {
     if (spots <= 3) return { backgroundColor: "rgba(220,38,38,0.12)", color: "#DC2626" };

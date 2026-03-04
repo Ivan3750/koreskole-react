@@ -400,11 +400,7 @@
       },
       {
         "question": "Kan jeg tage kørekort, hvis jeg er under 18?",
-        "answer": "Ja, du kan starte med teori og kørelektioner fra 17 år, men den praktiske prøve kan først tages ved 18 år."
-      },
-      {
-        "question": "Hvilke dokumenter skal jeg medbringe til første lektion?",
-        "answer": "Medbring gyldigt ID, et billede til kørekortet og dit sundhedskort. Hvis du har tidligere kørekort eller certifikater, tag dem også med."
+        "answer": "Ja, du kan starte med teori og kørelektioner fra 16 år og 9 måneder, men den praktiske prøve kan først tages ved 17 år. Når man køre som 17 årig så er der regler om ledsager "
       },
       {
         "question": "Hvordan fungerer prøverne?",
@@ -416,11 +412,7 @@
       },
       {
         "question": "Hvad sker der, hvis jeg ikke består første gang?",
-        "answer": "Ingen panik! Du kan tilmelde dig omprøven. Vi tilbyder ekstra lektioner for at sikre, at du er klar næste gang."
-      },
-      {
-        "question": "Tilbyder I kørelektioner i weekenden?",
-        "answer": "Ja, vi har weekendhold, så du kan tage lektioner, selvom du har skole eller arbejde i hverdagen."
+        "answer": "Ingen panik! Du kan tilmelde dig omprøven. Vi tilbyder ekstra lektioner for at sikre, at du er klar næste gang. Det vil dog koste nyt gebyr til Færdselsstyrelsen og hvis det er køreprøven også ny betaling for bil og tid."
       }
     ]
   },
