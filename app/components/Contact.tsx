@@ -9,7 +9,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   const contactInfo = [
-    { icon: Phone, label: t("contact.phone"), value: "25 00 00 00", href: "tel:25000000" },
+    { icon: Phone, label: t("contact.phone"), value: "20 76 03 33", href: "tel:20760333" },
     { icon: Mail, label: t("contact.email"), value: "lønbæks@gmail.com", href: "mailto:lønbæks@gmail.com" },
     { icon: MapPin, label: t("contact.address"), value: "Vestre Engvej 7\n7100 Vejle", href: "https://maps.google.com/?q=Vestre+Engvej+7,+7100+Vejle" }
   ];
