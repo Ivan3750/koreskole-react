@@ -482,7 +482,7 @@
     },
     "hero": {
       "badge": "Teoriprøve i Vejle",
-      "title": "Sådan består du teoriprøven i Vejle",
+      "title": "Sådan består du teoriprøven",
       "paragraph1": "Skal du tage teoriprøve til kørekort B i Vejle? Her får du en komplet guide til prøvens opbygning, fejlgrænse og de bedste strategier til at bestå første gang.",
       "paragraph2": "Teoriprøven er en vigtig del af dit kørekortforløb. Med korrekt forberedelse, realistiske øveprøver og forståelse for færdselsloven øger du markant dine chancer for succes.",
       "cta": "Læs mere om kørekort B forløbet →"
@@ -517,9 +517,9 @@
       "p2": "Når du har bestået teoriprøven, kan du fortsætte mod den praktiske køreprøve."
     },
     "cta": {
-      "title": "Klar til at starte dit kørekort i Vejle?",
+      "title": "Klar til at starte dit kørekort?",
       "text": "Vores strukturerede kørekort B forløb hjælper dig sikkert gennem både teori og praksis. Vi fokuserer på høj beståelsesrate og personlig undervisning.",
-      "button": "Læs mere om kørekort B forløbet →"
+      "button": "Læs mere"
     }
   },
   "theoryHero": {
