@@ -568,8 +568,8 @@
   "contact_page": {
     "heading": "Kontakt",
     "subheading": "Lad os tage en snak",
-    "description": "Har du spørgsmål om køreuddannelse, priser eller tilmelding? Ring eller skriv — vi svarer hurtigt og ærligt.",
-    "phoneLabel": "Telefon",
+    "description": "Vi inviterer altid til et kort informationsmøde inden opstart. Send en sms eller mail for at aftale nærmere. Vil du gerne ringes op så skriv det. Vi taler ikke i telefon når vi har køretimer",
+        "phoneLabel": "Telefon",
     "emailLabel": "E-mail",
     "addressLabel": "Adresse",
     "nameLabel": "Navn",
