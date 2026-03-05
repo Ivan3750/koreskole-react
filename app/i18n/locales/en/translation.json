@@ -204,91 +204,78 @@
     "title": "Next class start — get started now",
     "subtitle": "Choose a class that fits your schedule. We offer flexible hours, small groups, and personal instruction all the way to your driver's license."
   },
-  "prices": {
-    "table": {
-      "service": "Service",
-      "price": "Price"
+   "prices": {
+    "meeting": {
+      "badge": "Free information meeting",
+      "title": "Get an overview of the entire driving course",
+      "text": "Before you start your driving course we invite you to a free information meeting where we explain the whole process.",
+      "imageAlt": "Information meeting",
+      "cta": "Sign up for meeting",
+      "features": [
+        {
+          "title": "Course overview",
+          "text": "We explain the full process from theory to driving test."
+        },
+        {
+          "title": "Ask questions",
+          "text": "You can ask about lessons, schedule and requirements."
+        },
+        {
+          "title": "Meet the instructor",
+          "text": "Meet your instructor and learn about the lessons."
+        },
+        {
+          "title": "No obligations",
+          "text": "The meeting is free and without commitment."
+        }
+      ]
     },
     "package": {
-      "badge": "Popular package",
-      "title": "Full license package",
-      "description": "Our full package includes everything from start to finish. No hidden fees — just a safe and structured path to your driver's license.",
-      "price": "15,500 DKK",
-      "cta": "Sign up today",
-      "features": [
-        "29+ theory lessons",
-        "24 driving lessons",
-        "Manoeuvre track & slippery track",
-        "1 driving test included",
-        "Online theory + books"
-      ],
-      "includesTitle": "What is included?",
-      "includesSubtitle": "The package includes all mandatory elements for category B license.",
-      "table": [
+      "title": "What does the legal package include?",
+      "text": "The package includes all mandatory elements required for a driving licence in Denmark.",
+      "items": [
         {
-          "name": "16 driving lessons",
-          "price": "8,800 DKK"
+          "title": "Theory lessons",
+          "text": "Learn traffic rules and safety."
         },
         {
-          "name": "Unlimited theory lessons (min. 29 hours)",
-          "price": "4,200 DKK"
+          "title": "Driving lessons",
+          "text": "Practical driving training."
         },
         {
-          "name": "Manoeuvre track (3 hours)",
-          "price": "1,200 DKK"
+          "title": "Manoeuvre track",
+          "text": "Training on closed course."
         },
         {
-          "name": "Slippery track (3 hours)",
-          "price": "1,800 DKK"
+          "title": "Slippery track",
+          "text": "Driving in slippery conditions."
+        },
+        {
+          "title": "Theory test",
+          "text": "Preparation for official theory exam."
+        },
+        {
+          "title": "Driving test",
+          "text": "Final practical driving exam."
         }
       ]
     },
-    "extra": {
-      "title": "Additional payments",
-      "table": [
-        {
-          "name": "Test fee (paid to Danish Road Authority)",
-          "price": ""
-        },
-        {
-          "name": "First aid course",
-          "price": "750 DKK"
-        },
-        {
-          "name": "Driving test",
-          "price": "1,600 DKK"
-        },
-        {
-          "name": "Medical certificate",
-          "price": "approx. 500 DKK"
-        }
-      ]
-    },
-    "regain": {
-      "title": "License reinstatement",
-      "description": "Lost your driver's license? We help you quickly through the process so you can safely get back on the road.",
-      "price": "From 4,500 DKK",
-      "features": [
-        "Personal guidance",
+    "recovery": {
+      "badge": "License recovery",
+      "title": "Get your license back",
+      "text": "If you lost your license we help you recover it quickly.",
+      "imageAlt": "License recovery",
+      "list": [
+        "Individual lessons",
         "Theory preparation",
-        "Driving lessons as needed",
-        "Test booking"
-      ],
-      "typesTitle": "There are 3 types",
-      "types": [
-        {
-          "title": "Conditional disqualification",
-          "text": "You keep your license temporarily but must pass a control test before the deadline."
-        },
-        {
-          "title": "Unconditional disqualification",
-          "text": "Your license is revoked and you must pass both theory and driving test again."
-        },
-        {
-          "title": "Driving ban",
-          "text": "Typical for new drivers. Mandatory theory and driving lessons are required before a new test."
-        }
+        "Practical driving lessons",
+        "Full support"
       ]
+    },
+    "cta": {
+      "title": "Ready to start your driving license?",
+      "text": "Join our free information meeting.",
+      "button": "Book meeting"
     }
   },
   "info": {
@@ -665,6 +652,21 @@
       "year": "2025",
       "description": "The Volkswagen Taigo is a stylish and technologically advanced training vehicle. Its compact size makes it perfect for both city driving and longer trips, while modern assist systems and dual controls provide a safe and comfortable learning experience."
     }
+  },
+   "meet": {
+    "subtitle": "Driver's License in Vejle",
+    "title": "Unsure about the driving course? We can help",
+    "description": "If you're not quite sure how the driving course works, we offer a <strong>free information session</strong>. We will go through the entire process, answer your questions, and help you plan your theory and driving lessons — completely obligation-free.",
+    "features": [
+      "Free information session without obligations",
+      "Structured theory and driving lessons",
+      "Modern cars and experienced driving instructors"
+    ],
+    "cta": {
+      "book": "Book free information session",
+      "see": "See driving course"
+    },
+    "imageAlt": "Driving lesson"
   }
 
 }

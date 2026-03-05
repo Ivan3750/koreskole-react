@@ -204,104 +204,79 @@
     "title": "Næste holdstart — kom i gang nu",
     "subtitle": "Vælg et hold der passer til din hverdag. Vi tilbyder fleksible tider, små hold og personlig undervisning hele vejen til dit kørekort."
   },
-  "prices": {
-    "table": {
-      "service": "Ydelse",
-      "price": "Pris"
+    "prices": {
+    "meeting": {
+      "badge": "Gratis informationsmøde",
+      "title": "Få overblik over hele kørekortforløbet",
+      "text": "Før du starter dit kørekortforløb inviterer vi dig til et gratis informationsmøde hvor vi gennemgår hele processen.",
+      "imageAlt": "Informationsmøde",
+      "cta": "Tilmeld informationsmøde",
+      "features": [
+        {
+          "title": "Gennemgang af forløbet",
+          "text": "Vi forklarer hele processen fra teori til køreprøve."
+        },
+        {
+          "title": "Stil spørgsmål",
+          "text": "Du kan spørge om undervisning, tidsplan og krav."
+        },
+        {
+          "title": "Mød kørelæreren",
+          "text": "Du møder din kørelærer og får indblik i undervisningen."
+        },
+        {
+          "title": "Ingen forpligtelser",
+          "text": "Informationsmødet er gratis og uforpligtende."
+        }
+      ]
     },
     "package": {
-      "badge": "Populær pakke",
-      "title": "Lovpakke - komplet kørekort",
-      "description": "Med vores lovpakke får du alt inkluderet fra start til slut. Ingen skjulte gebyrer — kun en tryg og struktureret vej til dit kørekort.",
-      "price": "15.500 kr.",
-      "cta": "Tilmeld dig i dag",
-      "features": [
-        "29+ lektioner teori",
-        "24 kørelektioner",
-        "Manøvrebane & glatbane",
-        "1 køreprøve inkluderet",
-        "Online teori + lærebøger"
-      ],
-      "includesTitle": "Hvad består lovpakken af?",
-      "includesSubtitle": "Lovpakken indeholder alle lovpligtige elementer til kategori B kørekort.",
-      "table": [
+      "title": "Hvad indeholder lovpakken?",
+      "text": "Lovpakken indeholder alle obligatoriske elementer for kørekort i Danmark.",
+      "items": [
         {
-          "name": "16 køretimer på vejen",
-          "price": "8.800 kr"
+          "title": "Teoriundervisning",
+          "text": "Grundig teori om trafikregler og sikker kørsel."
         },
         {
-          "name": "Ubegrænset teoriundervisning (min. 29 timer)",
-          "price": "4.200 kr"
+          "title": "Kørelektioner",
+          "text": "Praktisk undervisning i rigtig trafik."
         },
         {
-          "name": "Manøvrebane (3 timer)",
-          "price": "1.200 kr"
+          "title": "Manøvrebane",
+          "text": "Træning på lukket bane."
         },
         {
-          "name": "Glatbane (3 timer)",
-          "price": "1.800 kr"
+          "title": "Glatbane",
+          "text": "Kørsel i glat føre."
+        },
+        {
+          "title": "Teoriprøve",
+          "text": "Forberedelse til den officielle teoriprøve."
+        },
+        {
+          "title": "Køreprøve",
+          "text": "Den afsluttende praktiske prøve."
         }
       ]
     },
-    "extra": {
-      "title": "Andre betalinger",
-      "table": [
-        {
-          "name": "Prøvegebyr (Betales til Trafikstyrelsen)",
-          "price": ""
-        },
-        {
-          "name": "Førstehjælpskursus",
-          "price": "750 kr"
-        },
-        {
-          "name": "Køreprøven",
-          "price": "1.600 kr"
-        },
-        {
-          "name": "Lægeerklæring",
-          "price": "ca. 500 kr"
-        }
+    "recovery": {
+      "badge": "Generhvervelse",
+      "title": "Få dit kørekort tilbage",
+      "text": "Hvis du har mistet dit kørekort hjælper vi dig gennem processen.",
+      "imageAlt": "Generhvervelse",
+      "list": [
+        "Individuel undervisning",
+        "Forberedelse til teoriprøve",
+        "Praktiske kørelektioner",
+        "Hjælp gennem hele processen"
       ]
     },
-    "regain": {
-      "title": "Generhvervelse af kørekort",
-      "description": "Har du mistet dit kørekort? Vi hjælper dig hurtigt gennem processen, så du kan komme sikkert tilbage på vejen.",
-      "price": "Fra 4.500 kr.",
-      "features": [
-        "Personlig vejledning",
-        "Teoriforberedelse",
-        "Kørelektioner efter behov",
-        "Booking af prøver"
-      ],
-      "typesTitle": "Der findes 3 typer",
-      "types": [
-        {
-          "title": "Betinget frakendelse",
-          "text": "Du beholder dit kørekort midlertidigt, men skal bestå en kontrollerende køreprøve inden fristen."
-        },
-        {
-          "title": "Ubetinget frakendelse",
-          "text": "Politiet inddrager dit kørekort, og du må ikke køre før du har bestået teori og køreprøve igen."
-        },
-        {
-          "title": "Kørselsforbud",
-          "text": "Typisk for nye bilister. Du skal gennemføre lovpligtig teori og kørelektioner før ny prøve."
-        }
-      ]
-    },
-    "infomeeting": {
-  "title": "Gratis infomøde",
-  "description": "Kom til vores gratis informationsmøde og få alt at vide om kørekort, undervisning og forløbet.",
-  "cta": "Tilmeld dig gratis infomøde",
-
-  "sectionTitle": "Gratis informationsmøde",
-  "sectionText": "Vi holder løbende gratis informationsmøder hvor du kan høre om hele forløbet til kørekort.",
-
-  "point1": "Gratis deltagelse",
-  "point2": "Ingen tilmelding nødvendig",
-  "point3": "Få svar på alle dine spørgsmål"
-}
+    "cta": {
+      "title": "Klar til at starte dit kørekort?",
+      "text": "Tilmeld dig vores gratis informationsmøde.",
+      "button": "Book informationsmøde"
+    }
   },
   "info": {
     "badge": "Kørekort Guide",
@@ -683,6 +658,21 @@
       "year": "2025",
       "description": "Volkswagen Taigo er en stilfuld og teknologisk opdateret undervisningsbil. Den kompakte størrelse gør den perfekt til både bykørsel og længere ture, mens moderne assistentsystemer og dobbeltbetjening sikrer en sikker og behagelig læringsoplevelse."
     }
+  },
+    "meet": {
+    "subtitle": "Kørekort i Vejle",
+    "title": "Er du i tvivl om kørekortforløbet? Vi kan hjælpe",
+    "description": "Hvis du ikke er helt sikker på, hvordan kørekortforløbet fungerer, tilbyder vi en <strong>gratis informationsmøde</strong>. Her gennemgår vi hele forløbet, svarer på dine spørgsmål og hjælper dig med at planlægge dine teoritimer og kørelektioner – helt uden forpligtelser.",
+    "features": [
+      "Gratis informationsmøde uden forpligtelser",
+      "Struktureret teori- og køreundervisning",
+      "Moderne biler og erfarne kørelærere"
+    ],
+    "cta": {
+      "book": "Book gratis informationsmøde",
+      "see": "Se kørekortforløb"
+    },
+    "imageAlt": "Køretime"
   }
  
 
