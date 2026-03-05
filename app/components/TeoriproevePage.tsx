@@ -4,7 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { useTranslation } from "react-i18next";
+import CTA from "../components/cta"
 import "@/app/i18n";
+
 
 export default function TeoriproevePage() {
   const { t } = useTranslation();
@@ -140,29 +142,7 @@ export default function TeoriproevePage() {
           </section>
 
           {/* CTA */}
-          <section
-            className="p-12 rounded-2xl text-center space-y-6"
-            style={{
-              background: "var(--color-yellow-1)",
-              border: "1px solid var(--color-yellow-3)",
-            }}
-          >
-            <h2 className="text-2xl font-bold">
-              {t("theory.cta.title")}
-            </h2>
-
-            <p style={{ color: "var(--color-text-secondary)" }}>
-              {t("theory.cta.text")}
-            </p>
-
-            <Link
-              href="/koerekort-b/"
-              className="inline-block px-10 py-4 rounded-xl font-semibold transition hover:scale-[1.03]"
-              style={{ background: "var(--color-yellow)", color: "white" }}
-            >
-              {t("theory.cta.button")}
-            </Link>
-          </section>
+        <CTA></CTA>
 
         </div>
       </div>

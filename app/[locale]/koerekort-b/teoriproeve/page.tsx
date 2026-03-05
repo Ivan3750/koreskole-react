@@ -1,13 +1,13 @@
 import TeoriproevePage from "../../../components/TeoriproevePage";
-import PageHero from "../../../components/PageHero";
-import heroImage from "../../../assets/hero-driving.jpg";
 import FAQ from "../../../components/FAQ";
+import gulbil from "@/app/assets/gulbil_2.jpeg"
 
 
 import type { Metadata } from "next";
 
 import en from "../../../i18n/locales/en/translation.json";
 import da from "../../../i18n/locales/da/translation.json";
+import PageHero from "@/app/components/PageHero";
 
 type Locale = "en" | "da";
 
@@ -52,7 +52,8 @@ export default async function Teoriproeve({
       <PageHero
         title={t?.theoryHero?.title}
         subtitle={t?.theoryHero?.subtitle}
-        image={heroImage}
+        image={gulbil}
+        position="0px -450px"
       />
 
       <TeoriproevePage></TeoriproevePage>

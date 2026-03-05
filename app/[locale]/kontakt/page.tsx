@@ -3,6 +3,7 @@ import PageHero from "../../components/PageHero";
 import heroImage from "../../assets/hero-driving.jpg";
 import ContactFormPage from "../../components/ContactFormPage";
 import type { Metadata } from "next";
+import gulbil from "@/app/assets/gulbil_2.jpeg"
 
 import en from "../../i18n/locales/en/translation.json";
 import da from "../../i18n/locales/da/translation.json";
@@ -50,7 +51,8 @@ export default async function Konktakt({
       <PageHero
         title={t?.contact_hero?.title}
         subtitle={t?.contact_hero?.subtitle}
-        image={heroImage}
+        image={gulbil}
+        position="0 -450px"
       />
 
      <ContactFormPage />

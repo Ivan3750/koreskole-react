@@ -9,7 +9,7 @@ import Cars from "../../components/om-os/Cars";
 import type { Metadata } from "next";
 import en from "../../i18n/locales/en/translation.json";
 import da from "../../i18n/locales/da/translation.json";
-import gulbil from "@/app/assets/gulbil.png"
+import gulbil from "@/app/assets/gulbil_2.jpeg"
 type Locale = "en" | "da";
 
 const translations: Record<Locale, any> = { en, da };
@@ -54,6 +54,7 @@ export default async function Omos({
         title={t?.aboutHero?.title}
         subtitle={t?.aboutHero?.subtitle}
         image={gulbil}
+        position="0px -450px"
       />
 
       

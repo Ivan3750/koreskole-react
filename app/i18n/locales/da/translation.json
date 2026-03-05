@@ -95,7 +95,7 @@
   "contact": {
     "label": "Kontakt",
     "heading": "Lad os tage en snak",
-    "description": "Har du spørgsmål om køreuddannelse, priser eller tilmelding? Ring eller skriv — vi svarer hurtigt og ærligt.",
+    "description": "Vi inviterer altid til et kort informationsmøde inden opstart. Send en sms eller mail for at aftale nærmere. Vil du gerne ringes op så skriv det. Vi taler ikke i telefon når vi har køretimer",
     "phone": "Telefon",
     "email": "Email",
     "address": "Adresse",
@@ -138,8 +138,8 @@
     ],
     "footerItems": [
       {
-        "label": "Priser",
-        "href": "/koerekort-b/priser"
+        "label": "Forløb",
+        "href": "/koerekort-b/forloeb"
       },
       {
         "label": "Kørekort",
@@ -163,8 +163,8 @@
         "label": "Kørekort B",
         "children": [
           {
-            "label": "Priser",
-            "href": "/koerekort-b/priser"
+            "label": "Forløb",
+            "href": "/koerekort-b/forloeb"
           },
           {
             "label": "Kørekort",
@@ -289,7 +289,19 @@
           "text": "Typisk for nye bilister. Du skal gennemføre lovpligtig teori og kørelektioner før ny prøve."
         }
       ]
-    }
+    },
+    "infomeeting": {
+  "title": "Gratis infomøde",
+  "description": "Kom til vores gratis informationsmøde og få alt at vide om kørekort, undervisning og forløbet.",
+  "cta": "Tilmeld dig gratis infomøde",
+
+  "sectionTitle": "Gratis informationsmøde",
+  "sectionText": "Vi holder løbende gratis informationsmøder hvor du kan høre om hele forløbet til kørekort.",
+
+  "point1": "Gratis deltagelse",
+  "point2": "Ingen tilmelding nødvendig",
+  "point3": "Få svar på alle dine spørgsmål"
+}
   },
   "info": {
     "badge": "Kørekort Guide",
@@ -485,7 +497,7 @@
       "title": "Sådan består du teoriprøven",
       "paragraph1": "Skal du tage teoriprøve til kørekort B i Vejle? I undervisningen på køreskolen får du en komplet guide til prøvens opbygning, fejlgrænse og de bedste strategier til at bestå første gang",
       "paragraph2": "Teoriprøven er en vigtig del af dit kørekortforløb. Med korrekt forberedelse, realistiske øveprøver og forståelse for færdselsloven øger du markant dine chancer for succes.",
-      "cta": "Læs mere om kørekort B forløbet →"
+      "cta": "Læs mere "
     },
     "stats": [
       {
@@ -505,22 +517,29 @@
         "text": "Multiple choice med billeder."
       }
     ],
-    "how": {
-      "title": "Hvordan foregår teoriprøven?",
-      "p1": "Når du skal til teoriprøven, skal du medbringe din ansøgning, lektionsplan og gyldigt billed-ID (pas anbefales). Prøven er digital og varer 25 minutter.",
-      "p2": "Du må maksimalt have 5 fejl for at bestå. Resultatet vises straks på skærmen, så du med det samme kan se, om du har bestået.",
-      "p3": "Vi anbefaler at øve dig online og gennemgå lektionsplanen grundigt. Elever, der følger undervisningen, har først og fremmest høj 'forståelsesprocent' og dermed høj beståelsesprocent. "
-    },
-    "location": {
-      "title": "Hvor foregår prøven?",
-      "p1": "Teoriprøven foregår hos Færdselsstyrelsen. Mød op i god tid og medbring gyldig legitimation.",
-      "p2": "Når du har bestået teoriprøven, kan du fortsætte mod den praktiske køreprøve."
-    },
+      "how": {
+        "title": "Hvordan foregår teoriprøven?",
+        "p1": "Når du skal til teoriprøven, skal du medbringe din ansøgning, lektionsplan og gyldigt billed-ID (pas anbefales). Prøven er digital og varer 25 minutter.",
+        "p2": "Du må maksimalt have 5 fejl for at bestå. Resultatet vises straks på skærmen, så du med det samme kan se, om du har bestået.",
+        "p3": "Vi anbefaler at øve dig online og gennemgå lektionsplanen grundigt. Elever, der følger undervisningen, har først og fremmest høj 'forståelsesprocent' og dermed høj beståelsesprocent. "
+      },
+      "location": {
+        "title": "Hvor foregår prøven?",
+        "p1": "Teoriprøven foregår hos Færdselsstyrelsen. Mød op i god tid og medbring gyldig legitimation.",
+        "p2": "Når du har bestået teoriprøven, kan du fortsætte mod den praktiske køreprøve."
+      },
     "cta": {
       "title": "Klar til at starte dit kørekort?",
       "text": "Vores strukturerede kørekort B forløb hjælper dig sikkert gennem både teori og praksis. Vi fokuserer på høj beståelsesrate og personlig undervisning.",
       "button": "Læs mere"
-    }
+    },
+    
+    "steps": [
+      "Read the task or theory carefully.",
+      "Understand the goal and expected result.",
+      "Prepare the necessary tools or environment.",
+      "Follow the instructions step by step."
+    ]
   },
   "theoryHero": {
     "title": "Teoriprøve - sådan består du første gang",

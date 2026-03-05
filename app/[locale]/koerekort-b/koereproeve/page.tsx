@@ -1,7 +1,7 @@
 import PageHero from "../../../components/PageHero";
-import heroImage from "../../../assets/hero-driving.jpg";
 import FAQ from "../../../components/FAQ";
 import KoereproevePage from "@/app/components/koereproeve-vejle/KoereproevePage";
+import gulbil from "@/app/assets/gulbil_2.jpeg"
 
 import type { Metadata } from "next";
 
@@ -51,7 +51,8 @@ export default async function Koereproeve({
       <PageHero
         title={t?.koereproeve_hero?.title}
         subtitle={t?.koereproeve_hero?.subtitle}
-        image={heroImage}
+        image={gulbil}
+        position="0 -450px"
       />
 
   

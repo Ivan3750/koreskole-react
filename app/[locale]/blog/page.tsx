@@ -1,6 +1,7 @@
 import Blog from "../../components/blog/Blog";
 import PageHero from "../../components/PageHero";
 import heroImage from "../../assets/hero-driving.jpg";
+import gulbil from "@/app/assets/gulbil_2.jpeg"
 
 
 import type { Metadata } from "next";
@@ -51,7 +52,8 @@ export default async function BlogPage({
       <PageHero
         title={t?.blog?.title}
         subtitle={t?.blog?.subtitle}
-        image={heroImage}
+        image={gulbil}
+        position="0px -450px"
       />
 
        

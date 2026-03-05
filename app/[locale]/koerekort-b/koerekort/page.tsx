@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import hero from "../../../assets/steering-wheel.jpeg";
 import en from "../../../i18n/locales/en/translation.json";
 import da from "../../../i18n/locales/da/translation.json";
+import gulbil from "@/app/assets/gulbil_2.jpeg"
 
 type Locale = "en" | "da";
 
@@ -55,7 +56,8 @@ export default async function Koerekort({
       <PageHero
         title={t?.licenseB.hero?.title}
         subtitle={t?.licenseB.hero?.subtitle}
-        image={heroImage}
+   image={gulbil}
+        position="0 -450px"
       />
 
       <Info></Info>

@@ -13,6 +13,7 @@ import type { Metadata } from "next";
 
 import da from "../i18n/locales/da/translation.json";
 import en from "../i18n/locales/en/translation.json";
+import KorekortSection from "../components/KorekortSection";
 
 type Locale = "en" | "da";
 
@@ -58,6 +59,7 @@ export default async function Home({
       <AboutSection />
       <Services />
       <HoldStart />
+      <KorekortSection></KorekortSection>
       <Testimonials />
       <Instructors />
       <FAQ />

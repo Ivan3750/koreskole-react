@@ -32,12 +32,14 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className="rounded-2xl p-6 border-2 hover:-translate-y-1 transition-all duration-300"
+                className="rounded-2xl p-6 border "
                 style={{ backgroundColor: "var(--color-bg-elevated)", borderColor: "var(--color-border)" }}
               >
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-transform" style={{ backgroundColor: "var(--color-yellow)" }}>
-                  <Icon className="w-7 h-7" style={{ color: "var(--color-bg)" }} />
+                {/* Decorative icon */}
+                <div className="w-14 h-14 mb-5 flex items-center justify-center"  >
+                  <Icon className="w-12 h-12" style={{ color: "var(--color-yellow)" }} />
                 </div>
+
                 <h3 className="text-xl font-semibold mb-2" style={{ color: "var(--color-text)" }}>
                   {service.title}
                 </h3>

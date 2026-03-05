@@ -3,6 +3,7 @@ import heroImage from "../../../assets/hero-driving.jpg";
 import FAQ from "../../../components/FAQ";
 import PriserPage from "../../../components/PriserPage";
 import type { Metadata } from "next";
+import gulbil from "@/app/assets/gulbil_2.jpeg"
 
 import en from "../../../i18n/locales/en/translation.json";
 import da from "../../../i18n/locales/da/translation.json";
@@ -50,7 +51,8 @@ export default async function Priser({
       <PageHero
         title={t?.priser_hero?.title}
         subtitle={t?.priser_hero?.subtitle}
-        image={heroImage}
+          image={gulbil}
+        position="0 -450px"
       />
 
      <PriserPage></PriserPage>

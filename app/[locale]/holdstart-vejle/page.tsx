@@ -3,6 +3,7 @@ import PageHero from "@/app/components/PageHero";
 import heroImage from "@/app/assets/hero-driving.jpg";
 import HoldStart from "@/app/components/home/HoldStart";
 import Contact from "@/app/components/Contact";
+import gulbil from "@/app/assets/gulbil_2.jpeg"
 
 import en from "../../i18n/locales/en/translation.json";
 import da from "../../i18n/locales/da/translation.json";
@@ -50,7 +51,8 @@ export default async function Holdstart({
       <PageHero
         title={t?.holdstart_hero?.title}
         subtitle={t?.holdstart_hero?.subtitle}
-        image={heroImage}
+         image={gulbil}
+        position="0 -450px"
       />
 
       <HoldStart />

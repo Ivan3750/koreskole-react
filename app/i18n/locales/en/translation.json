@@ -95,7 +95,7 @@
   "contact": {
     "label": "Contact",
     "heading": "Let's have a chat",
-    "description": "Do you have questions about driving lessons, prices, or registration? Call or write — we respond quickly and honestly.",
+    "description": "We always invite you to a short information meeting before starting. Send a text message or email to arrange the details. If you would like us to call you, please let us know. We do not talk on the phone during driving lessons.",
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
@@ -138,8 +138,8 @@
     ],
     "footerItems": [
       {
-        "label": "Prices",
-        "href": "/koerekort-b/priser"
+        "label": "Program",
+        "href": "/koerekort-b/forloeb"
       },
       {
         "label": "Driving License",
@@ -163,8 +163,8 @@
         "label": "Driving License B",
         "children": [
           {
-            "label": "Prices",
-            "href": "/koerekort-b/priser"
+            "label": "Program",
+            "href": "/koerekort-b/forloeb"
           },
           {
             "label": "Driving License",
@@ -386,44 +386,36 @@
     ]
   },
   "faq": {
-    "badge": "FAQ",
-    "title": "Frequently Asked Questions",
-    "subtitle": "Quick answers to the most common questions.",
-    "items": [
-      {
-        "question": "How long does it take to get a driver's license?",
-        "answer": "It depends on how quickly you complete theory and driving lessons, but most students finish within 3-6 months."
-      },
-      {
-        "question": "Do you offer both manual and automatic cars?",
-        "answer": "Yes, we provide lessons in both manual and automatic vehicles."
-      },
-      {
-        "question": "Can I get a license if I am under 18?",
-        "answer": "Yes, you can start theory and driving lessons at 17, but the practical test can only be taken at 18."
-      },
-      {
-        "question": "What documents should I bring to the first lesson?",
-        "answer": "Bring valid ID, a passport photo, and your health insurance card. If you have previous licenses or certificates, bring those as well."
-      },
-      {
-        "question": "How do the tests work?",
-        "answer": "You must pass both a theory test and a practical driving test. We prepare you thoroughly for both."
-      },
-      {
-        "question": "Can I pay in installments?",
-        "answer": "Yes, we offer flexible payment plans so you can split the cost without extra fees."
-      },
-      {
-        "question": "What happens if I fail the first time?",
-        "answer": "No worries! You can retake the test, and we offer extra lessons to ensure you're ready next time."
-      },
-      {
-        "question": "Do you offer weekend lessons?",
-        "answer": "Yes, we offer weekend classes so you can take lessons even if you have school or work during weekdays."
-      }
-    ]
-  },
+  "badge": "FAQ",
+  "title": "Frequently Asked Questions",
+  "subtitle": "Quick answers to the most common questions.",
+  "items": [
+    {
+      "question": "How long does it take to get a driver's license?",
+      "answer": "It depends on how quickly you complete the theory and driving lessons, but most people get their driver's license within 3–6 months."
+    },
+    {
+      "question": "Do you offer both manual and automatic transmission?",
+      "answer": "Yes, we provide lessons in both manual and automatic transmission cars."
+    },
+    {
+      "question": "Can I get a driver's license if I am under 18?",
+      "answer": "Yes, you can start theory and driving lessons from the age of 16 years and 9 months, but the practical test can only be taken at 17. When driving at 17, there are rules about having a supervising adult in the car."
+    },
+    {
+      "question": "How do the tests work?",
+      "answer": "You must pass both a theoretical test and a practical driving test. We help you prepare for both."
+    },
+    {
+      "question": "Can I pay in installments?",
+      "answer": "Yes, we offer flexible payment plans so you can pay for the driver's license in several installments without extra fees."
+    },
+    {
+      "question": "What happens if I don’t pass the first time?",
+      "answer": "No panic! You can sign up for a retest. We offer additional lessons to make sure you are ready next time. However, there will be a new fee to the Danish Road Traffic Authority, and if it is the driving test, there will also be a new payment for the car and the instructor’s time."
+    }
+  ]
+},
   "licenseB": {
     "hero": {
       "title": "Driving license category B — your road to freedom",
@@ -489,12 +481,12 @@
       "keywords": "theory test Vejle, driving license Vejle, pass theory test, Denmark theory exam"
     },
     "hero": {
-      "badge": "Theory Test in Vejle",
-      "title": "How to Pass the Theory Test in Vejle",
-      "paragraph1": "Taking your Category B theory test in Vejle? Here’s a complete guide to the structure, mistake limit, and best strategies to pass the first time.",
-      "paragraph2": "The theory test is an important part of your driving license journey. Proper preparation and realistic practice tests significantly increase your chances of success.",
-      "cta": "Read more about the Category B course →"
-    },
+  "badge": "Theory Test",
+  "title": "How to Pass the Theory Test",
+  "paragraph1": "Are you taking the theory test for a Category B driver’s license in Vejle? During lessons at the driving school, you will receive a complete guide to the test structure, the allowed number of mistakes, and the best strategies to pass on your first attempt.",
+  "paragraph2": "The theory test is an important part of getting your driver’s license. With proper preparation, realistic practice tests, and a solid understanding of traffic laws, you significantly increase your chances of success.",
+  "cta": "Read more"
+},
     "stats": [
       {
         "title": "25 Questions",
@@ -514,16 +506,16 @@
       }
     ],
     "how": {
-      "title": "How Does the Theory Test Work?",
-      "p1": "Bring your application, lesson plan and valid photo ID (passport recommended). The test is digital and lasts 25 minutes.",
-      "p2": "You may have a maximum of 5 mistakes to pass. Results are shown immediately after completion.",
-      "p3": "We recommend practicing online and reviewing your lesson plan carefully."
-    },
-    "location": {
-      "title": "Where Is the Test Held?",
-      "p1": "The theory test takes place at the police testing center. Arrive early and bring valid ID.",
-      "p2": "After passing, you can continue toward the practical driving test."
-    },
+  "title": "How does the theory test work?",
+  "p1": "When attending the theory test, you must bring your application, lesson plan, and valid photo ID (a passport is recommended). The test is digital and lasts 25 minutes.",
+  "p2": "You may have a maximum of 5 mistakes to pass. The result is shown immediately on the screen, so you can see right away whether you passed.",
+  "p3": "We recommend practicing online and reviewing your lesson plan thoroughly. Students who follow the lessons usually develop a high level of understanding, which leads to a higher pass rate."
+},
+"location": {
+  "title": "Where does the test take place?",
+  "p1": "The theory test takes place at the Danish Road Traffic Authority. Arrive on time and bring valid identification.",
+  "p2": "Once you have passed the theory test, you can continue toward the practical driving test."
+},
     "cta": {
       "title": "Ready to Start Your Driving License in Vejle?",
       "text": "Our structured Category B course guides you safely through theory and practice with a high pass rate and personal instruction.",
@@ -662,10 +654,10 @@
   },
    "cars": {
     "golf": {
-      "name": "Volkswagen Golf GTI",
+      "name": "Volkswagen Golf GTE",
       "year_label": "Model Year",
       "year": "2021",
-      "description": "The Volkswagen Golf GTI is a modern and dynamic training vehicle offering high comfort and advanced safety systems. It is stable on the road, easy to maneuver, and equipped with dual controls to ensure maximum safety for both student and instructor throughout the entire training process."
+      "description": "The Volkswagen Golf GTE is a modern and dynamic training vehicle offering high comfort and advanced safety systems. It is stable on the road, easy to maneuver, and equipped with dual controls to ensure maximum safety for both student and instructor throughout the entire training process."
     },
     "taigo": {
       "name": "Volkswagen Taigo",

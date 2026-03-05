@@ -7,6 +7,7 @@
 
 }
 * {
+  scroll-behavior: smooth;
   --ant-font-family: var(--font-albert);
 }
 
