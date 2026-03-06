@@ -55,3 +55,27 @@ CREATE TABLE login_attempts (
 );
 
 29 39
+
+CREATE TABLE courses (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    language ENUM('en','da') NOT NULL,
+
+    course_date DATE DEFAULT NULL,        -- дата курсу
+
+    start_time TIME DEFAULT NULL,         -- час початку
+    end_time TIME DEFAULT NULL,           -- час закінчення
+
+    days_of_week VARCHAR(100) DEFAULT NULL, 
+    -- Man,Tir,Ons або "ikke_angivet"
+
+    session_type SET(
+        'formiddag',
+        'eftermiddag',
+        'aften'
+    ) DEFAULT NULL,
+
+    location VARCHAR(255) DEFAULT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

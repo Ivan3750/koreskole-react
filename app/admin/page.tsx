@@ -11,9 +11,16 @@ const API = "http://localhost:8000";
 type Page = "courses" | "blog" | "contacts" | "password";
 
 export default function Page() {
-  const [loggedIn, setLoggedIn] = useState<boolean | null>(null);
   const [activePage, setActivePage] = useState<Page>("courses");
+  const [loggedIn, setLoggedIn] = useState<boolean | null>(null);
 
+  useEffect(() => {
+    checkAuth();
+  }, []);
+
+ 
+
+ 
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -23,8 +30,8 @@ export default function Page() {
     const res = await fetch(`${API}/check-auth.php`, {
       credentials: "include",
     });
-
-    setLoggedIn(res.ok);
+    const data = await res.json();
+    setLoggedIn(data.logged_in);
   };
 
   useEffect(() => {
