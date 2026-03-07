@@ -1,24 +1,22 @@
 <?php
+// courses.php
 
-require 'cors.php';
+require 'cors.php'; // Обов'язково першою
 require 'db.php';
 require 'security.php';
 
 header("Content-Type: application/json; charset=UTF-8");
 
+// === Авторизація ===
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     http_response_code(401);
     echo json_encode(["error" => "Unauthorized"]);
     exit;
 }
 
-if ($_SESSION['ip'] !== $_SERVER['REMOTE_ADDR']) {
-    http_response_code(403);
-    echo json_encode(["error" => "Session invalid"]);
-    exit;
-}
-
-if ($_SESSION['ua'] !== $_SERVER['HTTP_USER_AGENT']) {
+// Перевірка IP та User-Agent
+if ($_SESSION['ip'] !== $_SERVER['REMOTE_ADDR'] || $_SESSION['ua'] !== $_SERVER['HTTP_USER_AGENT']) {
+    session_destroy();
     http_response_code(403);
     echo json_encode(["error" => "Session invalid"]);
     exit;
@@ -26,34 +24,20 @@ if ($_SESSION['ua'] !== $_SERVER['HTTP_USER_AGENT']) {
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-/*
-RATE LIMIT
-*/
+// === RATE LIMIT (необов'язково, можна закоментувати) ===
+// $ip = $_SERVER['REMOTE_ADDR'];
+// $pdo->prepare("DELETE FROM api_limits WHERE time < ?")->execute([time() - 60]);
+// $stmt = $pdo->prepare("SELECT COUNT(*) FROM api_limits WHERE ip=?");
+// $stmt->execute([$ip]);
+// if ($stmt->fetchColumn() > 120) {
+//     http_response_code(429);
+//     echo json_encode(["error"=>"Too many requests"]);
+//     exit;
+// }
+// $pdo->prepare("INSERT INTO api_limits (ip,time) VALUES (?,?)")->execute([$ip,time()]);
 
-$ip = $_SERVER['REMOTE_ADDR'];
-
-$pdo->prepare("DELETE FROM api_limits WHERE time < ?")
-    ->execute([time() - 60]);
-
-$stmt = $pdo->prepare("SELECT COUNT(*) FROM api_limits WHERE ip=?");
-$stmt->execute([$ip]);
-
-if ($stmt->fetchColumn() > 120) {
-    http_response_code(429);
-    echo json_encode(["error" => "Too many requests"]);
-    exit;
-}
-
-$pdo->prepare("INSERT INTO api_limits (ip,time) VALUES (?,?)")
-    ->execute([$ip,time()]);
-
-
-/*
-GET COURSES
-*/
-
+// === GET COURSES ===
 if ($method === 'GET') {
-
     $stmt = $pdo->query("
         SELECT 
         id,
@@ -67,22 +51,15 @@ if ($method === 'GET') {
         FROM courses
         ORDER BY course_date ASC, start_time ASC
     ");
-
     echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
     exit;
 }
 
-
-/*
-CREATE COURSE
-*/
-
+// === POST / CREATE COURSE ===
 if ($method === 'POST') {
-
     verify_csrf();
 
     $data = json_decode(file_get_contents("php://input"), true);
-
     if (!$data) {
         http_response_code(400);
         echo json_encode(["error"=>"Invalid JSON"]);
@@ -126,17 +103,11 @@ if ($method === 'POST') {
     exit;
 }
 
-
-/*
-UPDATE COURSE
-*/
-
+// === PUT / UPDATE COURSE ===
 if ($method === 'PUT') {
-
     verify_csrf();
 
     $data = json_decode(file_get_contents("php://input"), true);
-
     if (!$data || !isset($data['id'])) {
         http_response_code(400);
         echo json_encode(["error"=>"Invalid data"]);
@@ -144,7 +115,6 @@ if ($method === 'PUT') {
     }
 
     $id = (int)$data['id'];
-
     $language = $data['language'] ?? '';
     $date = $data['course_date'] ?? null;
     $start = $data['start_time'] ?? null;
@@ -187,17 +157,11 @@ if ($method === 'PUT') {
     exit;
 }
 
-
-/*
-DELETE COURSE
-*/
-
+// === DELETE COURSE ===
 if ($method === 'DELETE') {
-
     verify_csrf();
 
     $id = $_GET['id'] ?? null;
-
     if (!$id || !filter_var($id,FILTER_VALIDATE_INT)) {
         http_response_code(400);
         echo json_encode(["error"=>"Invalid ID"]);
@@ -211,6 +175,6 @@ if ($method === 'DELETE') {
     exit;
 }
 
-
+// === DEFAULT: METHOD NOT ALLOWED ===
 http_response_code(405);
 echo json_encode(["error"=>"Method not allowed"]);

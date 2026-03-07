@@ -33,7 +33,7 @@ session_set_cookie_params([
     'domain' => '',
     'secure' => false, 
     'httponly' => true,
-    'samesite' => 'None'
+    'samesite' => 'Lax'
 ]);
 
 session_start();
