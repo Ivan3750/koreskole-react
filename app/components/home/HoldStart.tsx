@@ -1,146 +1,165 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Users, Calendar, Clock } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import enFlag from "@/app/assets/great-britain-flag.png";
 import daFlag from "@/app/assets/denmark-flag.png";
 import BookingForm from "../BookingForm";
-import { useTranslation } from "react-i18next";
-import "@/app/i18n";
 
 interface Hold {
   id: number;
-  name: string;
   language: string;
-  start_datetime: string;
-  rescheduled_datetime?: string | null;
-  days_of_week?: string | null;
+  date: string;
+  start_time: string;
+  end_time: string;
+  type?: string;
   spots: number;
 }
 
 const Holdstart = () => {
-  const { t } = useTranslation();
   const [holds, setHolds] = useState<Hold[]>([]);
   const [selectedHold, setSelectedHold] = useState<Hold | null>(null);
-  const [loading, setLoading] = useState(true);
 
- const temporaryHolds: Hold[] = [
-  {
-    id: 1,
-    name: "Mandag & Onsdag",
-    language: "DA",
-    start_datetime: "2026-03-18T17:00:00",
-    days_of_week: "Mandag & Onsdag",
-    spots: 8,
-  },
-  {
-    id: 2,
-    name: "Tuesday & Thursday",
-    language: "EN",
-    start_datetime: "2026-03-20T16:30:00",
-    days_of_week: "Tuesday & Thursday",
-    spots: 4,
-  },
-  {
-    id: 3,
-    name: "Weekend Hold",
-    language: "DA",
-    start_datetime: "2026-03-22T10:00:00",
-    days_of_week: "Lørdag & Søndag",
-    spots: 2,
-  },
-];
-useEffect(() => {
-  setHolds(temporaryHolds);
-  setLoading(false);
-}, []);
+  const temporaryHolds: Hold[] = [
+    {
+      id: 1,
+      language: "DA",
+      date: "2026-03-31",
+      start_time: "17:00:00",
+      end_time: "18:30:00",
+      spots: 8,
+    },
+    {
+      id: 2,
+      language: "DA",
+      date: "2026-04-15",
+      start_time: "17:00:00",
+      end_time: "18:30:00",
+      spots: 0,
+    },
+    {
+      id: 3,
+      language: "EN",
+      date: "2026-04-02",
+      start_time: "15:30:00",
+      end_time: "17:00:00",
+      spots: 8,
+    },
+    {
+      id: 4,
+      language: "EN",
+      date: "2026-04-16",
+      start_time: "15:30:00",
+      end_time: "17:00:00",
+      spots: 8,
+    },
+    {
+      id: 5,
+      language: "DA",
+      date: "2026-04-20",
+      start_time: "09:00:00",
+      end_time: "10:30:00",
+      type: "formiddag",
+      spots: 8,
+    },
+  ];
 
-  const getSpotStyle = (spots: number) => {
-    if (spots <= 3) return { backgroundColor: "rgba(220,38,38,0.12)", color: "#DC2626" };
-    if (spots <= 6) return { backgroundColor: "rgba(234,179,8,0.15)", color: "#EAB308" };
-    return { backgroundColor: "rgba(34,197,94,0.15)", color: "#22C55E" };
+  useEffect(() => {
+    setHolds(temporaryHolds);
+  }, []);
+
+  const formatDate = (date: string) =>
+    new Date(date).toLocaleDateString("da-DK", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+
+  const formatTime = (time: string) => time.slice(0, 5);
+
+  const getType = (type?: string) => {
+    if (type === "formiddag") return "Formiddagshold";
+    return "Aftenhold";
   };
 
-  if (loading) return <div className="text-center py-12">{t("holdstart.loading")}</div>;
+  const isAvailable = (spots: number) => spots > 0;
 
   return (
-    <section className="py-24 max-w-6xl m-auto" style={{ backgroundColor: "var(--color-bg)" }}>
-      <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="font-semibold text-sm uppercase tracking-wider" style={{ color: "var(--color-yellow)" }}>
-            {t("holdstart.title_label")}
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mt-2 mb-4" style={{ color: "var(--color-text)" }}>
-            {t("holdstart.heading")}
-          </h2>
-          <p className="normal-text" style={{ color: "var(--color-text-secondary)" }}>
-            {t("holdstart.description")}
-          </p>
-        </div>
+    <section className="py-24 max-w-6xl m-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {holds.map((hold) => (
+        {holds.map((hold) => {
+
+          const available = isAvailable(hold.spots);
+
+          return (
             <div
               key={hold.id}
-              className="rounded-2xl border-2 p-6 flex flex-col justify-between"
-              style={{ backgroundColor: "var(--color-bg-elevated)", borderColor: "var(--color-border)" }}
-            >
+              className=" rounded-2xl border p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between"
+      style={{ backgroundColor: "var(--color-bg)" }}
+            > 
               <div className="space-y-4">
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-xl font-bold leading-tight" style={{ color: "var(--color-text)" }}>
-                    {hold.days_of_week || hold.name}
-                  </h3>
-                  <div className="inline-flex items-center">
-                    {hold.language === "EN" ? (
-                      <img src={enFlag.src} alt="English flag" className="h-5 rounded-2xl" />
-                    ) : (
-                      <img src={daFlag.src} alt="Danish flag" className="h-5 rounded-2xl" />
-                    )}
-                  </div>
+
+                {/* top row */}
+                <div className="flex justify-between items-start">
+
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full w-fit" style={{ backgroundColor: "var(--color-yellow)", color: "var(--color-black)" }}>
+                    {getType(hold.type)}
+                  </span>
+
+                  {hold.language === "EN" ? (
+                    <img src={enFlag.src} className="h-5 rounded-md" />
+                  ) : (
+                    <img src={daFlag.src} className="h-5 rounded-md" />
+                  )}
                 </div>
 
-                <div className="flex flex-col gap-2 text-sm" style={{ color: "var(--color-text-secondary)" }}>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>
-                      {t("holdstart.start_label")} {new Date(hold.start_datetime).toLocaleDateString()}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>
-                      {t("holdstart.time_label")} {new Date(hold.start_datetime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-                    </span>
-                  </div>
+                {/* date */}
+                <div className="flex items-center gap-2 text-lg font-semibold">
+                  <Calendar className="w-4 h-4" />
+                  {formatDate(hold.date)}
                 </div>
 
+                {/* time */}
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Clock className="w-4 h-4" />
+                  {formatTime(hold.start_time)} – {formatTime(hold.end_time)}
+                </div>
+
+                {/* availability */}
                 <div
-                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold w-fit"
-                  style={getSpotStyle(hold.spots)}
+                  className={`text-sm font-semibold px-3 py-1 rounded-full w-fit ${
+                    available
+                      ? "bg-green-100 text-green-700"
+                      : "bg-red-100 text-red-700"
+                  }`}
                 >
-                  <Users className="w-4 h-4" />
-                  {hold.spots} {t("holdstart.spots_label")}
+                  {available ? "Ledige pladser" : "Fuldt booket"}
                 </div>
               </div>
 
               <button
+                disabled={!available}
                 onClick={() => setSelectedHold(hold)}
-                className="mt-6 inline-flex justify-center items-center px-4 py-2 rounded-xl font-semibold transition hover:-translate-y-0.5"
-                style={{ backgroundColor: "var(--color-yellow)", color: "var(--color-bg)" }}
+                className={`mt-6 py-2 rounded-xl font-semibold transition ${
+                  available
+                    ? "bg-yellow-400 hover:bg-yellow-500 text-black"
+                    : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                }`}
               >
-                {t("holdstart.select_button")}
+                Vælg hold
               </button>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
 
       {selectedHold && (
         <BookingForm
           holdId={selectedHold.id}
-          holdDate={new Date(selectedHold.start_datetime).toLocaleDateString()}
-          holdTime={new Date(selectedHold.start_datetime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-          holdDays={selectedHold.days_of_week || selectedHold.name}
+          holdDate={formatDate(selectedHold.date)}
+          holdTime={`${formatTime(selectedHold.start_time)} – ${formatTime(selectedHold.end_time)}`}
+          holdDays={getType(selectedHold.type)}
           onClose={() => setSelectedHold(null)}
         />
       )}
