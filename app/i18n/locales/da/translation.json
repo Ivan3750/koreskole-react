@@ -280,7 +280,7 @@
   },
   "info": {
     "badge": "Kørekort Guide",
-    "title": "Hvad er kørekort B?",
+    "title": "Hvad er kørekort kategory B?",
     "description": "Kørekort B er det klassiske bilkørekort i Danmark, som giver dig ret til at køre almindelige personbiler. Det er den mest populære kørekortskategori og din vej til frihed på vejene.",
     "features": [
       {
@@ -610,9 +610,9 @@
       "keywords": "teoriprøve Vejle, kørekort B teori, bestå teoriprøve"
     },
     "koerekort_b_priser": {
-      "title": "Priser på kørekort B i Vejle",
-      "description": "Se priser på kørekort B hos Køreskole Vejle. Oversigt over pakker, ekstra lektioner og afbetaling.",
-      "keywords": "kørekort B priser, køreskole Vejle priser, kørelektioner pris"
+      "title": "Gratis informationsmøde om kørekort",
+      "description": "Deltag i et gratis informationsmøde og få overblik over hele kørekortforløbet i Danmark.",
+      "keywords": "kørekort B, køreskole Vejle, informationsmøde"
     },
     "kontakt": {
       "title": "Kontakt Køreskole Vejle",

@@ -9,6 +9,8 @@ import SwitchLanguage from "../i18n/SwitchLanguage";
 import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
 import "@/app/i18n";
+import Button from "./ux/Button";
+
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -113,7 +115,7 @@ export const Header = () => {
             <ThemeToggle />
             <SwitchLanguage />
 
-            <CTAButton
+            <Button
               label={t("header.cta")}
               locale={locale}
             />
@@ -226,25 +228,3 @@ export const Header = () => {
     </>
   );
 };
-
-const CTAButton = ({
-  label,
-  locale,
-}: {
-  label: string;
-  locale: string;
-}) => (
-  <Link href={`/${locale}/holdstart-vejle`} className="self-start">
-    <motion.button
-      whileHover={{ y: -2 }}
-      whileTap={{ scale: 0.96 }}
-      className="hidden lg:flex items-center gap-2 px-6 h-11 rounded-full font-medium shadow-md"
-      style={{ backgroundColor: "var(--color-yellow)", color: "#000" }}
-    >
-      {label}
-      <motion.div whileHover={{ rotate: 45 }}>
-        <ArrowUpRight size={16} />
-      </motion.div>
-    </motion.button>
-  </Link>
-);

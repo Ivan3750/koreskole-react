@@ -11,6 +11,7 @@ import '../i18n';
 import { useEffect } from "react";
 import { useParams } from "next/navigation";
 import i18n from "@/app/i18n";
+import LocaleGuard from "../components/LocaleGuard";
 const albertSans = Albert_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
 <html lang="da" className={albertSans.variable}>
   <body className={albertSans.className}>
+    <LocaleGuard></LocaleGuard>
         <ThemeContextProvider>
           <AppProviders fontFamily="var(--font-albert)">
             <Header />
@@ -45,6 +47,7 @@ export default function RootLayout({
             <Footer />
           </AppProviders>
         </ThemeContextProvider>
+   
       </body>
     </html>
   );

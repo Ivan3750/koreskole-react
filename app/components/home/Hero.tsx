@@ -7,8 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import school from "@/app/assets/image.png";
-
-const Hero = () => {
+ const Hero = () => {
   const { t } = useTranslation();
   const params = useParams();
   const locale = params?.locale as string;
@@ -64,18 +63,6 @@ const Hero = () => {
               {t("home.sign_up")}
             </Link>
 
-            {/* SEE PRICES */}
-            <Link
-              href={withLocale("/koerekort-b/priser")}
-              className="py-3 px-10 rounded-lg font-medium"
-              style={{
-                border: "1px solid rgba(255,255,255,0.4)",
-                color: "white",
-                background: "transparent",
-              }}
-            >
-              {t("home.see_prices")}
-            </Link>
 
           </div>
 
