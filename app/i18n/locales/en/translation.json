@@ -32,7 +32,7 @@
       "feature1_desc": "Teaching tailored to each student",
       "feature2_title": "Flexible Scheduling",
       "feature2_desc": "Weekdays and weekends by appointment",
-      "experience_years": "40+ years",
+      "experience_years": "30+ years",
       "experience_label": "Experience"
     },
     "michael": {
@@ -44,7 +44,7 @@
       "feature1_desc": "Practical and theoretical support at all levels",
       "feature2_title": "Customized Lessons",
       "feature2_desc": "Flexible lessons to meet individual needs",
-      "experience_years": "30+ years",
+      "experience_years": "40+ years",
       "experience_label": "Experience"
     }
   },
@@ -113,8 +113,8 @@
     "navigation": "Navigation",
     "korekrtB": "Driving License B",
     "contact": "Contact",
-    "phone": "24 00 00 00",
-    "email": "loenbaeks@gmail.com",
+    "phone": "20 76 03 33",
+    "email": "hello@lønbæks.dk",
     "address": "Vestre Engvej 7\n7100 Vejle",
     "copyright": "All rights reserved.",
     "tagline": "Driving school in Vejle since 1984",
@@ -187,10 +187,6 @@
       {
         "label": "About Us",
         "href": "/om-os"
-      },
-      {
-        "label": "Blog",
-        "href": "/blog"
       },
       {
         "label": "Contact",
@@ -519,13 +515,12 @@
     "description": "Driving test in Vejle - complete guide to the practical test for driver's license B. Learn what is tested, where the test takes place, and how to pass on the first try.",
     "keywords": "driving test Vejle, practical test Vejle, driver's license B Vejle, pass driving test, driving school Vejle",
     "tag": "Driving Test in Vejle",
-    "heading": "How to pass the driving test on the first try",
-    "intro": "Are you taking the driving test in Vejle? Here’s a complete guide to the practical test for driver's license B - what you are tested on, how the test is conducted, and how to increase your chances of passing.",
-    "note": "The driving test is the final part of your driver’s license program. With proper training, calmness, and focus, you can pass on your first attempt.",
-    "cta": "Learn more",
+    "heading": "How to pass your driving test the first time",
+    "intro": "Are you preparing for your driving test in Vejle? With our driving school and thorough preparation, you can significantly increase your chances of passing on the first attempt. Our professional instructors help you build safe driving habits and give you the experience needed to feel confident behind the wheel.",
+    "note": "The driving test is the final part of your license process and requires both technical understanding and practical skills. Our driving school ensures you are fully prepared through structured lessons, realistic driving situations, and personalized feedback, so you can approach the test with confidence.",    "cta": "Learn more",
     "cards": {
-      "duration": "30-45 minutes",
-      "durationText": "The practical test typically lasts up to 45 minutes.",
+      "duration": "25 minutes",
+      "durationText": "The practical test typically lasts up to 25 minutes.",
       "technicalCheck": "Technical Check",
       "technicalText": "You start with questions about the car’s equipment.",
       "traffic": "City & Country Roads",
@@ -533,20 +528,19 @@
       "assessment": "Expert Evaluation",
       "assessmentText": "An examiner evaluates your driving."
     },
-    "how": {
-      "heading": "How does the driving test in Vejle work?",
-      "step1": "The driving test in Vejle starts with a technical check, where you explain the car’s essential functions. Then you drive in normal traffic and are tested on your ability to drive safely and independently.",
-      "step2": "The examiner assesses your awareness, positioning, speed adjustment, and adherence to traffic laws."
-    },
-    "where": {
-      "heading": "Where does the driving test take place?",
-      "step1": "The driving test in Vejle usually starts at the Traffic Authority's testing location near Borgerservice.",
-      "step2": "You will drive in city traffic, roundabouts, intersections, and on larger roads to demonstrate that you can handle different traffic situations."
-    },
-    "ready": {
-      "heading": "Ready for your driving test in Vejle?",
-      "text": "With the right training and professional instruction, you significantly increase your chances of passing the driving test on the first try."
-    }
+   "how": {
+    "heading": "How does the driving test in Vejle work?",
+    "step1": "The driving test in Vejle usually starts with a technical check of the car. You will be asked to explain or demonstrate how different parts of the vehicle function, such as lights, brakes, and steering. With training from a professional driving school, you will be well prepared for this part.",
+    "step2": "After that, the actual driving begins, where the examiner evaluates your awareness, your ability to adjust speed, and how you handle traffic situations. An experienced instructor from a driving school in Vejle will train you in city driving, roundabouts, intersections, and parking, so you can feel confident throughout the test."
+  },
+  "where": {
+    "heading": "Where does the driving test take place?",
+    "step1": "The driving test in Vejle usually starts at the Danish Road Traffic Authority’s test center. When you choose a local driving school in Vejle, you will be trained in the same areas and traffic conditions that you will encounter during the test, increasing your chances of passing."
+  },
+  "ready": {
+    "heading": "Ready for your driving test in Vejle?",
+    "text": "With the right training and professional instruction from a driving school in Vejle, you will be well prepared to pass your driving test. Skilled instructors help you build confidence, understand traffic, and master the car in all situations. Sign up for a driving school today and take the first step towards your driver’s license."
+  }
   },
   "koereproeve_hero": {
       "title": "Driving Test in Vejle — What You Need to Know",

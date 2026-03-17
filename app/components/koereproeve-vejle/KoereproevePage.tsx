@@ -21,7 +21,6 @@ export default function KoereproevePage() {
 
       <div style={{ background: "var(--color-bg)" }}>
         <div className="max-w-7xl mx-auto px-6 py-20 space-y-24">
-          {/* Hero Section */}
           <section className="grid lg:grid-cols-2 gap-14 items-center">
             <div className="space-y-6">
               <span
@@ -42,7 +41,7 @@ export default function KoereproevePage() {
               </h1>
 
               <p
-                className="text-lg leading-relaxed"
+                className="text-base leading-relaxed"
                 style={{ color: "var(--color-text-secondary)" }}
               >
                 {t("koereproeve.intro")}
@@ -159,9 +158,7 @@ export default function KoereproevePage() {
                 {t("koereproeve.where.step1")}
               </p>
 
-              <p style={{ color: "var(--color-text-secondary)" }}>
-                {t("koereproeve.where.step2")}
-              </p>
+          
 
             </div>
 

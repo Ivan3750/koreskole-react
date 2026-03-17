@@ -13,8 +13,7 @@ export default function KorekortSection() {
   const params = useParams();
   const locale = params?.locale as string;
 
-  // Change language when locale changes
-  useEffect(() => {
+   useEffect(() => {
     if (locale && i18n.language !== locale) {
       i18n.changeLanguage(locale);
     }
@@ -31,8 +30,7 @@ export default function KorekortSection() {
     <section className="py-28" style={{ background: "var(--color-bg)" }}>
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         
-        {/* TEXT */}
-        <div className="space-y-6">
+         <div className="space-y-6">
           <span className="text-sm font-semibold uppercase tracking-wider text-yellow-500">
             {t("meet.subtitle")}
           </span>
@@ -63,15 +61,15 @@ export default function KorekortSection() {
           {/* CTA */}
           <div className="flex gap-4 pt-4">
             <Link
-              href={withLocale("/priser")}
+              href={withLocale("/hold-")}
               className="px-8 py-4 rounded-xl font-semibold"
               style={{ background: "var(--color-yellow)", color: "#000" }}
             >
-              {t("meet.cta.book")}
+              {t("meet.cta.book")} {/* make a modal form  */}
             </Link>
 
             <Link
-              href={withLocale("/kontakt")}
+              href={withLocale("/koerekort-b/forloeb/")}
               className="px-8 py-4 rounded-xl border"
               style={{ borderColor: "var(--color-border)" }}
             >

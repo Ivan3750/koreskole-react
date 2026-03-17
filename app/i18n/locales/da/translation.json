@@ -32,7 +32,7 @@
       "feature1_desc": "Undervisning tilpasset den enkelte elev",
       "feature2_title": "Fleksible Tider",
       "feature2_desc": "Hverdage og weekender efter aftale",
-      "experience_years": "40+ år",
+      "experience_years": "30+ år",
       "experience_label": "Erfaring"
     },
     "michael": {
@@ -44,7 +44,7 @@
       "feature1_desc": "Praktisk og teoretisk støtte til alle niveauer",
       "feature2_title": "Tilpasset Undervisning",
       "feature2_desc": "Fleksible lektioner efter behov",
-      "experience_years": "30+ år",
+      "experience_years": "40+ år",
       "experience_label": "Erfaring"
     }
   },
@@ -113,8 +113,8 @@
     "navigation": "Navigation",
     "korekrtB": "Kørekort B",
     "contact": "Kontakt",
-    "phone": "24 00 00 00",
-    "email": "lønbæks@gmail.com",
+    "phone": "20 76 03 33",
+    "email": "hello@lønbæks.dk",
     "address": "Vestre Engvej 7\n7100 Vejle",
     "copyright": "Alle rettigheder forbeholdes.",
     "tagline": "Kørelærer i Vejle siden 1984",
@@ -188,10 +188,7 @@
         "label": "Om os",
         "href": "/om-os"
       },
-      {
-        "label": "Blog",
-        "href": "/blog"
-      },
+
       {
         "label": "Kontakt",
         "href": "/kontakt"
@@ -525,13 +522,13 @@
     "description": "Køreprøve i Vejle - komplet guide til den praktiske prøve til kørekort B. Læs hvad du bliver testet i, hvor prøven foregår og hvordan du består første gang.",
     "keywords": "køreprøve Vejle, praktisk prøve Vejle, kørekort B Vejle, bestå køreprøve, køreskole Vejle",
     "tag": "Køreprøve i Vejle",
-    "heading": "Sådan består du køreprøven første gang",
-    "intro": "Skal du til køreprøve i Vejle? Her får du en komplet guide...",
-    "note": "Køreprøven er den sidste del af dit kørekortforløb...",
+     "heading": "Sådan består du køreprøven første gang",
+  "intro": "Skal du til køreprøve i Vejle? Med den vores køreskole og grundig forberedelse kan du markant øge dine chancer for at bestå i første forsøg. Vores professionelle kørelærere hjælper dig med at opbygge sikre kørevaner og giver dig den nødvendige erfaring til at føle dig tryg bag rattet.",
+  "note": "Køreprøven er den sidste del af dit kørekortforløb og kræver både teknisk forståelse og praktiske færdigheder. Vores køreskole sikrer, at du er godt forberedt gennem struktureret undervisning, realistiske køresituationer og personlig feedback, så du kan gå til prøven med selvtillid.",
     "cta": "Læs mere",
     "cards": {
-      "duration": "30-45 minutter",
-      "durationText": "Den praktiske prøve varer typisk op til 45 minutter.",
+      "duration": "25 minutter",
+      "durationText": "Den praktiske prøve varer typisk op til 25 minutter.",
       "technicalCheck": "Teknisk kontrol",
       "technicalText": "Du starter med spørgsmål om bilens udstyr.",
       "traffic": "By- og landevej",
@@ -539,20 +536,19 @@
       "assessment": "Sagkyndig vurdering",
       "assessmentText": "En prøvesagkyndig vurderer din kørsel."
     },
-    "how": {
-      "heading": "Hvordan foregår køreprøven i Vejle?",
-      "step1": "Køreprøven i Vejle starter med en teknisk kontrol...",
-      "step2": "Den sagkyndige vurderer din orientering..."
-    },
-    "where": {
-      "heading": "Hvor foregår køreprøven?",
-      "step1": "Køreprøven i Vejle starter typisk ved Trafikstyrelsens...",
-      "step2": "Du vil køre i både bytrafik, rundkørsler..."
-    },
-    "ready": {
-      "heading": "Klar til din køreprøve i Vejle?",
-      "text": "Med den rette træning og professionel undervisning..."
-    }
+   "how": {
+    "heading": "Hvordan foregår køreprøven i Vejle?",
+    "step1": "Køreprøven i Vejle starter typisk med en teknisk kontrol af bilen. Her bliver du bedt om at forklare eller vise, hvordan forskellige dele af bilen fungerer, såsom lys, bremser og styretøj. Med undervisning fra en professionel køreskole er du godt forberedt på denne del.",
+    "step2": "Derefter begynder selve kørslen, hvor den sagkyndige vurderer din orientering, din evne til at tilpasse hastighed, samt hvordan du håndterer trafiksituationer. En erfaren kørelærer fra en køreskole i Vejle træner dig i både bykørsel, rundkørsler, kryds og parkering, så du kan føle dig sikker under hele prøven."
+  },
+  "where": {
+    "heading": "Hvor foregår køreprøven?",
+    "step1": "Køreprøven i Vejle starter som regel ved Trafikstyrelsens testcenter. Når du vælger en lokal køreskole i Vejle, bliver du trænet i de samme områder og trafikforhold, som du møder til prøven, hvilket øger dine chancer for at bestå."
+  },
+  "ready": {
+    "heading": "Klar til din køreprøve i Vejle?",
+    "text": "Med den rette træning og professionel undervisning fra en køreskole i Vejle står du stærkt til at bestå din køreprøve. Dygtige kørelærere hjælper dig med at opbygge selvtillid, forstå trafikken og mestre bilen i alle situationer. Tilmeld dig en køreskole i dag og tag det første skridt mod dit kørekort."
+  }
   },
 
    "koereproeve_hero": {

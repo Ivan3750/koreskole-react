@@ -1,7 +1,6 @@
 import PageHero from "../../../components/PageHero";
-import heroImage from "../../../assets/hero-driving.jpg";
 import FAQ from "../../../components/FAQ";
-import PriserPage from "../../../components/PriserPage";
+import ForloebPage from "../../../components/ForloebPage";
 import type { Metadata } from "next";
 import gulbil from "@/app/assets/gulbil_2.jpeg"
 
@@ -49,13 +48,13 @@ export default async function Priser({
   return (
     <>
       <PageHero
-        title={t?.priser_hero?.title}
-        subtitle={t?.priser_hero?.subtitle}
+        title={t?.seo.koerekort_b_priser?.title}
+        subtitle={t?.seo.koerekort_b_priser?.description}
           image={gulbil}
         position="0 -450px"
       />
 
-     <PriserPage></PriserPage>
+     <ForloebPage></ForloebPage>
 <FAQ></FAQ>
     </>
   );

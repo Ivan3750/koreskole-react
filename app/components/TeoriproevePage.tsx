@@ -44,8 +44,7 @@ export default function TeoriproevePage() {
                 {t("theory.hero.title")}
               </h1>
 
-              <p className="text-lg leading-relaxed"
-                style={{ color: "var(--color-text-secondary)" }}>
+ <p className="text-base leading-relaxed"                style={{ color: "var(--color-text-secondary)" }}>
                 {t("theory.hero.paragraph1")}
               </p>
 

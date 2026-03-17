@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 import { useEffect } from "react";
 import "@/app/i18n";
 
-export default function PriserPage() {
+ function ForloebPage() {
   const { t, i18n } = useTranslation();
   const params = useParams();
   const locale = params?.locale as string;
@@ -176,3 +176,5 @@ export default function PriserPage() {
     </div>
   );
 }
+
+export default ForloebPage;

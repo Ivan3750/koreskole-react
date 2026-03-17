@@ -20,20 +20,21 @@ const Contact = () => {
     {
       icon: Phone,
       label: t("contact_page.phoneLabel"),
-      value: "25 00 00 00",
-      href: "tel:25000000",
+      value: "20 76 03 33",
+      href: "tel:20760333",
     },
     {
       icon: Mail,
       label: t("contact_page.emailLabel"),
-      value: "lønbæks@gmail.com",
-      href: "mailto:lønbæks@gmail.com",
+      value: "hello@lønbæks.dk",
+      href: "mailto:hello@lønbæks.dk",
     },
     {
       icon: MapPin,
       label: t("contact_page.addressLabel"),
       value: "Vestre Engvej 7\n7100 Vejle",
       href: "https://maps.google.com/?q=Vestre+Engvej+7,+7100+Vejle",
+      
     },
   ];
 

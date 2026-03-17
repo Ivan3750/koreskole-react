@@ -72,7 +72,7 @@ export default function PriserPage() {
             </ul>
 
             <a
-              href="/koerekort-b/priser"
+              href="/koerekort-b/forloeb/"
               className="px-8 py-3 rounded-xl font-semibold transition hover:scale-[1.03]"
               style={{
                 background: "var(--color-yellow)",

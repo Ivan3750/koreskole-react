@@ -16,26 +16,27 @@ export default function ContactFormPage() {
 
   const [success, setSuccess] = useState(false);
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      label: t("contact_page.phoneLabel"),
-      value: "25 00 00 00",
-      href: "tel:25000000",
-    },
-    {
-      icon: Mail,
-      label: t("contact_page.emailLabel"),
-      value: "lønbæks@gmail.com",
-      href: "mailto:lønbæks@gmail.com",
-    },
-    {
-      icon: MapPin,
-      label: t("contact_page.addressLabel"),
-      value: "Vestre Engvej 7\n7100 Vejle",
-      href: "https://maps.google.com/?q=Vestre+Engvej+7,+7100+Vejle",
-    },
-  ];
+   const contactInfo = [
+      {
+        icon: Phone,
+        label: t("contact_page.phoneLabel"),
+        value: "20 76 03 33",
+        href: "tel:20760333",
+      },
+      {
+        icon: Mail,
+        label: t("contact_page.emailLabel"),
+        value: "hello@lønbæks.dk",
+        href: "mailto:hello@lønbæks.dk",
+      },
+      {
+        icon: MapPin,
+        label: t("contact_page.addressLabel"),
+        value: "Vestre Engvej 7\n7100 Vejle",
+        href: "https://maps.google.com/?q=Vestre+Engvej+7,+7100+Vejle",
+        
+      },
+    ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
