@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Anna_Marie_Lønbæk_img from "../../assets/Anna-Marie_Lønbæk.jpeg";
-import Michael_Lønbæk_img from "../../assets/Michael_Lønbæk.jpeg";
-
+/* import Anna_Marie_Lønbæk_img from "../../assets/Anna-Marie_Lønbæk.jpeg";
+ */import Michael_Lønbæk_img from "../../assets/Michael_Lønbæk.jpeg";
+import Anna_Marie_Lønbæk_img from "../../assets/gulbil_3.jpeg";
 
 const Instructors = () => {
   const instructors = [
@@ -55,7 +55,7 @@ const Instructors = () => {
             <div
               key={i}
       style={{ backgroundColor: "var(--color-bg-layout)" }}
-              className="group rounded-3xl overflow-hidden   transition-all duration-500 hover:-translate-y-2"
+              className="group rounded-3xl overflow-hidden   transition-all duration-500  "
             >
               {/* IMAGE */}
               <div className="relative aspect-[4/5] overflow-hidden">
@@ -64,7 +64,7 @@ const Instructors = () => {
                   alt={p.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700  "
                 />
 
                 {/* Gradient overlay */}

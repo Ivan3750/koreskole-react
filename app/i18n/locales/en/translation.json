@@ -109,9 +109,10 @@
   },
   "footer": {
     "logo": "Lønbæks",
+    "school": "Driving School",
     "description": "Your partner in safe and reliable driving education in Vejle. With over 40 years of experience, we guide you all the way to your driving license.",
     "navigation": "Navigation",
-    "korekrtB": "Driving License B",
+    "korekortB": "Driving License B",
     "contact": "Contact",
     "phone": "20 76 03 33",
     "email": "hello@lønbæks.dk",

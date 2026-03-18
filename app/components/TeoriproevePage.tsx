@@ -6,7 +6,10 @@ import Head from "next/head";
 import { useTranslation } from "react-i18next";
 import CTA from "../components/cta"
 import "@/app/i18n";
-
+import place_door from "../assets/frdselsstyrelsen_door.jpeg";
+import place_car_front from "../assets//frdselsstyrelsen_car_front.jpeg";
+import place_car_side_1 from "../assets/frdselsstyrelsen_car_side_1.jpeg";
+import place_car_side_2 from "../assets/frdselsstyrelsen_car_side_2.jpeg";
 
 export default function TeoriproevePage() {
   const { t } = useTranslation();
@@ -53,28 +56,41 @@ export default function TeoriproevePage() {
                 {t("theory.hero.paragraph2")}
               </p>
 
-              <Link
-                href="/koerekort-b/"
-                className="inline-block px-8 py-3 rounded-xl font-semibold transition hover:scale-[1.03]"
-                style={{ background: "var(--color-yellow)", color: "white" }}
-              >
-                {t("theory.hero.cta")}
-              </Link>
+         
 
             </div>
 
             {/* Images unchanged */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image src="/images/teori-class.jpg" alt="" fill className="object-cover" />
-              </div>
-              <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image src="/images/traffic-sign.jpg" alt="" fill className="object-cover" />
-              </div>
-              <div className="relative h-44 rounded-2xl overflow-hidden col-span-2">
-                <Image src="/images/vejle-city.jpg" alt="" fill className="object-cover" />
-              </div>
-            </div>
+          <div className="relative h-96">
+  {/* Large photo — tilted, fills most of the space */}
+  <div
+    className="absolute inset-0 right-16 rounded-2xl overflow-hidden shadow-xl"
+    style={{ transform: "rotate(-2deg)", transformOrigin: "bottom left" }}
+  >
+    <Image
+      src={place_car_front}
+      alt=""
+      fill
+      className="object-cover"
+    />
+  </div>
+
+  {/* Small photo — overlaps bottom-right, counter-rotated */}
+  <div
+    className="absolute bottom-0 right-0 w-48 h-56 rounded-2xl overflow-hidden shadow-2xl border-4"
+    style={{
+      transform: "rotate(3deg)",
+      borderColor: "var(--color-yellow)",
+    }}
+  >
+    <Image
+      src={place_car_side_1}
+      alt=""
+      fill
+      className="object-cover"
+    />
+  </div>
+</div>
 
           </section>
 
@@ -118,8 +134,8 @@ export default function TeoriproevePage() {
           </section>
 
           {/* LOCATION */}
-          <section className="grid lg:grid-cols-2 gap-16 items-center">
-
+         
+   <section className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
               <h2 className="text-2xl font-bold">
                 {t("theory.location.title")}
@@ -128,20 +144,23 @@ export default function TeoriproevePage() {
               <p style={{ color: "var(--color-text-secondary)" }}>
                 {t("theory.location.p1")}
               </p>
-
               <p style={{ color: "var(--color-text-secondary)" }}>
                 {t("theory.location.p2")}
               </p>
             </div>
 
-            <div className="relative h-72 rounded-2xl overflow-hidden">
-              <Image src="/images/location-modern.jpg" alt="" fill className="object-cover" />
+            {/* Vertical image with taller aspect ratio */}
+            <div className="relative w-full" style={{ aspectRatio: "3 / 4", maxHeight: "480px" }}>
+              <div className="relative h-full rounded-2xl overflow-hidden">
+                <Image
+                  src={place_door}
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
-
           </section>
-
-          {/* CTA */}
-        <CTA></CTA>
 
         </div>
       </div>

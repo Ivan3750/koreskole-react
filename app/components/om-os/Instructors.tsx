@@ -5,7 +5,8 @@ import { Award, Heart, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";
 
-import AnnaImg from "../../assets/Anna-Marie_Lønbæk.jpeg";
+/* import AnnaImg from "../../assets/Anna-Marie_Lønbæk.jpeg";
+ */import AnnaImg from "../../assets/gulbil_3.jpeg";
 import MichaelImg from "../../assets/Michael_Lønbæk.jpeg";
 
 type InstructorProps = {

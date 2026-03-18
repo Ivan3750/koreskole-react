@@ -109,9 +109,10 @@
   },
   "footer": {
     "logo": "Lønbæks",
+    "school" :"Køreskole",
     "description": "Din partner i tryg og sikker køreuddannelse i Vejle. Med over 40 års erfaring guider vi dig hele vejen til kørekortet.",
     "navigation": "Navigation",
-    "korekrtB": "Kørekort B",
+    "korekortB": "Kørekort B",
     "contact": "Kontakt",
     "phone": "20 76 03 33",
     "email": "hello@lønbæks.dk",

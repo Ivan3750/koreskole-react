@@ -35,7 +35,7 @@ const Holdstart = () => {
       date: "2026-04-15",
       start_time: "17:00:00",
       end_time: "18:30:00",
-      spots: 0,
+      spots: 10,
     },
     {
       id: 3,
@@ -95,8 +95,9 @@ const Holdstart = () => {
           return (
             <div
               key={hold.id}
-              className=" rounded-2xl border p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between"
-      style={{ backgroundColor: "var(--color-bg)" }}
+              className=" rounded-2xl border  p-6   transition flex flex-col justify-between"
+                            style={{ borderColor: "var(--color-border)" , background: "var(--color-bg-elevated)"}}
+
             > 
               <div className="space-y-4">
 
