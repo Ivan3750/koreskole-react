@@ -26,27 +26,63 @@
     "anna": {
       "label": "Mød Din Kørelærer",
       "heading": "En Passioneret Kørelærer Med Hjerte for Sikkerhed",
-      "paragraph1": "Anna Marie Lønbæk har været kørelærer i Vejle siden 1984. Med over 40 års erfaring har hun uddannet tusindvis af elever og hjulpet dem med at blive sikre, ansvarsbevidste bilister.",
-      "paragraph2": "Hendes filosofi er enkel: Undervisningen skal være både lærerig og hyggelig. En afslappet atmosfære skaber de bedste betingelser for læring.",
-      "feature1_title": "Personlig Tilgang",
-      "feature1_desc": "Undervisning tilpasset den enkelte elev",
-      "feature2_title": "Fleksible Tider",
-      "feature2_desc": "Hverdage og weekender efter aftale",
+      "paragraphs": [
+        "Anna Marie Lønbæk har været kørelærer i Vejle siden 1996 og har med over 30 års erfaring uddannet tusindvis af elever til sikre og ansvarsbevidste bilister.",
+        "Hendes filosofi er enkel: undervisning skal foregå i en afslappet atmosfære for at skabe de bedste betingelser for læring.",
+        "Udover almindelig køreundervisning har Anna Marie stor erfaring med undervisning af rutinerede bilister på køretekniske anlæg, hvor der arbejdes med kørestilsevaluering og sikker kørsel.",
+        "Hun underviser også i miljøvenlig kørsel, uddanner motorcyklister og tilbyder undervisning på engelsk."
+      ],
+      "features": [
+        {
+          "title": "Personlig Tilgang",
+          "desc": "Undervisning tilpasset den enkelte elev",
+          "icon": "heart"
+        },
+        {
+          "title": "Bred Erfaring",
+          "desc": "Fra nye elever til erfarne bilister",
+          "icon": "shield"
+        },
+        {
+          "title": "Fleksibel Undervisning",
+          "desc": "Mulighed for undervisning på engelsk",
+          "icon": "clock"
+        }
+      ],
       "experience_years": "30+ år",
       "experience_label": "Erfaring"
     },
-    "michael": {
+
+"michael": {
       "label": "Mød Din Kørelærer",
       "heading": "Erfaren Kørelærer med Fokus på Tryghed",
-      "paragraph1": "Michael Lønbæk har undervist i Vejle siden 1990 og har hjulpet hundreder af elever med at opnå kørekortet trygt og sikkert.",
-      "paragraph2": "Michael tror på, at en rolig og struktureret undervisning giver de bedste resultater, samtidig med at eleverne føler sig trygge bag rattet.",
-      "feature1_title": "Erfaren Vejleder",
-      "feature1_desc": "Praktisk og teoretisk støtte til alle niveauer",
-      "feature2_title": "Tilpasset Undervisning",
-      "feature2_desc": "Fleksible lektioner efter behov",
+      "paragraphs": [
+        "Michael Lønbæk har været kørelærer siden 1985 og har hjulpet tusindvis af elever med at få kørekort på en tryg og sikker måde.",
+        "Han er kendt for sin rolige og strukturerede tilgang, som skaber tryghed hos eleverne og giver de bedste forudsætninger for læring bag rattet.",
+        "Michael har mange års erfaring med undervisning på køretekniske anlæg for både private og virksomheder, hvor fokus er på sikkerhed og bedre kørsel i praksis.",
+        "Han arbejder også med kørestilsevaluering for erfarne bilister samt projekter inden for udvikling af køresimulatorer, blandt andet i samarbejde med OUH."
+      ],
+      "features": [
+        {
+          "title": "Erfaren Vejleder",
+          "desc": "Støtte til både nye og erfarne bilister",
+          "icon": "heart"
+        },
+        {
+          "title": "Struktureret Undervisning",
+          "desc": "Tryg og effektiv læring",
+          "icon": "clock"
+        },
+        {
+          "title": "Avanceret Erfaring",
+          "desc": "Simulator og køreteknik",
+          "icon": "shield"
+        }
+      ],
       "experience_years": "40+ år",
       "experience_label": "Erfaring"
     }
+  
   },
   "services": {
     "label": "Vores Ydelser",
@@ -118,7 +154,7 @@
     "email": "hello@lønbæks.dk",
     "address": "Vestre Engvej 7\n7100 Vejle",
     "copyright": "Alle rettigheder forbeholdes.",
-    "tagline": "Kørelærer i Vejle siden 1984",
+    "tagline": "Kørelærer i Vejle siden 1985",
     "navItems": [
       {
         "label": "Holdstart",
@@ -577,7 +613,7 @@
   },
     "aboutHero": {
     "title": "Om Lønbæks Køreskole",
-    "subtitle": "Vi har uddannet tusindvis af elever siden 1984 og tilbyder personlig undervisning."
+    "subtitle": "Vi har uddannet tusindvis af elever siden 1985 og tilbyder personlig undervisning."
   },
  
   "seo": {
@@ -618,7 +654,7 @@
     },
     "om_os": {
       "title": "Om Lønbæks Køreskole i Vejle",
-      "description": "Vi har uddannet tusindvis af elever siden 1984 og tilbyder personlig undervisning og høj beståelsesrate.",
+      "description": "Vi har uddannet tusindvis af elever siden 1985 og tilbyder personlig undervisning og høj beståelsesrate.",
       "keywords": "om os, køreskole Vejle, Lønbæks Køreskole, kørekort B"
     },
     "blog": {

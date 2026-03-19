@@ -23,27 +23,62 @@
     "loading": "Loading..."
   },
   "instructors": {
-    "anna": {
+        "anna": {
       "label": "Meet Your Driving Instructor",
-      "heading": "A Passionate Instructor With a Heart for Safety",
-      "paragraph1": "Anna Marie Lønbæk has been a driving instructor in Vejle since 1984. With over 40 years of experience, she has trained thousands of students and helped them become safe, responsible drivers.",
-      "paragraph2": "Her philosophy is simple: teaching should be both educational and enjoyable. A relaxed atmosphere creates the best conditions for learning.",
-      "feature1_title": "Personal Approach",
-      "feature1_desc": "Teaching tailored to each student",
-      "feature2_title": "Flexible Scheduling",
-      "feature2_desc": "Weekdays and weekends by appointment",
+      "heading": "A Passionate Driving Instructor Focused on Safety",
+      "paragraphs": [
+        "Anna Marie Lønbæk has been a driving instructor in Vejle since 1996 and, with over 30 years of experience, has trained thousands of students to become safe and responsible drivers.",
+        "Her philosophy is simple: teaching should take place in a relaxed atmosphere to create the best conditions for learning.",
+        "In addition to standard driving lessons, Anna Marie has extensive experience teaching experienced drivers at advanced driving facilities, focusing on driving style evaluation and road safety.",
+        "She also teaches eco-friendly driving, trains motorcyclists, and offers lessons in English."
+      ],
+      "features": [
+        {
+          "title": "Personal Approach",
+          "desc": "Lessons tailored to each individual student",
+          "icon": "heart"
+        },
+        {
+          "title": "Extensive Experience",
+          "desc": "From beginners to experienced drivers",
+          "icon": "shield"
+        },
+        {
+          "title": "Flexible Learning",
+          "desc": "Lessons available in English",
+          "icon": "clock"
+        }
+      ],
       "experience_years": "30+ years",
       "experience_label": "Experience"
     },
+
     "michael": {
       "label": "Meet Your Driving Instructor",
-      "heading": "Experienced Instructor Focused on Safety",
-      "paragraph1": "Michael Lønbæk has been teaching in Vejle since 1990 and has helped hundreds of students achieve their driving license safely and confidently.",
-      "paragraph2": "Michael believes that calm and structured teaching yields the best results, while ensuring students feel confident behind the wheel.",
-      "feature1_title": "Experienced Guide",
-      "feature1_desc": "Practical and theoretical support at all levels",
-      "feature2_title": "Customized Lessons",
-      "feature2_desc": "Flexible lessons to meet individual needs",
+      "heading": "Experienced Driving Instructor Focused on Confidence and Safety",
+      "paragraphs": [
+        "Michael Lønbæk has been a driving instructor since 1985 and has helped thousands of students obtain their driver’s license in a safe and confident way.",
+        "He is known for his calm and structured approach, which helps students feel comfortable behind the wheel while learning effectively.",
+        "Michael also has many years of experience teaching at advanced driving facilities for both private individuals and companies, focusing on practical safety and driving performance.",
+        "He works with driving style evaluation for experienced drivers and has contributed to projects involving the development of driving simulators, including collaboration with OUH."
+      ],
+      "features": [
+        {
+          "title": "Experienced Instructor",
+          "desc": "Support for both new and experienced drivers",
+          "icon": "heart"
+        },
+        {
+          "title": "Structured Teaching",
+          "desc": "Safe and effective learning process",
+          "icon": "clock"
+        },
+        {
+          "title": "Advanced Expertise",
+          "desc": "Simulator and advanced driving training",
+          "icon": "shield"
+        }
+      ],
       "experience_years": "40+ years",
       "experience_label": "Experience"
     }
@@ -118,7 +153,7 @@
     "email": "hello@lønbæks.dk",
     "address": "Vestre Engvej 7\n7100 Vejle",
     "copyright": "All rights reserved.",
-    "tagline": "Driving school in Vejle since 1984",
+    "tagline": "Driving school in Vejle since 1985",
     "navItems": [
       {
         "label": "Course Start",
@@ -570,7 +605,7 @@
   },
   "aboutHero": {
     "title": "About Lønbæks Driving School",
-    "subtitle": "We have trained thousands of students since 1984 and offer personalized instruction."
+    "subtitle": "We have trained thousands of students since 1985 and offer personalized instruction."
   },
     "seo": {
     "home": {
@@ -610,7 +645,7 @@
     },
     "om_os": {
       "title": "About Lønbæks Driving School in Vejle",
-      "description": "We have trained thousands of students since 1984 and offer personalized lessons with high pass rates.",
+      "description": "We have trained thousands of students since 1985 and offer personalized lessons with high pass rates.",
       "keywords": "about us, driving school Vejle, Lønbæks Driving School, driving license B"
     },
     "blog": {
