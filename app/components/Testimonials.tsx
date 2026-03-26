@@ -1,52 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Star, Quote } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useParams } from "next/navigation";
+import "@/app/i18n";
+
+type Testimonial = {
+  name: string;
+  age: number;
+  text: string;
+  rating: number;
+};
 
 const Testimonials = () => {
-const testimonials = [
-  {
-    name: "Marie Andersen",
-    age: 19,
-    text: "Jørgen er en fantastisk kørelærer! Han var altid tålmodig forklarede alt, så det var nemt at forstå. Jeg bestod min køreprøve i første forsøg!",
-    rating: 5,
-  },
-  {
-    name: "Thomas Nielsen",
-    age: 22,
-    text: "Super god køreskole med fleksible tider. Jeg kunne nemt passe køretimerne ind i mit studie, lærerne er meget hjælpsomme.",
-    rating: 5,
-  },
-  {
-    name: "Sofie Pedersen",
-    age: 18,
-    text: "Jeg var nervøs i starten, men Jørgen skabte en tryg atmosfære. Den rolige strukturerede undervisning gjorde det meget nemmere at lære.",
-    rating: 5,
-  },
-  {
-    name: "Alexander Madsen",
-    age: 20,
-    text: "Fremragende køreskole! Både teori og praktiske lektioner var godt tilrettelagt. Jeg følte mig godt forberedt til køreprøven.",
-    rating: 5,
-  },
-  {
-    name: "Clara Jensen",
-    age: 21,
-    text: "Kørelærerne er meget tålmodige, giver altid gode tips. Jeg anbefaler denne skole til alle, der vil lære at køre trygt.",
-    rating: 5,
-  },
-  {
-    name: "Leonard Bahro",
-    age: 23,
-    text: "Fantastisk personale, gode biler til undervisning. Jeg bestod min køreprøve uden problemer, følte mig altid sikker under lektionerne.",
-    rating: 5,
-  },
-];
+  const { t, i18n } = useTranslation();
+  const params = useParams();
 
+  useEffect(() => {
+    if (params?.lang) {
+      i18n.changeLanguage(params.lang as string);
+    }
+  }, [params?.lang, i18n]);
+
+  const testimonials = t("testimonials.items", {
+    returnObjects: true,
+  }) as Testimonial[];
 
   return (
     <section
-      className="py-24 "
+      className="py-24"
       style={{ backgroundColor: "var(--color-bg-layout)" }}
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -55,18 +38,18 @@ const testimonials = [
             className="font-semibold text-sm uppercase tracking-wider"
             style={{ color: "var(--color-yellow)" }}
           >
-            Anmeldelser
+            {t("testimonials.label")}
           </span>
+
           <h2
             className="font-display text-3xl md:text-4xl font-bold mt-2 mb-4"
             style={{ color: "var(--color-text)" }}
           >
-            Hvad vores elever siger
+            {t("testimonials.title")}
           </h2>
-          <p
-            className="normal-text"
-           >
-            Ærlige oplevelser fra elever, der har taget kørekort hos os.
+
+          <p className="normal-text">
+            {t("testimonials.subtitle")}
           </p>
         </div>
 
@@ -112,6 +95,7 @@ const testimonials = [
                 >
                   {testimonial.name.charAt(0)}
                 </div>
+
                 <div>
                   <div
                     className="text-sm font-semibold"
@@ -119,11 +103,12 @@ const testimonials = [
                   >
                     {testimonial.name}
                   </div>
-                  <div  
+
+                  <div
                     className="text-xs"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
-                    {testimonial.age} år
+                    {testimonial.age} {t("testimonials.years")}
                   </div>
                 </div>
               </div>

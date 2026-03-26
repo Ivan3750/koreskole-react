@@ -671,10 +671,10 @@
   },
    "cars": {
     "golf": {
-      "name": "Volkswagen Golf GTE",
+      "name": "Volkswagen Golf GTE ",
       "year_label": "Model Year",
       "year": "2021",
-      "description": "The Volkswagen Golf GTE is a modern and dynamic training vehicle offering high comfort and advanced safety systems. It is stable on the road, easy to maneuver, and equipped with dual controls to ensure maximum safety for both student and instructor throughout the entire training process."
+      "description": "The Golf GTE is a very good training car. It has automatic transmission and is intuitive to operate, and it is equipped with all modern safety features. This allows students to easily learn what is necessary about the cars of the future while having more time to focus on driving itself and thus road safety. Two-thirds of all accidents are caused by inattention or attention directed at the wrong things—therefore, it is important that the car itself is not also a distraction. When the new driver education program comes into effect on July 1, 2026, it will be a requirement that the student, during the driving test, can explain and demonstrate how modern driver assistance systems work and how they positively impact road safety."
     },
     "taigo": {
       "name": "Volkswagen Taigo",
@@ -697,6 +697,51 @@
       "see": "See driving course"
     },
     "imageAlt": "Driving lesson"
+  },
+
+  "testimonials": {
+    "label": "Testimonials",
+    "title": "What our students say",
+    "subtitle": "Honest experiences from students who got their license with us.",
+    "years": "years",
+    "items": [
+      {
+        "name": "Marie Andersen",
+        "age": 19,
+        "text": "Jørgen is an amazing driving instructor! He was always patient and explained everything clearly. I passed my test on the first try!",
+        "rating": 5
+      },
+      {
+        "name": "Thomas Nielsen",
+        "age": 22,
+        "text": "Great driving school with flexible schedules. I could easily fit lessons into my studies, and the instructors are very helpful.",
+        "rating": 5
+      },
+      {
+        "name": "Sofie Pedersen",
+        "age": 18,
+        "text": "I was nervous at first, but Jørgen created a safe environment. The calm and structured teaching made it much easier to learn.",
+        "rating": 5
+      },
+      {
+        "name": "Alexander Madsen",
+        "age": 20,
+        "text": "Excellent driving school! Both theory and practical lessons were well organized. I felt well prepared for the test.",
+        "rating": 5
+      },
+      {
+        "name": "Clara Jensen",
+        "age": 21,
+        "text": "The instructors are very patient and always give great tips. I highly recommend this school to anyone learning to drive.",
+        "rating": 5
+      },
+      {
+        "name": "Leonard Bahro",
+        "age": 23,
+        "text": "Fantastic staff and great cars for lessons. I passed without any problems and always felt safe during lessons.",
+        "rating": 5
+      }
+    ]
   }
 
 }

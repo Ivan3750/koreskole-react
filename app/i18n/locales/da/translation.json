@@ -680,10 +680,10 @@
   },
   "cars": {
     "golf": {
-      "name": "Volkswagen Golf GTE",
+      "name": "VW Golf GTE som skolevogn",
       "year_label": "Årgang",
       "year": "2021",
-      "description": "Volkswagen Golf GTE er en moderne og dynamisk undervisningsbil med høj komfort og avancerede sikkerhedssystemer. Den er stabil på vejen, nem at manøvrere og udstyret med dobbeltbetjening, hvilket giver maksimal tryghed for både elev og kørelærer under hele uddannelsesforløbet."
+      "description": "Golf GTE er en rigtig god skolevogn. Den har automatgear og er intuitiv at betjene samt har alt i moderne sikkerhedsudstyr. På den måde kan eleverne nemt lære det nødvendige om fremtidens biler og samtidig have mere tid til at fokusere på selve kørslen og dermed trafiksikkerheden. 2/3 af alle ulykker skyldes uopmærksomhed eller opmærksomhed rettet mod noget forkert - derfor er det vigtigt at bilen ikke også er en distraktion. Når den nye køreuddannelse træder i kraft den 1 juli 2026 bliver det et krav at eleven til køreprøven kan redegøre for og forklare hvordan moderne førerassistentsystemer virker og har positiv virkning på trafiksikkerheden. "
     },
     "taigo": {
       "name": "Volkswagen Taigo",
@@ -706,6 +706,50 @@
       "see": "Se kørekortforløb"
     },
     "imageAlt": "Køretime"
+  },
+   "testimonials": {
+    "label": "Anmeldelser",
+    "title": "Hvad vores elever siger",
+    "subtitle": "Ærlige oplevelser fra elever, der har taget kørekort hos os.",
+    "years": "år",
+    "items": [
+      {
+        "name": "Ivan Kohan",
+        "age": 17,
+        "text": "Det er den bedste køreskole. Bilerne er meget behagelige at køre i, og instruktørerne er utroligt tålmodige og altid klar til at hjælpe. De forklarer alt på et letforståeligt sprog og står altid klar til at hjælpe, når man er i tvivl. Jeg kan uden tvivl anbefale denne køreskole.",
+        "rating": 5
+      },
+      {
+        "name": "Thomas Nielsen",
+        "age": 22,
+        "text": "Super god køreskole med fleksible tider. Jeg kunne nemt passe køretimerne ind i mit studie, og lærerne er meget hjælpsomme.",
+        "rating": 5
+      },
+      {
+        "name": "Sofie Pedersen",
+        "age": 18,
+        "text": "Jeg var nervøs i starten, men Jørgen skabte en tryg atmosfære. Den rolige og strukturerede undervisning gjorde det meget nemmere at lære.",
+        "rating": 5
+      },
+      {
+        "name": "Alexander Madsen",
+        "age": 20,
+        "text": "Fremragende køreskole! Både teori og praktiske lektioner var godt tilrettelagt. Jeg følte mig godt forberedt til køreprøven.",
+        "rating": 5
+      },
+      {
+        "name": "Clara Jensen",
+        "age": 21,
+        "text": "Kørelærerne er meget tålmodige og giver altid gode tips. Jeg anbefaler denne skole til alle, der vil lære at køre trygt.",
+        "rating": 5
+      },
+      {
+        "name": "Leonard Bahro",
+        "age": 23,
+        "text": "Fantastisk personale og gode biler til undervisning. Jeg bestod uden problemer og følte mig altid sikker under lektionerne.",
+        "rating": 5
+      }
+    ]
   }
  
 

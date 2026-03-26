@@ -1,0 +1,844 @@
+20:13:25 Origin: http://localhost:3000
+20:13:25 Method: GET
+20:13:25 Origin allowed
+20:13:25 Origin: http://localhost:3000
+20:13:25 Method: GET
+20:13:25 Origin allowed
+20:13:25 Origin: http://localhost:3000
+20:13:25 Method: GET
+20:13:25 Origin allowed
+20:13:25 Origin: http://localhost:3000
+20:13:25 Method: GET
+20:13:25 Origin allowed
+20:15:39 ---- NEW REQUEST ----
+20:15:39 Origin: http://localhost:3000
+20:15:39 Method: GET
+20:15:39 Headers: {"Host":"localhost:8000","Connection":"keep-alive","Pragma":"no-cache","Cache-Control":"no-cache","sec-ch-ua-platform":"\"Windows\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/146.0.0.0 Safari\/537.36","sec-ch-ua":"\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.659893030.1773438838; _ga_7M08B6LMXB=GS2.1.s1773438837$o1$g1$t1773443803$j60$l0$h0; __next_hmr_refresh_hash__=7; PHPSESSID=Gg%2CVXSHZjXRmevVOhqeVbxt29kdgMYeBTgkpSKlrZVoktZmpFAINngJ8%2Ck32JIk4"}
+20:15:39 Origin allowed
+20:15:39 ---- NEW REQUEST ----
+20:15:39 Origin: http://localhost:3000
+20:15:39 Method: GET
+20:15:39 Headers: {"Host":"localhost:8000","Connection":"keep-alive","Pragma":"no-cache","Cache-Control":"no-cache","sec-ch-ua-platform":"\"Windows\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/146.0.0.0 Safari\/537.36","sec-ch-ua":"\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.659893030.1773438838; _ga_7M08B6LMXB=GS2.1.s1773438837$o1$g1$t1773443803$j60$l0$h0; __next_hmr_refresh_hash__=7; PHPSESSID=Gg%2CVXSHZjXRmevVOhqeVbxt29kdgMYeBTgkpSKlrZVoktZmpFAINngJ8%2Ck32JIk4"}
+20:15:39 Origin allowed
+20:15:39 ---- NEW REQUEST ----
+20:15:39 Origin: http://localhost:3000
+20:15:39 Method: GET
+20:15:39 Headers: {"Host":"localhost:8000","Connection":"keep-alive","Pragma":"no-cache","Cache-Control":"no-cache","sec-ch-ua-platform":"\"Windows\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/146.0.0.0 Safari\/537.36","sec-ch-ua":"\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.659893030.1773438838; _ga_7M08B6LMXB=GS2.1.s1773438837$o1$g1$t1773443803$j60$l0$h0; __next_hmr_refresh_hash__=7; PHPSESSID=Gg%2CVXSHZjXRmevVOhqeVbxt29kdgMYeBTgkpSKlrZVoktZmpFAINngJ8%2Ck32JIk4"}
+20:15:39 Origin allowed
+20:15:39 ---- NEW REQUEST ----
+20:15:39 Origin: http://localhost:3000
+20:15:39 Method: GET
+20:15:39 Headers: {"Host":"localhost:8000","Connection":"keep-alive","Pragma":"no-cache","Cache-Control":"no-cache","sec-ch-ua-platform":"\"Windows\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/146.0.0.0 Safari\/537.36","sec-ch-ua":"\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.659893030.1773438838; _ga_7M08B6LMXB=GS2.1.s1773438837$o1$g1$t1773443803$j60$l0$h0; __next_hmr_refresh_hash__=7; PHPSESSID=Gg%2CVXSHZjXRmevVOhqeVbxt29kdgMYeBTgkpSKlrZVoktZmpFAINngJ8%2Ck32JIk4"}
+20:15:39 Origin allowed
+20:20:49 ---- NEW REQUEST ----
+20:20:49 Origin: http://localhost:3000
+20:20:49 Method: OPTIONS
+20:20:49 OPTIONS HIT
+20:20:50 ---- NEW REQUEST ----
+20:20:50 Origin: http://localhost:3000
+20:20:50 Method: POST
+[26-Mar-2026 20:20:50 UTC] PHP Warning:  require(auth_guard.php): Failed to open stream: No such file or directory in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\courses.php on line 3
+[26-Mar-2026 20:20:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'auth_guard.php' (include_path='.;C:\php\pear') in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\courses.php:3
+Stack trace:
+#0 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\courses.php on line 3
+20:20:50 ---- NEW REQUEST ----
+20:20:50 Origin: http://localhost:3000
+20:20:50 Method: GET
+[26-Mar-2026 20:20:50 UTC] PHP Warning:  require(auth_guard.php): Failed to open stream: No such file or directory in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\courses.php on line 3
+[26-Mar-2026 20:20:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'auth_guard.php' (include_path='.;C:\php\pear') in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\courses.php:3
+Stack trace:
+#0 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\courses.php on line 3
+20:22:34 ---- NEW REQUEST ----
+20:22:34 Origin: http://localhost:3000
+20:22:34 Method: OPTIONS
+20:22:34 OPTIONS HIT
+20:22:34 ---- NEW REQUEST ----
+20:22:34 Origin: http://localhost:3000
+20:22:34 Method: POST
+20:22:35 ---- NEW REQUEST ----
+20:22:35 Origin: http://localhost:3000
+20:22:35 Method: GET
+20:22:48 ---- NEW REQUEST ----
+20:22:48 Origin: http://localhost:3000
+20:22:48 Method: GET
+20:22:48 ---- NEW REQUEST ----
+20:22:48 Origin: http://localhost:3000
+20:22:48 Method: GET
+20:22:48 ---- NEW REQUEST ----
+20:22:48 Origin: http://localhost:3000
+20:22:48 Method: GET
+20:22:48 ---- NEW REQUEST ----
+20:22:48 Origin: http://localhost:3000
+20:22:48 Method: GET
+20:22:48 ---- NEW REQUEST ----
+20:22:48 Origin: http://localhost:3000
+20:22:48 Method: GET
+20:22:49 ---- NEW REQUEST ----
+20:22:49 Origin: http://localhost:3000
+20:22:49 Method: GET
+20:23:33 ---- NEW REQUEST ----
+20:23:33 Origin: http://localhost:3000
+20:23:33 Method: GET
+20:23:33 ---- NEW REQUEST ----
+20:23:33 Origin: http://localhost:3000
+20:23:33 Method: GET
+20:23:33 ---- NEW REQUEST ----
+20:23:33 Origin: http://localhost:3000
+20:23:33 Method: GET
+20:23:33 ---- NEW REQUEST ----
+20:23:33 Origin: http://localhost:3000
+20:23:33 Method: GET
+20:23:33 ---- NEW REQUEST ----
+20:23:33 Origin: http://localhost:3000
+20:23:33 Method: GET
+20:23:34 ---- NEW REQUEST ----
+20:23:34 Origin: http://localhost:3000
+20:23:34 Method: GET
+20:25:31 ---- NEW REQUEST ----
+20:25:31 Origin: http://localhost:3000
+20:25:31 Method: GET
+20:25:31 ---- NEW REQUEST ----
+20:25:31 Origin: http://localhost:3000
+20:25:31 Method: GET
+20:25:32 ---- NEW REQUEST ----
+20:25:32 Origin: http://localhost:3000
+20:25:32 Method: GET
+20:25:32 ---- NEW REQUEST ----
+20:25:32 Origin: http://localhost:3000
+20:25:32 Method: GET
+20:25:32 ---- NEW REQUEST ----
+20:25:32 Origin: http://localhost:3000
+20:25:32 Method: GET
+20:25:32 ---- NEW REQUEST ----
+20:25:32 Origin: http://localhost:3000
+20:25:32 Method: GET
+20:28:28 ---- NEW REQUEST ----
+20:28:28 Origin: http://localhost:3000
+20:28:28 Method: GET
+20:28:28 ---- NEW REQUEST ----
+20:28:28 Origin: http://localhost:3000
+20:28:28 Method: GET
+20:28:28 ---- NEW REQUEST ----
+20:28:28 Origin: http://localhost:3000
+20:28:28 Method: GET
+20:28:28 ---- NEW REQUEST ----
+20:28:28 Origin: http://localhost:3000
+20:28:28 Method: GET
+20:28:28 ---- NEW REQUEST ----
+20:28:28 Origin: http://localhost:3000
+20:28:28 Method: GET
+20:28:28 ---- NEW REQUEST ----
+20:28:28 Origin: http://localhost:3000
+20:28:28 Method: GET
+20:29:28 ---- NEW REQUEST ----
+20:29:28 Origin: http://localhost:3000
+20:29:28 Method: GET
+20:29:28 ---- NEW REQUEST ----
+20:29:28 Origin: http://localhost:3000
+20:29:28 Method: GET
+20:29:28 ---- NEW REQUEST ----
+20:29:28 Origin: http://localhost:3000
+20:29:28 Method: GET
+20:29:28 ---- NEW REQUEST ----
+20:29:28 Origin: http://localhost:3000
+20:29:28 Method: GET
+20:29:28 ---- NEW REQUEST ----
+20:29:28 Origin: http://localhost:3000
+20:29:28 Method: GET
+20:29:29 ---- NEW REQUEST ----
+20:29:29 Origin: http://localhost:3000
+20:29:29 Method: GET
+20:37:21 ---- NEW REQUEST ----
+20:37:21 Origin: http://localhost:3000
+20:37:21 Method: GET
+20:37:21 ---- NEW REQUEST ----
+20:37:21 Origin: http://localhost:3000
+20:37:21 Method: GET
+20:37:21 ---- NEW REQUEST ----
+20:37:21 Origin: http://localhost:3000
+20:37:21 Method: GET
+20:37:21 ---- NEW REQUEST ----
+20:37:21 Origin: http://localhost:3000
+20:37:21 Method: GET
+20:37:21 ---- NEW REQUEST ----
+20:37:21 Origin: http://localhost:3000
+20:37:21 Method: GET
+20:37:22 ---- NEW REQUEST ----
+20:37:22 Origin: http://localhost:3000
+20:37:22 Method: GET
+20:37:36 ---- NEW REQUEST ----
+20:37:36 Origin: http://localhost:3000
+20:37:36 Method: OPTIONS
+20:37:36 OPTIONS HIT
+20:37:36 ---- NEW REQUEST ----
+20:37:36 Origin: http://localhost:3000
+20:37:36 Method: POST
+20:37:36 ---- NEW REQUEST ----
+20:37:36 Origin: http://localhost:3000
+20:37:36 Method: GET
+20:37:41 ---- NEW REQUEST ----
+20:37:41 Origin: http://localhost:3000
+20:37:41 Method: OPTIONS
+20:37:41 OPTIONS HIT
+20:37:41 ---- NEW REQUEST ----
+20:37:41 Origin: http://localhost:3000
+20:37:41 Method: DELETE
+20:44:30 ---- NEW REQUEST ----
+20:44:30 Origin: http://localhost:3000
+20:44:30 Method: GET
+20:44:30 ---- NEW REQUEST ----
+20:44:30 Origin: http://localhost:3000
+20:44:30 Method: GET
+20:44:30 ---- NEW REQUEST ----
+20:44:30 Origin: http://localhost:3000
+20:44:30 Method: GET
+[26-Mar-2026 20:44:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'defaultdb.blogs' doesn't exist in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:44:31 ---- NEW REQUEST ----
+20:44:31 Origin: http://localhost:3000
+20:44:31 Method: GET
+[26-Mar-2026 20:44:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'defaultdb.blogs' doesn't exist in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:46:46 ---- NEW REQUEST ----
+20:46:46 Origin: http://localhost:3000
+20:46:46 Method: GET
+20:46:46 ---- NEW REQUEST ----
+20:46:46 Origin: http://localhost:3000
+20:46:46 Method: GET
+20:46:46 ---- NEW REQUEST ----
+20:46:46 Origin: http://localhost:3000
+20:46:46 Method: GET
+[26-Mar-2026 20:46:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'defaultdb.blogs' doesn't exist in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:46:47 ---- NEW REQUEST ----
+20:46:47 Origin: http://localhost:3000
+20:46:47 Method: GET
+[26-Mar-2026 20:46:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'defaultdb.blogs' doesn't exist in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:46:57 ---- NEW REQUEST ----
+20:46:57 Origin: http://localhost:3000
+20:46:57 Method: GET
+20:46:58 ---- NEW REQUEST ----
+20:46:58 Origin: http://localhost:3000
+20:46:58 Method: GET
+20:46:58 ---- NEW REQUEST ----
+20:46:58 Origin: http://localhost:3000
+20:46:58 Method: GET
+20:46:58 ---- NEW REQUEST ----
+20:46:58 Origin: http://localhost:3000
+20:46:58 Method: GET
+20:46:58 ---- NEW REQUEST ----
+20:46:58 Origin: http://localhost:3000
+20:46:58 Method: GET
+20:46:59 ---- NEW REQUEST ----
+20:46:59 Origin: http://localhost:3000
+20:46:59 Method: GET
+20:46:59 ---- NEW REQUEST ----
+20:46:59 Origin: http://localhost:3000
+20:46:59 Method: GET
+20:46:59 ---- NEW REQUEST ----
+20:46:59 Origin: http://localhost:3000
+20:46:59 Method: GET
+20:46:59 ---- NEW REQUEST ----
+20:46:59 Origin: http://localhost:3000
+20:46:59 Method: GET
+20:46:59 ---- NEW REQUEST ----
+20:46:59 Origin: http://localhost:3000
+20:46:59 Method: GET
+20:46:59 ---- NEW REQUEST ----
+20:46:59 Origin: http://localhost:3000
+20:46:59 Method: GET
+20:47:00 ---- NEW REQUEST ----
+20:47:00 Origin: http://localhost:3000
+20:47:00 Method: GET
+20:48:06 ---- NEW REQUEST ----
+20:48:06 Origin: http://localhost:3000
+20:48:06 Method: GET
+20:48:06 ---- NEW REQUEST ----
+20:48:06 Origin: http://localhost:3000
+20:48:06 Method: GET
+20:48:06 ---- NEW REQUEST ----
+20:48:06 Origin: http://localhost:3000
+20:48:06 Method: GET
+20:48:06 ---- NEW REQUEST ----
+20:48:06 Origin: http://localhost:3000
+20:48:06 Method: GET
+20:48:06 ---- NEW REQUEST ----
+20:48:06 Origin: http://localhost:3000
+20:48:06 Method: GET
+20:48:06 ---- NEW REQUEST ----
+20:48:06 Origin: http://localhost:3000
+20:48:06 Method: GET
+20:48:43 ---- NEW REQUEST ----
+20:48:43 Origin: http://localhost:3000
+20:48:43 Method: GET
+20:48:44 ---- NEW REQUEST ----
+20:48:44 Origin: http://localhost:3000
+20:48:44 Method: GET
+20:48:44 ---- NEW REQUEST ----
+20:48:44 Origin: http://localhost:3000
+20:48:44 Method: GET
+20:48:44 ---- NEW REQUEST ----
+20:48:44 Origin: http://localhost:3000
+20:48:44 Method: GET
+20:48:44 ---- NEW REQUEST ----
+20:48:44 Origin: http://localhost:3000
+20:48:44 Method: GET
+20:48:44 ---- NEW REQUEST ----
+20:48:44 Origin: http://localhost:3000
+20:48:44 Method: GET
+20:48:45 ---- NEW REQUEST ----
+20:48:45 Origin: http://localhost:3000
+20:48:45 Method: GET
+20:48:45 ---- NEW REQUEST ----
+20:48:45 Origin: http://localhost:3000
+20:48:45 Method: GET
+20:48:45 ---- NEW REQUEST ----
+20:48:45 Origin: http://localhost:3000
+20:48:45 Method: GET
+[26-Mar-2026 20:48:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:48:46 ---- NEW REQUEST ----
+20:48:46 Origin: http://localhost:3000
+20:48:46 Method: GET
+[26-Mar-2026 20:48:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:48:56 ---- NEW REQUEST ----
+20:48:56 Origin: http://localhost:3000
+20:48:56 Method: OPTIONS
+20:48:56 OPTIONS HIT
+20:48:57 ---- NEW REQUEST ----
+20:48:57 Origin: http://localhost:3000
+20:48:57 Method: POST
+[26-Mar-2026 20:48:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:61
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 61
+20:48:57 ---- NEW REQUEST ----
+20:48:57 Origin: http://localhost:3000
+20:48:57 Method: OPTIONS
+20:48:57 OPTIONS HIT
+20:48:57 ---- NEW REQUEST ----
+20:48:57 Origin: http://localhost:3000
+20:48:57 Method: POST
+[26-Mar-2026 20:48:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:61
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 61
+20:48:57 ---- NEW REQUEST ----
+20:48:57 Origin: http://localhost:3000
+20:48:57 Method: GET
+[26-Mar-2026 20:48:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:48:58 ---- NEW REQUEST ----
+20:48:58 Origin: http://localhost:3000
+20:48:58 Method: GET
+[26-Mar-2026 20:48:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:49:30 ---- NEW REQUEST ----
+20:49:30 Origin: http://localhost:3000
+20:49:30 Method: GET
+20:49:30 ---- NEW REQUEST ----
+20:49:30 Origin: http://localhost:3000
+20:49:30 Method: GET
+20:49:31 ---- NEW REQUEST ----
+20:49:31 Origin: http://localhost:3000
+20:49:31 Method: GET
+[26-Mar-2026 20:49:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:49:31 ---- NEW REQUEST ----
+20:49:31 Origin: http://localhost:3000
+20:49:31 Method: GET
+[26-Mar-2026 20:49:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:50:56 ---- NEW REQUEST ----
+20:50:56 Origin: http://localhost:3000
+20:50:56 Method: GET
+20:50:57 ---- NEW REQUEST ----
+20:50:57 Origin: http://localhost:3000
+20:50:57 Method: GET
+[26-Mar-2026 20:50:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:51:01 ---- NEW REQUEST ----
+20:51:01 Origin: http://localhost:3000
+20:51:01 Method: GET
+20:51:01 ---- NEW REQUEST ----
+20:51:01 Origin: http://localhost:3000
+20:51:01 Method: GET
+20:51:01 ---- NEW REQUEST ----
+20:51:01 Origin: http://localhost:3000
+20:51:01 Method: GET
+[26-Mar-2026 20:51:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:51:01 ---- NEW REQUEST ----
+20:51:01 Origin: http://localhost:3000
+20:51:01 Method: GET
+[26-Mar-2026 20:51:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:55:16 ---- NEW REQUEST ----
+20:55:16 Origin: http://localhost:3000
+20:55:16 Method: GET
+20:55:16 ---- NEW REQUEST ----
+20:55:16 Origin: http://localhost:3000
+20:55:16 Method: GET
+20:55:16 ---- NEW REQUEST ----
+20:55:16 Origin: http://localhost:3000
+20:55:16 Method: GET
+[26-Mar-2026 20:55:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:55:16 ---- NEW REQUEST ----
+20:55:16 Origin: http://localhost:3000
+20:55:17 Method: GET
+[26-Mar-2026 20:55:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:55:26 ---- NEW REQUEST ----
+20:55:26 Origin: http://localhost:3000
+20:55:26 Method: GET
+20:55:26 ---- NEW REQUEST ----
+20:55:26 Origin: http://localhost:3000
+20:55:26 Method: GET
+20:55:26 ---- NEW REQUEST ----
+20:55:26 Origin: http://localhost:3000
+20:55:26 Method: GET
+20:55:26 ---- NEW REQUEST ----
+20:55:26 Origin: http://localhost:3000
+20:55:26 Method: GET
+20:55:27 ---- NEW REQUEST ----
+20:55:27 Origin: http://localhost:3000
+20:55:27 Method: GET
+20:55:27 ---- NEW REQUEST ----
+20:55:27 Origin: http://localhost:3000
+20:55:27 Method: GET
+20:55:28 ---- NEW REQUEST ----
+20:55:28 Origin: http://localhost:3000
+20:55:28 Method: GET
+20:55:28 ---- NEW REQUEST ----
+20:55:28 Origin: http://localhost:3000
+20:55:28 Method: GET
+20:55:28 ---- NEW REQUEST ----
+20:55:28 Origin: http://localhost:3000
+20:55:28 Method: GET
+[26-Mar-2026 20:55:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:55:29 ---- NEW REQUEST ----
+20:55:29 Origin: http://localhost:3000
+20:55:29 Method: GET
+[26-Mar-2026 20:55:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:57:37 ---- NEW REQUEST ----
+20:57:37 Origin: http://localhost:3000
+20:57:37 Method: GET
+20:57:37 ---- NEW REQUEST ----
+20:57:37 Origin: http://localhost:3000
+20:57:37 Method: GET
+20:57:37 ---- NEW REQUEST ----
+20:57:37 Origin: http://localhost:3000
+20:57:37 Method: GET
+[26-Mar-2026 20:57:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:57:38 ---- NEW REQUEST ----
+20:57:38 Origin: http://localhost:3000
+20:57:38 Method: GET
+[26-Mar-2026 20:57:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:58:09 ---- NEW REQUEST ----
+20:58:09 Origin: http://localhost:3000
+20:58:09 Method: OPTIONS
+20:58:09 OPTIONS HIT
+20:58:09 ---- NEW REQUEST ----
+20:58:09 Origin: http://localhost:3000
+20:58:09 Method: POST
+20:58:10 ---- NEW REQUEST ----
+20:58:10 Origin: http://localhost:3000
+20:58:10 Method: GET
+[26-Mar-2026 20:58:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+20:58:14 ---- NEW REQUEST ----
+20:58:14 Origin: http://localhost:3000
+20:58:14 Method: OPTIONS
+20:58:14 OPTIONS HIT
+20:58:14 ---- NEW REQUEST ----
+20:58:14 Origin: http://localhost:3000
+20:58:14 Method: POST
+20:58:14 ---- NEW REQUEST ----
+20:58:14 Origin: http://localhost:3000
+20:58:14 Method: GET
+[26-Mar-2026 20:58:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+21:03:04 ---- NEW REQUEST ----
+21:03:04 Origin: http://localhost:3000
+21:03:04 Method: GET
+21:03:04 ---- NEW REQUEST ----
+21:03:04 Origin: http://localhost:3000
+21:03:04 Method: GET
+21:03:05 ---- NEW REQUEST ----
+21:03:05 Origin: http://localhost:3000
+21:03:05 Method: GET
+[26-Mar-2026 21:03:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+21:03:05 ---- NEW REQUEST ----
+21:03:05 Origin: http://localhost:3000
+21:03:05 Method: GET
+[26-Mar-2026 21:03:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+21:04:01 ---- NEW REQUEST ----
+21:04:01 Origin: http://localhost:3000
+21:04:01 Method: OPTIONS
+21:04:01 OPTIONS HIT
+21:04:01 ---- NEW REQUEST ----
+21:04:01 Origin: http://localhost:3000
+21:04:01 Method: POST
+[26-Mar-2026 21:04:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:100
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(100): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 100
+21:05:13 ---- NEW REQUEST ----
+21:05:13 Origin: http://localhost:3000
+21:05:13 Method: GET
+21:05:13 ---- NEW REQUEST ----
+21:05:13 Origin: http://localhost:3000
+21:05:13 Method: GET
+21:05:14 ---- NEW REQUEST ----
+21:05:14 Origin: http://localhost:3000
+21:05:14 Method: GET
+21:05:14 ---- NEW REQUEST ----
+21:05:14 Origin: http://localhost:3000
+21:05:14 Method: GET
+21:05:14 ---- NEW REQUEST ----
+21:05:14 Origin: http://localhost:3000
+21:05:14 Method: GET
+21:05:15 ---- NEW REQUEST ----
+21:05:15 Origin: http://localhost:3000
+21:05:15 Method: GET
+21:05:15 ---- NEW REQUEST ----
+21:05:15 Origin: http://localhost:3000
+21:05:15 Method: GET
+21:05:15 ---- NEW REQUEST ----
+21:05:15 Origin: http://localhost:3000
+21:05:15 Method: GET
+21:05:16 ---- NEW REQUEST ----
+21:05:16 Origin: http://localhost:3000
+21:05:16 Method: GET
+[26-Mar-2026 21:05:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updated_at' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+21:05:16 ---- NEW REQUEST ----
+21:05:16 Origin: http://localhost:3000
+21:05:16 Method: GET
+[26-Mar-2026 21:05:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updated_at' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+21:05:51 ---- NEW REQUEST ----
+21:05:51 Origin: http://localhost:3000
+21:05:51 Method: OPTIONS
+21:05:51 OPTIONS HIT
+21:05:52 ---- NEW REQUEST ----
+21:05:52 Origin: http://localhost:3000
+21:05:52 Method: POST
+[26-Mar-2026 21:05:52 UTC] PHP Fatal error:  Uncaught Error: Class "finfo" not found in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:237
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(71): handle_upload(Array)
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 237
+21:05:57 ---- NEW REQUEST ----
+21:05:57 Origin: http://localhost:3000
+21:05:57 Method: OPTIONS
+21:05:57 OPTIONS HIT
+21:05:57 ---- NEW REQUEST ----
+21:05:57 Origin: http://localhost:3000
+21:05:57 Method: POST
+[26-Mar-2026 21:05:57 UTC] PHP Fatal error:  Uncaught Error: Class "finfo" not found in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:237
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(71): handle_upload(Array)
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 237
+21:07:11 ---- NEW REQUEST ----
+21:07:11 Origin: http://localhost:3000
+21:07:11 Method: OPTIONS
+21:07:11 OPTIONS HIT
+21:07:12 ---- NEW REQUEST ----
+21:07:12 Origin: http://localhost:3000
+21:07:12 Method: POST
+21:07:17 ---- NEW REQUEST ----
+21:07:17 Origin: http://localhost:3000
+21:07:17 Method: GET
+[26-Mar-2026 21:07:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updated_at' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+21:08:13 ---- NEW REQUEST ----
+21:08:13 Origin: http://localhost:3000
+21:08:13 Method: GET
+21:08:13 ---- NEW REQUEST ----
+21:08:13 Origin: http://localhost:3000
+21:08:13 Method: GET
+21:08:13 ---- NEW REQUEST ----
+21:08:13 Origin: http://localhost:3000
+21:08:13 Method: GET
+21:08:13 ---- NEW REQUEST ----
+21:08:13 Origin: http://localhost:3000
+21:08:13 Method: GET
+21:08:13 ---- NEW REQUEST ----
+21:08:13 Origin: http://localhost:3000
+21:08:13 Method: GET
+21:08:14 ---- NEW REQUEST ----
+21:08:14 Origin: http://localhost:3000
+21:08:14 Method: GET
+21:08:15 ---- NEW REQUEST ----
+21:08:15 Origin: http://localhost:3000
+21:08:15 Method: GET
+21:08:15 ---- NEW REQUEST ----
+21:08:15 Origin: http://localhost:3000
+21:08:15 Method: GET
+21:08:15 ---- NEW REQUEST ----
+21:08:15 Origin: http://localhost:3000
+21:08:15 Method: GET
+[26-Mar-2026 21:08:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updated_at' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+21:08:15 ---- NEW REQUEST ----
+21:08:15 Origin: http://localhost:3000
+21:08:15 Method: GET
+[26-Mar-2026 21:08:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updated_at' in 'field list' in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php:16
+Stack trace:
+#0 C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php(16): PDO->query('\r\n        SELEC...')
+#1 {main}
+  thrown in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\blog.php on line 16
+21:09:03 ---- NEW REQUEST ----
+21:09:03 Origin: http://localhost:3000
+21:09:03 Method: GET
+21:09:03 ---- NEW REQUEST ----
+21:09:03 Origin: http://localhost:3000
+21:09:03 Method: GET
+21:09:04 ---- NEW REQUEST ----
+21:09:04 Origin: http://localhost:3000
+21:09:04 Method: GET
+21:09:04 ---- NEW REQUEST ----
+21:09:04 Origin: http://localhost:3000
+21:09:04 Method: GET
+21:09:04 ---- NEW REQUEST ----
+21:09:04 Origin: http://localhost:3000
+21:09:04 Method: GET
+21:09:04 ---- NEW REQUEST ----
+21:09:04 Origin: http://localhost:3000
+21:09:04 Method: GET
+21:09:05 ---- NEW REQUEST ----
+21:09:05 Origin: http://localhost:3000
+21:09:05 Method: GET
+21:09:06 ---- NEW REQUEST ----
+21:09:06 Origin: http://localhost:3000
+21:09:06 Method: GET
+21:09:06 ---- NEW REQUEST ----
+21:09:06 Origin: http://localhost:3000
+21:09:06 Method: GET
+21:09:08 ---- NEW REQUEST ----
+21:09:08 Origin: http://localhost:3000
+21:09:08 Method: GET
+21:09:11 ---- NEW REQUEST ----
+21:09:11 Origin: 
+21:09:11 Method: GET
+21:09:22 ---- NEW REQUEST ----
+21:09:22 Origin: http://localhost:3000
+21:09:22 Method: OPTIONS
+21:09:22 OPTIONS HIT
+21:09:22 ---- NEW REQUEST ----
+21:09:22 Origin: http://localhost:3000
+21:09:22 Method: POST
+21:09:27 ---- NEW REQUEST ----
+21:09:27 Origin: http://localhost:3000
+21:09:27 Method: GET
+21:09:30 ---- NEW REQUEST ----
+21:09:30 Origin: 
+21:09:30 Method: GET
+21:09:35 ---- NEW REQUEST ----
+21:09:35 Origin: http://localhost:3000
+21:09:35 Method: GET
+21:09:35 ---- NEW REQUEST ----
+21:09:35 Origin: http://localhost:3000
+21:09:35 Method: GET
+21:09:35 ---- NEW REQUEST ----
+21:09:35 Origin: http://localhost:3000
+21:09:35 Method: GET
+21:09:36 ---- NEW REQUEST ----
+21:09:36 Origin: http://localhost:3000
+21:09:36 Method: GET
+21:13:51 ---- NEW REQUEST ----
+21:13:51 Origin: http://localhost:3000
+21:13:51 Method: GET
+21:13:58 ---- NEW REQUEST ----
+21:13:58 Origin: 
+21:13:58 Method: GET
+21:15:06 ---- NEW REQUEST ----
+21:15:06 Origin: http://localhost:3000
+21:15:06 Method: GET
+21:15:06 ---- NEW REQUEST ----
+21:15:06 Origin: http://localhost:3000
+21:15:06 Method: GET
+21:15:06 ---- NEW REQUEST ----
+21:15:06 Origin: http://localhost:3000
+21:15:06 Method: GET
+21:15:07 ---- NEW REQUEST ----
+21:15:07 Origin: http://localhost:3000
+21:15:07 Method: GET
+21:15:07 ---- NEW REQUEST ----
+21:15:07 Origin: http://localhost:3000
+21:15:07 Method: GET
+21:15:07 ---- NEW REQUEST ----
+21:15:07 Origin: http://localhost:3000
+21:15:07 Method: GET
+21:15:07 ---- NEW REQUEST ----
+21:15:07 Origin: http://localhost:3000
+21:15:07 Method: GET
+21:15:07 ---- NEW REQUEST ----
+21:15:07 Origin: http://localhost:3000
+21:15:07 Method: GET
+21:15:07 ---- NEW REQUEST ----
+21:15:07 Origin: http://localhost:3000
+21:15:07 Method: GET
+21:15:07 ---- NEW REQUEST ----
+21:15:07 Origin: http://localhost:3000
+21:15:07 Method: GET
+21:15:08 ---- NEW REQUEST ----
+21:15:08 Origin: http://localhost:3000
+21:15:08 Method: GET
+21:15:08 ---- NEW REQUEST ----
+21:15:08 Origin: http://localhost:3000
+21:15:08 Method: GET
+21:26:10 ---- NEW REQUEST ----
+21:26:10 Origin: http://localhost:3000
+21:26:10 Method: GET
+21:26:13 ---- NEW REQUEST ----
+21:26:13 Origin: http://localhost:3000
+21:26:13 Method: GET
+21:26:15 ---- NEW REQUEST ----
+21:26:15 Origin: 
+21:26:15 Method: GET
+21:26:31 ---- NEW REQUEST ----
+21:26:31 Origin: http://localhost:3000
+21:26:31 Method: GET
+21:26:34 ---- NEW REQUEST ----
+21:26:34 Origin: http://localhost:3000
+21:26:34 Method: GET
+21:26:36 ---- NEW REQUEST ----
+21:26:36 Origin: 
+21:26:36 Method: GET
+21:27:47 ---- NEW REQUEST ----
+21:27:47 Origin: http://localhost:3000
+21:27:47 Method: GET
+21:27:51 ---- NEW REQUEST ----
+21:27:51 Origin: http://localhost:3000
+21:27:51 Method: GET
+21:27:56 ---- NEW REQUEST ----
+21:27:56 Origin: 
+21:27:56 Method: GET
+21:27:57 ---- NEW REQUEST ----
+21:27:57 Origin: http://localhost:3000
+21:27:57 Method: GET
+21:28:01 ---- NEW REQUEST ----
+21:28:01 Origin: http://localhost:3000
+21:28:01 Method: GET
+21:28:03 ---- NEW REQUEST ----
+21:28:03 Origin: 
+21:28:03 Method: GET
+21:28:23 ---- NEW REQUEST ----
+21:28:23 Origin: http://localhost:3000
+21:28:23 Method: GET
+21:28:23 ---- NEW REQUEST ----
+21:28:23 Origin: http://localhost:3000
+21:28:23 Method: GET
+21:28:23 ---- NEW REQUEST ----
+21:28:23 Origin: http://localhost:3000
+21:28:23 Method: GET
+21:28:24 ---- NEW REQUEST ----
+21:28:24 Origin: http://localhost:3000
+21:28:24 Method: GET
+21:28:28 ---- NEW REQUEST ----
+21:28:28 Origin: http://localhost:3000
+21:28:28 Method: GET
+21:28:31 ---- NEW REQUEST ----
+21:28:31 Origin: 
+21:28:31 Method: GET
+21:28:34 ---- NEW REQUEST ----
+21:28:34 Origin: 
+21:28:34 Method: GET

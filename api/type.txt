@@ -17,6 +17,13 @@ CREATE TABLE blog_posts (
     image_url VARCHAR(255) DEFAULT NULL,         -- шлях або URL до зображення
     content LONGTEXT NOT NULL,                   -- повний текст статті
     category VARCHAR(100) DEFAULT NULL           -- категорія
+); 
+
+CREATE TABLE blogs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255),
+  content LONGTEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Таблиця користувачів

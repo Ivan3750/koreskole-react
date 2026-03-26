@@ -63,7 +63,7 @@ import "@/app/i18n";
 
             <div className="grid md:grid-cols-2 gap-4 pt-4">
               {meetingFeatures.map((item, i) => (
-                <div key={i} className="p-4 rounded-xl border bg-[var(--color-bg-elevated)]">
+                <div key={i} className="p-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]">
                   <h4 className="font-semibold mb-1">{item.title}</h4>
                   <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
                     {item.text}
@@ -99,7 +99,7 @@ import "@/app/i18n";
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {packageItems.map((item, i) => (
-              <div key={i} className="p-6 rounded-2xl border bg-[var(--color-bg-elevated)]">
+              <div key={i} className="p-6 rounded-2xl border border-[var(--color-border)]  bg-[var(--color-bg-elevated)]">
                 <h4 className="font-semibold mb-2">{item.title}</h4>
                 <p style={{ color: "var(--color-text-secondary)" }}>
                   {item.text}

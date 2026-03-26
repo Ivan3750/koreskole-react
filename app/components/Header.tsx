@@ -45,9 +45,7 @@ export const Header = () => {
           scrolled ? "py-3 backdrop-blur-md border-b" : "py-5"
         }`}
         style={{
-          backgroundColor: scrolled
-            ? "color-mix(in srgb, var(--color-black) 85%, transparent)"
-            : "transparent",
+          backgroundColor: "color-mix(in srgb, var(--color-black) 85%, transparent)",
           borderColor: "var(--color-border)",
         }}
       >
@@ -79,7 +77,7 @@ export const Header = () => {
                       <ChevronDown className="h-4 w-4 ml-1" />
                     </span>
 
-                    <div className="absolute top-full left-0 mt-2 w-44 bg-black/90 backdrop-blur-xl border rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <div className="absolute top-full left-0 mt-2 w-44 bg-black/90 backdrop-blur-xl border border-[var(--color-border)]  rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                       <div className="flex flex-col py-2">
                         {item.children.map((child: any) => (
                           <Link
