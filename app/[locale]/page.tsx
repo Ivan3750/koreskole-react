@@ -60,8 +60,8 @@ export default async function Home({
       <Services />
       <HoldStart />
       <KorekortSection></KorekortSection>
-      <Testimonials />
-      <Instructors />
+{/*       <Testimonials />
+ */}      <Instructors />
       <FAQ />
       <Contact />
     </>

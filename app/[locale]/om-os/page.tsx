@@ -61,8 +61,8 @@ export default async function Omos({
       <AboutIntro />
       <Instructors />
       <Cars></Cars>
-      <Testimonials></Testimonials>
-      <FAQ></FAQ>
+{/*       <Testimonials></Testimonials>
+ */}      <FAQ></FAQ>
       <Contact></Contact>
     </>
   );
