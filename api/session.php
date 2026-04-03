@@ -1,8 +1,8 @@
 <?php
+require_once 'cors.php';
+require_once 'security.php';
 
-require 'security.php';
-
-if (!isset($_SESSION['csrf'])) {
+if (empty($_SESSION['csrf'])) {
     $_SESSION['csrf'] = bin2hex(random_bytes(32));
 }
 
