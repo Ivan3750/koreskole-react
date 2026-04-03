@@ -222,253 +222,190 @@ export default function BlogPage() {
 
   /* ── Render ──────────────────────────────────────────────────────────── */
   return (
-    <>
-      {/* ProseMirror base styles — move to globals.css if preferred */}
-      <style>{`
-        .ProseMirror { outline:none; min-height:300px; padding:1rem; cursor:text; }
-        .ProseMirror > * + * { margin-top:0.6em; }
-        .ProseMirror p       { margin:0; }
-        .ProseMirror h1 { font-size:1.75rem; font-weight:700; }
-        .ProseMirror h2 { font-size:1.4rem;  font-weight:700; }
-        .ProseMirror h3 { font-size:1.15rem; font-weight:700; }
-        .ProseMirror ul  { list-style:disc;    padding-left:1.5rem; }
-        .ProseMirror ol  { list-style:decimal; padding-left:1.5rem; }
-        .ProseMirror blockquote { border-left:3px solid #d1d5db; padding-left:1rem; color:#6b7280; }
-        .ProseMirror code { background:#f3f4f6; padding:0.1em 0.3em; border-radius:3px; font-size:0.875em; font-family:monospace; }
-        .ProseMirror pre  { background:#1e293b; color:#e2e8f0; padding:1rem; border-radius:6px; overflow-x:auto; }
-        .ProseMirror pre code { background:none; padding:0; }
-        .ProseMirror strong { font-weight:700; }
-        .ProseMirror em     { font-style:italic; }
-        .ProseMirror a      { color:#2563eb; text-decoration:underline; }
-        .ProseMirror img    { max-width:100%; border-radius:4px; display:block; margin:0.5em 0; }
-        .ProseMirror hr     { border:none; border-top:2px solid #e5e7eb; margin:1em 0; }
-      `}</style>
+  <>
+    <style>{`
+      .ProseMirror { outline:none; min-height:300px; padding:1rem; cursor:text; }
+      .ProseMirror img { max-width:100%; border-radius:6px; margin:0.5rem 0; }
+    `}</style>
 
-      <div className="max-w-6xl mx-auto p-6 grid grid-cols-3 gap-6">
+    <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-12 gap-8">
 
-        {/* ── LEFT: blog list ───────────────────────────────────────────── */}
-        <div className="col-span-1 space-y-3">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold">Blogs</h2>
-            <button type="button" onClick={reset} className="text-sm text-blue-600 hover:underline">
+      {/* ───── SIDEBAR ───── */}
+      <div className="col-span-12 md:col-span-4 lg:col-span-3">
+        <div className="bg-white rounded-2xl shadow p-4 space-y-4">
+
+          <div className="flex justify-between items-center">
+            <h2 className="font-semibold text-lg">Posts</h2>
+            <button
+              onClick={reset}
+              className="text-sm bg-blue-50 text-blue-600 px-3 py-1 rounded hover:bg-blue-100"
+            >
               + New
             </button>
           </div>
 
-          {blogs.length === 0 && <p className="text-sm text-gray-400">No blogs yet.</p>}
-
-          {blogs.map((b) => (
-            <div
-              key={b.id}
-              onClick={() => selectBlog(b)}
-              className={`p-3 border rounded cursor-pointer transition-colors hover:bg-gray-50 ${
-                form.id === b.id ? "border-blue-500 bg-blue-50" : "border-gray-200"
-              }`}
-            >
-              {b.image && (
-                <img
-                  src={b.image.startsWith("/") ? `${BASE_URL}${b.image}` : b.image}
-                  alt=""
-                  className="w-full h-24 object-cover rounded mb-2"
-                />
-              )}
-              <div className="font-semibold text-sm">{b.title}</div>
-              {b.updated_at && (
-                <div className="text-xs text-gray-400 mt-0.5">
-                  {new Date(b.updated_at).toLocaleDateString()}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* ── RIGHT: editor ─────────────────────────────────────────────── */}
-        <div className="col-span-2 space-y-4">
-
-          {error && (
-            <div className="bg-red-50 border border-red-300 text-red-700 rounded px-3 py-2 text-sm">
-              {error}
-            </div>
-          )}
-
-          {/* Title */}
-          <input
-            value={form.title}
-            onChange={(e) => setForm((p) => ({ ...p, title: e.target.value }))}
-            placeholder="Post title…"
-            className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-lg font-semibold"
-          />
-
-          {/* ── Cover image panel ───────────────────────────────────────── */}
-          <div className="border border-gray-200 rounded p-3 space-y-2 bg-gray-50">
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Cover image</p>
-            <div className="flex gap-2 flex-wrap">
-              <input
-                type="text"
-                placeholder="Paste an image URL…"
-                value={form.imageUrl}
-                onChange={(e) => setForm((p) => ({ ...p, imageUrl: e.target.value, imageFile: null }))}
-                className="flex-1 min-w-0 border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
-              />
-              <span className="text-gray-400 text-sm self-center">or</span>
-              <label className="cursor-pointer bg-white border border-gray-300 rounded px-3 py-1 text-sm hover:bg-gray-100 transition-colors whitespace-nowrap">
-                Upload file
-                <input
-                  ref={coverFileRef}
-                  type="file"
-                  accept="image/jpeg,image/png,image/gif,image/webp"
-                  className="hidden"
-                  onChange={(e) => {
-                    const file = e.target.files?.[0] ?? null;
-                    setForm((p) => ({ ...p, imageFile: file, imageUrl: "" }));
-                  }}
-                />
-              </label>
-              {(form.imageUrl || form.imageFile) && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setForm((p) => ({ ...p, imageUrl: "", imageFile: null }));
-                    if (coverFileRef.current) coverFileRef.current.value = "";
-                  }}
-                  className="text-red-500 text-sm hover:underline"
-                >
-                  Remove
-                </button>
-              )}
-            </div>
-            {coverPreview && (
-              <img
-                src={coverPreview}
-                alt="Cover preview"
-                className="w-full max-h-48 object-cover rounded border border-gray-200"
-              />
+          <div className="space-y-2 max-h-[70vh] overflow-y-auto">
+            {blogs.length === 0 && (
+              <p className="text-sm text-gray-400">No posts yet</p>
             )}
-          </div>
 
-          {/* ── Toolbar ─────────────────────────────────────────────────── */}
-          <div className="flex flex-wrap gap-1 p-2 border border-gray-200 rounded bg-gray-50">
-            {/* Formatting */}
-            <Btn onClick={() => editor?.chain().focus().toggleBold().run()}      active={editor?.isActive("bold")}      title="Bold"><strong>B</strong></Btn>
-            <Btn onClick={() => editor?.chain().focus().toggleItalic().run()}    active={editor?.isActive("italic")}    title="Italic"><em>I</em></Btn>
-            <Btn onClick={() => editor?.chain().focus().toggleStrike().run()}    active={editor?.isActive("strike")}    title="Strikethrough"><s>S</s></Btn>
-            <Btn onClick={() => editor?.chain().focus().toggleCode().run()}      active={editor?.isActive("code")}      title="Inline code">{"<>"}</Btn>
-            <SEP />
-            {([1, 2, 3] as const).map((lvl) => (
-              <Btn
-                key={lvl}
-                onClick={() => editor?.chain().focus().toggleHeading({ level: lvl }).run()}
-                active={editor?.isActive("heading", { level: lvl })}
-                title={`Heading ${lvl}`}
-              >H{lvl}</Btn>
-            ))}
-            <SEP />
-            <Btn onClick={() => editor?.chain().focus().toggleBulletList().run()}  active={editor?.isActive("bulletList")}  title="Bullet list">• —</Btn>
-            <Btn onClick={() => editor?.chain().focus().toggleOrderedList().run()} active={editor?.isActive("orderedList")} title="Ordered list">1. —</Btn>
-            <Btn onClick={() => editor?.chain().focus().toggleBlockquote().run()}  active={editor?.isActive("blockquote")}  title="Blockquote">❝</Btn>
-            <Btn onClick={() => editor?.chain().focus().toggleCodeBlock().run()}   active={editor?.isActive("codeBlock")}   title="Code block">{"{ }"}</Btn>
-            <Btn onClick={() => editor?.chain().focus().setHorizontalRule().run()} title="Divider">—</Btn>
-            <SEP />
-
-            {/* Inline image by URL */}
-            <div className="flex items-center gap-1">
-              <input
-                ref={imgUrlRef}
-                type="text"
-                placeholder="Image URL"
-                className="border border-gray-300 rounded px-2 py-0.5 text-xs w-32 focus:outline-none focus:ring-1 focus:ring-blue-400"
-                onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); insertImageByUrl(); } }}
-              />
-              <Btn onClick={insertImageByUrl} title="Insert image from URL">🖼</Btn>
-            </div>
-
-            {/* Inline image by file (base64 embedded in content) */}
-            <label
-              className="cursor-pointer px-2 py-1 rounded text-sm font-medium border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 transition-colors select-none"
-              title="Upload image into editor"
-            >
-              📁
-              <input type="file" accept="image/*" className="hidden" onChange={insertImageByFile} />
-            </label>
-            <SEP />
-
-            {/* Link */}
-            <Btn
-              active={editor?.isActive("link")}
-              title="Add / edit link"
-              onClick={() => {
-                const prev = editor?.getAttributes("link").href ?? "";
-                const url  = window.prompt("URL (empty to remove):", prev);
-                if (url === null) return;
-                url === ""
-                  ? editor?.chain().focus().unsetLink().run()
-                  : editor?.chain().focus().setLink({ href: url }).run();
-              }}
-            >🔗</Btn>
-            <SEP />
-
-            {/* Undo / Redo */}
-            <Btn onClick={() => editor?.chain().focus().undo().run()} title="Undo">↩</Btn>
-            <Btn onClick={() => editor?.chain().focus().redo().run()} title="Redo">↪</Btn>
-          </div>
-
-          {/* ── Editor area ─────────────────────────────────────────────── */}
-          <div
-            className="border border-gray-300 rounded bg-white overflow-auto"
-            style={{ minHeight: 300 }}
-            onClick={() => editor?.commands.focus()}
-          >
-            <EditorContent editor={editor} />
-          </div>
-
-          {/* ── Action buttons ───────────────────────────────────────────── */}
-          <div className="flex gap-2 items-center">
-            <button
-              type="button"
-              onClick={save}
-              disabled={saving}
-              className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 disabled:opacity-60 transition-colors font-medium"
-            >
-              {saving ? "Saving…" : form.id !== null ? "Update" : "Publish"}
-            </button>
-            <button
-              type="button"
-              onClick={reset}
-              className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300 transition-colors"
-            >
-              Cancel
-            </button>
-            {form.id !== null && (
-              <button
-                type="button"
-                onClick={deleteBlog}
-                disabled={deleting}
-                className="ml-auto bg-red-50 text-red-600 border border-red-300 px-4 py-2 rounded hover:bg-red-100 disabled:opacity-60 transition-colors"
-              >
-                {deleting ? "Deleting…" : "Delete post"}
-              </button>
-            )}
-          </div>
-
-          {/* ── Live preview ─────────────────────────────────────────────── */}
-          <details className="border border-gray-200 rounded" open>
-            <summary className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide cursor-pointer select-none bg-gray-50 rounded">
-              Preview
-            </summary>
-            <div className="p-4">
-              {form.title && <h1 className="text-2xl font-bold mb-4">{form.title}</h1>}
-              {coverPreview && (
-                <img src={coverPreview} alt="Cover" className="w-full max-h-64 object-cover rounded mb-4" />
-              )}
+            {blogs.map((b) => (
               <div
-                className="prose prose-sm max-w-none"
-                dangerouslySetInnerHTML={{ __html: editor?.getHTML() || "" }}
-              />
-            </div>
-          </details>
-
+                key={b.id}
+                onClick={() => selectBlog(b)}
+                className={`p-3 rounded-xl border cursor-pointer transition
+                  ${
+                    form.id === b.id
+                      ? "bg-blue-50 border-blue-400"
+                      : "hover:bg-gray-50"
+                  }`}
+              >
+                {b.image && (
+                  <img
+                    src={b.image.startsWith("/") ? `${BASE_URL}${b.image}` : b.image}
+                    className="w-full h-24 object-cover rounded mb-2"
+                  />
+                )}
+                <div className="font-medium text-sm">{b.title}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </>
-  );
+
+      {/* ───── MAIN EDITOR ───── */}
+      <div className="col-span-12 md:col-span-8 lg:col-span-9 space-y-6">
+
+        {/* ERROR */}
+        {error && (
+          <div className="bg-red-50 border border-red-300 text-red-700 px-4 py-2 rounded-xl">
+            {error}
+          </div>
+        )}
+
+        {/* TITLE */}
+        <input
+          value={form.title}
+          onChange={(e) => setForm(p => ({ ...p, title: e.target.value }))}
+          placeholder="Write your title..."
+          className="w-full text-3xl font-bold border-none outline-none"
+        />
+
+        {/* COVER */}
+        <div className="bg-white p-5 rounded-2xl shadow space-y-3">
+          <div className="text-sm font-medium text-gray-500">Cover Image</div>
+
+          <div className="flex gap-2 flex-wrap">
+            <input
+              type="text"
+              placeholder="Paste image URL..."
+              value={form.imageUrl}
+              onChange={(e) =>
+                setForm(p => ({ ...p, imageUrl: e.target.value, imageFile: null }))
+              }
+              className="flex-1 border rounded px-3 py-2 text-sm"
+            />
+
+            <label className="bg-gray-100 px-3 py-2 rounded cursor-pointer hover:bg-gray-200 text-sm">
+              Upload
+              <input
+                type="file"
+                className="hidden"
+                onChange={(e) =>
+                  setForm(p => ({
+                    ...p,
+                    imageFile: e.target.files?.[0] ?? null,
+                    imageUrl: "",
+                  }))
+                }
+              />
+            </label>
+          </div>
+
+          {coverPreview && (
+            <img
+              src={coverPreview}
+              className="w-full max-h-64 object-cover rounded-xl"
+            />
+          )}
+        </div>
+
+        {/* TOOLBAR */}
+        <div className="sticky top-4 z-10 bg-white border rounded-xl p-2 flex flex-wrap gap-1 shadow-sm">
+
+          <Btn onClick={() => editor?.chain().focus().toggleBold().run()} active={editor?.isActive("bold")}>B</Btn>
+          <Btn onClick={() => editor?.chain().focus().toggleItalic().run()} active={editor?.isActive("italic")}>I</Btn>
+          <Btn onClick={() => editor?.chain().focus().toggleStrike().run()} active={editor?.isActive("strike")}>S</Btn>
+
+          <SEP />
+
+          <Btn onClick={() => editor?.chain().focus().toggleHeading({ level: 1 }).run()}>H1</Btn>
+          <Btn onClick={() => editor?.chain().focus().toggleHeading({ level: 2 }).run()}>H2</Btn>
+
+          <SEP />
+
+          <Btn onClick={() => editor?.chain().focus().toggleBulletList().run()}>•</Btn>
+          <Btn onClick={() => editor?.chain().focus().toggleOrderedList().run()}>1.</Btn>
+
+          <SEP />
+
+          <Btn onClick={() => editor?.chain().focus().undo().run()}>↩</Btn>
+          <Btn onClick={() => editor?.chain().focus().redo().run()}>↪</Btn>
+        </div>
+
+        {/* EDITOR */}
+        <div className="bg-white border rounded-2xl shadow">
+          <EditorContent editor={editor} />
+        </div>
+
+        {/* ACTIONS */}
+        <div className="flex items-center gap-3">
+
+          <button
+            onClick={save}
+            disabled={saving}
+            className="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700"
+          >
+            {saving ? "Saving..." : form.id ? "Update" : "Publish"}
+          </button>
+
+          <button
+            onClick={reset}
+            className="bg-gray-200 px-5 py-2 rounded-xl hover:bg-gray-300"
+          >
+            Cancel
+          </button>
+
+          {form.id && (
+            <button
+              onClick={deleteBlog}
+              className="ml-auto bg-red-100 text-red-600 px-5 py-2 rounded-xl hover:bg-red-200"
+            >
+              Delete
+            </button>
+          )}
+        </div>
+
+        {/* PREVIEW */}
+        <div className="bg-white rounded-2xl shadow p-6 space-y-4">
+          <div className="text-sm text-gray-400">Preview</div>
+
+          {form.title && (
+            <h1 className="text-3xl font-bold">{form.title}</h1>
+          )}
+
+          {coverPreview && (
+            <img src={coverPreview} className="rounded-xl" />
+          )}
+
+          <div
+            className="prose max-w-none"
+            dangerouslySetInnerHTML={{ __html: editor?.getHTML() || "" }}
+          />
+        </div>
+
+      </div>
+    </div>
+  </>
+);
 }

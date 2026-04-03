@@ -5,12 +5,12 @@ import CoursesPage from "../components/admin/CoursesPage";
 import BlogPage from "../components/admin/BlogPage";
 import ContactsPage from "../components/admin/ContactsPage";
 import PasswordPage from "../components/admin/PasswordPage";
+import LoginPage from "../components/admin/LoginPage";
 
 const API = "http://localhost:8000";
- 
 type Page = "courses" | "blog" | "contacts" | "password";
 
-export default function Page() {
+export default function AdminPage() {
   const [activePage, setActivePage] = useState<Page>("courses");
   const [loggedIn, setLoggedIn] = useState<boolean | null>(null);
 
@@ -18,145 +18,84 @@ export default function Page() {
     checkAuth();
   }, []);
 
- 
-
- 
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
-  /* ---------------- CHECK SESSION ---------------- */
   const checkAuth = async () => {
-    const res = await fetch(`${API}/check-auth.php`, {
-      credentials: "include",
-    });
-    const data = await res.json();
-    setLoggedIn(data.logged_in);
-  };
-
-  useEffect(() => {
-    checkAuth();
-  }, []);
-
-  /* ---------------- LOGIN ---------------- */
-  const login = async () => {
-    setError("");
-
-    const res = await fetch(`${API}/login.php`, {
-      method: "POST",
-      credentials: "include",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, password }),
-    });
-
-    if (res.ok) {
-      setLoggedIn(true);
-    } else {
+    try {
+      const res = await fetch(`${API}/check-auth.php`, { credentials: "include" });
       const data = await res.json();
-      setError(data.error || "Login failed");
+      setLoggedIn(data.logged_in === true);
+    } catch {
+      setLoggedIn(false);
     }
   };
 
-  /* ---------------- LOGOUT ---------------- */
   const logout = async () => {
-    await fetch(`${API}/logout.php`, {
-      credentials: "include",
-    });
-    setLoggedIn(false);
+    try {
+      await fetch(`${API}/logout.php`, { credentials: "include" });
+    } finally {
+      setLoggedIn(false);
+    }
   };
 
-  /* ---------------- LOADING ---------------- */
   if (loggedIn === null) {
     return (
-      <div className="flex h-screen items-center justify-center">
-        Loading...
+      <div className="flex h-screen items-center justify-center text-gray-400">
+        Indlæser...
       </div>
     );
   }
 
-  /* ======================================================
-      LOGIN VIEW
-  ====================================================== */
   if (!loggedIn) {
-    return (
-      <div className="flex h-screen items-center justify-center bg-gray-100">
-        <div className="w-96 bg-white p-8 rounded-xl shadow">
-          <h1 className="text-2xl font-bold mb-6">Admin Login</h1>
-
-          <input
-            className="w-full border p-3 mb-3"
-            placeholder="Username"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-
-          <input
-            type="password"
-            className="w-full border p-3 mb-4"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          {error && <p className="text-red-500 mb-3">{error}</p>}
-
-          <button
-            onClick={login}
-            className="w-full bg-black text-white p-3 rounded"
-          >
-            Login
-          </button>
-        </div>
-      </div>
-    );
+    return <LoginPage onLogin={() => setLoggedIn(true)} />;
   }
 
-  /* ======================================================
-      ADMIN PANEL VIEW
-  ====================================================== */
+  const pageLabels: Record<Page, string> = {
+    courses:  "Kurser",
+    blog:     "Blog",
+    contacts: "Kontakter",
+    password: "Adgangskode",
+  };
+
   const renderPage = () => {
     switch (activePage) {
-      case "courses":
-        return <CoursesPage />;
-      case "blog":
-        return <BlogPage />;
-      case "contacts":
-        return <ContactsPage />;
-      case "password":
-        return <PasswordPage />;
+      case "courses":  return <CoursesPage onLogout={logout} />;
+      case "blog":     return <BlogPage />;
+      case "contacts": return <ContactsPage />;
+      case "password": return <PasswordPage />;
     }
   };
 
   return (
     <div className="flex min-h-screen">
-      {/* SIDEBAR */}
-      <div className="w-64 bg-black text-white p-6">
-        <h2 className="text-xl mb-6">Admin Panel</h2>
+      <div className="w-64 bg-black text-white p-6 flex flex-col">
+        <h2 className="text-xl font-bold mb-8">Admin Panel</h2>
 
-        {(["courses", "blog", "contacts", "password"] as Page[]).map(
-          (page) => (
+        <nav className="flex-1 space-y-2">
+          {(["courses", "blog", "contacts", "password"] as Page[]).map((page) => (
             <div
               key={page}
               onClick={() => setActivePage(page)}
-              className={`cursor-pointer mb-3 ${
-                activePage === page ? "font-bold" : ""
+              className={`cursor-pointer px-3 py-2 rounded transition-colors ${
+                activePage === page
+                  ? "bg-white text-black font-semibold"
+                  : "hover:bg-gray-800"
               }`}
             >
-              {page}
+              {pageLabels[page]}
             </div>
-          )
-        )}
+          ))}
+        </nav>
 
         <button
           onClick={logout}
-          className="mt-10 bg-red-600 w-full p-2 rounded"
+          className="mt-auto bg-red-600 hover:bg-red-700 w-full p-2 rounded transition-colors"
         >
-          Logout
+          Log ud
         </button>
       </div>
 
-      {/* CONTENT */}
-      <div className="flex-1 p-10 bg-gray-50">{renderPage()}</div>
+      <div className="flex-1 p-10 bg-gray-50 overflow-auto">
+        {renderPage()}
+      </div>
     </div>
   );
 }

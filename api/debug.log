@@ -842,3 +842,503 @@ Stack trace:
 21:28:34 ---- NEW REQUEST ----
 21:28:34 Origin: 
 21:28:34 Method: GET
+21:38:43 ---- NEW REQUEST ----
+21:38:43 Origin: http://localhost:3000
+21:38:43 Method: GET
+21:38:43 ---- NEW REQUEST ----
+21:38:43 Origin: http://localhost:3000
+21:38:43 Method: GET
+21:38:43 ---- NEW REQUEST ----
+21:38:43 Origin: http://localhost:3000
+21:38:43 Method: GET
+21:38:46 ---- NEW REQUEST ----
+21:38:46 Origin: http://localhost:3000
+21:38:46 Method: GET
+21:39:16 ---- NEW REQUEST ----
+21:39:16 Origin: http://localhost:3000
+21:39:16 Method: OPTIONS
+21:39:16 OPTIONS HIT
+21:39:16 ---- NEW REQUEST ----
+21:39:16 Origin: http://localhost:3000
+21:39:16 Method: POST
+[26-Mar-2026 21:39:18 UTC] PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\book.php on line 60
+11:44:54 ---- NEW REQUEST ----
+11:44:54 Origin: http://localhost:3000
+11:44:54 Method: GET
+11:44:54 ---- NEW REQUEST ----
+11:44:54 Origin: http://localhost:3000
+11:44:54 Method: GET
+11:45:02 ---- NEW REQUEST ----
+11:45:02 Origin: http://localhost:3000
+11:45:02 Method: OPTIONS
+11:45:02 OPTIONS HIT
+11:45:02 ---- NEW REQUEST ----
+11:45:02 Origin: http://localhost:3000
+11:45:02 Method: POST
+[03-Apr-2026 11:45:02 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+11:45:03 ---- NEW REQUEST ----
+11:45:03 Origin: http://localhost:3000
+11:45:03 Method: GET
+11:45:03 ---- NEW REQUEST ----
+11:45:03 Origin: http://localhost:3000
+11:45:03 Method: GET
+11:45:03 ---- NEW REQUEST ----
+11:45:03 Origin: http://localhost:3000
+11:45:03 Method: GET
+11:45:03 ---- NEW REQUEST ----
+11:45:03 Origin: http://localhost:3000
+11:45:03 Method: GET
+11:45:04 ---- NEW REQUEST ----
+11:45:04 Origin: http://localhost:3000
+11:45:04 Method: GET
+11:45:05 ---- NEW REQUEST ----
+11:45:05 Origin: http://localhost:3000
+11:45:05 Method: GET
+11:45:05 ---- NEW REQUEST ----
+11:45:05 Origin: http://localhost:3000
+11:45:05 Method: GET
+11:45:05 ---- NEW REQUEST ----
+11:45:05 Origin: http://localhost:3000
+11:45:05 Method: GET
+11:45:13 ---- NEW REQUEST ----
+11:45:13 Origin: http://localhost:3000
+11:45:13 Method: GET
+11:45:13 ---- NEW REQUEST ----
+11:45:13 Origin: http://localhost:3000
+11:45:13 Method: GET
+11:45:13 ---- NEW REQUEST ----
+11:45:13 Origin: http://localhost:3000
+11:45:13 Method: GET
+11:45:14 ---- NEW REQUEST ----
+11:45:14 Origin: http://localhost:3000
+11:45:14 Method: GET
+11:53:49 ---- NEW REQUEST ----
+11:53:49 Origin: http://localhost:3000
+11:53:49 Method: GET
+11:53:49 ---- NEW REQUEST ----
+11:53:49 Origin: http://localhost:3000
+11:53:49 Method: GET
+11:53:56 ---- NEW REQUEST ----
+11:53:56 Origin: http://localhost:3000
+11:53:56 Method: OPTIONS
+11:53:56 OPTIONS HIT
+11:53:56 ---- NEW REQUEST ----
+11:53:56 Origin: http://localhost:3000
+11:53:56 Method: POST
+[03-Apr-2026 11:53:56 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+11:53:56 ---- NEW REQUEST ----
+11:53:56 Origin: http://localhost:3000
+11:53:56 Method: GET
+11:53:56 ---- NEW REQUEST ----
+11:53:56 Origin: http://localhost:3000
+11:53:56 Method: GET
+11:53:56 ---- NEW REQUEST ----
+11:53:56 Origin: http://localhost:3000
+11:53:56 Method: GET
+11:53:56 ---- NEW REQUEST ----
+11:53:56 Origin: http://localhost:3000
+11:53:56 Method: GET
+11:58:22 ---- NEW REQUEST ----
+11:58:22 Origin: http://localhost:3000
+11:58:22 Method: GET
+11:58:22 ---- NEW REQUEST ----
+11:58:22 Origin: http://localhost:3000
+11:58:22 Method: GET
+11:58:28 ---- NEW REQUEST ----
+11:58:28 Origin: http://localhost:3000
+11:58:28 Method: OPTIONS
+11:58:28 OPTIONS HIT
+11:58:28 ---- NEW REQUEST ----
+11:58:28 Origin: http://localhost:3000
+11:58:28 Method: POST
+[03-Apr-2026 11:58:28 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+11:58:28 ---- NEW REQUEST ----
+11:58:28 Origin: http://localhost:3000
+11:58:28 Method: GET
+11:58:28 ---- NEW REQUEST ----
+11:58:28 Origin: http://localhost:3000
+11:58:28 Method: GET
+11:58:29 ---- NEW REQUEST ----
+11:58:29 Origin: http://localhost:3000
+11:58:29 Method: GET
+11:58:29 ---- NEW REQUEST ----
+11:58:29 Origin: http://localhost:3000
+11:58:29 Method: GET
+12:00:42 ---- NEW REQUEST ----
+12:00:42 Origin: http://localhost:3000
+12:00:42 Method: GET
+12:00:43 ---- NEW REQUEST ----
+12:00:43 Origin: http://localhost:3000
+12:00:43 Method: GET
+12:00:48 ---- NEW REQUEST ----
+12:00:48 Origin: http://localhost:3000
+12:00:48 Method: OPTIONS
+12:00:48 OPTIONS HIT
+12:00:48 ---- NEW REQUEST ----
+12:00:48 Origin: http://localhost:3000
+12:00:48 Method: POST
+[03-Apr-2026 12:00:48 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:00:48 ---- NEW REQUEST ----
+12:00:48 Origin: http://localhost:3000
+12:00:48 Method: GET
+12:00:48 ---- NEW REQUEST ----
+12:00:48 Origin: http://localhost:3000
+12:00:48 Method: GET
+12:00:48 ---- NEW REQUEST ----
+12:00:48 Origin: http://localhost:3000
+12:00:48 Method: GET
+12:00:48 ---- NEW REQUEST ----
+12:00:48 Origin: http://localhost:3000
+12:00:48 Method: GET
+12:00:52 ---- NEW REQUEST ----
+12:00:52 Origin: http://localhost:3000
+12:00:52 Method: GET
+12:00:52 ---- NEW REQUEST ----
+12:00:52 Origin: http://localhost:3000
+12:00:52 Method: GET
+12:01:06 ---- NEW REQUEST ----
+12:01:06 Origin: http://localhost:3000
+12:01:06 Method: GET
+12:01:06 ---- NEW REQUEST ----
+12:01:06 Origin: http://localhost:3000
+12:01:06 Method: GET
+12:01:33 ---- NEW REQUEST ----
+12:01:33 Origin: http://localhost:3000
+12:01:33 Method: GET
+12:01:33 ---- NEW REQUEST ----
+12:01:33 Origin: http://localhost:3000
+12:01:33 Method: GET
+12:01:36 ---- NEW REQUEST ----
+12:01:36 Origin: http://localhost:3000
+12:01:36 Method: OPTIONS
+12:01:36 OPTIONS HIT
+12:01:37 ---- NEW REQUEST ----
+12:01:37 Origin: http://localhost:3000
+12:01:37 Method: POST
+[03-Apr-2026 12:01:37 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:01:37 ---- NEW REQUEST ----
+12:01:37 Origin: http://localhost:3000
+12:01:37 Method: GET
+12:01:37 ---- NEW REQUEST ----
+12:01:37 Origin: http://localhost:3000
+12:01:37 Method: GET
+12:01:37 ---- NEW REQUEST ----
+12:01:37 Origin: http://localhost:3000
+12:01:37 Method: GET
+12:01:37 ---- NEW REQUEST ----
+12:01:37 Origin: http://localhost:3000
+12:01:37 Method: GET
+12:01:44 ---- NEW REQUEST ----
+12:01:44 Origin: http://localhost:3000
+12:01:44 Method: GET
+12:01:44 ---- NEW REQUEST ----
+12:01:44 Origin: http://localhost:3000
+12:01:44 Method: GET
+12:01:48 ---- NEW REQUEST ----
+12:01:48 Origin: http://localhost:3000
+12:01:48 Method: OPTIONS
+12:01:48 OPTIONS HIT
+12:01:48 ---- NEW REQUEST ----
+12:01:48 Origin: http://localhost:3000
+12:01:48 Method: POST
+[03-Apr-2026 12:01:48 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:01:48 ---- NEW REQUEST ----
+12:01:48 Origin: http://localhost:3000
+12:01:48 Method: GET
+12:01:48 ---- NEW REQUEST ----
+12:01:48 Origin: http://localhost:3000
+12:01:48 Method: GET
+12:01:48 ---- NEW REQUEST ----
+12:01:48 Origin: http://localhost:3000
+12:01:48 Method: GET
+12:01:48 ---- NEW REQUEST ----
+12:01:48 Origin: http://localhost:3000
+12:01:48 Method: GET
+12:04:14 ---- NEW REQUEST ----
+12:04:14 Origin: http://localhost:3000
+12:04:14 Method: GET
+12:04:14 ---- NEW REQUEST ----
+12:04:14 Origin: http://localhost:3000
+12:04:14 Method: GET
+12:04:20 ---- NEW REQUEST ----
+12:04:20 Origin: http://localhost:3000
+12:04:20 Method: GET
+12:04:20 ---- NEW REQUEST ----
+12:04:20 Origin: http://localhost:3000
+12:04:20 Method: GET
+12:04:24 ---- NEW REQUEST ----
+12:04:24 Origin: http://localhost:3000
+12:04:24 Method: OPTIONS
+12:04:24 OPTIONS HIT
+12:04:24 ---- NEW REQUEST ----
+12:04:24 Origin: http://localhost:3000
+12:04:24 Method: POST
+[03-Apr-2026 12:04:24 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:04:25 ---- NEW REQUEST ----
+12:04:25 Origin: http://localhost:3000
+12:04:25 Method: GET
+12:04:25 ---- NEW REQUEST ----
+12:04:25 Origin: http://localhost:3000
+12:04:25 Method: GET
+12:04:25 ---- NEW REQUEST ----
+12:04:25 Origin: http://localhost:3000
+12:04:25 Method: GET
+12:04:25 ---- NEW REQUEST ----
+12:04:25 Origin: http://localhost:3000
+12:04:25 Method: GET
+12:05:00 ---- NEW REQUEST ----
+12:05:00 Origin: http://localhost:3000
+12:05:00 Method: GET
+12:05:00 ---- NEW REQUEST ----
+12:05:00 Origin: http://localhost:3000
+12:05:00 Method: GET
+12:09:42 ---- NEW REQUEST ----
+12:09:42 Origin: http://localhost:3000
+12:09:42 Method: GET
+12:09:45 ---- NEW REQUEST ----
+12:09:45 Origin: http://localhost:3000
+12:09:45 Method: GET
+12:09:50 ---- NEW REQUEST ----
+12:09:50 Origin: http://localhost:3000
+12:09:50 Method: GET
+12:09:50 ---- NEW REQUEST ----
+12:09:50 Origin: http://localhost:3000
+12:09:50 Method: OPTIONS
+12:09:50 OPTIONS HIT
+12:09:50 ---- NEW REQUEST ----
+12:09:50 Origin: http://localhost:3000
+12:09:50 Method: POST
+[03-Apr-2026 12:09:50 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:09:50 ---- NEW REQUEST ----
+12:09:50 Origin: http://localhost:3000
+12:09:50 Method: GET
+12:09:50 ---- NEW REQUEST ----
+12:09:50 Origin: http://localhost:3000
+12:09:50 Method: GET
+12:09:51 ---- NEW REQUEST ----
+12:09:51 Origin: http://localhost:3000
+12:09:51 Method: GET
+12:09:51 ---- NEW REQUEST ----
+12:09:51 Origin: http://localhost:3000
+12:09:51 Method: GET
+12:09:51 ---- NEW REQUEST ----
+12:09:51 Origin: http://localhost:3000
+12:09:51 Method: GET
+12:09:51 ---- NEW REQUEST ----
+12:09:51 Origin: http://localhost:3000
+12:09:51 Method: GET
+12:09:54 ---- NEW REQUEST ----
+12:09:54 Origin: http://localhost:3000
+12:09:54 Method: GET
+12:09:54 ---- NEW REQUEST ----
+12:09:54 Origin: http://localhost:3000
+12:09:54 Method: OPTIONS
+12:09:54 OPTIONS HIT
+12:09:54 ---- NEW REQUEST ----
+12:09:54 Origin: http://localhost:3000
+12:09:54 Method: POST
+[03-Apr-2026 12:09:54 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:09:54 ---- NEW REQUEST ----
+12:09:54 Origin: http://localhost:3000
+12:09:54 Method: GET
+12:09:54 ---- NEW REQUEST ----
+12:09:54 Origin: http://localhost:3000
+12:09:54 Method: GET
+12:09:54 ---- NEW REQUEST ----
+12:09:54 Origin: http://localhost:3000
+12:09:54 Method: GET
+12:09:55 ---- NEW REQUEST ----
+12:09:55 Origin: http://localhost:3000
+12:09:55 Method: GET
+12:09:55 ---- NEW REQUEST ----
+12:09:55 Origin: http://localhost:3000
+12:09:55 Method: GET
+12:09:55 ---- NEW REQUEST ----
+12:09:55 Origin: http://localhost:3000
+12:09:55 Method: GET
+12:09:55 ---- NEW REQUEST ----
+12:09:55 Origin: http://localhost:3000
+12:09:55 Method: GET
+12:09:56 ---- NEW REQUEST ----
+12:09:56 Origin: http://localhost:3000
+12:09:56 Method: OPTIONS
+12:09:56 OPTIONS HIT
+12:09:56 ---- NEW REQUEST ----
+12:09:56 Origin: http://localhost:3000
+12:09:56 Method: POST
+[03-Apr-2026 12:09:56 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:09:56 ---- NEW REQUEST ----
+12:09:56 Origin: http://localhost:3000
+12:09:56 Method: GET
+12:09:56 ---- NEW REQUEST ----
+12:09:56 Origin: http://localhost:3000
+12:09:56 Method: GET
+12:09:56 ---- NEW REQUEST ----
+12:09:56 Origin: http://localhost:3000
+12:09:56 Method: GET
+12:09:56 ---- NEW REQUEST ----
+12:09:56 Origin: http://localhost:3000
+12:09:56 Method: GET
+12:09:57 ---- NEW REQUEST ----
+12:09:57 Origin: http://localhost:3000
+12:09:57 Method: GET
+12:09:57 ---- NEW REQUEST ----
+12:09:57 Origin: http://localhost:3000
+12:09:57 Method: GET
+12:09:57 ---- NEW REQUEST ----
+12:09:57 Origin: http://localhost:3000
+12:09:57 Method: GET
+12:09:57 ---- NEW REQUEST ----
+12:09:57 Origin: http://localhost:3000
+12:09:57 Method: OPTIONS
+12:09:57 OPTIONS HIT
+12:09:57 ---- NEW REQUEST ----
+12:09:57 Origin: http://localhost:3000
+12:09:57 Method: POST
+[03-Apr-2026 12:09:57 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:09:58 ---- NEW REQUEST ----
+12:09:58 Origin: http://localhost:3000
+12:09:58 Method: GET
+12:09:58 ---- NEW REQUEST ----
+12:09:58 Origin: http://localhost:3000
+12:09:58 Method: GET
+12:09:58 ---- NEW REQUEST ----
+12:09:58 Origin: http://localhost:3000
+12:09:58 Method: GET
+12:09:58 ---- NEW REQUEST ----
+12:09:58 Origin: http://localhost:3000
+12:09:58 Method: GET
+12:09:58 ---- NEW REQUEST ----
+12:09:58 Origin: http://localhost:3000
+12:09:58 Method: GET
+12:09:58 ---- NEW REQUEST ----
+12:09:58 Origin: http://localhost:3000
+12:09:58 Method: GET
+12:09:58 ---- NEW REQUEST ----
+12:09:58 Origin: http://localhost:3000
+12:09:58 Method: GET
+12:09:59 ---- NEW REQUEST ----
+12:09:59 Origin: http://localhost:3000
+12:09:59 Method: OPTIONS
+12:09:59 OPTIONS HIT
+12:09:59 ---- NEW REQUEST ----
+12:09:59 Origin: http://localhost:3000
+12:09:59 Method: POST
+[03-Apr-2026 12:09:59 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:09:59 ---- NEW REQUEST ----
+12:09:59 Origin: http://localhost:3000
+12:09:59 Method: GET
+12:09:59 ---- NEW REQUEST ----
+12:09:59 Origin: http://localhost:3000
+12:09:59 Method: GET
+12:09:59 ---- NEW REQUEST ----
+12:09:59 Origin: http://localhost:3000
+12:09:59 Method: GET
+12:10:00 ---- NEW REQUEST ----
+12:10:00 Origin: http://localhost:3000
+12:10:00 Method: GET
+12:10:00 ---- NEW REQUEST ----
+12:10:00 Origin: http://localhost:3000
+12:10:00 Method: GET
+12:10:00 ---- NEW REQUEST ----
+12:10:00 Origin: http://localhost:3000
+12:10:00 Method: GET
+12:13:07 ---- NEW REQUEST ----
+12:13:07 Origin: http://localhost:3000
+12:13:07 Method: GET
+12:14:29 ---- NEW REQUEST ----
+12:14:29 Origin: http://localhost:3000
+12:14:29 Method: GET
+12:14:30 ---- NEW REQUEST ----
+12:14:30 Origin: http://localhost:3000
+12:14:30 Method: OPTIONS
+12:14:30 OPTIONS HIT
+12:14:30 ---- NEW REQUEST ----
+12:14:30 Origin: http://localhost:3000
+12:14:30 Method: POST
+[03-Apr-2026 12:14:30 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:14:30 ---- NEW REQUEST ----
+12:14:30 Origin: http://localhost:3000
+12:14:30 Method: GET
+12:14:30 ---- NEW REQUEST ----
+12:14:30 Origin: http://localhost:3000
+12:14:30 Method: GET
+12:14:30 ---- NEW REQUEST ----
+12:14:30 Origin: http://localhost:3000
+12:14:30 Method: GET
+12:14:30 ---- NEW REQUEST ----
+12:14:30 Origin: http://localhost:3000
+12:14:30 Method: GET
+12:14:30 ---- NEW REQUEST ----
+12:14:30 Origin: http://localhost:3000
+12:14:30 Method: GET
+12:14:31 ---- NEW REQUEST ----
+12:14:31 Origin: http://localhost:3000
+12:14:31 Method: GET
+12:14:44 ---- NEW REQUEST ----
+12:14:44 Origin: http://localhost:3000
+12:14:44 Method: GET
+12:14:48 ---- NEW REQUEST ----
+12:14:48 Origin: http://localhost:3000
+12:14:48 Method: GET
+12:14:48 ---- NEW REQUEST ----
+12:14:48 Origin: http://localhost:3000
+12:14:48 Method: OPTIONS
+12:14:48 OPTIONS HIT
+12:14:48 ---- NEW REQUEST ----
+12:14:48 Origin: http://localhost:3000
+12:14:48 Method: POST
+[03-Apr-2026 12:14:48 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:14:48 ---- NEW REQUEST ----
+12:14:48 Origin: http://localhost:3000
+12:14:48 Method: GET
+12:14:48 ---- NEW REQUEST ----
+12:14:48 Origin: http://localhost:3000
+12:14:48 Method: GET
+12:14:48 ---- NEW REQUEST ----
+12:14:48 Origin: http://localhost:3000
+12:14:48 Method: GET
+12:14:49 ---- NEW REQUEST ----
+12:14:49 Origin: http://localhost:3000
+12:14:49 Method: GET
+12:14:49 ---- NEW REQUEST ----
+12:14:49 Origin: http://localhost:3000
+12:14:49 Method: GET
+12:14:49 ---- NEW REQUEST ----
+12:14:49 Origin: http://localhost:3000
+12:14:49 Method: GET
+12:15:15 ---- NEW REQUEST ----
+12:15:15 Origin: http://localhost:3000
+12:15:15 Method: GET
+12:15:24 ---- NEW REQUEST ----
+12:15:24 Origin: http://localhost:3000
+12:15:24 Method: GET
+12:15:27 ---- NEW REQUEST ----
+12:15:27 Origin: http://localhost:3000
+12:15:27 Method: GET
+12:15:27 ---- NEW REQUEST ----
+12:15:27 Origin: http://localhost:3000
+12:15:27 Method: OPTIONS
+12:15:27 OPTIONS HIT
+12:15:27 ---- NEW REQUEST ----
+12:15:27 Origin: http://localhost:3000
+12:15:27 Method: POST
+[03-Apr-2026 12:15:27 UTC] PHP Fatal error:  Cannot redeclare debug_log() (previously declared in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php:7) in C:\Users\kohan\Documents\DEVELOPMENT\projects\github\koreskole-react\api\cors.php on line 8
+12:15:27 ---- NEW REQUEST ----
+12:15:27 Origin: http://localhost:3000
+12:15:27 Method: GET
+12:15:27 ---- NEW REQUEST ----
+12:15:27 Origin: http://localhost:3000
+12:15:27 Method: GET
+12:15:28 ---- NEW REQUEST ----
+12:15:28 Origin: http://localhost:3000
+12:15:28 Method: GET
+12:15:28 ---- NEW REQUEST ----
+12:15:28 Origin: http://localhost:3000
+12:15:28 Method: GET
+12:15:28 ---- NEW REQUEST ----
+12:15:28 Origin: http://localhost:3000
+12:15:28 Method: GET
+12:15:28 ---- NEW REQUEST ----
+12:15:28 Origin: http://localhost:3000
+12:15:28 Method: GET
