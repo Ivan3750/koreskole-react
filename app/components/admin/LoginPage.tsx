@@ -45,7 +45,7 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
       onLogin();
 
     } catch (e) {
-      setError("Serverfejl — prøv igen");
+      setError("Serverfejl - prøv igen");
     }
 
     setLoading(false);

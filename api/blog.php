@@ -251,7 +251,7 @@ function handle_upload(array $file): string|false
 
     if (!move_uploaded_file($file['tmp_name'], $dest)) return false;
 
-    // Return a root-relative public URL — adjust if your app lives in a subpath
+    // Return a root-relative public URL - adjust if your app lives in a subpath
     return '/uploads/' . $filename;
 }
 

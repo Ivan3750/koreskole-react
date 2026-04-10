@@ -233,7 +233,7 @@
     "menu": "Menu"
   },
   "holdstart_hero": {
-    "title": "Next class start — get started now",
+    "title": "Next class start - get started now",
     "subtitle": "Choose a class that fits your schedule. We offer flexible hours, small groups, and personal instruction all the way to your driver's license."
   },
    "prices": {
@@ -344,7 +344,7 @@
       {
         "number": "02",
         "title": "Theory lessons",
-        "description": "Theory once a week with unlimited access — so you feel fully prepared for the test."
+        "description": "Theory once a week with unlimited access - so you feel fully prepared for the test."
       },
       {
         "number": "03",
@@ -374,7 +374,7 @@
       {
         "number": "08",
         "title": "Driving test",
-        "description": "The final test — pass and receive your driver's license."
+        "description": "The final test - pass and receive your driver's license."
       }
     ]
   },
@@ -437,7 +437,7 @@
 },
   "licenseB": {
     "hero": {
-      "title": "Driving license category B — your road to freedom",
+      "title": "Driving license category B - your road to freedom",
       "subtitle": "Dreaming of freedom on the road? At Køreskole Vejle, we help you get your Category B license quickly, safely, and at a fair price."
     }
   },
@@ -445,7 +445,7 @@
     "package": {
       "badge": "Most Popular Package",
       "title": "Legal Package - Complete Driving License",
-      "description": "With our legal package, everything is included from start to finish. No hidden fees, no unexpected costs — just a safe and structured path to your driver's license.",
+      "description": "With our legal package, everything is included from start to finish. No hidden fees, no unexpected costs - just a safe and structured path to your driver's license.",
       "price": "From 15,500 DKK",
       "cta": "Read more",
       "items": [
@@ -579,14 +579,14 @@
   }
   },
   "koereproeve_hero": {
-      "title": "Driving Test in Vejle — What You Need to Know",
-      "subtitle": "Everything you need to know about the practical driving test in Vejle — from the test process to typical routes and how to pass on the first try."
+      "title": "Driving Test in Vejle - What You Need to Know",
+      "subtitle": "Everything you need to know about the practical driving test in Vejle - from the test process to typical routes and how to pass on the first try."
 
   },
    "contact_page": {
     "heading": "Contact",
     "subheading": "Let's have a chat",
-    "description": "Do you have questions about driving lessons, prices, or registration? Call or write — we respond quickly and honestly.",
+    "description": "Do you have questions about driving lessons, prices, or registration? Call or write - we respond quickly and honestly.",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
     "addressLabel": "Address",
@@ -674,7 +674,7 @@
       "name": "Volkswagen Golf GTE ",
       "year_label": "Model Year",
       "year": "2021",
-      "description": "The Golf GTE is a very good training car. It has automatic transmission and is intuitive to operate, and it is equipped with all modern safety features. This allows students to easily learn what is necessary about the cars of the future while having more time to focus on driving itself and thus road safety. Two-thirds of all accidents are caused by inattention or attention directed at the wrong things—therefore, it is important that the car itself is not also a distraction. When the new driver education program comes into effect on July 1, 2026, it will be a requirement that the student, during the driving test, can explain and demonstrate how modern driver assistance systems work and how they positively impact road safety."
+      "description": "The Golf GTE is a very good training car. It has automatic transmission and is intuitive to operate, and it is equipped with all modern safety features. This allows students to easily learn what is necessary about the cars of the future while having more time to focus on driving itself and thus road safety. Two-thirds of all accidents are caused by inattention or attention directed at the wrong things-therefore, it is important that the car itself is not also a distraction. When the new driver education program comes into effect on July 1, 2026, it will be a requirement that the student, during the driving test, can explain and demonstrate how modern driver assistance systems work and how they positively impact road safety."
     },
     "taigo": {
       "name": "Volkswagen Taigo",
@@ -686,7 +686,7 @@
    "meet": {
     "subtitle": "Driver's License in Vejle",
     "title": "Unsure about the driving course? We can help",
-    "description": "If you're not quite sure how the driving course works, we offer a <strong>free information session</strong>. We will go through the entire process, answer your questions, and help you plan your theory and driving lessons — completely obligation-free.",
+    "description": "If you're not quite sure how the driving course works, we offer a <strong>free information session</strong>. We will go through the entire process, answer your questions, and help you plan your theory and driving lessons - completely obligation-free.",
     "features": [
       "Free information session without obligations",
       "Structured theory and driving lessons",

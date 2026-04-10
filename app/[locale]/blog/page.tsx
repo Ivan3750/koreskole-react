@@ -114,7 +114,7 @@ const Blog = () => {
     })();
   }, []);
 
-  /* Each post's category is not stored in the DB — we derive it from the
+  /* Each post's category is not stored in the DB - we derive it from the
      title keywords so the existing filter UI still works for admin-created posts.
      You can also add a real `category` column later.                          */
   const guessCategory = (post: Blog): string => {

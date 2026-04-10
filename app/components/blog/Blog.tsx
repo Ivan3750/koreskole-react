@@ -135,8 +135,8 @@ const Blog = () => {
     {
       id: 10,
       category: "trafik-vejle",
-      title: "Trafik i Vejle centrum — hvad skal du vide?",
-      description: "Navigér sikkert gennem Vejle centrum med vores lokale guide.",
+      title: "Trafik i Vejle centrum - hvad skal du vide?",
+      description: "Naviger sikkert gennem Vejle centrum med vores lokale guide.",
       date: "2026-02-04",
       image: "/blog-image-10.jpg",
       slug: "/blog/trafik-vejle/vejle-centrum"
@@ -162,7 +162,7 @@ const Blog = () => {
     {
       id: 13,
       category: "trafikregler",
-      title: "Klip i kørekort — hvad gør du?",
+      title: "Klip i kørekort - hvad gør du?",
       description: "Få svar på hvad du skal gøre, hvis du får klip i dit kørekort.",
       date: "2026-01-30",
       image: "/blog-image-13.jpg",

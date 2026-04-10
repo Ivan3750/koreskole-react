@@ -133,7 +133,7 @@ const Testimonials = () => {
   const prev = useCallback(() => goTo((active - 1 + total) % total, "right"), [active, total, goTo]);
   const next = useCallback(() => goTo((active + 1) % total, "left"), [active, total, goTo]);
 
-  // Autoplay — resets on every slide change
+  // Autoplay - resets on every slide change
   useEffect(() => {
     const id = setTimeout(next, AUTOPLAY_MS);
     return () => clearTimeout(id);

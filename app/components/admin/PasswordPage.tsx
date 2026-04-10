@@ -55,7 +55,7 @@ export default function PasswordPage() {
       setNewPassword("");
     } catch {
       setStatus("error");
-      setMessage("Server error — try again.");
+      setMessage("Server error - try again.");
     }
   };
 

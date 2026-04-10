@@ -152,7 +152,7 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
       await fetchCourses();
       setNewCourse(EMPTY_COURSE);
     } catch (err) {
-      setError("Serverfejl — prøv igen.");
+      setError("Serverfejl - prøv igen.");
     } finally {
       setLoading(false);
     }

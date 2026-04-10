@@ -62,7 +62,7 @@ export default function TeoriproevePage() {
 
             {/* Images unchanged */}
           <div className="relative h-96">
-  {/* Large photo — tilted, fills most of the space */}
+  {/* Large photo - tilted, fills most of the space */}
   <div
     className="absolute inset-0 right-16 rounded-2xl overflow-hidden shadow-xl"
     style={{ transform: "rotate(-2deg)", transformOrigin: "bottom left" }}
@@ -75,7 +75,7 @@ export default function TeoriproevePage() {
     />
   </div>
 
-  {/* Small photo — overlaps bottom-right, counter-rotated */}
+  {/* Small photo - overlaps bottom-right, counter-rotated */}
   <div
     className="absolute bottom-0 right-0 w-48 h-56 rounded-2xl overflow-hidden shadow-2xl border-4"
     style={{

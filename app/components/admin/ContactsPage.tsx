@@ -63,7 +63,7 @@ export default function ContactsPage() {
       setMessage("Saved successfully.");
     } catch {
       setStatus("error");
-      setMessage("Server error — try again.");
+      setMessage("Server error - try again.");
     }
   };
 

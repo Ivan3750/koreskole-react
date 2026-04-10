@@ -235,7 +235,7 @@
     "menu": "Menu"
   },
   "holdstart_hero": {
-    "title": "Næste holdstart — kom i gang nu",
+    "title": "Næste holdstart - kom i gang nu",
     "subtitle": "Vælg et hold der passer til din hverdag. Vi tilbyder fleksible tider, små hold og personlig undervisning hele vejen til dit kørekort."
   },
     "prices": {
@@ -346,7 +346,7 @@
       {
         "number": "02",
         "title": "Teoriundervisning",
-        "description": "Teori én gang om ugen med ubegrænset adgang — så du kan blive helt tryg og klar til prøven."
+        "description": "Teori en gang om ugen med ubegrænset adgang - så du kan blive helt tryg og klar til prøven."
       },
       {
         "number": "03",
@@ -376,7 +376,7 @@
       {
         "number": "08",
         "title": "Køreprøve",
-        "description": "Den sidste test — bestå og få dit kørekort i hånden."
+        "description": "Den sidste test - bestå og få dit kørekort i hånden."
       }
     ]
   },
@@ -439,7 +439,7 @@
   },
   "licenseB": {
     "hero": {
-      "title": "Kørekort B i Vejle — din vej til kørekortet",
+      "title": "Kørekort B i Vejle - din vej til kørekortet",
       "subtitle": "Drømmer du om frihed på vejene? Hos Køreskole Vejle hjælper vi dig med at tage kørekort B hurtigt, sikkert og til en fair pris."
     }
   },
@@ -447,7 +447,7 @@
     "package": {
       "badge": "Mest populære pakke",
       "title": "Lovpakke - komplet kørekort",
-      "description": "Med vores lovpakke får du alt inkluderet fra start til slut. Ingen skjulte gebyrer, ingen uforudsete omkostninger — kun en tryg og struktureret vej til dit kørekort.",
+      "description": "Med vores lovpakke får du alt inkluderet fra start til slut. Ingen skjulte gebyrer, ingen uforudsete omkostninger - kun en tryg og struktureret vej til dit kørekort.",
       "price": "Fra 15.500 kr.",
       "cta": "Læs mere",
       "items": [
@@ -589,8 +589,8 @@
   },
 
    "koereproeve_hero": {
-      "title": "Køreprøve i Vejle — hvad skal du vide?",
-      "subtitle": "Alt du behøver at vide om den praktiske køreprøve i Vejle — fra prøveforløb til typiske ruter og hvordan du består første gang."
+      "title": "Køreprøve i Vejle - hvad skal du vide?",
+      "subtitle": "Alt du behøver at vide om den praktiske køreprøve i Vejle - fra prøveforløb til typiske ruter og hvordan du består første gang."
   },
   "contact_page": {
     "heading": "Kontakt",

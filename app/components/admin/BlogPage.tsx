@@ -141,7 +141,7 @@ export default function BlogPage() {
       let res: Response;
 
       if (form.imageFile) {
-        // multipart — PHP handle_upload() takes care of saving the file
+        // multipart - PHP handle_upload() takes care of saving the file
         const fd = new FormData();
         fd.append("title",   title);
         fd.append("content", content);
@@ -152,7 +152,7 @@ export default function BlogPage() {
           body: fd,
         });
       } else {
-        // JSON — pass URL (or null to clear)
+        // JSON - pass URL (or null to clear)
         res = await fetch(url, {
           method: "POST", credentials: "include",
           headers: { "Content-Type": "application/json", "X-CSRF-TOKEN": csrf },
