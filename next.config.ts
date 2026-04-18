@@ -4,13 +4,13 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: "/:path*.php",            // всі запити, які закінчуються на .php
-        destination: "http://localhost:8000/:path*.php", // проксі на PHP сервер
+        source: "/:path*.php",          
+        destination: "/:path*.php", 
       },
     ];
   },
-/* output: "export",
- */  trailingSlash: true,
+output: "export",
+  trailingSlash: true,
   images: { unoptimized: true },
 
   

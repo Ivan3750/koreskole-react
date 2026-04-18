@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";
+import { BASE_URL } from "@/app/store/api"
 
 interface BookingFormProps {
   holdId: number;
@@ -35,7 +36,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ holdId, holdDate, holdTime, h
     }
 
     try {
-      const res = await fetch("http://localhost:8000/book.php", {
+      const res = await fetch(`${BASE_URL}/book.php`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ hold_id: holdId, ...formData }),

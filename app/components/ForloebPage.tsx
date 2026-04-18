@@ -40,8 +40,7 @@ import "@/app/i18n";
     <div style={{ background: "var(--color-bg)" }}>
       <div className="max-w-7xl mx-auto px-6 py-24 space-y-32">
 
-        {/* INFORMATIONS MØDE */}
-        <section className="grid lg:grid-cols-2 gap-16 items-center">
+         <section className="grid lg:grid-cols-2 gap-16 items-center">
 
           <div className="relative h-[600px] rounded-3xl overflow-hidden">
             <Image src={school} alt={t("prices.meeting.imageAlt")} fill className="object-cover" />

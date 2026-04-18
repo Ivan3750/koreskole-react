@@ -1,10 +1,14 @@
 <?php
 header("Content-Type: application/json; charset=UTF-8");
+header("X-Content-Type-Options: nosniff");
+header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Pragma: no-cache");
 
 session_set_cookie_params([
     'lifetime' => 0,
     'path'     => '/',
-    'secure'   => false,
+    'domain'   => '',
+    'secure'   => true,
     'httponly' => true,
     'samesite' => 'Lax'
 ]);
@@ -15,19 +19,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
 if (!isset($_SESSION['created'])) {
     $_SESSION['created'] = time();
-    $_SESSION['ip']      = $_SERVER['REMOTE_ADDR'];
-    $_SESSION['ua']      = $_SERVER['HTTP_USER_AGENT'];
-}
-
-if (
-    isset($_SESSION['ip'], $_SESSION['ua']) &&
-    ($_SESSION['ip'] !== $_SERVER['REMOTE_ADDR'] ||
-     $_SESSION['ua'] !== $_SERVER['HTTP_USER_AGENT'])
-) {
-    session_destroy();
-    http_response_code(403);
-    echo json_encode(["error" => "Session invalid"]);
-    exit;
 }
 
 if (empty($_SESSION['csrf'])) {
@@ -35,11 +26,29 @@ if (empty($_SESSION['csrf'])) {
 }
 
 function verify_csrf() {
-    $headers = getallheaders();
-    $csrf    = $headers['X-Csrf-Token'] ?? $headers['X-CSRF-TOKEN'] ?? '';
-    if (!$csrf || !hash_equals($_SESSION['csrf'], $csrf)) {
+    $token = null;
+    
+    if (function_exists('getallheaders')) {
+        $headers = getallheaders();
+        $token = $headers['X-CSRF-TOKEN'] ?? $headers['X-Csrf-Token'] ?? null;
+    }
+    
+    if (!$token && isset($_SERVER['HTTP_X_CSRF_TOKEN'])) {
+        $token = $_SERVER['HTTP_X_CSRF_TOKEN'];
+    }
+    
+    error_log("Session CSRF: " . ($_SESSION['csrf'] ?? 'NOT SET'));
+    error_log("Request CSRF: " . ($token ?? 'NOT SET'));
+    error_log("Session ID: " . session_id());
+    
+    if (!$token || empty($_SESSION['csrf']) || !hash_equals($_SESSION['csrf'], $token)) {
         http_response_code(403);
-        echo json_encode(["error" => "Invalid CSRF"]);
+        echo json_encode([
+            "error" => "Invalid CSRF",
+            "session_has_csrf" => !empty($_SESSION['csrf']),
+            "token_provided" => !empty($token),
+            "session_id" => session_id()
+        ]);
         exit;
     }
 }

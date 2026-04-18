@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
+import { BASE_URL } from "@/app/store/api"
 
 type Blog = {
   id: number;
@@ -13,8 +14,6 @@ type Blog = {
   updated_at: string | null;
 };
 
-const BASE_URL = "http://localhost:8000";
-const API_URL  = `${BASE_URL}/blog.php`;
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString("da-DK", {
@@ -39,14 +38,12 @@ export default function BlogPostPage() {
       setLoading(true);
       setError(null);
       try {
-        // Fetch the single post
-        const res = await fetch(`${API_URL}?id=${id}`, { credentials: "include" });
+        const res = await fetch(`${BASE_URL}/blog.php?id=${id}`, { credentials: "include" });
         if (!res.ok) throw new Error("Post ikke fundet");
         const data: Blog = await res.json();
         setPost(data);
 
-        // Fetch all posts for related sidebar
-        const allRes  = await fetch(API_URL, { credentials: "include" });
+        const allRes  = await fetch(`${BASE_URL}/blog.php`, { credentials: "include" });
         const allData = await allRes.json();
         setRelated(
           (allData.blogs as Blog[]).filter((b) => b.id !== data.id).slice(0, 4)
@@ -59,7 +56,6 @@ export default function BlogPostPage() {
     })();
   }, [id]);
 
-  /* ── Loading ─────────────────────────────────────────────────────────── */
   if (loading) {
     return (
       <section className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "var(--color-bg)" }}>
@@ -72,7 +68,6 @@ export default function BlogPostPage() {
     );
   }
 
-  /* ── Error ───────────────────────────────────────────────────────────── */
   if (error || !post) {
     return (
       <section className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "var(--color-bg)" }}>
@@ -101,7 +96,6 @@ export default function BlogPostPage() {
     ? post.image.startsWith("/uploads/") ? `${BASE_URL}${post.image}` : post.image
     : null;
 
-  /* ── Page ────────────────────────────────────────────────────────────── */
   return (
     <>
       {/* ProseMirror content styles */}
@@ -162,10 +156,8 @@ export default function BlogPostPage() {
 
           <div className="grid lg:grid-cols-3 gap-12">
 
-            {/* ── Main article ──────────────────────────────────────────── */}
             <article className="lg:col-span-2">
 
-              {/* Cover image */}
               {coverSrc && (
                 <div className="w-full aspect-video rounded-3xl overflow-hidden mb-8 border-2"
                   style={{ borderColor: "var(--color-border)" }}>
@@ -174,7 +166,6 @@ export default function BlogPostPage() {
                 </div>
               )}
 
-              {/* Meta */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center gap-1.5 text-sm"
                   style={{ color: "var(--color-text-secondary)" }}>
@@ -195,7 +186,6 @@ export default function BlogPostPage() {
                 )}
               </div>
 
-              {/* Title */}
               <h1
                 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8"
                 style={{ color: "var(--color-text)" }}
@@ -203,11 +193,8 @@ export default function BlogPostPage() {
                 {post.title}
               </h1>
 
-              {/* Divider */}
               <div className="h-1 w-16 rounded-full mb-8"
                 style={{ backgroundColor: "var(--color-yellow)" }} />
-
-              {/* Content */}
               <div
                 className="blog-content text-base md:text-lg"
                 style={{ color: "var(--color-text)" }}
@@ -216,7 +203,7 @@ export default function BlogPostPage() {
 
             </article>
 
-            {/* ── Sidebar ───────────────────────────────────────────────── */}
+
             <aside className="lg:col-span-1 space-y-6">
 
               <div className="sticky top-24 space-y-6">

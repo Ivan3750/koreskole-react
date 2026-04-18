@@ -65,7 +65,7 @@ export default function TeoriproevePage() {
   {/* Large photo - tilted, fills most of the space */}
   <div
     className="absolute inset-0 right-16 rounded-2xl overflow-hidden shadow-xl"
-    style={{ transform: "rotate(-2deg)", transformOrigin: "bottom left" }}
+    style={{   transformOrigin: "bottom left" }}
   >
     <Image
       src={place_car_front}
@@ -79,7 +79,6 @@ export default function TeoriproevePage() {
   <div
     className="absolute bottom-0 right-0 w-48 h-56 rounded-2xl overflow-hidden shadow-2xl border-4"
     style={{
-      transform: "rotate(3deg)",
       borderColor: "var(--color-yellow)",
     }}
   >

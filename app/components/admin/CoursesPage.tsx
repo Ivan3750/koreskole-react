@@ -1,6 +1,6 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
+import { BASE_URL } from "@/app/store/api"
 
 type Course = {
   id: number;
@@ -10,8 +10,7 @@ type Course = {
   end_time: string;
   days_of_week?: string;
   session_type?: string[];
-  location?: string;
-};
+ };
 
 const days = ["Man", "Tir", "Ons", "Tor", "Fre", "Lør", "Søn", "Ikke angivet"];
 const sessions = ["Formiddag", "Eftermiddag", "Aften"];
@@ -24,10 +23,7 @@ const EMPTY_COURSE: Course = {
   end_time: "",
   days_of_week: "",
   session_type: [],
-  location: "",
-};
-
-const API_URL = "http://localhost:8000/courses.php";
+ };
 
 export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
   const [courses, setCourses] = useState<Course[]>([]);
@@ -42,38 +38,37 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
 
   const init = async () => {
     try {
-      const res = await fetch("http://localhost:8000/session.php", {
+      const res = await fetch(`${BASE_URL}/session.php`, {
         credentials: "include",
       });
       const data = await res.json();
+      console.log("Session data:", data);
       setCsrf(data.csrf ?? "");
       await fetchCourses();
     } catch (err) {
-      console.error(err);
+      console.error("Init error:", err);
     }
   };
 
   const fetchCourses = async () => {
     try {
-      const res = await fetch(API_URL, { credentials: "include" });
-
+      const res = await fetch(`${BASE_URL}/courses.php`, { 
+        credentials: "include" 
+      });
       if (res.status === 401) {
         onLogout();
         return;
       }
-
       const data = await res.json();
-
       const formatted: Course[] = (data.courses ?? []).map((c: any) => ({
         ...c,
         session_type: c.session_type
           ? String(c.session_type).split(",").filter(Boolean)
           : [],
       }));
-
       setCourses(formatted);
     } catch (err) {
-      console.error(err);
+      console.error("Fetch courses error:", err);
     }
   };
 
@@ -81,9 +76,7 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
     const selected = newCourse.days_of_week
       ? newCourse.days_of_week.split(",")
       : [];
-
     let updated: string[];
-
     if (selected.includes(day)) {
       updated = selected.filter((d) => d !== day);
     } else if (day === "Ikke angivet") {
@@ -91,7 +84,6 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
     } else {
       updated = [...selected.filter((d) => d !== "Ikke angivet"), day];
     }
-
     setNewCourse((prev) => ({
       ...prev,
       days_of_week: updated.join(","),
@@ -112,32 +104,43 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
 
   const addCourse = async () => {
     setError("");
-
     if (!newCourse.course_date || !newCourse.start_time || !newCourse.end_time) {
       setError("Udfyld venligst dato og tidspunkt.");
       return;
     }
 
-    setLoading(true);
+    if (!csrf) {
+      setError("CSRF token mangler. Genindlæs siden.");
+      return;
+    }
 
+    setLoading(true);
     try {
-      const res = await fetch(API_URL, {
+      console.log("Sending CSRF token:", csrf);
+      
+      const payload = {
+        language: newCourse.language,
+        course_date: newCourse.course_date,
+        start_time: newCourse.start_time,
+        end_time: newCourse.end_time,
+        days_of_week: newCourse.days_of_week,
+        session_type: newCourse.session_type?.join(","),
+      };
+
+      console.log("Payload:", payload);
+
+      const res = await fetch(`${BASE_URL}/courses.php`, {
         method: "POST",
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
           "X-CSRF-TOKEN": csrf,
         },
-        body: JSON.stringify({
-          language: newCourse.language,
-          course_date: newCourse.course_date,
-          start_time: newCourse.start_time,
-          end_time: newCourse.end_time,
-          days_of_week: newCourse.days_of_week,
-          session_type: newCourse.session_type?.join(","),
-          location: newCourse.location,
-        }),
+        body: JSON.stringify(payload),
       });
+
+      const responseData = await res.json();
+      console.log("Response:", responseData);
 
       if (res.status === 401) {
         onLogout();
@@ -145,13 +148,14 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
       }
 
       if (!res.ok) {
-        setError("Kunne ikke tilføje kursus.");
+        setError(responseData.error || "Kunne ikke tilføje kursus.");
         return;
       }
 
       await fetchCourses();
       setNewCourse(EMPTY_COURSE);
     } catch (err) {
+      console.error("Add course error:", err);
       setError("Serverfejl - prøv igen.");
     } finally {
       setLoading(false);
@@ -160,34 +164,31 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
 
   const deleteCourse = async (id: number) => {
     if (!confirm("Er du sikker på at du vil slette?")) return;
-
     try {
-      const res = await fetch(`${API_URL}?id=${id}`, {
+      const res = await fetch(`${BASE_URL}/courses.php?id=${id}`, {
         method: "DELETE",
         credentials: "include",
-        headers: { "X-CSRF-TOKEN": csrf },
+        headers: { 
+          "X-CSRF-TOKEN": csrf 
+        },
       });
-
       if (res.status === 401) {
         onLogout();
         return;
       }
-
       if (res.ok) {
         setCourses((prev) => prev.filter((c) => c.id !== id));
       }
     } catch (err) {
-      console.error(err);
+      console.error("Delete error:", err);
     }
   };
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
       <h2 className="text-3xl font-semibold mb-8">Kurser</h2>
-
-      {/* FORM */}
-      <div className="bg-white p-8 rounded-2xl  space-y-8 mb-12">
-        {/* Language */}
+      
+      <div className="bg-white p-8 rounded-2xl space-y-8 mb-12">
         <div>
           <label className="block text-sm mb-2">Sprog</label>
           <select
@@ -205,7 +206,6 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
           </select>
         </div>
 
-        {/* Date + time */}
         <div className="grid md:grid-cols-3 gap-4">
           <div>
             <label className="text-sm">Dato</label>
@@ -221,7 +221,6 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
               }
             />
           </div>
-
           <div>
             <label className="text-sm">Start</label>
             <input
@@ -236,7 +235,6 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
               }
             />
           </div>
-
           <div>
             <label className="text-sm">Slut</label>
             <input
@@ -253,24 +251,8 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
           </div>
         </div>
 
-        {/* Location */}
-        <div>
-          <label className="text-sm">Lokation</label>
-          <input
-            type="text"
-            placeholder="Fx Aarhus C"
-            className="border p-3 rounded w-full"
-            value={newCourse.location ?? ""}
-            onChange={(e) =>
-              setNewCourse((prev) => ({
-                ...prev,
-                location: e.target.value,
-              }))
-            }
-          />
-        </div>
+        
 
-        {/* Days */}
         <div>
           <label className="text-sm mb-2 block">Dage</label>
           <div className="flex flex-wrap gap-2">
@@ -278,14 +260,13 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
               const active = newCourse.days_of_week
                 ?.split(",")
                 .includes(day);
-
               return (
                 <button
                   key={day}
                   onClick={() => toggleDay(day)}
                   type="button"
                   style={{border:"var(--color-border)"}}
-                  className={`px-4 py-2 rounded-full  transition
+                  className={`px-4 py-2 rounded-full transition
                     ${
                       active
                         ? "bg-yellow-400 border-yellow-400"
@@ -299,20 +280,18 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
           </div>
         </div>
 
-        {/* Sessions */}
         <div>
           <label className="text-sm mb-2 block">Session</label>
           <div className="grid grid-cols-3 gap-3">
             {sessions.map((s) => {
               const active = newCourse.session_type?.includes(s);
-
               return (
                 <button
                   key={s}
                   type="button"
-                   style={{border:"var(--color-border)"}}
+                  style={{border:"var(--color-border)"}}
                   onClick={() => toggleSession(s)}
-                  className={`p-3 rounded-xl  text-center transition
+                  className={`p-3 rounded-xl text-center transition
                     ${
                       active
                         ? "bg-yellow-400 border-yellow-400"
@@ -327,7 +306,7 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
         </div>
 
         {error && <p className="text-red-500 text-sm">{error}</p>}
-
+        
         <button
           onClick={addCourse}
           disabled={loading}
@@ -337,7 +316,6 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
         </button>
       </div>
 
-      {/* TABLE */}
       <div className="overflow-x-auto">
         <table className="w-full border rounded-xl overflow-hidden">
           <thead>
@@ -351,7 +329,6 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
               <th className="p-3">Handling</th>
             </tr>
           </thead>
-
           <tbody>
             {courses.length === 0 ? (
               <tr>
@@ -371,7 +348,6 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
                   <td className="p-3">
                     {c.session_type?.join(", ")}
                   </td>
-                  <td className="p-3">{c.location}</td>
                   <td className="p-3">
                     <button
                       onClick={() => deleteCourse(c.id)}

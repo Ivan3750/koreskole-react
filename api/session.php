@@ -7,5 +7,7 @@ if (empty($_SESSION['csrf'])) {
 }
 
 echo json_encode([
-    "csrf" => $_SESSION['csrf']
+    "csrf" => $_SESSION['csrf'],
+    "session_id" => session_id(),
+    "logged_in" => $_SESSION['logged_in'] ?? false
 ]);

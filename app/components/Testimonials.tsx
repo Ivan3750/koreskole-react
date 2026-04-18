@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
 import "@/app/i18n";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
 
 type Testimonial = {
   name: string;
@@ -17,15 +16,12 @@ type Testimonial = {
 
 type Direction = "left" | "right";
 
-// ─── Constants ────────────────────────────────────────────────────────────────
 
 const AUTOPLAY_MS = 4500;
 const DRAG_THRESHOLD_PX = 40;
 const ANIM_MS = 360;
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
 
-/** Normalises index distance to [-floor(n/2), ceil(n/2)] for wrap-around display */
 const getOffset = (index: number, active: number, total: number) => {
   const raw = ((index - active) % total + total) % total;
   return raw > total / 2 ? raw - total : raw;
@@ -52,8 +48,7 @@ const exitStyle = (dir: Direction): React.CSSProperties => ({
                opacity   ${ANIM_MS - 60}ms ease`,
 });
 
-// ─── Sub-components ───────────────────────────────────────────────────────────
-
+ 
 const Stars = ({ rating }: { rating: number }) => (
   <div className="flex gap-0.5 mb-3">
     {Array.from({ length: 5 }).map((_, i) => (

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { BASE_URL } from "@/app/store/api"
 
-const API = "http://localhost:8000";
 
 export default function ContactsPage() {
   const [email, setEmail]   = useState("");
@@ -17,8 +17,8 @@ export default function ContactsPage() {
   const init = async () => {
     try {
       const [sessionRes, contactsRes] = await Promise.all([
-        fetch(`${API}/session.php`, { credentials: "include" }),
-        fetch(`${API}/contacts.php`, { credentials: "include" }),
+        fetch(`${BASE_URL}/session.php`, { credentials: "include" }),
+        fetch(`${BASE_URL}/contacts.php`, { credentials: "include" }),
       ]);
 
       const sessionData  = await sessionRes.json();
@@ -41,7 +41,7 @@ export default function ContactsPage() {
     setMessage("");
 
     try {
-      const res = await fetch(`${API}/contacts.php`, {
+      const res = await fetch(`${BASE_URL}/contacts.php`, {
         method: "POST",
         credentials: "include",
         headers: {

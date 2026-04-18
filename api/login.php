@@ -9,9 +9,14 @@ $password = $data['password'] ?? '';
 
 if (!$username || !$password) {
     http_response_code(400);
-    echo json_encode(["error" => "Invalid credentials"]);
+    echo json_encode(["error" => $username, $password]);
     exit;
 }
+/* if (!$username || !$password) {
+    http_response_code(400);
+    echo json_encode(["error" => "Invalid credentials"]);
+    exit;
+} */
 
 $ip = $_SERVER['REMOTE_ADDR'];
 

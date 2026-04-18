@@ -8,7 +8,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 if ($method === 'GET') {
     $stmt = $pdo->query("
-        SELECT id, language, course_date, start_time, end_time, days_of_week, session_type, location
+        SELECT id, language, course_date, start_time, end_time, days_of_week, session_type
         FROM courses
         ORDER BY course_date ASC, start_time ASC
     ");
@@ -18,18 +18,15 @@ if ($method === 'GET') {
 
 if ($method === 'POST') {
     verify_csrf();
-
     $data = json_decode(file_get_contents("php://input"), true);
-
     if (!$data) {
         http_response_code(400);
         echo json_encode(["error" => "Invalid JSON"]);
         exit;
     }
-
     $stmt = $pdo->prepare("
-        INSERT INTO courses (language, course_date, start_time, end_time, days_of_week, session_type, location)
-        VALUES (?,?,?,?,?,?,?)
+        INSERT INTO courses (language, course_date, start_time, end_time, days_of_week, session_type)
+        VALUES (?,?,?,?,?,?)
     ");
     $stmt->execute([
         $data['language'],
@@ -38,24 +35,19 @@ if ($method === 'POST') {
         $data['end_time'],
         $data['days_of_week'] ?? null,
         $data['session_type'] ?? null,
-        $data['location']     ?? null
     ]);
-
     echo json_encode(["success" => true]);
     exit;
 }
 
 if ($method === 'DELETE') {
     verify_csrf();
-
     $id = $_GET['id'] ?? null;
-
     if (!$id || !ctype_digit((string)$id)) {
         http_response_code(400);
         echo json_encode(["error" => "Invalid ID"]);
         exit;
     }
-
     $pdo->prepare("DELETE FROM courses WHERE id = ?")->execute([$id]);
     echo json_encode(["success" => true]);
     exit;

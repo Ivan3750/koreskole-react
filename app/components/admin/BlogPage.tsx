@@ -4,8 +4,7 @@ import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
-
-/* ─── Types ──────────────────────────────────────────────────────────────── */
+import { BASE_URL } from "@/app/store/api"
 type Blog = {
   id: number;
   title: string;
@@ -18,11 +17,10 @@ type Blog = {
 type FormState = {
   id: number | null;
   title: string;
-  imageUrl: string;   // existing URL or typed URL
-  imageFile: File | null; // new file to upload as cover
+  imageUrl: string;  
+  imageFile: File | null; 
 };
 
-/* ─── Toolbar button ─────────────────────────────────────────────────────── */
 function Btn({
   onClick,
   active,
@@ -39,7 +37,7 @@ function Btn({
       type="button"
       title={title}
       onMouseDown={(e) => {
-        e.preventDefault(); // keep editor focused
+        e.preventDefault(); 
         onClick();
       }}
       className={`px-2 py-1 rounded text-sm font-medium border transition-colors select-none ${
@@ -55,10 +53,7 @@ function Btn({
 
 const SEP = () => <span className="w-px self-stretch bg-gray-200 mx-0.5" />;
 
-/* ─── Main component ─────────────────────────────────────────────────────── */
 export default function BlogPage() {
-  const API_URL  = "http://localhost:8000/blog.php";
-  const BASE_URL = "http://localhost:8000"; // serves /uploads/…
 
   const [blogs,    setBlogs]    = useState<Blog[]>([]);
   const [csrf,     setCsrf]     = useState("");
@@ -74,7 +69,6 @@ export default function BlogPage() {
   const imgUrlRef    = useRef<HTMLInputElement>(null);
   const coverFileRef = useRef<HTMLInputElement>(null);
 
-  /* ── TipTap ──────────────────────────────────────────────────────────── */
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -88,23 +82,21 @@ export default function BlogPage() {
     },
   });
 
-  /* ── Init ────────────────────────────────────────────────────────────── */
   useEffect(() => {
     setMounted(true);
     (async () => {
       try {
-        const res = await fetch("http://localhost:8000/session.php", { credentials: "include" });
+        const res = await fetch(`${BASE_URL}/session.php`, { credentials: "include" });
         const d = await res.json();
         setCsrf(d.csrf || "");
-      } catch { /* optional */ }
+      } catch(err) { console.log(err)  }
       fetchBlogs();
     })();
   }, []);
 
-  /* ── Helpers ─────────────────────────────────────────────────────────── */
   const fetchBlogs = async () => {
     try {
-      const res = await fetch(API_URL, { credentials: "include" });
+      const res = await fetch(`${BASE_URL}/blog.php`, { credentials: "include" });
       const d   = await res.json();
       setBlogs(d.blogs || []);
     } catch {
@@ -126,7 +118,6 @@ export default function BlogPage() {
     if (coverFileRef.current) coverFileRef.current.value = "";
   }, [editor]);
 
-  /* ── Save ────────────────────────────────────────────────────────────── */
   const save = async () => {
     if (!editor) return;
     setError(null);
@@ -137,11 +128,10 @@ export default function BlogPage() {
 
     setSaving(true);
     try {
-      const url = form.id !== null ? `${API_URL}?id=${form.id}` : API_URL;
+      const url = form.id !== null ? `${BASE_URL}/blog.php?id=${form.id}` : `${BASE_URL}/blog.php`;
       let res: Response;
 
       if (form.imageFile) {
-        // multipart - PHP handle_upload() takes care of saving the file
         const fd = new FormData();
         fd.append("title",   title);
         fd.append("content", content);
@@ -152,7 +142,6 @@ export default function BlogPage() {
           body: fd,
         });
       } else {
-        // JSON - pass URL (or null to clear)
         res = await fetch(url, {
           method: "POST", credentials: "include",
           headers: { "Content-Type": "application/json", "X-CSRF-TOKEN": csrf },
@@ -171,13 +160,12 @@ export default function BlogPage() {
     }
   };
 
-  /* ── Delete ──────────────────────────────────────────────────────────── */
   const deleteBlog = async () => {
     if (!form.id || !confirm("Delete this blog post?")) return;
     setDeleting(true);
     setError(null);
     try {
-      const res = await fetch(`${API_URL}?id=${form.id}`, {
+      const res = await fetch(`${BASE_URL}/blog.php?id=${form.id}`, {
         method: "DELETE", credentials: "include",
         headers: { "X-CSRF-TOKEN": csrf },
       });
@@ -192,7 +180,6 @@ export default function BlogPage() {
     }
   };
 
-  /* ── Inline image helpers ────────────────────────────────────────────── */
   const insertImageByUrl = () => {
     const url = imgUrlRef.current?.value.trim();
     if (!url) return;
@@ -211,7 +198,6 @@ export default function BlogPage() {
     e.target.value = "";
   };
 
-  /* ── Cover preview src ───────────────────────────────────────────────── */
   const coverPreview = form.imageFile
     ? URL.createObjectURL(form.imageFile)
     : form.imageUrl
@@ -220,7 +206,6 @@ export default function BlogPage() {
 
   if (!mounted) return null;
 
-  /* ── Render ──────────────────────────────────────────────────────────── */
   return (
   <>
     <style>{`
@@ -230,7 +215,6 @@ export default function BlogPage() {
 
     <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-12 gap-8">
 
-      {/* ───── SIDEBAR ───── */}
       <div className="col-span-12 md:col-span-4 lg:col-span-3">
         <div className="bg-white rounded-2xl shadow p-4 space-y-4">
 
@@ -273,17 +257,14 @@ export default function BlogPage() {
         </div>
       </div>
 
-      {/* ───── MAIN EDITOR ───── */}
       <div className="col-span-12 md:col-span-8 lg:col-span-9 space-y-6">
 
-        {/* ERROR */}
         {error && (
           <div className="bg-red-50 border border-red-300 text-red-700 px-4 py-2 rounded-xl">
             {error}
           </div>
         )}
 
-        {/* TITLE */}
         <input
           value={form.title}
           onChange={(e) => setForm(p => ({ ...p, title: e.target.value }))}
@@ -291,7 +272,6 @@ export default function BlogPage() {
           className="w-full text-3xl font-bold border-none outline-none"
         />
 
-        {/* COVER */}
         <div className="bg-white p-5 rounded-2xl shadow space-y-3">
           <div className="text-sm font-medium text-gray-500">Cover Image</div>
 
@@ -330,7 +310,6 @@ export default function BlogPage() {
           )}
         </div>
 
-        {/* TOOLBAR */}
         <div className="sticky top-4 z-10 bg-white border rounded-xl p-2 flex flex-wrap gap-1 shadow-sm">
 
           <Btn onClick={() => editor?.chain().focus().toggleBold().run()} active={editor?.isActive("bold")}>B</Btn>
@@ -353,12 +332,11 @@ export default function BlogPage() {
           <Btn onClick={() => editor?.chain().focus().redo().run()}>↪</Btn>
         </div>
 
-        {/* EDITOR */}
         <div className="bg-white border rounded-2xl shadow">
           <EditorContent editor={editor} />
         </div>
 
-        {/* ACTIONS */}
+ 
         <div className="flex items-center gap-3">
 
           <button
@@ -386,7 +364,6 @@ export default function BlogPage() {
           )}
         </div>
 
-        {/* PREVIEW */}
         <div className="bg-white rounded-2xl shadow p-6 space-y-4">
           <div className="text-sm text-gray-400">Preview</div>
 

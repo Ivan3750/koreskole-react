@@ -6,9 +6,9 @@ import BlogPage from "../components/admin/BlogPage";
 import ContactsPage from "../components/admin/ContactsPage";
 import PasswordPage from "../components/admin/PasswordPage";
 import LoginPage from "../components/admin/LoginPage";
+import { BASE_URL } from "@/app/store/api"
 
-const API = "http://localhost:8000";
-type Page = "courses" | "blog" | "contacts" | "password";
+ type Page = "courses" | "blog" | "contacts" | "password";
 
 export default function AdminPage() {
   const [activePage, setActivePage] = useState<Page>("courses");
@@ -20,7 +20,7 @@ export default function AdminPage() {
 
   const checkAuth = async () => {
     try {
-      const res = await fetch(`${API}/check-auth.php`, { credentials: "include" });
+      const res = await fetch(`${BASE_URL}/check-auth.php`, { credentials: "include" });
       const data = await res.json();
       setLoggedIn(data.logged_in === true);
     } catch {
@@ -30,7 +30,7 @@ export default function AdminPage() {
 
   const logout = async () => {
     try {
-      await fetch(`${API}/logout.php`, { credentials: "include" });
+      await fetch(`${BASE_URL}/logout.php`, { credentials: "include" });
     } finally {
       setLoggedIn(false);
     }

@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 
-const API = "http://localhost:8000";
+import { BASE_URL } from "@/app/store/api"
+
 
 export default function LoginPage({ onLogin }: { onLogin: () => void }) {
   const [name, setName] = useState("");
@@ -15,16 +16,14 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
     setLoading(true);
 
     try {
-      // 1. Get CSRF token first
-      const sessionRes = await fetch(`${API}/session.php`, {
+      const sessionRes = await fetch(`${BASE_URL}/session.php`, {
         credentials: "include",
       });
 
       const sessionData = await sessionRes.json();
       const csrf = sessionData.csrf ?? "";
 
-      // 2. POST login with CSRF header
-      const res = await fetch(`${API}/login.php`, {
+      const res = await fetch(`${BASE_URL}/login.php`, {
         method: "POST",
         credentials: "include",
         headers: {

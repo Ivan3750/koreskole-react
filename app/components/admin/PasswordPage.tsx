@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
-const API = "http://localhost:8000";
+import { BASE_URL } from "@/app/store/api"
 
 export default function PasswordPage() {
   const [oldPassword, setOldPassword] = useState("");
@@ -11,7 +10,7 @@ export default function PasswordPage() {
   const [message, setMessage]         = useState("");
 
   useEffect(() => {
-    fetch(`${API}/session.php`, { credentials: "include" })
+    fetch(`${BASE_URL}/session.php`, { credentials: "include" })
       .then((r) => r.json())
       .then((d) => setCsrf(d.csrf ?? ""))
       .catch(() => {});
@@ -28,7 +27,7 @@ export default function PasswordPage() {
     }
 
     try {
-      const res = await fetch(`${API}/password.php`, {
+      const res = await fetch(`${BASE_URL}/password.php`, {
         method: "POST",
         credentials: "include",
         headers: {
