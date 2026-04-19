@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";
+import { BASE_URL } from "@/app/store/api";
 
 export default function ContactFormPage() {
   const { t } = useTranslation();
@@ -14,39 +15,65 @@ export default function ContactFormPage() {
     message: "",
   });
 
-  const [success, setSuccess] = useState(false);
+  const [status, setStatus] = useState<null | "success" | "error">(null);
+  const [statusMessage, setStatusMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-   const contactInfo = [
-      {
-        icon: Phone,
-        label: t("contact_page.phoneLabel"),
-        value: "20 76 03 33",
-        href: "tel:20760333",
-      },
-      {
-        icon: Mail,
-        label: t("contact_page.emailLabel"),
-        value: "hello@lønbæks.dk",
-        href: "mailto:hello@lønbæks.dk",
-      },
-      {
-        icon: MapPin,
-        label: t("contact_page.addressLabel"),
-        value: "Vestre Engvej 7\n7100 Vejle",
-        href: "https://maps.google.com/?q=Vestre+Engvej+7,+7100+Vejle",
-        
-      },
-    ];
+  const contactInfo = [
+    {
+      icon: Phone,
+      label: t("contact_page.phoneLabel"),
+      value: "20 76 03 33",
+      href: "tel:20760333",
+    },
+    {
+      icon: Mail,
+      label: t("contact_page.emailLabel"),
+      value: "hello@lønbæks.dk",
+      href: "mailto:hello@lønbæks.dk",
+    },
+    {
+      icon: MapPin,
+      label: t("contact_page.addressLabel"),
+      value: "Vestre Engvej 7\n7100 Vejle",
+      href: "https://maps.google.com/?q=Vestre+Engvej+7,+7100+Vejle",
+    },
+  ];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
-    setSuccess(true);
-    setFormData({ name: "", email: "", message: "" });
+    setStatus(null);
+    setLoading(true);
+
+    try {
+      const res = await fetch(`${BASE_URL}/book.php`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setStatus("success");
+        setStatusMessage(t("contact_page.successMessage"));
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+        setStatusMessage(data.error || t("contact_page.errorMessage"));
+      }
+    } catch {
+      setStatus("error");
+      setStatusMessage(t("contact_page.serverError"));
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -86,7 +113,9 @@ export default function ContactFormPage() {
                   key={index}
                   href={item.href}
                   target={item.icon === MapPin ? "_blank" : undefined}
-                  rel={item.icon === MapPin ? "noopener noreferrer" : undefined}
+                  rel={
+                    item.icon === MapPin ? "noopener noreferrer" : undefined
+                  }
                   className="flex items-start gap-4 group"
                 >
                   <div
@@ -121,15 +150,21 @@ export default function ContactFormPage() {
           <div>
             <form
               onSubmit={handleSubmit}
-              className="space-y-6  backdrop-blur-sm p-10 rounded-3xl border"
+              className="space-y-6 backdrop-blur-sm p-10 rounded-3xl border"
               style={{
                 borderColor: "var(--color-border)",
                 backgroundColor: "var(--color-bg-elevated)",
               }}
             >
-              {success && (
-                <div className="text-green-600 font-semibold mb-4">
-                  {t("contact_page.successMessage")}
+              {/* Status messages */}
+              {status === "success" && (
+                <div className="text-green-600 font-semibold bg-green-50 px-4 py-3 rounded-xl">
+                  {statusMessage}
+                </div>
+              )}
+              {status === "error" && (
+                <div className="text-red-600 font-semibold bg-red-50 px-4 py-3 rounded-xl">
+                  {statusMessage}
                 </div>
               )}
 
@@ -200,10 +235,11 @@ export default function ContactFormPage() {
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-full font-semibold hover:scale-[1.02] transition"
+                disabled={loading}
+                className="w-full py-4 rounded-full font-semibold hover:scale-[1.02] transition disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                 style={{ backgroundColor: "var(--color-yellow)", color: "white" }}
               >
-                {t("contact_page.submitButton")}
+                {loading ? t("contact_page.sending") : t("contact_page.submitButton")}
               </button>
             </form>
           </div>

@@ -281,8 +281,8 @@
           "text": "Træning på lukket bane."
         },
         {
-          "title": "Glatbane",
-          "text": "Kørsel i glat føre."
+          "title": "Køreteknisk kursus",
+          "text": "Bremseøvelser m.m. på både tør og glat vej."
         },
         {
           "title": "Teoriprøve",
@@ -605,7 +605,10 @@
     "messageLabel": "Besked",
     "messagePlaceholder": "Skriv din besked her",
     "submitButton": "Send besked",
-    "successMessage": "Tak! Din besked er sendt."
+    "successMessage": "Tak! Din besked er sendt.",
+    "errorMessage": "Noget gik galt. Prøv igen.",
+  "serverError": "Serverfejl. Prøv igen senere.",
+  "sending": "Sender..."
   },
    "contact_hero": {
       "title": "Kontakt Lønbæks Køreskole i Vejle",

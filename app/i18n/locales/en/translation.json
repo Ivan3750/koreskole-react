@@ -279,8 +279,8 @@
           "text": "Training on closed course."
         },
         {
-          "title": "Slippery track",
-          "text": "Driving in slippery conditions."
+        "title": "Driving Technique Course",
+        "text": "Braking exercises, etc. on both dry and slippery roads."
         },
         {
           "title": "Theory test",
@@ -596,7 +596,10 @@
     "messageLabel": "Message",
     "messagePlaceholder": "Write your message here",
     "submitButton": "Send message",
-    "successMessage": "Thank you! Your message has been sent."
+    "successMessage": "Thank you! Your message has been sent.",
+      "errorMessage": "Something went wrong. Please try again.",
+  "serverError": "Server error. Please try again later.",
+  "sending": "Sending..."
   },
     "contact_hero": {
 

@@ -25,7 +25,7 @@ const Holdstart = () => {
   useEffect(() => {
     const fetchHolds = async () => {
       try {
-        const res = await fetch(`${BASE_URL}/courses.php`);
+        const res = await fetch(`${BASE_URL}/get-courses.php`);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const data = await res.json();
         setHolds(data.courses || data.data || data);
