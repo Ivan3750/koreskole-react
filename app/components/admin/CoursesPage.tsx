@@ -325,7 +325,6 @@ export default function CoursesPage({ onLogout }: { onLogout: () => void }) {
               <th className="p-3">Tid</th>
               <th className="p-3">Dage</th>
               <th className="p-3">Session</th>
-              <th className="p-3">Lokation</th>
               <th className="p-3">Handling</th>
             </tr>
           </thead>
