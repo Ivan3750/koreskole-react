@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import school from "../assets/school_inside_2.jpeg";
+import lov from "../assets/lov.png";
 import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
 import { useEffect } from "react";
@@ -140,7 +141,7 @@ import "@/app/i18n";
 
           <div className="relative h-[420px] rounded-3xl overflow-hidden">
             <Image
-              src="/images/payment-modern.jpg"
+              src={lov}
               alt={t("prices.recovery.imageAlt")}
               fill
               className="object-cover"

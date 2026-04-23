@@ -1,21 +1,17 @@
+import type { Metadata } from "next";
 import PageHero from "../../../components/PageHero";
-import heroImage from "../../../assets/hero-driving.jpg";
 import Info from "../../../components/koereproeve-vejle/Info";
-import TimeLine from "../../../components/koereproeve-vejle/TimeLine";
 import PassStrategySection from "../../../components/koereproeve-vejle/PassStrategySection";
 import FAQ from "../../../components/FAQ";
 import Contact from "@/app/components/Contact";
 import HoldStart from "@/app/components/home/HoldStart";
-import Priser from "@/app/components/koereproeve-vejle/Priser";
-import type { Metadata } from "next";
-import hero from "../../../assets/steering-wheel.jpeg";
+import gulbil from "@/app/assets/gulbil_2.jpeg";
 import en from "../../../i18n/locales/en/translation.json";
 import da from "../../../i18n/locales/da/translation.json";
-import gulbil from "@/app/assets/gulbil_2.jpeg"
-
-type Locale = "en" | "da";
+import { buildAlternates, buildOpenGraph, robots, type Locale } from "@/app/lib/seo";
 
 const translations: Record<Locale, any> = { en, da };
+const PATH = "koerekort-b/koerekort";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "da" }];
@@ -28,17 +24,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = translations[locale];
+  const title = t?.seo.koerekort_b_koerekort?.title;
+  const description = t?.seo.koerekort_b_koerekort?.description;
 
   return {
-    title: t?.seo.koerekort_b_koerekort?.title,
-    description: t?.seo.koerekort_b_koerekort?.description,
+    title,
+    description,
     keywords: t?.seo.koerekort_b_koerekort?.keywords,
-    alternates: {
-      languages: {
-        en: "/en/koerekort-b/koerekort",
-        da: "/da/koerekort-b/koerekort",
-      },
-    },
+    alternates: buildAlternates(locale, PATH),
+    robots,
+    openGraph: buildOpenGraph(title, description, locale, PATH),
   };
 }
 
@@ -48,7 +43,6 @@ export default async function Koerekort({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-
   const t = translations[locale] || translations.en;
 
   return (
@@ -56,17 +50,14 @@ export default async function Koerekort({
       <PageHero
         title={t?.licenseB.hero?.title}
         subtitle={t?.licenseB.hero?.subtitle}
-   image={gulbil}
+        image={gulbil}
         position="0 -450px"
       />
-
-      <Info></Info>
-   {/*    <Priser></Priser>
-      <TimeLine></TimeLine> */}
-      <HoldStart></HoldStart>
-      <PassStrategySection></PassStrategySection>
-      <FAQ></FAQ>
-      <Contact></Contact>
+      <Info />
+      <HoldStart />
+      <PassStrategySection />
+      <FAQ />
+      <Contact />
     </>
   );
 }

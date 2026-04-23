@@ -33,7 +33,7 @@ const Contact = () => {
       icon: MapPin,
       label: t("contact_page.addressLabel"),
       value: "Vestre Engvej 7\n7100 Vejle",
-      href: "https://maps.google.com/?q=Vestre+Engvej+7,+7100+Vejle",
+      href: "https://maps.google.com/?q=Lønbæks+Køreskole,+Vestre+Engvej+7,+7100+Vejle",
       
     },
   ];
@@ -241,7 +241,7 @@ const Contact = () => {
             }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2247.9420592492784!2d9.525943758466008!3d55.70737889071618!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c8250830d65e9%3A0x52845aa3807ae20e!2sVestre%20Engvej%207%2C%207100%20Vejle!5e0!3m2!1sda!2sdk!4v1772734191029!5m2!1sda!2sdk"
+              src="https://maps.google.com/?q=Lønbæks+Køreskole+Vejle&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

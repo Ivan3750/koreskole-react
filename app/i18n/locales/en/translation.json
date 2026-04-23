@@ -9,7 +9,7 @@
     "about_title_label": "About us",
     "about_heading": "Lønbæks Driving School – Driving Made Simple",
     "about_paragraph1": "At Lønbæks Driving School in Vejle, you get a personal driving education focused on both learning and well-being. Lessons proceed at a calm pace so you feel well-prepared for both theory and driving tests.",
-    "about_paragraph2": "We have many years of experience in Vejle and the surrounding area and have helped many students safely through their driving license journey. Our local knowledge and personal guidance give you the best conditions for success.",
+    "about_paragraph2": "With many years of experience in Vejle and the surrounding area, we have helped thousands of students safely through their driving license journey. Our local knowledge and personal guidance give you the best conditions for success.",
     "about_paragraph3": "Become a safe and confident driver with Lønbæks Driving School in Vejle. Sign up today and start your driving education immediately!"
   },
   "holdstart": {
@@ -23,61 +23,36 @@
     "loading": "Loading..."
   },
   "instructors": {
-        "anna": {
+    "anna": {
       "label": "Meet Your Driving Instructor",
       "heading": "A Passionate Driving Instructor Focused on Safety",
       "paragraphs": [
         "Anna Marie Lønbæk has been a driving instructor in Vejle since 1996 and, with over 30 years of experience, has trained thousands of students to become safe and responsible drivers.",
         "Her philosophy is simple: teaching should take place in a relaxed atmosphere to create the best conditions for learning.",
         "In addition to standard driving lessons, Anna Marie has extensive experience teaching experienced drivers at advanced driving facilities, focusing on driving style evaluation and road safety.",
-        "She also teaches eco-friendly driving, trains motorcyclists, and offers lessons in English."
+        "She also teaches eco-friendly driving, trains motorcyclists, and offers lessons in English – making her the ideal instructor for international students in Vejle."
       ],
       "features": [
-        {
-          "title": "Personal Approach",
-          "desc": "Lessons tailored to each individual student",
-          "icon": "heart"
-        },
-        {
-          "title": "Extensive Experience",
-          "desc": "From beginners to experienced drivers",
-          "icon": "shield"
-        },
-        {
-          "title": "Flexible Learning",
-          "desc": "Lessons available in English",
-          "icon": "clock"
-        }
+        { "title": "Personal Approach", "desc": "Lessons tailored to each individual student", "icon": "heart" },
+        { "title": "Extensive Experience", "desc": "From beginners to experienced drivers", "icon": "shield" },
+        { "title": "English Lessons Available", "desc": "Full driving instruction in English", "icon": "clock" }
       ],
       "experience_years": "30+ years",
       "experience_label": "Experience"
     },
-
     "michael": {
       "label": "Meet Your Driving Instructor",
       "heading": "Experienced Driving Instructor Focused on Confidence and Safety",
       "paragraphs": [
-        "Michael Lønbæk has been a driving instructor since 1985 and has helped thousands of students obtain their driver’s license in a safe and confident way.",
+        "Michael Lønbæk has been a driving instructor since 1985 and has helped thousands of students obtain their driver's license in Vejle in a safe and confident way.",
         "He is known for his calm and structured approach, which helps students feel comfortable behind the wheel while learning effectively.",
         "Michael also has many years of experience teaching at advanced driving facilities for both private individuals and companies, focusing on practical safety and driving performance.",
         "He works with driving style evaluation for experienced drivers and has contributed to projects involving the development of driving simulators, including collaboration with OUH."
       ],
       "features": [
-        {
-          "title": "Experienced Instructor",
-          "desc": "Support for both new and experienced drivers",
-          "icon": "heart"
-        },
-        {
-          "title": "Structured Teaching",
-          "desc": "Safe and effective learning process",
-          "icon": "clock"
-        },
-        {
-          "title": "Advanced Expertise",
-          "desc": "Simulator and advanced driving training",
-          "icon": "shield"
-        }
+        { "title": "Experienced Instructor", "desc": "Support for both new and experienced drivers", "icon": "heart" },
+        { "title": "Structured Teaching", "desc": "Safe and effective learning process", "icon": "clock" },
+        { "title": "Advanced Expertise", "desc": "Simulator and advanced driving training", "icon": "shield" }
       ],
       "experience_years": "40+ years",
       "experience_label": "Experience"
@@ -88,30 +63,12 @@
     "heading": "Everything you need for your driving license",
     "description": "We offer a complete driving education with a focus on safety, quality, and personal guidance.",
     "items": [
-      {
-        "title": "Theory Lessons",
-        "description": "Comprehensive theoretical lessons with modern materials and engaging teaching."
-      },
-      {
-        "title": "Driving Lessons",
-        "description": "Practical driving lessons in modern cars with an experienced instructor."
-      },
-      {
-        "title": "Skid Control Course",
-        "description": "Mandatory course at a driving facility for safe driving in all weather conditions."
-      },
-      {
-        "title": "First Aid Course",
-        "description": "Vital first aid - learn how to act correctly in emergencies."
-      },
-      {
-        "title": "Flexible Schedule",
-        "description": "We adapt lessons to your daily life with flexible meeting times."
-      },
-      {
-        "title": "High Pass Rate",
-        "description": "Quality teaching giving you the best conditions to pass."
-      }
+      { "title": "Theory Lessons", "description": "Comprehensive theoretical lessons with modern materials and engaging teaching." },
+      { "title": "Driving Lessons", "description": "Practical driving lessons in modern cars with an experienced instructor." },
+      { "title": "Skid Control Course", "description": "Mandatory course at a driving facility for safe driving in all weather conditions." },
+      { "title": "First Aid Course", "description": "Vital first aid – learn how to act correctly in emergencies." },
+      { "title": "Flexible Schedule", "description": "We adapt lessons to your daily life with flexible meeting times." },
+      { "title": "High Pass Rate", "description": "Quality teaching giving you the best conditions to pass." }
     ]
   },
   "bookingForm": {
@@ -130,7 +87,7 @@
   "contact": {
     "label": "Contact",
     "heading": "Let's have a chat",
-    "description": "We always invite you to a short information meeting before starting. Send a text message or email to arrange the details. If you would like us to call you, please let us know. We do not talk on the phone during driving lessons.",
+    "description": "We always invite you to a short information meeting before starting. Send a text message or email to arrange the details. If you would like us to call you, please let us know. We do not take phone calls during driving lessons.",
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
@@ -139,7 +96,7 @@
     "hours": {
       "theory": "By appointment",
       "driving": "Flexible times",
-      "phone": "08:00 - 20:00"
+      "phone": "08:00 - 19:00"
     }
   },
   "footer": {
@@ -155,40 +112,16 @@
     "copyright": "All rights reserved.",
     "tagline": "Driving school in Vejle since 1985",
     "navItems": [
-      {
-        "label": "Course Start",
-        "href": "/holdstart-vejle"
-      },
-      {
-        "label": "About Us",
-        "href": "/om-os"
-      },
-      {
-        "label": "Blog",
-        "href": "/blog"
-      },
-      {
-        "label": "Contact",
-        "href": "/kontakt"
-      }
+      { "label": "Course Start", "href": "/holdstart-vejle" },
+      { "label": "About Us", "href": "/om-os" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contact", "href": "/kontakt" }
     ],
     "footerItems": [
-      {
-        "label": "Program",
-        "href": "/koerekort-b/forloeb"
-      },
-      {
-        "label": "Driving License",
-        "href": "/koerekort-b/koerekort"
-      },
-      {
-        "label": "Theory Exam",
-        "href": "/koerekort-b/teoriproeve"
-      },
-      {
-        "label": "Driving Test",
-        "href": "/koerekort-b/koereproeve"
-      }
+      { "label": "Program", "href": "/koerekort-b/forloeb" },
+      { "label": "Driving License", "href": "/koerekort-b/koerekort" },
+      { "label": "Theory Exam", "href": "/koerekort-b/teoriproeve" },
+      { "label": "Driving Test", "href": "/koerekort-b/koereproeve" }
     ]
   },
   "header": {
@@ -198,45 +131,24 @@
       {
         "label": "Driving License B",
         "children": [
-          {
-            "label": "Program",
-            "href": "/koerekort-b/forloeb"
-          },
-          {
-            "label": "Driving License",
-            "href": "/koerekort-b/koerekort"
-          },
-          {
-            "label": "Theory Exam",
-            "href": "/koerekort-b/teoriproeve"
-          },
-          {
-            "label": "Driving Test",
-            "href": "/koerekort-b/koereproeve"
-          }
+          { "label": "Program", "href": "/koerekort-b/forloeb" },
+          { "label": "Driving License", "href": "/koerekort-b/koerekort" },
+          { "label": "Theory Exam", "href": "/koerekort-b/teoriproeve" },
+          { "label": "Driving Test", "href": "/koerekort-b/koereproeve" }
         ]
       },
-      {
-        "label": "Course Start",
-        "href": "/holdstart-vejle"
-      },
-      {
-        "label": "About Us",
-        "href": "/om-os"
-      },
-      {
-        "label": "Contact",
-        "href": "/kontakt"
-      }
+      { "label": "Course Start", "href": "/holdstart-vejle" },
+      { "label": "About Us", "href": "/om-os" },
+      { "label": "Contact", "href": "/kontakt" }
     ],
     "cta": "Join a class",
     "menu": "Menu"
   },
   "holdstart_hero": {
-    "title": "Next class start - get started now",
-    "subtitle": "Choose a class that fits your schedule. We offer flexible hours, small groups, and personal instruction all the way to your driver's license."
+    "title": "Next course start in Vejle – get started now",
+    "subtitle": "Choose a class that fits your schedule. We offer evening and morning classes with small groups and personal instruction all the way to your Category B driving license in Vejle. Spots available – sign up today."
   },
-   "prices": {
+  "prices": {
     "meeting": {
       "badge": "Free information meeting",
       "title": "Get an overview of the entire driving course",
@@ -244,52 +156,22 @@
       "imageAlt": "Information meeting",
       "cta": "Sign up for meeting",
       "features": [
-        {
-          "title": "Course overview",
-          "text": "We explain the full process from theory to driving test."
-        },
-        {
-          "title": "Ask questions",
-          "text": "You can ask about lessons, schedule and requirements."
-        },
-        {
-          "title": "Meet the instructor",
-          "text": "Meet your instructor and learn about the lessons."
-        },
-        {
-          "title": "No obligations",
-          "text": "The meeting is free and without commitment."
-        }
+        { "title": "Course overview", "text": "We explain the full process from theory to driving test." },
+        { "title": "Ask questions", "text": "You can ask about lessons, schedule and requirements." },
+        { "title": "Meet the instructor", "text": "Meet your instructor and learn about the lessons." },
+        { "title": "No obligations", "text": "The meeting is free and without commitment." }
       ]
     },
     "package": {
       "title": "What does the legal package include?",
       "text": "The package includes all mandatory elements required for a driving licence in Denmark.",
       "items": [
-        {
-          "title": "Theory lessons",
-          "text": "Learn traffic rules and safety."
-        },
-        {
-          "title": "Driving lessons",
-          "text": "Practical driving training."
-        },
-        {
-          "title": "Manoeuvre track",
-          "text": "Training on closed course."
-        },
-        {
-        "title": "Driving Technique Course",
-        "text": "Braking exercises, etc. on both dry and slippery roads."
-        },
-        {
-          "title": "Theory test",
-          "text": "Preparation for official theory exam."
-        },
-        {
-          "title": "Driving test",
-          "text": "Final practical driving exam."
-        }
+        { "title": "Theory lessons", "text": "Learn traffic rules and safety." },
+        { "title": "Driving lessons", "text": "Practical driving training." },
+        { "title": "Manoeuvre track", "text": "Training on closed course." },
+        { "title": "Driving Technique Course", "text": "Braking exercises on both dry and slippery roads." },
+        { "title": "Theory test", "text": "Preparation for official theory exam." },
+        { "title": "Driving test", "text": "Final practical driving exam." }
       ]
     },
     "recovery": {
@@ -298,37 +180,27 @@
       "text": "If you lost your license we help you recover it quickly.",
       "imageAlt": "License recovery",
       "list": [
-        "Individual lessons",
-        "Theory preparation",
+        "Practical driving preparation",
         "Practical driving lessons",
         "Full support"
       ]
     },
     "cta": {
-      "title": "Ready to start your driving license?",
+      "title": "Ready to start your driving license in Vejle?",
       "text": "Join our free information meeting.",
       "button": "Book meeting"
     }
   },
   "info": {
     "badge": "Driving License Guide",
-    "title": "What is category B license?",
+    "title": "What is category B driving license?",
     "description": "Category B is the standard car driving license in Denmark, allowing you to drive regular passenger cars. It is the most popular license category and your path to freedom on the road.",
     "features": [
-      {
-        "title": "Drive cars up to 3,500 kg",
-        "text": "With a category B license, you may drive regular passenger cars with up to 8 seats in addition to the driver."
-      },
-      {
-        "title": "Trailer allowed",
-        "text": "You may tow a light trailer as long as the total weight does not exceed 3,500 kg."
-      },
-      {
-        "title": "Minimum age: 16 years and 9 months",
-        "text": "You must be 17 years old to obtain a category B license, but you can start the training at 16 years and 9 months."
-      }
+      { "title": "Drive cars up to 3,500 kg", "text": "With a category B license, you may drive regular passenger cars with up to 8 seats in addition to the driver." },
+      { "title": "Trailer allowed", "text": "You may tow a light trailer as long as the total weight does not exceed 3,500 kg." },
+      { "title": "Minimum age: 16 years and 9 months", "text": "You must be 17 years old to obtain a category B license, but you can start the training at 16 years and 9 months." }
     ],
-    "closing": "At Lønbæks Driving School, we guide you safely through the entire process - from theory classes to the day you receive your license. Start your journey today!",
+    "closing": "At Lønbæks Driving School in Vejle, we guide you safely through the entire process – from theory classes to the day you receive your license. Start your journey toward Category B today!",
     "imageAltMain": "Category B driving education",
     "imageAltSecondary": "Passenger car license"
   },
@@ -336,116 +208,51 @@
     "title": "Your path to your driver's license",
     "subtitle": "8 clear steps from your first meeting to holding your license.",
     "steps": [
-      {
-        "number": "01",
-        "title": "Intro meeting & registration",
-        "description": "Start with a non-binding meeting to understand the process. After registration, you receive your lesson plan and instructor."
-      },
-      {
-        "number": "02",
-        "title": "Theory lessons",
-        "description": "Theory once a week with unlimited access - so you feel fully prepared for the test."
-      },
-      {
-        "number": "03",
-        "title": "First aid & medical certificate",
-        "description": "8 hours of traffic-related first aid plus a medical certificate before the theory test."
-      },
-      {
-        "number": "04",
-        "title": "Closed driving track",
-        "description": "Your first driving experience on a closed track, learning basic vehicle control."
-      },
-      {
-        "number": "05",
-        "title": "Driving in traffic",
-        "description": "Drive in real traffic and turn theory into practice with your instructor."
-      },
-      {
-        "number": "06",
-        "title": "Slippery track training",
-        "description": "Practice braking, control, and risk situations in a safe environment."
-      },
-      {
-        "number": "07",
-        "title": "Theory test",
-        "description": "Online practice and final exam at the police test center."
-      },
-      {
-        "number": "08",
-        "title": "Driving test",
-        "description": "The final test - pass and receive your driver's license."
-      }
+      { "number": "01", "title": "Intro meeting & registration", "description": "Start with a non-binding meeting to understand the process. After registration, you receive your lesson plan and instructor." },
+      { "number": "02", "title": "Theory lessons", "description": "Theory once a week with unlimited access – so you feel fully prepared for the test." },
+      { "number": "03", "title": "First aid & medical certificate", "description": "8 hours of traffic-related first aid plus a medical certificate before the theory test." },
+      { "number": "04", "title": "Closed driving track", "description": "Your first driving experience on a closed track, learning basic vehicle control." },
+      { "number": "05", "title": "Driving in traffic", "description": "Drive in real traffic and turn theory into practice with your instructor." },
+      { "number": "06", "title": "Slippery track training", "description": "Practice braking, control, and risk situations in a safe environment." },
+      { "number": "07", "title": "Theory test", "description": "Online practice and final exam at the test center." },
+      { "number": "08", "title": "Driving test", "description": "The final test – pass and receive your driver's license." }
     ]
   },
   "strategy": {
     "title": "How we ensure your success",
     "subtitle": "Four concrete steps that make the difference between passing and failing",
     "steps": [
-      {
-        "number": "01",
-        "title": "Individual assessment",
-        "description": "We adapt the lessons to your learning style and needs, so you progress at your own pace."
-      },
-      {
-        "number": "02",
-        "title": "Mock test",
-        "description": "We drive almost the same test route under realistic conditions, so you know exactly what to expect."
-      },
-      {
-        "number": "03",
-        "title": "Examiner training",
-        "description": "We teach you exactly what the examiner looks for and how to score points during the test."
-      },
-      {
-        "number": "04",
-        "title": "Stress management",
-        "description": "Mental preparation and techniques to stay calm so nerves do not take over on the day."
-      }
+      { "number": "01", "title": "Individual assessment", "description": "We adapt the lessons to your learning style and needs, so you progress at your own pace." },
+      { "number": "02", "title": "Mock test", "description": "We drive almost the same test route under realistic conditions, so you know exactly what to expect." },
+      { "number": "03", "title": "Examiner training", "description": "We teach you exactly what the examiner looks for and how to score points during the test." },
+      { "number": "04", "title": "Stress management", "description": "Mental preparation and techniques to stay calm so nerves do not take over on the day." }
     ]
   },
   "faq": {
-  "badge": "FAQ",
-  "title": "Frequently Asked Questions",
-  "subtitle": "Quick answers to the most common questions.",
-  "items": [
-    {
-      "question": "How long does it take to get a driver's license?",
-      "answer": "It depends on how quickly you complete the theory and driving lessons, but most people get their driver's license within 3–6 months."
-    },
-    {
-      "question": "Do you offer both manual and automatic transmission?",
-      "answer": "Yes, we provide lessons in both manual and automatic transmission cars."
-    },
-    {
-      "question": "Can I get a driver's license if I am under 18?",
-      "answer": "Yes, you can start theory and driving lessons from the age of 16 years and 9 months, but the practical test can only be taken at 17. When driving at 17, there are rules about having a supervising adult in the car."
-    },
-    {
-      "question": "How do the tests work?",
-      "answer": "You must pass both a theoretical test and a practical driving test. We help you prepare for both."
-    },
-    {
-      "question": "Can I pay in installments?",
-      "answer": "Yes, we offer flexible payment plans so you can pay for the driver's license in several installments without extra fees."
-    },
-    {
-      "question": "What happens if I don’t pass the first time?",
-      "answer": "No panic! You can sign up for a retest. We offer additional lessons to make sure you are ready next time. However, there will be a new fee to the Danish Road Traffic Authority, and if it is the driving test, there will also be a new payment for the car and the instructor’s time."
-    }
-  ]
-},
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Quick answers to the most common questions.",
+    "items": [
+      { "question": "How long does it take to get a driver's license?", "answer": "It depends on how quickly you complete the theory and driving lessons, but most people get their driver's license within 3–6 months." },
+      { "question": "Do you offer both manual and automatic transmission?", "answer": "Yes, we provide lessons in both manual and automatic transmission cars." },
+      { "question": "Can I get a driver's license if I am under 18?", "answer": "Yes, you can start theory and driving lessons from the age of 16 years and 9 months, but the practical test can only be taken at 17. When driving at 17, there are rules about having a supervising adult in the car." },
+      { "question": "How do the tests work?", "answer": "You must pass both a theoretical test and a practical driving test. We help you prepare for both." },
+      { "question": "Can I pay in installments?", "answer": "Yes, we offer flexible payment plans so you can pay for the driver's license in several installments without extra fees." },
+      { "question": "What happens if I don't pass the first time?", "answer": "No panic! You can sign up for a retest. We offer additional lessons to make sure you are ready next time. However, there will be a new fee to the Danish Road Traffic Authority, and if it is the driving test, there will also be a new payment for the car and the instructor's time." },
+      { "question": "Can I take a break during the course?", "answer": "Yes, you can. You are welcome to take a break from your lessons if needed and continue later. Contact us, and we will help you plan the rest of your course." }
+    ]
+  },
   "licenseB": {
     "hero": {
-      "title": "Driving license category B - your road to freedom",
-      "subtitle": "Dreaming of freedom on the road? At Køreskole Vejle, we help you get your Category B license quickly, safely, and at a fair price."
+      "title": "Driving license category B in Vejle – your road to freedom",
+      "subtitle": "Dreaming of freedom on the road? At Lønbæks Driving School in Vejle, we help you get your Category B license quickly, safely, and at a fair price. Experienced instructors and a high pass rate since 1985."
     }
   },
   "prices_section": {
     "package": {
       "badge": "Most Popular Package",
-      "title": "Legal Package - Complete Driving License",
-      "description": "With our legal package, everything is included from start to finish. No hidden fees, no unexpected costs - just a safe and structured path to your driver's license.",
+      "title": "Legal Package – Complete Category B Driving License",
+      "description": "With our legal package, everything is included from start to finish. No hidden fees, no unexpected costs – just a safe and structured path to your Category B driver's license in Vejle.",
       "price": "From 15,500 DKK",
       "cta": "Read more",
       "items": [
@@ -459,22 +266,10 @@
     "extras": {
       "title": "Additional Lessons",
       "items": [
-        {
-          "name": "Extra driving lesson (45 min)",
-          "price": "395 DKK"
-        },
-        {
-          "name": "Extra driving lesson (90 min)",
-          "price": "750 DKK"
-        },
-        {
-          "name": "New practical test",
-          "price": "690 DKK"
-        },
-        {
-          "name": "New theory test",
-          "price": "170 DKK"
-        }
+        { "name": "Extra driving lesson (45 min)", "price": "395 DKK" },
+        { "name": "Extra driving lesson (90 min)", "price": "750 DKK" },
+        { "name": "New practical test", "price": "690 DKK" },
+        { "name": "New theory test", "price": "170 DKK" }
       ]
     },
     "payment": {
@@ -486,107 +281,96 @@
     "benefits": {
       "title": "Why Choose Us?",
       "description": "We focus on quality, personal instruction, and a high pass rate. Modern cars and experienced instructors ensure you get the best possible start.",
-      "items": [
-        "High pass rate",
-        "Personal instruction",
-        "Modern vehicles"
-      ]
+      "items": ["High pass rate", "Personal instruction", "Modern vehicles"]
     }
   },
   "theory": {
     "meta": {
       "title": "Theory Test in Vejle | Category B License | Pass First Time",
-      "description": "Theory test in Vejle - complete guide for Category B driving license. Learn about structure, requirements, mistake limit, and how to pass the first time.",
-      "keywords": "theory test Vejle, driving license Vejle, pass theory test, Denmark theory exam"
+      "description": "Theory test in Vejle – complete guide for Category B driving license. Learn about structure, mistake limit, question types and how to pass the first time.",
+      "keywords": "theory test Vejle, driving license B theory exam, pass theory test first time, theory test Denmark English, online theory test practice, theory test mistakes allowed"
     },
     "hero": {
-  "badge": "Theory Test",
-  "title": "How to Pass the Theory Test",
-  "paragraph1": "Are you taking the theory test for a Category B driver’s license in Vejle? During lessons at the driving school, you will receive a complete guide to the test structure, the allowed number of mistakes, and the best strategies to pass on your first attempt.",
-  "paragraph2": "The theory test is an important part of getting your driver’s license. With proper preparation, realistic practice tests, and a solid understanding of traffic laws, you significantly increase your chances of success.",
-  "cta": "Read more"
-},
+      "badge": "Theory Test",
+      "title": "How to Pass the Theory Test",
+      "paragraph1": "Are you taking the theory test for a Category B driver's license in Vejle? During lessons at the driving school, you will receive a complete guide to the test structure, the allowed number of mistakes, and the best strategies to pass on your first attempt.",
+      "paragraph2": "The theory test is an important part of getting your driver's license. With proper preparation, realistic practice tests, and a solid understanding of traffic laws, you significantly increase your chances of success.",
+      "cta": "Read more"
+    },
     "stats": [
-      {
-        "title": "25 Questions",
-        "text": "Questions about traffic signs, positioning and risk assessment."
-      },
-      {
-        "title": "Max 5 Mistakes",
-        "text": "You must answer at least 20 correctly."
-      },
-      {
-        "title": "25 Minutes",
-        "text": "The test lasts 25 minutes."
-      },
-      {
-        "title": "Digital Exam",
-        "text": "Multiple choice with images."
-      }
+      { "title": "25 Questions", "text": "Questions about traffic signs, positioning and risk assessment." },
+      { "title": "Max 5 Mistakes", "text": "You must answer at least 20 correctly." },
+      { "title": "25 Minutes", "text": "The test lasts 25 minutes." },
+      { "title": "Digital Exam", "text": "Multiple choice with images." }
     ],
     "how": {
-  "title": "How does the theory test work?",
-  "p1": "When attending the theory test, you must bring your application, lesson plan, and valid photo ID (a passport is recommended). The test is digital and lasts 25 minutes.",
-  "p2": "You may have a maximum of 5 mistakes to pass. The result is shown immediately on the screen, so you can see right away whether you passed.",
-  "p3": "We recommend practicing online and reviewing your lesson plan thoroughly. Students who follow the lessons usually develop a high level of understanding, which leads to a higher pass rate."
-},
-"location": {
-  "title": "Where does the test take place?",
-  "p1": "The theory test takes place at the Danish Road Traffic Authority. Arrive on time and bring valid identification.",
-  "p2": "Once you have passed the theory test, you can continue toward the practical driving test."
-},
+      "title": "How does the theory test work?",
+      "p1": "When attending the theory test, you must bring your application, lesson plan, and valid photo ID (a passport is recommended). The test is digital and lasts 25 minutes.",
+      "p2": "You may have a maximum of 5 mistakes to pass. The result is shown immediately on the screen, so you can see right away whether you passed.",
+      "p3": "We recommend practicing online and reviewing your lesson plan thoroughly. Students who follow the lessons usually develop a high level of understanding, which leads to a higher pass rate."
+    },
+    "location": {
+      "title": "Where does the test take place?",
+      "p1": "The theory test takes place at the Danish Road Traffic Authority. Arrive on time and bring valid identification.",
+      "p2": "Once you have passed the theory test, you can continue toward the practical driving test."
+    },
     "cta": {
       "title": "Ready to Start Your Driving License in Vejle?",
       "text": "Our structured Category B course guides you safely through theory and practice with a high pass rate and personal instruction.",
-      "button": "Read more about the Category B course →"
-    }
+      "button": "Read more about the Category B course"
+    },
+    "steps": [
+      "Read the task or theory carefully.",
+      "Understand the goal and expected result.",
+      "Prepare the necessary tools or environment.",
+      "Follow the instructions step by step."
+    ]
   },
   "theoryHero": {
-    "title": "Theory Test - How to Pass the First Time",
+    "title": "Theory Test – How to Pass the First Time",
     "subtitle": "Get a clear overview of how the theory test works in Vejle, how many mistakes are allowed, and what you should focus on to pass successfully."
   },
-   
-    "koereproeve": {
+  "koereproeve": {
     "title": "Driving Test in Vejle | Practical Test | Driver's License B",
-    "description": "Driving test in Vejle - complete guide to the practical test for driver's license B. Learn what is tested, where the test takes place, and how to pass on the first try.",
-    "keywords": "driving test Vejle, practical test Vejle, driver's license B Vejle, pass driving test, driving school Vejle",
+    "description": "Driving test in Vejle – complete guide to the practical test for Category B driver's license. Learn what is tested, where the test takes place, and how to pass on the first try.",
+    "keywords": "driving test Vejle, pass driving test first time Denmark, practical driving test category B, driving test route Vejle, driving school Vejle English, what happens at driving test Denmark",
     "tag": "Driving Test in Vejle",
     "heading": "How to pass your driving test the first time",
-    "intro": "Are you preparing for your driving test in Vejle? With our driving school and thorough preparation, you can significantly increase your chances of passing on the first attempt. Our professional instructors help you build safe driving habits and give you the experience needed to feel confident behind the wheel.",
-    "note": "The driving test is the final part of your license process and requires both technical understanding and practical skills. Our driving school ensures you are fully prepared through structured lessons, realistic driving situations, and personalized feedback, so you can approach the test with confidence.",    "cta": "Learn more",
+    "intro": "Are you preparing for your driving test in Vejle? With Lønbæks Driving School and thorough preparation, you can significantly increase your chances of passing on the first attempt. Our professional instructors help you build safe driving habits and give you the experience needed to feel confident behind the wheel.",
+    "note": "The driving test is the final part of your license process and requires both technical understanding and practical skills. Our driving school ensures you are fully prepared through structured lessons, realistic driving situations, and personalized feedback, so you can approach the test with confidence.",
+    "cta": "Learn more",
     "cards": {
       "duration": "25 minutes",
       "durationText": "The practical test typically lasts up to 25 minutes.",
       "technicalCheck": "Technical Check",
-      "technicalText": "You start with questions about the car’s equipment.",
+      "technicalText": "You start with questions about the car's equipment.",
       "traffic": "City & Country Roads",
       "trafficText": "You drive in different traffic situations.",
       "assessment": "Expert Evaluation",
       "assessmentText": "An examiner evaluates your driving."
     },
-   "how": {
-    "heading": "How does the driving test in Vejle work?",
-    "step1": "The driving test in Vejle usually starts with a technical check of the car. You will be asked to explain or demonstrate how different parts of the vehicle function, such as lights, brakes, and steering. With training from a professional driving school, you will be well prepared for this part.",
-    "step2": "After that, the actual driving begins, where the examiner evaluates your awareness, your ability to adjust speed, and how you handle traffic situations. An experienced instructor from a driving school in Vejle will train you in city driving, roundabouts, intersections, and parking, so you can feel confident throughout the test."
-  },
-  "where": {
-    "heading": "Where does the driving test take place?",
-    "step1": "The driving test in Vejle usually starts at the Danish Road Traffic Authority’s test center. When you choose a local driving school in Vejle, you will be trained in the same areas and traffic conditions that you will encounter during the test, increasing your chances of passing."
-  },
-  "ready": {
-    "heading": "Ready for your driving test in Vejle?",
-    "text": "With the right training and professional instruction from a driving school in Vejle, you will be well prepared to pass your driving test. Skilled instructors help you build confidence, understand traffic, and master the car in all situations. Sign up for a driving school today and take the first step towards your driver’s license."
-  }
+    "how": {
+      "heading": "How does the driving test in Vejle work?",
+      "step1": "The driving test in Vejle usually starts with a technical check of the car. You will be asked to explain or demonstrate how different parts of the vehicle function, such as lights, brakes, and steering. With training from Lønbæks Driving School, you will be well prepared for this part.",
+      "step2": "After that, the actual driving begins, where the examiner evaluates your awareness, your ability to adjust speed, and how you handle traffic situations. An experienced instructor from Lønbæks Driving School in Vejle will train you in city driving, roundabouts, intersections, and parking, so you can feel confident throughout the test."
+    },
+    "where": {
+      "heading": "Where does the driving test take place?",
+      "step1": "The driving test in Vejle usually starts at the Danish Road Traffic Authority's test center. When you choose Lønbæks Driving School in Vejle, you will be trained in the same areas and traffic conditions that you will encounter during the test, increasing your chances of passing."
+    },
+    "ready": {
+      "heading": "Ready for your driving test in Vejle?",
+      "text": "With the right training and professional instruction from Lønbæks Driving School in Vejle, you will be well prepared to pass your driving test. Skilled instructors help you build confidence, understand traffic, and master the car in all situations. Sign up today and take the first step towards your Category B driver's license."
+    }
   },
   "koereproeve_hero": {
-      "title": "Driving Test in Vejle - What You Need to Know",
-      "subtitle": "Everything you need to know about the practical driving test in Vejle - from the test process to typical routes and how to pass on the first try."
-
+    "title": "Driving Test in Vejle – What You Need to Know",
+    "subtitle": "Everything you need to know about the practical driving test in Vejle – from the test process to typical routes and how to pass on the first try."
   },
-   "contact_page": {
+  "contact_page": {
     "heading": "Contact",
     "subheading": "Let's have a chat",
-    "description": "Do you have questions about driving lessons, prices, or registration? Call or write - we respond quickly and honestly.",
+    "description": "Do you have questions about driving license B, prices, course start dates, or registration in Vejle? Contact Lønbæks Driving School – we respond quickly and help you find the right program. Send a text or email to arrange the details. We do not take phone calls during driving lessons.",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
     "addressLabel": "Address",
@@ -597,87 +381,86 @@
     "messagePlaceholder": "Write your message here",
     "submitButton": "Send message",
     "successMessage": "Thank you! Your message has been sent.",
-      "errorMessage": "Something went wrong. Please try again.",
-  "serverError": "Server error. Please try again later.",
-  "sending": "Sending..."
+    "errorMessage": "Something went wrong. Please try again.",
+    "serverError": "Server error. Please try again later.",
+    "sending": "Sending..."
   },
-    "contact_hero": {
-
-      "title": "Contact Lønbæks Driving School in Vejle",
-      "subtitle": "Do you have questions about the theory test, driving test, or our driver's license B program? Our team in Vejle is ready to help you."
+  "contact_hero": {
+    "title": "Contact Lønbæks Driving School in Vejle",
+    "subtitle": "Do you have questions about the theory test, driving test, prices, or our Category B program in Vejle? Our experienced instructors are ready to help – call or write today."
   },
   "aboutHero": {
-    "title": "About Lønbæks Driving School",
-    "subtitle": "We have trained thousands of students since 1985 and offer personalized instruction."
+    "title": "About Lønbæks Driving School in Vejle",
+    "subtitle": "Since 1985 we have trained thousands of students to become safe drivers in Vejle. We offer personal instruction, experienced instructors, and a high pass rate – also in English."
   },
-    "seo": {
+  "seo": {
     "home": {
-      "title": "Driving School Vejle - Get Your Car License B Safely",
-      "description": "Welcome to Driving School Vejle. We offer driving license B courses with high pass rates and personalized lessons.",
-      "keywords": "driving school Vejle, driving license B, driving lessons, theory classes"
+      "title": "Driving School Vejle – Get Your Category B License Safely",
+      "description": "Lønbæks Driving School in Vejle offers Category B driving lessons with a high pass rate, personal instruction, and flexible schedules. Experienced instructors since 1985. Sign up today.",
+      "keywords": "driving school Vejle, driving license B Vejle, driving instructor Vejle, driving school Vejle English, category B license Denmark, driving lessons Vejle price, pass driving test Vejle, English driving instructor Denmark"
     },
-    "holdstart-vejle": {
-      "title": "Start Dates in Vejle - Enroll for Driving License B",
-      "description": "Check all upcoming start dates for driving license B in Vejle. Find a suitable time and start your driving journey.",
-      "keywords": "start dates Vejle, driving license B Vejle, driving lessons"
+    "holdstart": {
+      "title": "Course Start Dates Vejle – Enroll for Driving License B",
+      "description": "See next course start dates at Lønbæks Driving School in Vejle. Evening and morning classes for Category B driving license with small groups and personal instruction.",
+      "keywords": "driving course start Vejle, category B course dates, enroll driving school Vejle, evening driving class Denmark, morning driving class Vejle, driving license course schedule"
     },
     "koerekort_b_koerekort": {
-      "title": "Driving License B in Vejle - Complete Guide",
-      "description": "Everything you need to know about driving license B in Vejle - theory, driving lessons, and practical exams.",
-      "keywords": "driving license B Vejle, car license, driving lessons"
+      "title": "Driving License B in Vejle – Complete Guide",
+      "description": "Everything you need to know about Category B driving license in Vejle – theory, driving lessons, practical exam, and price. Lønbæks Driving School guides you safely all the way.",
+      "keywords": "driving license B Vejle, category B license Denmark, driving license B price, driving license automatic Denmark, get driving license at 17 Denmark, driving license B requirements"
     },
     "koerekort_b_koereproeve": {
-      "title": "Practical Driving Test in Vejle - Pass First Time",
-      "description": "Get a complete guide to the practical driving test in Vejle. Learn what is tested and how to pass the first time.",
-      "keywords": "driving test Vejle, practical driving test B, pass driving test"
+      "title": "Practical Driving Test in Vejle – Pass First Time",
+      "description": "Complete guide to the practical driving test in Vejle. Learn what is tested, what happens during the test, and how to pass the first time with Lønbæks Driving School.",
+      "keywords": "driving test Vejle, pass driving test first time, practical driving test category B Denmark, driving test route Vejle, what happens at driving test Denmark, driving test preparation Vejle"
     },
     "koerekort_b_teoriproeve": {
-      "title": "Theory Test in Vejle - Driving License B Guide",
-      "description": "How to pass the theory test in Vejle. Read about mistakes allowed, question types, and best strategies.",
-      "keywords": "theory test Vejle, driving license B theory, pass theory test"
+      "title": "Theory Test in Vejle – Pass First Time | Driving License B",
+      "description": "How to pass the theory test in Vejle the first time. Read about mistake limit, question types, practice options, and the best strategies for Category B driving license.",
+      "keywords": "theory test Vejle, pass theory test first time Denmark, theory test mistakes allowed, theory test questions category B, practice theory test online Denmark, theory test driving license"
     },
     "koerekort_b_priser": {
-      "title": "Free Driving License Information Meeting",
-      "description": "Join a free information meeting and get a full overview of the driving license process in Denmark.",
-      "keywords": "driving license B, driving school Vejle, information meeting"
+      "title": "Driving License B Program in Vejle – From Theory to Test",
+      "description": "See the complete Category B driving program at Lønbæks Driving School in Vejle. Theory, driving lessons, skid training, and tests – we guide you all the way. Start with a free information meeting.",
+      "keywords": "driving license B program Vejle, driving license B legal package Denmark, free information meeting driving school, driving license B steps Denmark, driving course enrollment Vejle"
     },
     "kontakt": {
-      "title": "Contact Driving School Vejle",
-      "description": "Contact us for questions, registration or information about driving license B. We help you reach your goal safely.",
-      "keywords": "contact driving school Vejle, register driving license, questions driving license"
+      "title": "Contact Lønbæks Driving School in Vejle",
+      "description": "Contact us for questions about driving license B, prices, course start dates, or enrollment. Lønbæks Driving School in Vejle responds quickly – call, write, or visit us.",
+      "keywords": "contact driving school Vejle, enroll driving license Vejle, driving school Vejle phone, Lønbæks Driving School contact, driving school Vejle address, questions driving license B Denmark"
     },
     "om_os": {
-      "title": "About Lønbæks Driving School in Vejle",
-      "description": "We have trained thousands of students since 1985 and offer personalized lessons with high pass rates.",
-      "keywords": "about us, driving school Vejle, Lønbæks Driving School, driving license B"
+      "title": "About Lønbæks Driving School in Vejle – Since 1985",
+      "description": "Lønbæks Driving School in Vejle has trained thousands of students since 1985. Meet our experienced instructors and learn about our approach to personal driving education – also in English.",
+      "keywords": "about Lønbæks Driving School Vejle, driving instructor Vejle experience, driving school Vejle since 1985, English driving instructor Vejle, Anna Marie Lønbæk driving instructor, experienced driving school Vejle"
     },
     "blog": {
-      "title": "Blog - Tips and Guides for Driving License B",
-      "description": "Read our blog with tips, advice, and guides to pass driving license B and drive safely on the road.",
-      "keywords": "blog driving license B, driving tips, driving lessons, traffic safety"
+      "title": "Blog – Tips and Guides for Driving License B in Vejle",
+      "description": "Read our blog with tips, advice, and guides to pass your Category B driving license in Vejle. Theory test, driving test, traffic rules, and local conditions.",
+      "keywords": "driving license B tips Vejle, theory test guide Denmark, driving test advice, traffic rules Denmark, driving blog Vejle, learn to drive safely Denmark"
     }
   },
   "blog": {
-      "title": "Driving Tips and News",
-      "subtitle": "Get insights on theory tests, practical driving tests, traffic rules, and local conditions in Vejle. Tips, guides, and news for your journey to Driving License B."
-     },
-     "priser_hero": {
-      "title": "Prices for Driving License B in Vejle",
-      "subtitle": "See our competitive prices for driving license B. We offer packages, extra lessons, and flexible payment options to fit your needs."
-     },
-      "about": {
+    "title": "Driving Tips and News – Category B in Vejle",
+    "subtitle": "Get insights on theory tests, practical driving tests, traffic rules, and local conditions in Vejle. Tips, guides, and news for your journey to Driving License B."
+  },
+  "priser_hero": {
+    "title": "Prices for Driving License B in Vejle",
+    "subtitle": "See our competitive prices for Category B driving license in Vejle. We offer packages, extra lessons, and flexible payment options. No hidden fees – just a clear path to your license."
+  },
+  "about": {
     "label": "About Us",
-    "heading": "Lønbæks Driving School – Your Driving School in Vejle",
+    "heading": "Lønbæks Driving School – Your Driving School in Vejle Since 1985",
     "paragraph1": "At Lønbæks Driving School in Vejle, you receive personalized driver training focused on both learning and confidence. Lessons are conducted at a calm pace, ensuring you are well prepared for both the theory and driving test.",
-    "paragraph2": "With many years of experience in Vejle and the surrounding area, we have helped numerous students safely complete their driving license journey. Our local knowledge and personal guidance give you the best conditions to succeed.",
+    "paragraph2": "With many years of experience in Vejle and the surrounding area, we have helped thousands of students safely complete their driving license journey. Our local knowledge and personal guidance give you the best conditions to pass the driving test the first time.",
     "paragraph3": "Become a safe and confident driver with Lønbæks Driving School in Vejle. Enroll today and start your driving education right away!"
   },
-   "cars": {
+  "cars": {
     "golf": {
-      "name": "Volkswagen Golf GTE ",
+      "name": "Volkswagen Golf GTE",
       "year_label": "Model Year",
       "year": "2021",
-      "description": "The Golf GTE is a very good training car. It has automatic transmission and is intuitive to operate, and it is equipped with all modern safety features. This allows students to easily learn what is necessary about the cars of the future while having more time to focus on driving itself and thus road safety. Two-thirds of all accidents are caused by inattention or attention directed at the wrong things-therefore, it is important that the car itself is not also a distraction. When the new driver education program comes into effect on July 1, 2026, it will be a requirement that the student, during the driving test, can explain and demonstrate how modern driver assistance systems work and how they positively impact road safety."
+      "description": "The Golf GTE is an excellent training car. It has automatic transmission and is intuitive to operate, equipped with all modern safety features. This allows students to easily learn what is necessary about the cars of the future while having more time to focus on driving itself and road safety. Two-thirds of all accidents are caused by inattention – therefore it is important that the car itself is not a distraction. When the new driver education program comes into effect on 1 July 2026, it will be a requirement that the student can explain and demonstrate how modern driver assistance systems work and how they positively impact road safety."
     },
     "taigo": {
       "name": "Volkswagen Taigo",
@@ -686,10 +469,10 @@
       "description": "The Volkswagen Taigo is a stylish and technologically advanced training vehicle. Its compact size makes it perfect for both city driving and longer trips, while modern assist systems and dual controls provide a safe and comfortable learning experience."
     }
   },
-   "meet": {
+  "meet": {
     "subtitle": "Driver's License in Vejle",
     "title": "Unsure about the driving course? We can help",
-    "description": "If you're not quite sure how the driving course works, we offer a <strong>free information session</strong>. We will go through the entire process, answer your questions, and help you plan your theory and driving lessons - completely obligation-free.",
+    "description": "If you're not quite sure how the driving course works, we offer a <strong>free information session</strong>. We will go through the entire process, answer your questions, and help you plan your theory and driving lessons – completely obligation-free.",
     "features": [
       "Free information session without obligations",
       "Structured theory and driving lessons",
@@ -701,50 +484,18 @@
     },
     "imageAlt": "Driving lesson"
   },
-
   "testimonials": {
     "label": "Testimonials",
     "title": "What our students say",
     "subtitle": "Honest experiences from students who got their license with us.",
     "years": "years",
     "items": [
-      {
-        "name": "Marie Andersen",
-        "age": 19,
-        "text": "Jørgen is an amazing driving instructor! He was always patient and explained everything clearly. I passed my test on the first try!",
-        "rating": 5
-      },
-      {
-        "name": "Thomas Nielsen",
-        "age": 22,
-        "text": "Great driving school with flexible schedules. I could easily fit lessons into my studies, and the instructors are very helpful.",
-        "rating": 5
-      },
-      {
-        "name": "Sofie Pedersen",
-        "age": 18,
-        "text": "I was nervous at first, but Jørgen created a safe environment. The calm and structured teaching made it much easier to learn.",
-        "rating": 5
-      },
-      {
-        "name": "Alexander Madsen",
-        "age": 20,
-        "text": "Excellent driving school! Both theory and practical lessons were well organized. I felt well prepared for the test.",
-        "rating": 5
-      },
-      {
-        "name": "Clara Jensen",
-        "age": 21,
-        "text": "The instructors are very patient and always give great tips. I highly recommend this school to anyone learning to drive.",
-        "rating": 5
-      },
-      {
-        "name": "Leonard Bahro",
-        "age": 23,
-        "text": "Fantastic staff and great cars for lessons. I passed without any problems and always felt safe during lessons.",
-        "rating": 5
-      }
+      { "name": "Ivan Kohan", "age": 17, "text": "This is the best driving school. The cars are very comfortable to drive, and the instructors are incredibly patient and always ready to help. They explain everything clearly and are always available when you have doubts. I can absolutely recommend this driving school.", "rating": 5 },
+      { "name": "Thomas Nielsen", "age": 22, "text": "Great driving school with flexible schedules. I could easily fit lessons into my studies, and the instructors are very helpful.", "rating": 5 },
+      { "name": "Sofie Pedersen", "age": 18, "text": "I was nervous at first, but Anna Marie created a safe environment. The calm and structured teaching made it much easier to learn.", "rating": 5 },
+      { "name": "Alexander Madsen", "age": 20, "text": "Excellent driving school! Both theory and practical lessons were well organized. I felt well prepared for the test.", "rating": 5 },
+      { "name": "Clara Jensen", "age": 21, "text": "The instructors are very patient and always give great tips. I highly recommend this school to anyone learning to drive.", "rating": 5 },
+      { "name": "Leonard Bahro", "age": 23, "text": "Fantastic staff and great cars for lessons. I passed without any problems and always felt safe during lessons.", "rating": 5 }
     ]
   }
-
 }
