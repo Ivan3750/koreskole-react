@@ -3,7 +3,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";
-import img from "@/app/assets/school_1.jpeg";
+import img from "@/app/assets/school_1.webp";
 
 const AboutIntro = () => {
   const { t } = useTranslation();

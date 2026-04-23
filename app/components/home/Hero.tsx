@@ -51,7 +51,6 @@ import school from "@/app/assets/image.png";
 
           <div className="flex flex-wrap gap-4 pt-4">
             
-            {/* SIGN UP */}
             <Link
               href={withLocale("/koerekort-b/koerkort")}
               className="py-3 px-10 rounded-lg font-semibold"

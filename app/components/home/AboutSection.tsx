@@ -2,8 +2,8 @@
 
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";  
-import school from "../../assets/school_1.jpeg";
-import school_inside from "../../assets/school_inside_1.jpeg";
+import school from "../../optimized/school_1.webp";
+import school_inside from "../../optimized/school_inside_1.webp";
 const AboutSection = () => {
   const { t } = useTranslation();
 
