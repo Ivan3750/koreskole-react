@@ -100,11 +100,7 @@ const Holdstart = () => {
                   {formatTime(hold.start_time)} – {formatTime(hold.end_time)}
                 </div>
 
-                {hold.days_of_week && (
-                  <div className="text-sm text-gray-500">
-                    {hold.days_of_week}
-                  </div>
-                )}
+                
               </div>
 
               <button

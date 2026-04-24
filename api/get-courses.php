@@ -1,7 +1,6 @@
 <?php
 require_once 'cors.php';
-require_once 'security.php';
-require_once 'db.php';
+ require_once 'db.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 
