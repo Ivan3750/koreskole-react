@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 import { useEffect } from "react";
 import "@/app/i18n";
 import school from "../assets/school_inside_2.jpeg";
+import Button from "./ux/Button";
 
 export default function KorekortSection() {
   const { t, i18n } = useTranslation();
@@ -48,7 +49,6 @@ export default function KorekortSection() {
             dangerouslySetInnerHTML={{ __html: t("meet.description") }}
           />
 
-          {/* FEATURES */}
           <ul className="space-y-3 pt-2">
             {features?.map((feature, index) => (
               <li className="flex gap-3" key={index}>
@@ -58,15 +58,16 @@ export default function KorekortSection() {
             ))}
           </ul>
 
-          {/* CTA */}
+     
           <div className="flex gap-4 pt-4">
-            <Link
+            {/* <Link
               href={withLocale("/hold-")}
               className="px-8 py-4 rounded-xl font-semibold"
               style={{ background: "var(--color-yellow)", color: "#000" }}
             >
-              {t("meet.cta.book")} {/* make a modal form  */}
-            </Link>
+              {t("meet.cta.book")} 
+            </Link> */}
+            <Button locale={"da"} label={t("meet.cta.book")}></Button>
 
             <Link
               href={withLocale("/koerekort-b/forloeb/")}

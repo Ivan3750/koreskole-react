@@ -16,8 +16,6 @@ const ThemeProvider: React.FC<Props> = ({
   useEffect(() => {
     const root = document.documentElement;
 
-    /* ========== BASE ========== */
-
     root.style.setProperty("--font-family", fontFamily);
     root.style.setProperty("--radius", "20px");
 
@@ -28,9 +26,8 @@ const ThemeProvider: React.FC<Props> = ({
     root.style.setProperty("--shadow-1", "0 1px 2px rgba(0,0,0,0.05)");
     root.style.setProperty("--shadow-2", "0 8px 24px rgba(0,0,0,0.12)");
 
-root.style.setProperty("--color-primary", "#F2B705");
-root.style.setProperty("--color-yellow", "#F2B705");
-    /* ========== THEME COLORS ========== */
+    root.style.setProperty("--color-primary", "#F2B705");
+    root.style.setProperty("--color-yellow", "#F2B705");
 
     if (themeMode === "dark") {
       root.style.setProperty("--color-bg", "#141414");
@@ -52,8 +49,6 @@ root.style.setProperty("--color-yellow", "#F2B705");
       root.style.setProperty("--color-border", "rgba(0,0,0,0.06)");
     }
 
-    /* ========== YELLOW PALETTE ========== */
-
     [
       "#FFFCF0",
       "#FFF3CC",
@@ -68,8 +63,6 @@ root.style.setProperty("--color-yellow", "#F2B705");
     ].forEach((color, i) => {
       root.style.setProperty(`--color-yellow-${i + 1}`, color);
     });
-
-    /* semantic yellow */
 
     if (themeMode === "dark") {
       root.style.setProperty("--color-yellow-bg", "#2A2418");

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { BASE_URL } from "@/app/store/api"
+import { BASE_URL } from "@/app/lib/api"
 
 type Blog = {
   id: number;

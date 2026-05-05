@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { BASE_URL } from "@/app/store/api"
+import { BASE_URL } from "@/app/lib/api"
 
 
 export default function ContactsPage() {

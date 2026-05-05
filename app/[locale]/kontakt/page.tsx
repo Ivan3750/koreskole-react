@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHero from "../../components/PageHero";
+import PageHero from "../../components/ux/PageHero";
 import ContactFormPage from "../../components/ContactFormPage";
 import gulbil from "@/app/assets/gulbil_2.jpeg";
 import en from "../../i18n/locales/en/translation.json";

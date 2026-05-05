@@ -4,7 +4,7 @@ import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
-import { BASE_URL } from "@/app/store/api"
+import { BASE_URL } from "@/app/lib/api"
 type Blog = {
   id: number;
   title: string;

@@ -6,7 +6,7 @@ import BlogPage from "../components/admin/BlogPage";
 import ContactsPage from "../components/admin/ContactsPage";
 import PasswordPage from "../components/admin/PasswordPage";
 import LoginPage from "../components/admin/LoginPage";
-import { BASE_URL } from "@/app/store/api"
+import { BASE_URL } from "@/app/lib/api"
 
  type Page = "courses" | "blog" | "contacts" | "password";
 

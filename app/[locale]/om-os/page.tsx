@@ -1,4 +1,4 @@
-import PageHero from "../../components/PageHero";
+import PageHero from "../../components/ux/PageHero";
 import Instructors from "../../components/om-os/Instructors";
 import AboutIntro from "../../components/om-os/AboutInro";
 import FAQ from "../../components/FAQ";

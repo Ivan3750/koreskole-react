@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";
-import { BASE_URL } from "@/app/store/api"
+import { BASE_URL } from "@/app/lib/api"
 
 interface BookingFormProps {
   holdId: number;

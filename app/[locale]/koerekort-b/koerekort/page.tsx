@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHero from "../../../components/PageHero";
+import PageHero from "../../../components/ux/PageHero";
 import Info from "../../../components/koereproeve-vejle/Info";
 import PassStrategySection from "../../../components/koereproeve-vejle/PassStrategySection";
 import FAQ from "../../../components/FAQ";

@@ -11,7 +11,7 @@ import '../i18n';
 import { useEffect } from "react";
 import { useParams } from "next/navigation";
 import i18n from "@/app/i18n";
-import LocaleGuard from "../components/LocaleGuard";
+import LocaleGuard from "../i18n/LocaleGuard";
 const albertSans = Albert_Sans({
   subsets: ["latin"],
   display: "swap",

@@ -14,7 +14,6 @@ export default function NotFound() {
         <Header></Header>
 
         <section className="min-h-screen flex items-center justify-center py-20 px-6 relative overflow-hidden bg-[#141414]">
-          {/* Decorative background elements */}
           <div
             className="absolute top-20 right-20 w-72 h-72 rounded-full opacity-5"
             style={{ backgroundColor: "var(--color-yellow)" }}
@@ -25,7 +24,6 @@ export default function NotFound() {
           />
 
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            {/* 404 Number */}
             <div className="mb-8">
               <h1
                 className="font-display font-bold text-[150px] md:text-[200px] lg:text-[250px] leading-none"
@@ -38,18 +36,15 @@ export default function NotFound() {
               </h1>
             </div>
 
-            {/* Heading */}
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-white">
               Ups! Siden blev ikke fundet
             </h2>
 
-            {/* Description */}
             <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed text-white/60">
               Den side du leder efter eksisterer ikke, eller er blevet flyttet.
               Lad os hjælpe dig med at finde vejen tilbage.
             </p>
 
-            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/"
@@ -79,7 +74,6 @@ export default function NotFound() {
             </div>
           </div>
 
-          {/* Additional decorative elements */}
         </section>
         <Footer></Footer>
       </AppProviders>
