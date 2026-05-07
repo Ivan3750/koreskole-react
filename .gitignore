@@ -44,3 +44,4 @@ next-env.d.ts
  
 api/db.php
 optimized
+api/mail/config.php

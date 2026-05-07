@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "../../components/ux/PageHero";
-import ContactFormPage from "../../components/ContactFormPage";
+import Contact from "../../components/Contact";
 import gulbil from "@/app/assets/gulbil_2.jpeg";
 import en from "../../i18n/locales/en/translation.json";
 import da from "../../i18n/locales/da/translation.json";
@@ -50,7 +50,7 @@ export default async function Kontakt({
         image={gulbil}
         position="0 -450px"
       />
-      <ContactFormPage />
+      <Contact />
     </>
   );
 }
