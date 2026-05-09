@@ -28,7 +28,7 @@ const items = [
   {
     icon: Gauge,
     title: "Hastighedstilpasning",
-    text: "Hold grænsen — og sæt farten ned i tide ved kryds og usikre situationer.",
+    text: "Hold grænsen - og sæt farten ned i tide ved kryds og usikre situationer.",
   },
   {
     icon: TriangleAlert,
@@ -38,7 +38,7 @@ const items = [
   {
     icon: ArrowLeftRight,
     title: "Blinklys i tide",
-    text: "Tegn gives i god tid — ikke samtidig med at du svinger. Tydelig og rettidig signalering.",
+    text: "Tegn gives i god tid - ikke samtidig med at du svinger. Tydelig og rettidig signalering.",
   },
   {
     icon: ShieldCheck,
@@ -69,18 +69,10 @@ const ExamChecklistSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
           <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left lg:sticky lg:top-32">
-            <span
-              className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full"
-              style={{
-                color: "var(--color-yellow)",
-                backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
-              }}
-            >
-              Køreprøven
-            </span>
+            
 
             <h2
-              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6 leading-tight"
+              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6 leading-tight text-balance"
               style={{ color: "var(--color-text)" }}
             >
               8 ting censoren kigger efter
@@ -90,7 +82,7 @@ const ExamChecklistSection = () => {
               className="normal-text text-lg"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Censoren bruger en fast tjekliste under hele køreprøven. Kend punkterne inden du sætter dig bag rattet — så ved du præcist hvad der vurderes.
+              Censoren bruger en fast tjekliste under hele køreprøven. Kend punkterne inden du sætter dig bag rattet - så ved du præcist hvad der vurderes.
             </p>
           </div>
 

@@ -11,9 +11,9 @@ import {
   robots,
   type Locale,
 } from "@/app/lib/seo";
-import TheoryTransitionSection from "@/app/components/teori/TheoryTransitionSection";
-import TheoryPracticeSection from "@/app/components/teori/TheoryPracticeSection";
-import TheoryMistakesSection from "@/app/components/teori/TheoryMistakesSection";
+import TheoryTransitionSection from "@/app/components/teoriproeve/TheoryTransitionSection";
+import TheoryPracticeSection from "@/app/components/teoriproeve/TheoryPracticeSection";
+import TheoryMistakesSection from "@/app/components/teoriproeve/TheoryMistakesSection";
 
 const translations: Record<Locale, any> = { en, da };
 const PATH = "koerekort-b/teoriproeve";

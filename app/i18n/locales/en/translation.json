@@ -139,6 +139,7 @@
       },
       { "label": "Course Start", "href": "/holdstart-vejle" },
       { "label": "About Us", "href": "/om-os" },
+      { "label": "Blog", "href": "/blog" },
       { "label": "Contact", "href": "/kontakt" }
     ],
     "cta": "Join a class",
@@ -340,8 +341,8 @@
     "note": "The driving test is the final part of your license process and requires both technical understanding and practical skills. Our driving school ensures you are fully prepared through structured lessons, realistic driving situations, and personalized feedback, so you can approach the test with confidence.",
     "cta": "Learn more",
     "cards": {
-      "duration": "25 minutes",
-      "durationText": "The practical test typically lasts up to 25 minutes.",
+      "duration": "30 – 45 minutes",
+      "durationText": "The practical test typically lasts up to 30 – 45 minutes.",
       "technicalCheck": "Technical Check",
       "technicalText": "You start with questions about the car's equipment.",
       "traffic": "City & Country Roads",

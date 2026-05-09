@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
 import { useEffect } from "react";
 import "@/app/i18n";
-import school from "../assets/school_inside_2.jpeg";
-import Button from "./ux/Button";
+import school from "../../assets/school_inside_2.jpeg";
+import Button from "../ux/Button";
 
 export default function KorekortSection() {
   const { t, i18n } = useTranslation();

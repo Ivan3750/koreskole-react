@@ -11,14 +11,14 @@ const mistakes = [
     number: "01",
     title: "Fejllæsning af situationsbilleder",
     description:
-      "Du ser billedet men overser cyklisten i kanten, barnet bag den parkerede bil eller skiltet delvist skjult af grene. Scan hele billedet — ikke bare midten.",
+      "Du ser billedet men overser cyklisten i kanten, barnet bag den parkerede bil eller skiltet delvist skjult af grene. Scan hele billedet - ikke bare midten.",
   },
   {
     icon: Clock,
     number: "02",
     title: "For hurtige svar under tidspres",
     description:
-      "Du ved svaret — men klikker forkert. Teoriprøven har god tid per spørgsmål. Læs altid alle svarmuligheder igennem, selv hvis det første virker oplagt.",
+      "Du ved svaret - men klikker forkert. Teoriprøven har god tid per spørgsmål. Læs altid alle svarmuligheder igennem, selv hvis det første virker oplagt.",
   },
   {
     icon: MapPin,
@@ -39,7 +39,7 @@ const mistakes = [
     number: "05",
     title: "Placering og svingning",
     description:
-      "Spørgsmål om korrekt placering inden sving, vognbaneskift og særligt ved flerstrækede veje er klassiske fælder — reglerne er præcise og kræver forståelse.",
+      "Spørgsmål om korrekt placering inden sving, vognbaneskift og særligt ved flerstrækede veje er klassiske fælder - reglerne er præcise og kræver forståelse.",
   },
   {
     icon: AlertTriangle,
@@ -80,7 +80,7 @@ const TheoryMistakesSection = () => {
             className="mt-4 text-lg max-w-2xl mx-auto"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            De fleste fejl handler ikke om manglende viden — men om opmærksomhed, tempo og forståelse af kombinerede situationer.
+            De fleste fejl handler ikke om manglende viden - men om opmærksomhed, tempo og forståelse af kombinerede situationer.
           </p>
         </div>
 

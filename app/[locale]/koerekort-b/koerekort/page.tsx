@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "../../../components/ux/PageHero";
-import Info from "../../../components/koereproeve-vejle/Info";
-import PassStrategySection from "../../../components/koereproeve-vejle/PassStrategySection";
+import Info from "../../../components/koereproeve/Info";
+import PassStrategySection from "../../../components/koereproeve/PassStrategySection";
 import FAQ from "../../../components/FAQ";
 import Contact from "@/app/components/Contact";
 import HoldStart from "@/app/components/home/HoldStart";
@@ -9,8 +9,8 @@ import gulbil from "@/app/assets/gulbil_2.jpeg";
 import en from "../../../i18n/locales/en/translation.json";
 import da from "../../../i18n/locales/da/translation.json";
 import { buildAlternates, buildOpenGraph, robots, type Locale } from "@/app/lib/seo";
-import GearSection from "@/app/components/GearSection";
-import LicenseCodesSection from "@/app/components/LicenseCodesSection";
+import GearSection from "@/app/components/korekort/GearSection";
+import LicenseCodesSection from "@/app/components/korekort/LicenseCodesSection";
 
 const translations: Record<Locale, any> = { en, da };
 const PATH = "koerekort-b/koerekort";

@@ -12,7 +12,7 @@ const codes = [
     icon: Lock,
     description:
       "Tildeles når du har bestået køreprøven i en bil med automatgear. Kørekortet begrænser dig til kun at føre køretøjer med automatisk transmission.",
-    note: "Dette er standardkoden for alle elever hos os — du kører i en VW Golf GTE.",
+    note: "Dette er standardkoden for alle elever hos os - du kører i en VW Golf GTE.",
     type: "restriction",
   },
   {
@@ -21,7 +21,7 @@ const codes = [
     icon: Unlock,
     description:
       "Giver dig ret til at køre manuelt gear, selvom du oprindeligt bestod prøven i en automatbil. Kræver 7 timers supplerende undervisning hos en godkendt kørelærer.",
-    note: "Ønsker du fuld frihed — både automatbil og manuelbil — kan du tilføje kode 148 bagefter.",
+    note: "Ønsker du fuld frihed - både automatbil og manuelbil - kan du tilføje kode 148 bagefter.",
     type: "upgrade",
   },
   {
@@ -29,7 +29,7 @@ const codes = [
     label: "Ledsagerkørsel (17 år)",
     icon: UserCheck,
     description:
-      "Påføres 17-årige der har bestået køreprøven. Koden angiver krav om ledsager under kørsel — indtil den unge fylder 18 år.",
+      "Påføres 17-årige der har bestået køreprøven. Koden angiver krav om ledsager under kørsel - indtil den unge fylder 18 år.",
     note: "Gælder kun for elever der starter kørekortet som 17-årige.",
     type: "condition",
   },

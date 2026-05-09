@@ -99,7 +99,7 @@ const TheoryTransitionSection = () => {
                 className="text-lg leading-relaxed mb-8"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                Godt klaret. Nu begynder den praktiske del — og her gælder helt andre regler. Læs hvad du kan forvente til selve køreprøven i Vejle.
+                Godt klaret. Nu begynder den praktiske del - og her gælder helt andre regler. Læs hvad du kan forvente til selve køreprøven i Vejle.
               </p>
 
               <Link

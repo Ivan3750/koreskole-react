@@ -16,19 +16,19 @@ const steps = [
     icon: MessageCircle,
     step: "01",
     title: "Forstå hvad der gik galt",
-    text: "Censoren giver en mundtlig tilbagemelding direkte efter prøven. Lyt nøje — det er præcist de punkter vi arbejder videre med.",
+    text: "Censoren giver en mundtlig tilbagemelding direkte efter prøven. Lyt nøje - det er præcist de punkter vi arbejder videre med.",
   },
   {
     icon: Target,
     step: "02",
     title: "Fokuseret gennemgang med din kørelærer",
-    text: "Vi gennemgår fejlene konkret og laver en plan for de næste lektioner. Ingen generel kørsel — kun det der manglede.",
+    text: "Vi gennemgår fejlene konkret og laver en plan for de næste lektioner. Ingen generel kørsel - kun det der manglede.",
   },
   {
     icon: CalendarCheck,
     step: "03",
     title: "Book en ny prøve og kør den roligt",
-    text: "Du kan booke en ny prøve inden for få uger. De fleste elever består ved anden forsøg — med den rette forberedelse.",
+    text: "Du kan booke en ny prøve inden for få uger. De fleste elever består ved anden forsøg - med den rette forberedelse.",
   },
 ];
 
@@ -51,7 +51,7 @@ const ExamFailSection = () => {
 
           <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
             <span
-              className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full"
+              className="inline-block font-semibold text-sm uppercase tracking-widest pr-4 pt-2 rounded-full"
               style={{
                 color: "var(--color-yellow)",
                 backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
@@ -71,7 +71,7 @@ const ExamFailSection = () => {
               className="normal-text text-lg mb-8"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Det sker for mange — og det er ikke enden på verden. Næsten 40% dumper til køreprøven første gang. Det vigtigste er at forstå præcist hvad der gik galt og rette det målrettet.
+              Det sker for mange - og det er ikke enden på verden. Næsten 40% dumper til køreprøven første gang. Det vigtigste er at forstå præcist hvad der gik galt og rette det målrettet.
             </p>
 
             <div className="grid grid-cols-3 gap-4">
@@ -155,33 +155,7 @@ const ExamFailSection = () => {
               );
             })}
 
-            <Link
-              href="/kontakt"
-              className="flex items-center justify-between gap-4 rounded-2xl border-2 px-6 py-5 transition-all duration-200 hover:shadow-md group mt-2"
-              style={{
-                borderColor: "var(--color-yellow)",
-                backgroundColor: "rgba(var(--color-yellow-rgb), 0.04)",
-              }}
-            >
-              <div>
-                <span
-                  className="block font-bold text-base"
-                  style={{ color: "var(--color-text)" }}
-                >
-                  Kontakt os — vi lægger en plan
-                </span>
-                <span
-                  className="block text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  Vi finder hurtigt ud af hvad der skal til næste gang.
-                </span>
-              </div>
-              <ChevronRight
-                className="w-5 h-5 flex-shrink-0 transition-transform duration-200 group-hover:translate-x-0.5"
-                style={{ color: "var(--color-yellow)" }}
-              />
-            </Link>
+         
           </div>
 
         </div>

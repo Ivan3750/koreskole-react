@@ -181,6 +181,7 @@
       },
       { "label": "Holdstart", "href": "/holdstart-vejle" },
       { "label": "Om os", "href": "/om-os" },
+      { "label": "Blog", "href": "/blog" },
       { "label": "Kontakt", "href": "/kontakt" }
     ],
     "cta": "Tilmeld hold",
@@ -365,7 +366,7 @@
     "hero": {
       "badge": "Teoriprøve",
       "title": "Sådan består du teoriprøven",
-      "paragraph1": "Skal du tage teoriprøve til kørekort B i Vejle? I undervisningen på køreskolen får du en komplet guide til prøvens opbygning, fejlgrænse og de bedste strategier til at bestå første gang.",
+      "paragraph1": "Skal du tage teoriprøve til kørekort B ? I undervisningen på køreskolen får du en komplet guide til prøvens opbygning, fejlgrænse og de bedste strategier til at bestå første gang.",
       "paragraph2": "Teoriprøven er en vigtig del af dit kørekortforløb. Med korrekt forberedelse, realistiske øveprøver og forståelse for færdselsloven øger du markant dine chancer for succes.",
       "cta": "Læs mere"
     },
@@ -412,8 +413,8 @@
     "note": "Køreprøven er den sidste del af dit kørekortforløb og kræver både teknisk forståelse og praktiske færdigheder. Vores køreskole sikrer, at du er godt forberedt gennem struktureret undervisning, realistiske køresituationer og personlig feedback, så du kan gå til prøven med selvtillid.",
     "cta": "Læs mere",
     "cards": {
-      "duration": "25 minutter",
-      "durationText": "Den praktiske prøve varer typisk op til 25 minutter.",
+      "duration": "30 – 45 minutter",
+      "durationText": "Den praktiske prøve varer typisk op til 45 minutter.",
       "technicalCheck": "Teknisk kontrol",
       "technicalText": "Du starter med spørgsmål om bilens udstyr.",
       "traffic": "By- og landevej",

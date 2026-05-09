@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
 import "@/app/i18n";
-import WebHjerte from "./WebHjerte";
+import WebHjerte from "./ux/WebHjerte";
 const Footer = () => {
   const { t } = useTranslation();
   const params = useParams();

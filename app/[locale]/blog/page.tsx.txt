@@ -1,0 +1,14 @@
+
+
+import Blog from "../../components/blog/Blog";
+
+export function generateStaticParams() {
+  return [
+    { locale: "en" },
+    { locale: "da" }
+  ];
+}
+
+export default function Page() {
+  return <Blog />;
+}

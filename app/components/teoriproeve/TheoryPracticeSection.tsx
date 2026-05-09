@@ -9,17 +9,17 @@ const features = [
   {
     icon: BookOpen,
     title: "Teori fra første lektion",
-    text: "Vi gennemgår teorien struktureret fra start — så du forstår reglerne, ikke bare husker dem.",
+    text: "Vi gennemgår teorien struktureret fra start - så du forstår reglerne, ikke bare husker dem.",
   },
   {
     icon: MonitorPlay,
     title: "Adgang til øvetests",
-    text: "Som elev hos os får du adgang til øvetests du kan tage hjemmefra — så mange gange du vil, i dit eget tempo.",
+    text: "Som elev hos os får du adgang til øvetests du kan tage hjemmefra - så mange gange du vil, i dit eget tempo.",
   },
   {
     icon: RotateCcw,
     title: "Mindst 3 øveprøver",
-    text: "Vi anbefaler minimum 3 gennemløb af den officielle øveprøve — spredt over flere dage, ikke natten før.",
+    text: "Vi anbefaler minimum 3 gennemløb af den officielle øveprøve - spredt over flere dage, ikke natten før.",
   },
 ];
 
@@ -56,14 +56,14 @@ const TheoryPracticeSection = () => {
               className="normal-text text-lg mb-4"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Du behøver ikke sidde alene med teoribogen. Vi gennemgår alt det vigtige med dig — og giver dig adgang til øvetests du kan tage når det passer dig.
+              Du behøver ikke sidde alene med teoribogen. Vi gennemgår alt det vigtige med dig - og giver dig adgang til øvetests du kan tage når det passer dig.
             </p>
 
             <p
               className="normal-text text-lg"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Øvetestene er bygget op præcis som den rigtige prøve — samme format, samme sværhedsgrad, samme typer spørgsmål.
+              Øvetestene er bygget op præcis som den rigtige prøve - samme format, samme sværhedsgrad, samme typer spørgsmål.
             </p>
           </div>
 

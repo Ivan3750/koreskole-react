@@ -9,17 +9,17 @@ const manualPoints = [
   {
     icon: ShieldCheck,
     title: "Bredt kørekort",
-    text: "Du må køre alle biler — både manuel og automatisk — med ét kørekort.",
+    text: "Du må køre alle biler - både manuel og automatisk - med ét kørekort.",
   },
   {
     icon: Settings,
     title: "Fuld kontrol",
-    text: "Du styrer gear selv og føler køretøjet mere direkte — foretrukket af mange erfarne bilister.",
+    text: "Du styrer gear selv og føler køretøjet mere direkte - foretrukket af mange erfarne bilister.",
   },
   {
     icon: Car,
     title: "Større biludvalg",
-    text: "Ældre og billigere biler er oftest manuelle — nyttigt hvis du køber brugt.",
+    text: "Ældre og billigere biler er oftest manuelle - nyttigt hvis du køber brugt.",
   },
 ];
 
@@ -27,7 +27,7 @@ const autoPoints = [
   {
     icon: Brain,
     title: "Lettere at lære",
-    text: "Ingen kobling eller gearskift — du bruger mere opmærksomhed på trafik og teknik.",
+    text: "Ingen kobling eller gearskift - du bruger mere opmærksomhed på trafik og teknik.",
   },
   {
     icon: Zap,
@@ -123,7 +123,7 @@ const GearSection = () => {
             className="mt-4 text-lg max-w-2xl mx-auto"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            Begge typer har fordele. Her er hvad der adskiller dem — så du kan vælge det der passer dig bedst.
+            Begge typer har fordele. Her er hvad der adskiller dem - så du kan vælge det der passer dig bedst.
           </p>
         </div>
 

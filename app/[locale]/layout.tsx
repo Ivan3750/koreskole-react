@@ -6,7 +6,7 @@ import { ThemeContextProvider } from "../theme/ThemeContext";
 import { AppProviders } from "../theme/AppProviders";
 import { Header } from "../components/Header";
 import Footer from "../components/Footer";
-import '../i18n';
+import "../i18n";
 
 import { useEffect } from "react";
 import { useParams } from "next/navigation";
@@ -17,17 +17,12 @@ const albertSans = Albert_Sans({
   display: "swap",
   variable: "--font-albert",
 });
- 
-
-
- 
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-
   const params = useParams();
 
   useEffect(() => {
@@ -37,9 +32,9 @@ export default function RootLayout({
   }, [params]);
 
   return (
-<html lang="da" className={albertSans.variable}>
-  <body className={albertSans.className}>
-    <LocaleGuard></LocaleGuard>
+    <html lang="da" className={albertSans.variable}>
+      <body className={albertSans.className}>
+        <LocaleGuard></LocaleGuard>
         <ThemeContextProvider>
           <AppProviders fontFamily="var(--font-albert)">
             <Header />
@@ -47,7 +42,6 @@ export default function RootLayout({
             <Footer />
           </AppProviders>
         </ThemeContextProvider>
-   
       </body>
     </html>
   );

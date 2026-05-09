@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import PageHero from "../../../components/ux/PageHero";
 import FAQ from "../../../components/FAQ";
-import KoereproevePage from "@/app/components/koereproeve-vejle/KoereproevePage";
+import KoereproevePage from "@/app/components/koereproeve/KoereproevePage";
 import gulbil from "@/app/assets/gulbil_2.jpeg";
 import en from "../../../i18n/locales/en/translation.json";
 import da from "../../../i18n/locales/da/translation.json";
 import { buildAlternates, buildOpenGraph, robots, type Locale } from "@/app/lib/seo";
-import ExamFailSection from "@/app/components/kore/ExamFailSection";
-import ExamChecklistSection from "@/app/components/kore/ExamChecklistSection";
+import ExamFailSection from "@/app/components/koereproeve/ExamFailSection";
+import ExamChecklistSection from "@/app/components/koereproeve/ExamChecklistSection";
 
 const translations: Record<Locale, any> = { en, da };
 const PATH = "koerekort-b/koereproeve";
