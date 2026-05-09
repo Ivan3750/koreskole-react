@@ -5,10 +5,16 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";
 import { useParams } from "next/navigation";
-import place_car_front from "../../assets//frdselsstyrelsen_car_front.jpeg";
+import place_car_front from "../../assets/frdselsstyrelsen_car_front.jpeg";
 import place_car_side_1 from "../../assets/frdselsstyrelsen_car_side_1.jpeg";
-import place_car_side_2 from "../../assets/frdselsstyrelsen_car_side_2.jpeg";
 import place_door from "../../assets/frdselsstyrelsen_door.jpeg";
+
+const cards = [
+  ["duration", "durationText"],
+  ["technicalCheck", "technicalText"],
+  ["traffic", "trafficText"],
+  ["assessment", "assessmentText"],
+];
 
 export default function KoereproevePage() {
   const { t } = useTranslation();
@@ -21,162 +27,227 @@ export default function KoereproevePage() {
   };
 
   return (
-    <>
-      <div style={{ background: "var(--color-bg)" }}>
-        <div className="max-w-7xl mx-auto px-6 py-20 space-y-24">
-            <section className="grid lg:grid-cols-2 gap-14 items-center">
-              <div className="space-y-6">
-                <span
-                  className="px-4 py-1 rounded-full text-sm font-semibold"
-                  style={{
-                    background: "var(--color-yellow-2)",
-                    color: "var(--color-yellow-8)",
-                  }}
-                >
-                  {t("koereproeve.tag")}
-                </span>
+    <div style={{ backgroundColor: "var(--color-bg)" }}>
 
-                <h1
-                  className="text-4xl font-bold"
-                  style={{ color: "var(--color-text)" }}
-                >
-                  {t("koereproeve.heading")}
-                </h1>
+      <section className="py-20 md:py-28 lg:py-40 max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-                <p
-                  className="text-base leading-relaxed"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  {t("koereproeve.intro")}
-                </p>
+          <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+            <span
+              className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full"
+              style={{
+                color: "var(--color-yellow)",
+                backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
+              }}
+            >
+              {t("koereproeve.tag")}
+            </span>
 
-                <p
-                  className="text-base leading-relaxed"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  {t("koereproeve.note")}
-                </p>
+            <h1
+              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mt-6 mb-6 leading-tight"
+              style={{ color: "var(--color-text)" }}
+            >
+              {t("koereproeve.heading")}
+            </h1>
 
-                <Link
-                  href={withLocale("/koerekort-b/koerekort/")}
-                  className="inline-block px-6 py-3 rounded-xl font-semibold"
-                  style={{ background: "var(--color-yellow)", color: "#000" }}
-                >
-                  {t("koereproeve.cta")}
-                </Link>
-              </div>
+            <p
+              className="text-lg leading-relaxed mb-4"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
+              {t("koereproeve.intro")}
+            </p>
 
-              {/* Creative 2-photo layout */}
-<div className="relative h-96">
-  {/* Large photo - tilted, fills most of the space */}
-  <div
-    className="absolute inset-0 right-16 rounded-2xl overflow-hidden shadow-xl"
-    style={{   transformOrigin: "bottom left" }}
-  >
-    <Image
-      src={place_car_front}
-      alt=""
-      fill
-      className="object-cover"
-    />
-  </div>
+            <p
+              className="text-lg leading-relaxed mb-8"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
+              {t("koereproeve.note")}
+            </p>
 
-  {/* Small photo - overlaps bottom-right, counter-rotated */}
-  <div
-    className="absolute bottom-0 right-0 w-48 h-56 rounded-2xl overflow-hidden shadow-2xl border-4"
-    style={{
-      borderColor: "var(--color-yellow)",
-    }}
-  >
-    <Image
-      src={place_car_side_1}
-      alt=""
-      fill
-      className="object-cover"
-    />
-  </div>
-</div>
-            </section>
+            <Link
+              href={withLocale("/koerekort-b/koerekort/")}
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl font-semibold text-base transition-all duration-200 hover:opacity-90"
+              style={{
+                backgroundColor: "var(--color-yellow)",
+                color: "#fff",
+                boxShadow: "0 4px 24px rgba(var(--color-yellow-rgb), 0.3)",
+              }}
+            >
+              {t("koereproeve.cta")}
+            </Link>
+          </div>
 
-          <section className="grid lg:grid-cols-4 gap-8">
-            {[
-              ["duration", "durationText"],
-              ["technicalCheck", "technicalText"],
-              ["traffic", "trafficText"],
-              ["assessment", "assessmentText"],
-            ].map(([key, descKey]) => (
+          <div className="relative h-96 order-first lg:order-last">
+            <div
+              className="absolute inset-0 right-16 rounded-3xl overflow-hidden shadow-2xl border-2"
+              style={{ borderColor: "var(--color-border)" }}
+            >
+              <Image src={place_car_front} alt="" fill className="object-cover" />
+            </div>
+            <div
+              className="absolute bottom-0 right-0 w-48 h-56 rounded-2xl overflow-hidden shadow-2xl border-4"
+              style={{ borderColor: "var(--color-yellow)" }}
+            >
+              <Image src={place_car_side_1} alt="" fill className="object-cover" />
+            </div>
+            <div
+              className="absolute -top-8 -left-8 w-40 h-40 rounded-full opacity-10 -z-10"
+              style={{ backgroundColor: "var(--color-yellow)" }}
+            />
+          </div>
+
+        </div>
+      </section>
+
+      <section
+        className="py-16 md:py-20"
+        style={{ backgroundColor: "var(--color-bg-secondary, var(--color-bg))" }}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {cards.map(([key, descKey], index) => (
               <div
                 key={key}
-                className="p-6 rounded-2xl space-y-3"
+                className="rounded-2xl border-2 p-6 space-y-3"
                 style={{
-                  background: "var(--color-bg-elevated)",
-                  border: "1px solid var(--color-border)",
+                  borderColor: index === 0 ? "var(--color-yellow)" : "var(--color-border)",
+                  backgroundColor: index === 0 ? "rgba(var(--color-yellow-rgb), 0.04)" : "var(--color-bg)",
                 }}
               >
-                <h3 className="font-bold">{t(`koereproeve.cards.${key}`)}</h3>
+                <div
+                  className="w-8 h-1 rounded-full"
+                  style={{ backgroundColor: "var(--color-yellow)" }}
+                />
+                <h3
+                  className="font-bold text-base"
+                  style={{ color: "var(--color-text)" }}
+                >
+                  {t(`koereproeve.cards.${key}`)}
+                </h3>
                 <p
-                  className="text-sm"
+                  className="text-sm leading-relaxed"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
                   {t(`koereproeve.cards.${descKey}`)}
                 </p>
               </div>
             ))}
-          </section>
+          </div>
+        </div>
+      </section>
 
-          <section
-            className="p-10 rounded-2xl space-y-6"
-            style={{
-              background: "var(--color-bg-elevated)",
-              border: "1px solid var(--color-border)",
-            }}
-          >
-            <h2 className="text-2xl font-bold">
+      <section className="py-20 md:py-28 lg:py-40 max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+          <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left lg:sticky lg:top-32">
+            <span
+              className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full"
+              style={{
+                color: "var(--color-yellow)",
+                backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
+              }}
+            >
+              Forløbet
+            </span>
+            <h2
+              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6 leading-tight"
+              style={{ color: "var(--color-text)" }}
+            >
               {t("koereproeve.how.heading")}
             </h2>
-
-            <p style={{ color: "var(--color-text-secondary)" }}>
-              {t("koereproeve.how.step1")}
-            </p>
-
-            <p style={{ color: "var(--color-text-secondary)" }}>
-              {t("koereproeve.how.step2")}
-            </p>
-
             <Link
               href={withLocale("/koerekort-b/koerekort/")}
-              className="inline-block px-6 py-3 rounded-xl font-semibold"
-              style={{ background: "var(--color-yellow)", color: "#000" }}
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl font-semibold text-base transition-all duration-200 hover:opacity-90 mt-4"
+              style={{
+                backgroundColor: "var(--color-yellow)",
+                color: "#fff",
+                boxShadow: "0 4px 24px rgba(var(--color-yellow-rgb), 0.3)",
+              }}
             >
               {t("koereproeve.cta")}
             </Link>
-          </section>
+          </div>
 
-          <section className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <h2 className="text-2xl font-bold">
+          <div className="space-y-4">
+            {[t("koereproeve.how.step1"), t("koereproeve.how.step2")].map((text, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 rounded-2xl border-2 px-6 py-5"
+                style={{
+                  borderColor: "var(--color-border)",
+                  backgroundColor: "var(--color-bg)",
+                }}
+              >
+                <div
+                  className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-sm"
+                  style={{ backgroundColor: "var(--color-yellow)", color: "#fff" }}
+                >
+                  {index + 1}
+                </div>
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <section
+        className="py-20 md:py-28 lg:py-40"
+        style={{ backgroundColor: "var(--color-bg-secondary, var(--color-bg))" }}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+            <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+              <span
+                className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full"
+                style={{
+                  color: "var(--color-yellow)",
+                  backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
+                }}
+              >
+                Lokation
+              </span>
+              <h2
+                className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6 leading-tight"
+                style={{ color: "var(--color-text)" }}
+              >
                 {t("koereproeve.where.heading")}
               </h2>
-
-              <p style={{ color: "var(--color-text-secondary)" }}>
+              <p
+                className="text-lg leading-relaxed"
+                style={{ color: "var(--color-text-secondary)" }}
+              >
                 {t("koereproeve.where.step1")}
               </p>
             </div>
 
-            {/* Vertical image with taller aspect ratio */}
-            <div className="relative w-full" style={{ aspectRatio: "3 / 4", maxHeight: "480px" }}>
-              <div className="relative h-full rounded-2xl overflow-hidden">
-                <Image
-                  src={place_door}
-                  alt=""
-                  fill
-                  className="object-cover"
-                />
+            <div
+              className="relative w-full order-first lg:order-last"
+              style={{ aspectRatio: "3 / 4", maxHeight: "520px" }}
+            >
+              <div
+                className="relative h-full rounded-3xl overflow-hidden border-2 shadow-2xl"
+                style={{ borderColor: "var(--color-border)" }}
+              >
+                <Image src={place_door} alt="" fill className="object-cover" />
               </div>
+              <div
+                className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full opacity-10 -z-10"
+                style={{ backgroundColor: "var(--color-yellow)" }}
+              />
             </div>
-          </section>
+
+          </div>
         </div>
-      </div>
-    </>
+      </section>
+
+    </div>
   );
 }

@@ -4,8 +4,8 @@ import Michael_Lønbæk_img from "../../assets/Michael_Lønbæk.jpeg";
 import Anna_Marie_Lønbæk_img from "../../assets/gulbil_3.jpeg";
 
 const instructors = [
-  { name: "Anna Marie Lønbæk", exp: "29 år", img: Anna_Marie_Lønbæk_img },
-  { name: "Michael Lønbæk", exp: "39 år", img: Michael_Lønbæk_img },
+  { name: "Anna Marie Lønbæk", title: "lorem ipsum", exp: "29 år", img: Anna_Marie_Lønbæk_img },
+  { name: "Michael Lønbæk", title: "lorem ipsum", exp: "39 år", img: Michael_Lønbæk_img },
 ];
 
 const Instructors = () => {
@@ -36,18 +36,17 @@ const Instructors = () => {
         {/* Full-width two-panel layout */}
         <div className="flex flex-col md:flex-row w-full rounded-3xl overflow-hidden" style={{ minHeight: "520px" }}>
           {instructors.map((p, i) => (
-            <div key={i} className="group relative flex-1 overflow-hidden" style={{ minHeight: "400px" }}>
+            <div key={i} className=" relative flex-1 overflow-hidden" style={{ minHeight: "400px" }}>
               <Image
                 src={p.img}
                 alt={p.name}
                 fill
                 sizes="50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover"
               />
               {/* Dark overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-              {/* Divider line between panels */}
               {i === 0 && (
                 <div
                   className="hidden md:block absolute top-0 right-0 w-px h-full z-10"
@@ -61,6 +60,7 @@ const Instructors = () => {
                   {p.exp} erfaring
                 </p>
                 <h3 className="text-2xl font-bold text-white leading-tight">{p.name}</h3>
+                <p className="text-lg font-semibold text-white/40">{p.title}</p>
               </div>
             </div>
           ))}

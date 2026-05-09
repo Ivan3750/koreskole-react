@@ -5,7 +5,15 @@ import FAQ from "../../../components/FAQ";
 import gulbil from "@/app/assets/gulbil_2.jpeg";
 import en from "../../../i18n/locales/en/translation.json";
 import da from "../../../i18n/locales/da/translation.json";
-import { buildAlternates, buildOpenGraph, robots, type Locale } from "@/app/lib/seo";
+import {
+  buildAlternates,
+  buildOpenGraph,
+  robots,
+  type Locale,
+} from "@/app/lib/seo";
+import TheoryTransitionSection from "@/app/components/teori/TheoryTransitionSection";
+import TheoryPracticeSection from "@/app/components/teori/TheoryPracticeSection";
+import TheoryMistakesSection from "@/app/components/teori/TheoryMistakesSection";
 
 const translations: Record<Locale, any> = { en, da };
 const PATH = "koerekort-b/teoriproeve";
@@ -51,7 +59,10 @@ export default async function Teoriproeve({
         image={gulbil}
         position="0px -450px"
       />
+      <TheoryPracticeSection />
+      <TheoryMistakesSection />
       <TeoriproevePage />
+      <TheoryTransitionSection />
       <FAQ />
     </>
   );

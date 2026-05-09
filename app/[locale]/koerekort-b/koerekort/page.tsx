@@ -9,6 +9,8 @@ import gulbil from "@/app/assets/gulbil_2.jpeg";
 import en from "../../../i18n/locales/en/translation.json";
 import da from "../../../i18n/locales/da/translation.json";
 import { buildAlternates, buildOpenGraph, robots, type Locale } from "@/app/lib/seo";
+import GearSection from "@/app/components/GearSection";
+import LicenseCodesSection from "@/app/components/LicenseCodesSection";
 
 const translations: Record<Locale, any> = { en, da };
 const PATH = "koerekort-b/koerekort";
@@ -56,6 +58,8 @@ export default async function Koerekort({
       <Info />
       <HoldStart />
       <PassStrategySection />
+      <GearSection/>
+       <LicenseCodesSection/>
       <FAQ />
       <Contact />
     </>

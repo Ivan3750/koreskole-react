@@ -96,7 +96,6 @@ const NavButton = ({
   </button>
 );
 
-// ─── Main Component ───────────────────────────────────────────────────────────
 
 const Testimonials = () => {
   const { t, i18n } = useTranslation();
@@ -128,13 +127,11 @@ const Testimonials = () => {
   const prev = useCallback(() => goTo((active - 1 + total) % total, "right"), [active, total, goTo]);
   const next = useCallback(() => goTo((active + 1) % total, "left"), [active, total, goTo]);
 
-  // Autoplay - resets on every slide change
   useEffect(() => {
     const id = setTimeout(next, AUTOPLAY_MS);
     return () => clearTimeout(id);
   }, [active, next]);
 
-  // Keyboard navigation
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") prev();
@@ -144,7 +141,6 @@ const Testimonials = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, [prev, next]);
 
-  // Pointer swipe (mouse + touch via pointer events)
   const onPointerDown = (e: React.PointerEvent) => { dragStartX.current = e.clientX; };
   const onPointerUp = (e: React.PointerEvent) => {
     if (dragStartX.current === null) return;
@@ -157,21 +153,21 @@ const Testimonials = () => {
     <section className="py-20 overflow-hidden" style={{ backgroundColor: "var(--color-bg-layout)" }}>
       <div className="max-w-5xl mx-auto px-6">
 
-        {/* Header */}
         <div className="text-center max-w-xl mx-auto mb-12">
           <span
-            className="font-semibold text-xs uppercase tracking-widest"
-            style={{ color: "var(--color-yellow)" }}
+    className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4"
+            style={{ color: "var(--color-yellow)", backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)" }}
           >
             {t("testimonials.label")}
           </span>
           <h2
-            className="font-display text-2xl md:text-3xl font-bold mt-2 mb-3"
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
             style={{ color: "var(--color-text)" }}
           >
             {t("testimonials.title")}
           </h2>
-          <p className="normal-text text-sm">{t("testimonials.subtitle")}</p>
+                    <p className="text-lg leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+{t("testimonials.subtitle")}</p>
         </div>
 
         {/* Carousel */}
@@ -200,7 +196,6 @@ const Testimonials = () => {
                   }}
                   onClick={() => !isActive && (offset > 0 ? next() : prev())}
                 >
-                  {/* Decorative quote mark */}
                   <span
                     className="absolute top-3 right-4 text-5xl font-serif leading-none opacity-[0.08] pointer-events-none"
                     style={{ color: "var(--color-yellow)" }}
