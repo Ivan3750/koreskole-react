@@ -10,10 +10,10 @@ const AboutIntro = () => {
 
   return (
     <section
-      className="py-20 md:py-28 lg:py-40 max-w-7xl mx-auto"
+      className="py-20 md:py-28 lg:py-40 "
       style={{ backgroundColor: "var(--color-bg)" }}
     >
-      <div className="px-6">
+      <div className="px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           {/* TEXT */}

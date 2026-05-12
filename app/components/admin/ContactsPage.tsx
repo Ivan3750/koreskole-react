@@ -77,11 +77,9 @@ export default function ContactsPage() {
     <div className="w-full space-y-6">
       <div>
         <h2 className="text-3xl font-semibold" style={{ color: "var(--color-text)" }}>
-          Contact Settings
-        </h2>
+    Kontaktindstillinger        </h2>
         <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
-          Manage how users can contact you
-        </p>
+          Administrer, hvordan brugerne kan kontakte dig        </p>
       </div>
 
       <div
@@ -146,7 +144,7 @@ export default function ContactsPage() {
             onMouseOver={(e) => (e.currentTarget.style.background = "var(--color-primary-hover)")}
             onMouseOut={(e)  => (e.currentTarget.style.background = "var(--color-primary)")}
           >
-            {status === "saving" ? "Saving..." : "Save"}
+            {status === "saving" ? "Gemmer..." : "Gem"}
           </button>
 
           <button
@@ -158,7 +156,7 @@ export default function ContactsPage() {
               background: "var(--color-bg)",
             }}
           >
-            Cancel
+            Annuller
           </button>
         </div>
       </div>

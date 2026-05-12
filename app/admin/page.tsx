@@ -47,9 +47,9 @@ export default function AdminPage() {
     );
   }
 
-  /* if (!loggedIn) {
+  if (!loggedIn) {
     return <LoginPage onLogin={() => setLoggedIn(true)} />;
-  } */
+  }
 
   const pageLabels: Record<Page, string> = {
     courses: "Kurser",

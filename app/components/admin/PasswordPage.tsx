@@ -22,7 +22,7 @@ export default function PasswordPage() {
 
     if (newPassword.length < 8) {
       setStatus("error");
-      setMessage("New password must be at least 8 characters.");
+      setMessage("Den nye adgangskode skal bestå af mindst 8 tegn.");
       return;
     }
 
@@ -44,17 +44,17 @@ export default function PasswordPage() {
 
       if (!res.ok) {
         setStatus("error");
-        setMessage(data.error ?? "Could not update password.");
+        setMessage(data.error ?? "Det var ikke muligt at opdatere adgangskoden.");
         return;
       }
 
       setStatus("success");
-      setMessage("Password updated successfully.");
+      setMessage("Adgangskode opdateret succesfuldt.");
       setOldPassword("");
       setNewPassword("");
     } catch {
       setStatus("error");
-      setMessage("Server error - try again.");
+      setMessage("Serverfejl - prøv igen.");
     }
   };
 
@@ -69,10 +69,10 @@ export default function PasswordPage() {
     <div className="w-full space-y-6">
       <div>
         <h2 className="text-3xl font-semibold" style={{ color: "var(--color-text)" }}>
-          Change Password
+          Skift adgangskode
         </h2>
         <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
-          Update your account password securely
+          Opdatér din adgangskode sikkert
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export default function PasswordPage() {
       >
         <div className="space-y-1">
           <label className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-            Current password
+            Nuværende adgangskode
           </label>
           <input
             type="password"
@@ -102,7 +102,7 @@ export default function PasswordPage() {
 
         <div className="space-y-1">
           <label className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-            New password
+            Ny adgangskode
           </label>
           <input
             type="password"
@@ -140,7 +140,7 @@ export default function PasswordPage() {
             onMouseOver={(e) => (e.currentTarget.style.background = "var(--color-primary-hover)")}
             onMouseOut={(e)  => (e.currentTarget.style.background = "var(--color-primary)")}
           >
-            {status === "saving" ? "Updating..." : "Update password"}
+            {status === "saving" ? "Opdaterer..." : "Opdater adgangskode"}
           </button>
 
           <button
@@ -152,7 +152,7 @@ export default function PasswordPage() {
               background: "var(--color-bg)",
             }}
           >
-            Cancel
+            Annuller
           </button>
         </div>
       </div>

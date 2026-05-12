@@ -140,10 +140,10 @@ const features = t(`${translationKey}.features`, {
 
 const Instructors = () => {
   return (
-    <section className="py-24 max-w-6xl m-auto"
+    <section className="py-24"
       style={{ backgroundColor: "var(--color-bg)" }}
     >
-      <div className="container mx-auto px-6 space-y-32">
+      <div className="container mx-auto px-6 space-y-32  max-w-7xl m-auto">
 
         <InstructorCard
           image={AnnaImg.src}

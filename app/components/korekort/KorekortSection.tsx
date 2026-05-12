@@ -69,13 +69,7 @@ export default function KorekortSection() {
             </Link> */}
             <Button locale={"da"} label={t("meet.cta.book")}></Button>
 
-            <Link
-              href={withLocale("/koerekort-b/forloeb/")}
-              className="px-8 py-4 rounded-xl border"
-              style={{ borderColor: "var(--color-border)" }}
-            >
-              {t("meet.cta.see")}
-            </Link>
+          
           </div>
         </div>
 

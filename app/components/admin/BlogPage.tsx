@@ -1,11 +1,6 @@
 "use client";
 
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  useCallback,
-} from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
 import { useEditor, EditorContent } from "@tiptap/react";
 
@@ -251,11 +246,7 @@ export default function BlogPage() {
 
       fetchBlogs();
     } catch (e: unknown) {
-      setError(
-        e instanceof Error
-          ? e.message
-          : "Save failed"
-      );
+      setError(e instanceof Error ? e.message : "Save failed");
     } finally {
       setSaving(false);
     }
@@ -270,16 +261,13 @@ export default function BlogPage() {
     setError(null);
 
     try {
-      const res = await fetch(
-        `${BASE_URL}/blog.php?id=${form.id}`,
-        {
-          method: "DELETE",
-          credentials: "include",
-          headers: {
-            "X-CSRF-TOKEN": csrf,
-          },
-        }
-      );
+      const res = await fetch(`${BASE_URL}/blog.php?id=${form.id}`, {
+        method: "DELETE",
+        credentials: "include",
+        headers: {
+          "X-CSRF-TOKEN": csrf,
+        },
+      });
 
       const d = await res.json();
 
@@ -291,11 +279,7 @@ export default function BlogPage() {
 
       fetchBlogs();
     } catch (e: unknown) {
-      setError(
-        e instanceof Error
-          ? e.message
-          : "Delete failed"
-      );
+      setError(e instanceof Error ? e.message : "Delete failed");
     } finally {
       setDeleting(false);
     }
@@ -313,9 +297,7 @@ export default function BlogPage() {
     }
   };
 
-  const insertImageByFile = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const insertImageByFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
 
     if (!file) return;
@@ -340,10 +322,10 @@ export default function BlogPage() {
   const coverPreview = form.imageFile
     ? URL.createObjectURL(form.imageFile)
     : form.imageUrl
-    ? form.imageUrl.startsWith("/")
-      ? `${BASE_URL}${form.imageUrl}`
-      : form.imageUrl
-    : null;
+      ? form.imageUrl.startsWith("/")
+        ? `${BASE_URL}${form.imageUrl}`
+        : form.imageUrl
+      : null;
 
   if (!mounted) return null;
 
@@ -424,24 +406,19 @@ export default function BlogPage() {
           <div
             className="rounded-2xl p-5 space-y-4"
             style={{
-              backgroundColor:
-                "var(--color-bg-elevated)",
+              backgroundColor: "var(--color-bg-elevated)",
 
-              border:
-                "1px solid var(--color-border)",
+              border: "1px solid var(--color-border)",
             }}
           >
             <div className="flex justify-between items-center">
-              <h2 className="font-semibold text-lg">
-                Posts
-              </h2>
+              <h2 className="font-semibold text-lg">Posts</h2>
 
               <button
                 onClick={reset}
                 className="px-4 py-2 rounded-xl text-sm font-medium transition"
                 style={{
-                  backgroundColor:
-                    "var(--color-primary)",
+                  backgroundColor: "var(--color-primary)",
                   color: "#111111",
                 }}
               >
@@ -454,11 +431,10 @@ export default function BlogPage() {
                 <p
                   className="text-sm"
                   style={{
-                    color:
-                      "var(--color-text-secondary)",
+                    color: "var(--color-text-secondary)",
                   }}
                 >
-                  No posts yet
+                  ikke fundet nogen posts.
                 </p>
               )}
 
@@ -490,9 +466,7 @@ export default function BlogPage() {
                     />
                   )}
 
-                  <div className="font-medium text-sm">
-                    {b.title}
-                  </div>
+                  <div className="font-medium text-sm">{b.title}</div>
                 </div>
               ))}
             </div>
@@ -504,11 +478,9 @@ export default function BlogPage() {
             <div
               className="px-4 py-3 rounded-2xl"
               style={{
-                backgroundColor:
-                  "rgba(239,68,68,0.12)",
+                backgroundColor: "rgba(239,68,68,0.12)",
 
-                border:
-                  "1px solid rgba(239,68,68,0.2)",
+                border: "1px solid rgba(239,68,68,0.2)",
 
                 color: "var(--color-danger)",
               }}
@@ -535,27 +507,24 @@ export default function BlogPage() {
           <div
             className="p-6 rounded-2xl space-y-4"
             style={{
-              backgroundColor:
-                "var(--color-bg-elevated)",
+              backgroundColor: "var(--color-bg-elevated)",
 
-              border:
-                "1px solid var(--color-border)",
+              border: "1px solid var(--color-border)",
             }}
           >
             <div
               className="text-sm font-medium"
               style={{
-                color:
-                  "var(--color-text-secondary)",
+                color: "var(--color-text-secondary)",
               }}
             >
-              Cover Image
+              Forsidebillede
             </div>
 
             <div className="flex gap-3 flex-wrap">
               <input
                 type="text"
-                placeholder="Paste image URL..."
+                placeholder="Indsæt billedets URL..."
                 value={form.imageUrl}
                 onChange={(e) =>
                   setForm((p) => ({
@@ -566,13 +535,11 @@ export default function BlogPage() {
                 }
                 className="flex-1 px-4 py-3 rounded-xl outline-none"
                 style={{
-                  backgroundColor:
-                    "var(--color-input-bg)",
+                  backgroundColor: "var(--color-input-bg)",
 
                   color: "var(--color-text)",
 
-                  border:
-                    "1px solid var(--color-border)",
+                  border: "1px solid var(--color-border)",
                 }}
               />
 
@@ -581,14 +548,12 @@ export default function BlogPage() {
                 style={{
                   backgroundColor: "var(--color-bg)",
 
-                  border:
-                    "1px solid var(--color-border)",
+                  border: "1px solid var(--color-border)",
 
                   color: "var(--color-text)",
                 }}
               >
                 Upload
-
                 <input
                   type="file"
                   className="hidden"
@@ -596,8 +561,7 @@ export default function BlogPage() {
                   onChange={(e) =>
                     setForm((p) => ({
                       ...p,
-                      imageFile:
-                        e.target.files?.[0] ?? null,
+                      imageFile: e.target.files?.[0] ?? null,
                       imageUrl: "",
                     }))
                   }
@@ -616,49 +580,29 @@ export default function BlogPage() {
           <div
             className="sticky top-4 z-10 rounded-2xl p-3 flex flex-wrap gap-2"
             style={{
-              backgroundColor:
-                "var(--color-bg-elevated)",
+              backgroundColor: "var(--color-bg-elevated)",
 
-              border:
-                "1px solid var(--color-border)",
+              border: "1px solid var(--color-border)",
 
               backdropFilter: "blur(10px)",
             }}
           >
             <Btn
-              onClick={() =>
-                editor
-                  ?.chain()
-                  .focus()
-                  .toggleBold()
-                  .run()
-              }
+              onClick={() => editor?.chain().focus().toggleBold().run()}
               active={editor?.isActive("bold")}
             >
               B
             </Btn>
 
             <Btn
-              onClick={() =>
-                editor
-                  ?.chain()
-                  .focus()
-                  .toggleItalic()
-                  .run()
-              }
+              onClick={() => editor?.chain().focus().toggleItalic().run()}
               active={editor?.isActive("italic")}
             >
               I
             </Btn>
 
             <Btn
-              onClick={() =>
-                editor
-                  ?.chain()
-                  .focus()
-                  .toggleStrike()
-                  .run()
-              }
+              onClick={() => editor?.chain().focus().toggleStrike().run()}
               active={editor?.isActive("strike")}
             >
               S
@@ -697,56 +641,30 @@ export default function BlogPage() {
             <SEP />
 
             <Btn
-              onClick={() =>
-                editor
-                  ?.chain()
-                  .focus()
-                  .toggleBulletList()
-                  .run()
-              }
+              onClick={() => editor?.chain().focus().toggleBulletList().run()}
             >
               •
             </Btn>
 
             <Btn
-              onClick={() =>
-                editor
-                  ?.chain()
-                  .focus()
-                  .toggleOrderedList()
-                  .run()
-              }
+              onClick={() => editor?.chain().focus().toggleOrderedList().run()}
             >
               1.
             </Btn>
 
             <SEP />
 
-            <Btn
-              onClick={() =>
-                editor?.chain().focus().undo().run()
-              }
-            >
-              ↩
-            </Btn>
+            <Btn onClick={() => editor?.chain().focus().undo().run()}>↩</Btn>
 
-            <Btn
-              onClick={() =>
-                editor?.chain().focus().redo().run()
-              }
-            >
-              ↪
-            </Btn>
+            <Btn onClick={() => editor?.chain().focus().redo().run()}>↪</Btn>
           </div>
 
           <div
             className="rounded-2xl overflow-hidden"
             style={{
-              backgroundColor:
-                "var(--color-bg-elevated)",
+              backgroundColor: "var(--color-bg-elevated)",
 
-              border:
-                "1px solid var(--color-border)",
+              border: "1px solid var(--color-border)",
             }}
           >
             <EditorContent editor={editor} />
@@ -758,32 +676,25 @@ export default function BlogPage() {
               disabled={saving}
               className="px-6 py-3 rounded-xl font-semibold transition disabled:opacity-50"
               style={{
-                backgroundColor:
-                  "var(--color-primary)",
+                backgroundColor: "var(--color-primary)",
                 color: "#111111",
               }}
             >
-              {saving
-                ? "Saving..."
-                : form.id
-                ? "Update"
-                : "Publish"}
+              {saving ? "Gemmer..." : form.id ? "Update" : "Publish"}
             </button>
 
             <button
               onClick={reset}
               className="px-6 py-3 rounded-xl transition"
               style={{
-                backgroundColor:
-                  "var(--color-bg-elevated)",
+                backgroundColor: "var(--color-bg-elevated)",
 
-                border:
-                  "1px solid var(--color-border)",
+                border: "1px solid var(--color-border)",
 
                 color: "var(--color-text)",
               }}
             >
-              Cancel
+              Annuller
             </button>
 
             {form.id && (
@@ -792,18 +703,14 @@ export default function BlogPage() {
                 disabled={deleting}
                 className="ml-auto px-6 py-3 rounded-xl transition"
                 style={{
-                  backgroundColor:
-                    "rgba(239,68,68,0.12)",
+                  backgroundColor: "rgba(239,68,68,0.12)",
 
-                  border:
-                    "1px solid rgba(239,68,68,0.2)",
+                  border: "1px solid rgba(239,68,68,0.2)",
 
                   color: "var(--color-danger)",
                 }}
               >
-                {deleting
-                  ? "Deleting..."
-                  : "Delete"}
+                {deleting ? "Deleting..." : "Delete"}
               </button>
             )}
           </div>
@@ -811,35 +718,23 @@ export default function BlogPage() {
           <div
             className="rounded-2xl p-6 space-y-5"
             style={{
-              backgroundColor:
-                "var(--color-bg-elevated)",
+              backgroundColor: "var(--color-bg-elevated)",
 
-              border:
-                "1px solid var(--color-border)",
+              border: "1px solid var(--color-border)",
             }}
           >
             <div
               className="text-sm"
               style={{
-                color:
-                  "var(--color-text-secondary)",
+                color: "var(--color-text-secondary)",
               }}
             >
-              Preview
+              Forhåndsvisning
             </div>
 
-            {form.title && (
-              <h1 className="text-4xl font-bold">
-                {form.title}
-              </h1>
-            )}
+            {form.title && <h1 className="text-4xl font-bold">{form.title}</h1>}
 
-            {coverPreview && (
-              <img
-                src={coverPreview}
-                className="rounded-2xl"
-              />
-            )}
+            {coverPreview && <img src={coverPreview} className="rounded-2xl" />}
 
             <div
               className="prose max-w-none"
