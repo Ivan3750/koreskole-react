@@ -113,43 +113,57 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-24 max-w-6xl m-auto" style={{ background: "var(--color-bg)" }}>
-      
+    <section className="py-24 " style={{ background: "var(--color-bg)" }}>
       <Modal open={modal} onClose={() => setModal(false)} />
 
-      <div className="container mx-auto px-6">
-
+      <div className="container mx-auto px-6 max-w-6xl ">
         <div className="grid lg:grid-cols-2 gap-16">
-
-      
-          <div
-           
-          >
-            <span className="text-sm uppercase font-semibold" style={{ color: "var(--color-yellow)" }}>
+          <div>
+            <span
+              className="text-sm uppercase font-semibold"
+              style={{ color: "var(--color-yellow)" }}
+            >
               {t("contact.label")}
             </span>
 
-            <h2 className="text-4xl font-bold mt-2 mb-6" style={{ color: "var(--color-text)" }}>
+            <h2
+              className="text-4xl font-bold mt-2 mb-6"
+              style={{ color: "var(--color-text)" }}
+            >
               {t("contact.heading")}
             </h2>
 
-            <p className="mb-10" style={{ color: "var(--color-text-secondary)" }}>
+            <p
+              className="mb-10"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
               {t("contact.description")}
             </p>
 
             <div className="space-y-6">
               {contactInfo.map((item, i) => (
                 <a key={i} href={item.href} className="flex gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-xl"
-                    style={{ background: "var(--color-yellow-bg)" }}>
-                    <item.icon className="w-5 h-5" style={{ color: "var(--color-yellow)" }} />
+                  <div
+                    className="w-12 h-12 flex items-center justify-center rounded-xl"
+                    style={{ background: "var(--color-yellow-bg)" }}
+                  >
+                    <item.icon
+                      className="w-5 h-5"
+                      style={{ color: "var(--color-yellow)" }}
+                    />
                   </div>
 
                   <div>
-                    <div className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                    <div
+                      className="text-sm"
+                      style={{ color: "var(--color-text-secondary)" }}
+                    >
                       {item.label}
                     </div>
-                    <div className="font-semibold whitespace-pre-line" style={{ color: "var(--color-text)" }}>
+                    <div
+                      className="font-semibold whitespace-pre-line"
+                      style={{ color: "var(--color-text)" }}
+                    >
                       {item.value}
                     </div>
                   </div>
@@ -160,12 +174,19 @@ const Contact = () => {
 
           <form
             onSubmit={handleSubmit}
-            
             className="space-y-6 p-10 rounded-3xl "
-            style={{ background: "var(--color-bg-elevated)", borderColor: "var(--color-border)" }}
+            style={{
+              background: "var(--color-bg-elevated)",
+              borderColor: "var(--color-border)",
+            }}
           >
-
-<label className="block mb-2 font-semibold" style={{ color: "var(--color-text)" }} > {t("contact_page.nameLabel")} </label>
+            <label
+              className="block mb-2 font-semibold"
+              style={{ color: "var(--color-text)" }}
+            >
+              {" "}
+              {t("contact_page.nameLabel")}{" "}
+            </label>
             <input
               name="name"
               value={formData.name}
@@ -174,7 +195,13 @@ const Contact = () => {
               className="w-full p-4 rounded-xl border"
               required
             />
-<label className="block mb-2 font-semibold" style={{ color: "var(--color-text)" }} > {t("contact_page.emailLabel")} </label>
+            <label
+              className="block mb-2 font-semibold"
+              style={{ color: "var(--color-text)" }}
+            >
+              {" "}
+              {t("contact_page.emailLabel")}{" "}
+            </label>
             <input
               name="email"
               value={formData.email}
@@ -183,14 +210,19 @@ const Contact = () => {
               className="w-full p-4 rounded-xl border"
               required
             />
-<label className="block mb-2 font-semibold" style={{ color: "var(--color-text)" }} > {t("contact_page.messageLabel")} </label>
+            <label
+              className="block mb-2 font-semibold"
+              style={{ color: "var(--color-text)" }}
+            >
+              {" "}
+              {t("contact_page.messageLabel")}{" "}
+            </label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
               placeholder="Message"
               className="w-full p-4 rounded-xl border h-40"
-               
             />
 
             <button
@@ -201,12 +233,10 @@ const Contact = () => {
             >
               {loading ? <Spinner /> : "Send"}
             </button>
-
           </form>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 mt-20">
-
           <div className="h-80 rounded-2xl overflow-hidden ">
             <iframe
               src="https://maps.google.com/?q=Lønbæks+Køreskole+Vejle&output=embed"
@@ -215,31 +245,37 @@ const Contact = () => {
             />
           </div>
 
-          <div className="p-6 rounded-2xl  flex flex-col justify-around"             style={{ background: "var(--color-bg-elevated)", borderColor: "var(--color-border)" }}
->
+          <div
+            className="p-6 rounded-2xl  flex flex-col justify-around"
+            style={{
+              background: "var(--color-bg-elevated)",
+              borderColor: "var(--color-border)",
+            }}
+          >
             <div className="flex items-center gap-2 mb-4">
-              <Clock className="w-5 h-5" style={{ color: "var(--color-yellow)" }} />
+              <Clock
+                className="w-5 h-5"
+                style={{ color: "var(--color-yellow)" }}
+              />
               <h3 className="font-semibold">{t("contact.hoursTitle")}</h3>
             </div>
 
             <div className="text-sm space-y-3">
               <div className="flex justify-between">
-                <span>Teori</span>
+                <span>{t("contact.hoursLabel.theory")}</span>
                 <span>{t("contact.hours.theory")}</span>
               </div>
               <div className="flex justify-between">
-                <span>Kørsel</span>
+                <span>{t("contact.hoursLabel.driving")}</span>
                 <span>{t("contact.hours.driving")}</span>
               </div>
               <div className="flex justify-between">
-                <span>Telefon</span>
+                <span>{t("contact.hoursLabel.phone")}</span>
                 <span>{t("contact.hours.phone")}</span>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );

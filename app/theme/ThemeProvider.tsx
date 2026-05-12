@@ -38,7 +38,19 @@ const ThemeProvider: React.FC<Props> = ({
       root.style.setProperty("--color-text-secondary", "#A6A6A6");
 
       root.style.setProperty("--color-border", "rgba(255,255,255,0.08)");
+
+      root.style.setProperty("--color-input-bg", "#262626");
+      root.style.setProperty("--color-hover", "#2f2f2f");
+
+      root.style.setProperty("--color-table-head", "#262626");
+      root.style.setProperty("--color-danger", "#ef4444");
+   
+  root.style.setProperty("--picker-filter", "invert(1)");
+ 
+ 
     } else {
+        root.style.setProperty("--picker-filter", "invert(0)");
+
       root.style.setProperty("--color-bg", "#FFFFFF");
       root.style.setProperty("--color-bg-layout", "#F5F5F5");
       root.style.setProperty("--color-bg-elevated", "#FAFAFA");
@@ -47,6 +59,12 @@ const ThemeProvider: React.FC<Props> = ({
       root.style.setProperty("--color-text-secondary", "#666666");
 
       root.style.setProperty("--color-border", "rgba(0,0,0,0.06)");
+
+      root.style.setProperty("--color-input-bg", "#FFFFFF");
+      root.style.setProperty("--color-hover", "#f3f4f6");
+
+      root.style.setProperty("--color-table-head", "#f3f4f6");
+      root.style.setProperty("--color-danger", "#dc2626");
     }
 
     [
@@ -71,6 +89,11 @@ const ThemeProvider: React.FC<Props> = ({
       root.style.setProperty("--color-yellow-bg", "#FFF6DB");
       root.style.setProperty("--color-yellow-border", "#F5D98C");
     }
+
+    document.body.style.backgroundColor = "var(--color-bg-layout)";
+    document.body.style.color = "var(--color-text)";
+    document.body.style.transition =
+      "background 0.2s ease, color 0.2s ease";
   }, [themeMode, fontFamily]);
 
   return <>{children}</>;

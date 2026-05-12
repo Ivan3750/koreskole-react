@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 
-import { BASE_URL } from "@/app/lib/api"
-
+import { BASE_URL } from "@/app/lib/api";
 
 export default function LoginPage({ onLogin }: { onLogin: () => void }) {
   const [name, setName] = useState("");
@@ -42,7 +41,6 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
       }
 
       onLogin();
-
     } catch (e) {
       setError("Serverfejl - prøv igen");
     }
@@ -51,10 +49,20 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
   };
 
   return (
-    <div className="flex h-screen items-center justify-center bg-gray-100">
-      <div className="w-96 bg-white p-8 rounded-xl shadow">
-
-        <h1 className="text-2xl font-bold mb-6">Admin Login</h1>
+    <div
+      className="flex h-screen items-center justify-center bg-gray-100"
+      style={{ backgroundColor: "var(--color-bg)" }}
+    >
+      <div
+        className="w-96 bg-white p-8 rounded-xl shadow"
+        style={{ backgroundColor: "var(--color-bg-elevated)" }}
+      >
+        <h1
+          className="text-2xl font-bold mb-6"
+          style={{ color: "var(--color-text)" }}
+        >
+          Admin Login
+        </h1>
 
         <input
           className="w-full border p-3 mb-3 rounded"
@@ -73,9 +81,7 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
           onKeyDown={(e) => e.key === "Enter" && login()}
         />
 
-        {error && (
-          <p className="text-red-500 mb-3">{error}</p>
-        )}
+        {error && <p className="text-red-500 mb-3">{error}</p>}
 
         <button
           onClick={login}
@@ -84,7 +90,6 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
         >
           {loading ? "Logger ind..." : "Log ind"}
         </button>
-
       </div>
     </div>
   );

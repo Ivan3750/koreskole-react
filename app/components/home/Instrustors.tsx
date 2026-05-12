@@ -2,34 +2,34 @@
 import Image from "next/image";
 import Michael_Lønbæk_img from "../../assets/Michael_Lønbæk.jpeg";
 import Anna_Marie_Lønbæk_img from "../../assets/gulbil_3.jpeg";
+import { useTranslation } from "react-i18next";
 
 const instructors = [
-  { name: "Anna Marie Lønbæk", title: "lorem ipsum", exp: "29 år", img: Anna_Marie_Lønbæk_img },
-  { name: "Michael Lønbæk", title: "lorem ipsum", exp: "39 år", img: Michael_Lønbæk_img },
+  { name: "Anna Marie Lønbæk", title: "lorem ipsum", exp: "29 ", img: Anna_Marie_Lønbæk_img },
+  { name: "Michael Lønbæk", title: "lorem ipsum", exp: "39 ", img: Michael_Lønbæk_img },
 ];
 
 const Instructors = () => {
+  const { t } = useTranslation();
   return (
     <section className="py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+         <div className="text-center max-w-3xl mx-auto mb-16">
           <span
             className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4"
             style={{ color: "var(--color-yellow)", backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)" }}
           >
-            Kørelærere
+             {t("instructorsBlock.label")}
           </span>
           <h2
             className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
             style={{ color: "var(--color-text)" }}
           >
-            Mød vores kørelærere
+             {t("instructorsBlock.heading")}
           </h2>
           <p className="text-lg leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-            Vores kørelærere er erfarne, tålmodige og dedikerede til at give dig
-            den bedst mulige undervisning.
+         {t("instructorsBlock.description")}
           </p>
         </div>
 
@@ -57,7 +57,7 @@ const Instructors = () => {
               {/* Name at bottom */}
               <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                 <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "var(--color-yellow)" }}>
-                  {p.exp} erfaring
+                  {p.exp}   {t("instructorsBlock.experience")}
                 </p>
                 <h3 className="text-2xl font-bold text-white leading-tight">{p.name}</h3>
                 <p className="text-lg font-semibold text-white/40">{p.title}</p>

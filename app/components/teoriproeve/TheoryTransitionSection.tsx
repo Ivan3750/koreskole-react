@@ -6,14 +6,10 @@ import "@/app/i18n";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
-const checklist = [
-  "Du har forstået vigepligt og placering i vejkryds",
-  "Du har genkendt og øvet situationsbilleder",
-  "Du har taget mindst 3 øveprøver uden tidspres",
-];
-
 const TheoryTransitionSection = () => {
   const { t } = useTranslation();
+
+  const checklist = t("theoryTransition.checklist", { returnObjects: true }) as string[];
 
   return (
     <section
@@ -27,6 +23,7 @@ const TheoryTransitionSection = () => {
         >
           <div className="grid lg:grid-cols-2">
 
+            {/* Left: checklist */}
             <div
               className="px-8 py-10 md:px-12 md:py-14"
               style={{ backgroundColor: "var(--color-bg)" }}
@@ -35,7 +32,7 @@ const TheoryTransitionSection = () => {
                 className="font-semibold text-sm uppercase tracking-widest mb-3"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                Tjek inden du booker prøven
+                {t("theoryTransition.checkLabel")}
               </p>
 
               <div className="space-y-4 mb-8">
@@ -57,6 +54,7 @@ const TheoryTransitionSection = () => {
                 ))}
               </div>
 
+              {/* Reminder box */}
               <div
                 className="rounded-2xl border-2 px-5 py-4"
                 style={{
@@ -64,13 +62,22 @@ const TheoryTransitionSection = () => {
                   backgroundColor: "rgba(var(--color-yellow-rgb), 0.03)",
                 }}
               >
-                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-                  <span className="font-semibold" style={{ color: "var(--color-text)" }}>Husk: </span>
-                  Du skal have bestået teoriprøven inden du kan booke din endelige køreprøve. Gyldigt i 18 måneder efter beståelse.
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  <span
+                    className="font-semibold"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    {t("theoryTransition.reminder.prefix")}
+                  </span>
+                  {t("theoryTransition.reminder.text")}
                 </p>
               </div>
             </div>
 
+            {/* Right: CTA */}
             <div
               className="px-8 py-10 md:px-12 md:py-14 border-t-2 lg:border-t-0 lg:border-l-2 flex flex-col justify-center"
               style={{
@@ -85,21 +92,21 @@ const TheoryTransitionSection = () => {
                   backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
                 }}
               >
-                Næste skridt
+                {t("theoryTransition.badge")}
               </span>
 
               <h2
                 className="font-display text-3xl md:text-4xl font-bold leading-tight mb-4"
                 style={{ color: "var(--color-text)" }}
               >
-                Bestået teorien?
+                {t("theoryTransition.title")}
               </h2>
 
               <p
                 className="text-lg leading-relaxed mb-8"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                Godt klaret. Nu begynder den praktiske del - og her gælder helt andre regler. Læs hvad du kan forvente til selve køreprøven i Vejle.
+                {t("theoryTransition.text")}
               </p>
 
               <Link
@@ -111,7 +118,7 @@ const TheoryTransitionSection = () => {
                   boxShadow: "0 4px 24px rgba(var(--color-yellow-rgb), 0.3)",
                 }}
               >
-                Læs om køreprøven
+                {t("theoryTransition.cta")}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

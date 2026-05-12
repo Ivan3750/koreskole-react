@@ -12,8 +12,8 @@ const Services = () => {
   const services = t("services.items", { returnObjects: true }) as any[];
 
   return (
-    <section className="py-24 max-w-6xl m-auto" style={{ backgroundColor: "var(--color-bg)" }}>
-      <div className="container mx-auto px-6">
+    <section className="py-24  m-auto" style={{ backgroundColor: "var(--color-bg)" }}>
+      <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="font-semibold text-sm uppercase tracking-wider" style={{ color: "var(--color-yellow)" }}>
             {t("services.label")}

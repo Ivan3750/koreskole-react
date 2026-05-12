@@ -12,6 +12,12 @@
     "about_paragraph2": "Vi har mange års erfaring i Vejle og lokalområdet og har hjulpet mange elever sikkert gennem deres kørekortforløb. Vores lokalkendskab og personlige vejledning giver dig de bedste forudsætninger for at bestå.",
     "about_paragraph3": "Bliv en sikker og selvsikker bilist med Lønbæks Køreskole i Vejle. Tilmeld dig i dag og start din køreuddannelse med det samme!"
   },
+  "instructorsBlock": {
+    "label": "Kørelærere",
+    "heading": "Mød dine kørelærere",
+    "description": "Vores kørelærere er erfarne, tålmodige og dedikerede til at give dig den bedst mulige undervisning.",
+    "experience": "år erfaring"
+  },
   "holdstart": {
     "title_label": "Holdstart",
     "heading": "Vælg dit hold",
@@ -139,6 +145,11 @@
       "theory": "Efter aftale",
       "driving": "Fleksible tider",
       "phone": "08:00 - 19:00"
+    },
+    "hoursLabel": {
+      "theory": "Teoriundervisning",
+      "driving": "Kørsel",
+      "phone": "Telefon"
     }
   },
   "footer": {
@@ -193,29 +204,89 @@
   },
   "prices": {
     "meeting": {
-      "badge": "Gratis informationsmøde",
-      "title": "Få overblik over hele kørekortforløbet",
-      "text": "Før du starter dit kørekortforløb inviterer vi dig til et gratis informationsmøde hvor vi gennemgår hele processen.",
-      "imageAlt": "Informationsmøde",
-      "cta": "Tilmeld informationsmøde",
+      "badge": "Gratis konsultation",
+      "title": "Book et møde på skolen",
+      "text": "Vi inviterer dig til et gratis og uforpligtende møde, hvor vi gennemgår dit barns behov og hvordan vi kan hjælpe. Sammen finder vi den rette løsning.",
+      "imageAlt": "Inden i skolen",
+      "studentQuote": {
+        "label": "Elev om mødet",
+        "text": "Jeg vidste ikke hvor jeg skulle starte. Efter mødet var alt klart."
+      },
+      "info": {
+        "duration": "Ca. 30 minutter",
+        "location": "På skolen",
+        "price": "Gratis"
+      },
+      "nextAvailable": {
+        "label": "Næste ledige møde:",
+        "value": "inden for 3 dage"
+      },
+      "cta": "Book et gratis møde",
       "features": [
-        { "title": "Gennemgang af forløbet", "text": "Vi forklarer hele processen fra teori til køreprøve." },
-        { "title": "Stil spørgsmål", "text": "Du kan spørge om undervisning, tidsplan og krav." },
-        { "title": "Mød kørelæreren", "text": "Du møder din kørelærer og får indblik i undervisningen." },
-        { "title": "Ingen forpligtelser", "text": "Informationsmødet er gratis og uforpligtende." }
+        {
+          "title": "Personlig vejledning",
+          "text": "Vi gennemgår dit barns situation og finder den rette vej frem sammen."
+        },
+        {
+          "title": "Ingen forpligtelser",
+          "text": "Mødet er helt gratis og du er ikke bundet til noget efterfølgende."
+        },
+        {
+          "title": "Konkret plan",
+          "text": "Du går derfra med et klart overblik over hvad de næste skridt ser ud."
+        },
+        {
+          "title": "Mød lærerne",
+          "text": "Lær de mennesker at kende, som kommer til at undervise dit barn."
+        }
       ]
-    },
-    "package": {
+ 
+  },
+   "package": {
+      "badge": "Dit forløb",
       "title": "Hvad indeholder lovpakken?",
-      "text": "Lovpakken indeholder alle obligatoriske elementer for kørekort i Danmark.",
-      "items": [
-        { "title": "Teoriundervisning", "text": "Grundig teori om trafikregler og sikker kørsel." },
-        { "title": "Kørelektioner", "text": "Praktisk undervisning i rigtig trafik." },
-        { "title": "Manøvrebane", "text": "Træning på lukket bane." },
-        { "title": "Køreteknisk kursus", "text": "Bremseøvelser m.m. på både tør og glat vej." },
-        { "title": "Teoriprøve", "text": "Forberedelse til den officielle teoriprøve." },
-        { "title": "Køreprøve", "text": "Den afsluttende praktiske prøve." }
-      ]
+      "text": "Alt hvad du har brug for fra start til køreprøven – samlet i én pakke.",
+      "headers": {
+        "included": "Hvad er inkluderet",
+        "amount": "Mængde"
+      },
+      "itemsData": {
+        "theory": {
+          "title": "Teori",
+          "description": "Ubegrænset undervisning indtil du er klar til teoriprøven.",
+          "detail": "Ubegrænset"
+        },
+        "manovre": {
+          "title": "Manøvrebane",
+          "description": "Kørsel på manøvrebane (kravlegården) til grundlæggende køreteknik.",
+          "detail": "4 lektioner"
+        },
+        "lessons": {
+          "title": "Kørelektioner",
+          "description": "Praktiske kørelektioner af 45 minutters varighed med godkendt kørelærer.",
+          "detail": "16 lektioner"
+        },
+        "snow": {
+          "title": "Køreteknisk anlæg",
+          "description": "Lektioner på glatbanen - træn kontrol i kritiske situationer.",
+          "detail": "4 lektioner"
+        },
+        "car": {
+          "title": "Leje af skolevogn",
+          "description": "Brug af skolevogn til selve køreprøven er inkluderet.",
+          "detail": "Inkluderet"
+        },
+        "theoryFee": {
+          "title": "Teoriprøvegebyr",
+          "description": "Administrationsgebyr til bestilling af din teoriprøve.",
+          "detail": "Inkluderet"
+        },
+        "application": {
+          "title": "Kørekortansøgning",
+          "description": "Behandling af din kørekortansøgning hos Borgerservice.",
+          "detail": "Inkluderet"
+        }
+      }
     },
     "recovery": {
       "badge": "Generhvervelse",
@@ -227,12 +298,7 @@
         "Praktiske kørelektioner",
         "Hjælp gennem hele processen"
       ]
-    },
-    "cta": {
-      "title": "Klar til at starte dit kørekort?",
-      "text": "Tilmeld dig vores gratis informationsmøde.",
-      "button": "Book informationsmøde"
-    }
+    } 
   },
   "info": {
     "badge": "Kørekort Guide",
@@ -570,5 +636,295 @@
       { "name": "Clara Jensen", "age": 21, "text": "Kørelærerne er meget tålmodige og giver altid gode tips. Jeg anbefaler denne skole til alle, der vil lære at køre trygt.", "rating": 5 },
       { "name": "Leonard Bahro", "age": 23, "text": "Fantastisk personale og gode biler til undervisning. Jeg bestod uden problemer og følte mig altid sikker under lektionerne.", "rating": 5 }
     ]
+  },
+  "gear": {
+    "badge": "Bil & Gear",
+    "title": "Manuel eller automatgear?",
+    "description": "Begge valg har fordele. Her er en direkte sammenligning — så du selv kan se hvad der passer til din situation.",
+    "tableHeaders": {
+      "topic": "Hvad sammenligner vi",
+      "manual": "Manuelt gear",
+      "auto": "Automatgear"
+    },
+    "rows": [
+      {
+        "topic": "Nem at lære",
+        "manual": {
+          "value": "Sværere",
+          "note": "Kobling og gearskift kræver tilvænning"
+        },
+        "auto": {
+          "value": "Lettere",
+          "note": "Ingen kobling — mere fokus på trafikken"
+        }
+      },
+      {
+        "topic": "Hvilke biler du må køre",
+        "manual": {
+          "value": "Alle biler",
+          "note": "Manuel og automatisk"
+        },
+        "auto": {
+          "value": "Kun automatbiler",
+          "note": "Med mindre du tager kode 148 bagefter"
+        }
+      },
+      {
+        "topic": "Passer til fremtiden",
+        "manual": {
+          "value": "Delvist",
+          "note": "Færre nye biler er manuelle"
+        },
+        "auto": {
+          "value": "Ja",
+          "note": "El- og hybridbiler er altid automatiske"
+        }
+      },
+      {
+        "topic": "Tid til at bestå",
+        "manual": {
+          "value": "Længere forløb",
+          "note": "Flere ting at mestre på én gang"
+        },
+        "auto": {
+          "value": "Kortere forløb",
+          "note": "Typisk hurtigere beståelse"
+        }
+      },
+      {
+        "topic": "Køre brugte biler",
+        "manual": {
+          "value": "Stort udvalg",
+          "note": "Mange billige brugte biler er manuelle"
+        },
+        "auto": {
+          "value": "Mindre udvalg",
+          "note": "Brugte automatbiler er oftest dyrere"
+        }
+      }
+    ],
+    "choosers": [
+      {
+        "type": "Manuel",
+        "fits": [
+          "Du vil have frihed til at køre alle biler",
+          "Du overvejer at købe en ældre manuel bil",
+          "Du kan godt lide at have fuld kontrol over køretøjet"
+        ]
+      },
+      {
+        "type": "Automatgear",
+        "fits": [
+          "Du vil komme hurtigt igennem forløbet",
+          "Du planlægger at køre el- eller hybridbil",
+          "Du vil fokusere på trafik frem for teknik"
+        ]
+      }
+    ],
+    "chooserLabel": "Vælg {{type}} hvis du…"
+  },
+  "licenseCodes": {
+    "badge": "Officielle koder",
+    "title": "Hvad betyder koderne på dit kørekort?",
+    "description": "Dit danske kørekort kan indeholde koder der beskriver rettigheder, betingelser eller begrænsninger. Klik på en kode for at forstå hvad den betyder for dig.",
+    "codeLabel": "Kode",
+    "relevantLabel": "Relevant",
+    "link78to148": "Vil du have ret til manuelt gear? Se kode 148",
+    "codes": [
+      {
+        "code": "78",
+        "label": "Kun automatgear",
+        "description": "Tildeles når du har bestået køreprøven i en bil med automatgear. Kørekortet begrænser dig til kun at føre køretøjer med automatisk transmission.",
+        "note": "Dette er standardkoden for alle elever hos os - du kører i en VW Golf GTE."
+      },
+      {
+        "code": "148",
+        "label": "Ret til manuelt gear",
+        "description": "Giver dig ret til at køre manuelt gear, selvom du oprindeligt bestod prøven i en automatbil. Kræver 7 timers supplerende undervisning hos en godkendt kørelærer.",
+        "note": "Ønsker du fuld frihed - både automatbil og manuelbil - kan du tilføje kode 148 bagefter."
+      },
+      {
+        "code": "141",
+        "label": "Ledsagerkørsel (17 år)",
+        "description": "Påføres 17-årige der har bestået køreprøven. Koden angiver krav om ledsager under kørsel - indtil den unge fylder 18 år.",
+        "note": "Gælder kun for elever der starter kørekortet som 17-årige."
+      },
+      {
+        "code": "100",
+        "label": "Administrativ begrænsning",
+        "description": "En administrativ kode der kan forekomme i særlige tilfælde. Indholdet afhænger af den konkrete sag og fastsættes af politiet eller Færdselsstyrelsen.",
+        "note": "Denne kode er sjælden og vil altid blive forklaret ved udstedelse."
+      }
+    ]
+  },
+    "theoryPractice": {
+    "badge": "Forberedelse",
+    "title": "Vi hjælper dig hele vejen til teoriprøven",
+    "text1": "Du behøver ikke sidde alene med teoribogen. Vi gennemgår alt det vigtige med dig - og giver dig adgang til øvetests du kan tage når det passer dig.",
+    "text2": "Øvetestene er bygget op præcis som den rigtige prøve - samme format, samme sværhedsgrad, samme typer spørgsmål.",
+    "features": [
+      {
+        "title": "Teori fra første lektion",
+        "text": "Vi gennemgår teorien struktureret fra start - så du forstår reglerne, ikke bare husker dem."
+      },
+      {
+        "title": "Adgang til øvetests",
+        "text": "Som elev hos os får du adgang til øvetests du kan tage hjemmefra - så mange gange du vil, i dit eget tempo."
+      },
+      {
+        "title": "Mindst 3 øveprøver",
+        "text": "Vi anbefaler minimum 3 gennemløb af den officielle øveprøve - spredt over flere dage, ikke natten før."
+      }
+    ],
+    "officialLink": {
+      "title": "Officiel øveprøve",
+      "subtitle": "Færdselsstyrelsen"
+    }
+  },
+  "theoryMistakes": {
+    "badge": "Undgå fejlene",
+    "title": "De mest almindelige fejl til teoriprøven",
+    "description": "De fleste fejl handler ikke om manglende viden - men om opmærksomhed, tempo og forståelse af kombinerede situationer.",
+    "mistakes": [
+      {
+        "title": "Fejllæsning af situationsbilleder",
+        "description": "Du ser billedet men overser cyklisten i kanten, barnet bag den parkerede bil eller skiltet delvist skjult af grene. Scan hele billedet - ikke bare midten."
+      },
+      {
+        "title": "For hurtige svar under tidspres",
+        "description": "Du ved svaret - men klikker forkert. Teoriprøven har god tid per spørgsmål. Læs altid alle svarmuligheder igennem, selv hvis det første virker oplagt."
+      },
+      {
+        "title": "Vigepligt i vejkryds",
+        "description": "Mange kan reglerne isoleret, men fejler når de kombineres i en konkret situation. Hajtænder, stiplede linjer og placering i rundkørsler testes ofte sammen."
+      },
+      {
+        "title": "Fejlfortolkning af færdselstavler",
+        "description": "Tavler der ligner hinanden visuelt kan have vidt forskellig betydning. Især supplerende tavler under hovedtavlen overses ofte og ændrer budskabet fuldstændig."
+      },
+      {
+        "title": "Placering og svingning",
+        "description": "Spørgsmål om korrekt placering inden sving, vognbaneskift og særligt ved flerstrækede veje er klassiske fælder - reglerne er præcise og kræver forståelse."
+      },
+      {
+        "title": "Alkohol- og promillegrænser",
+        "description": "Mange husker ikke de nøjagtige grænser for nye og erfarne bilister, eller hvornår kørselsforbud træder i kraft. Det er konkret viden der testes direkte."
+      }
+    ]
+  },
+  "theoryTransition": {
+    "checkLabel": "Tjek inden du booker prøven",
+    "checklist": [
+      "Du har forstået vigepligt og placering i vejkryds",
+      "Du har genkendt og øvet situationsbilleder",
+      "Du har taget mindst 3 øveprøver uden tidspres"
+    ],
+    "reminder": {
+      "prefix": "Husk: ",
+      "text": "Du skal have bestået teoriprøven inden du kan booke din endelige køreprøve. Gyldigt i 18 måneder efter beståelse."
+    },
+    "badge": "Næste skridt",
+    "title": "Bestået teorien?",
+    "text": "Godt klaret. Nu begynder den praktiske del - og her gælder helt andre regler. Læs hvad du kan forvente til selve køreprøven i Vejle.",
+    "cta": "Læs om køreprøven"
+  },
+    "examChecklist": {
+    "title": "8 ting censoren kigger efter",
+    "description": "Censoren bruger en fast tjekliste under hele køreprøven. Kend punkterne inden du sætter dig bag rattet - så ved du præcist hvad der vurderes.",
+    "items": [
+      {
+        "title": "Spejlbrug og skulder-kig",
+        "text": "Aktiv brug af alle spejle og drejet skulder ved vognbaneskift og svingning."
+      },
+      {
+        "title": "Placering på vejen",
+        "text": "Korrekt placering inden sving, i rundkørsler og på flerstrækede veje."
+      },
+      {
+        "title": "Hastighedstilpasning",
+        "text": "Hold grænsen - og sæt farten ned i tide ved kryds og usikre situationer."
+      },
+      {
+        "title": "Reaktion på det uventede",
+        "text": "Opdager og reagerer du korrekt på cyklister, fodgængere og biler der bremser pludseligt?"
+      },
+      {
+        "title": "Blinklys i tide",
+        "text": "Tegn gives i god tid - ikke samtidig med at du svinger. Tydelig og rettidig signalering."
+      },
+      {
+        "title": "Vigepligt og krydsadfærd",
+        "text": "Fejl i kryds er den hyppigste årsag til dumpning. Censoren følger hvert kryds nøje."
+      },
+      {
+        "title": "Vendinger og bakkemanøvrer",
+        "text": "Rolig og kontrolleret udførelse tæller mere end hastighed. Typisk en trepunktsvendig."
+      },
+      {
+        "title": "Samspil med trafikanter",
+        "text": "Hensynsfuld og tydelig adfærd overfor cyklister, fodgængere og andre bilister."
+      }
+    ]
+  },
+  "examFail": {
+    "badge": "Ingen panik",
+    "title": "Ikke bestået?",
+    "description": "Det sker for mange - og det er ikke enden på verden. Næsten 40% dumper til køreprøven første gang. Det vigtigste er at forstå præcist hvad der gik galt og rette det målrettet.",
+    "stepLabel": "Trin",
+    "facts": [
+      {
+        "value": "~40%",
+        "label": "dumper første gang"
+      },
+      {
+        "value": "2–3 uger",
+        "label": "til næste prøve"
+      },
+      {
+        "value": "1–3",
+        "label": "ekstra lektioner typisk nok"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Forstå hvad der gik galt",
+        "text": "Censoren giver en mundtlig tilbagemelding direkte efter prøven. Lyt nøje - det er præcist de punkter vi arbejder videre med."
+      },
+      {
+        "title": "Fokuseret gennemgang med din kørelærer",
+        "text": "Vi gennemgår fejlene konkret og laver en plan for de næste lektioner. Ingen generel kørsel - kun det der manglede."
+      },
+      {
+        "title": "Book en ny prøve og kør den roligt",
+        "text": "Du kan booke en ny prøve inden for få uger. De fleste elever består ved andet forsøg - med den rette forberedelse."
+      }
+    ]
+  },
+  "blogPage": {
+    "categories": {
+      "all": "Alle artikler"
+    },
+    "title": "Tips og nyheder om kørsel",
+    "description": "Få indsigt i teoriprøven, køreprøven og trafikregler.",
+    "readMore": "Læs mere",
+    "loading": "Indlæser artikler...",
+    "noArticles": {
+      "title": "Ingen artikler fundet",
+      "text": "Der er ingen blogs endnu."
+    }
+  },
+  "blogPost": {
+    "back": "Tilbage",
+    "backToBlog": "← Tilbage til blog",
+    "updated": "Opdateret",
+    "moreArticles": "Flere artikler",
+    "noRelated": "Ingen andre artikler endnu.",
+    "notFound": "Artikel ikke fundet",
+    "loading": "Indlæser artikel…",
+    "cta": {
+      "title": "Klar til at starte?",
+      "text": "Bestil din første kørelektion i dag.",
+      "button": "Kontakt os"
+    }
   }
 }

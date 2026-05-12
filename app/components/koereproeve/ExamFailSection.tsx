@@ -7,48 +7,35 @@ import {
   MessageCircle,
   Target,
   CalendarCheck,
-  ChevronRight,
 } from "lucide-react";
-import Link from "next/link";
+import { LucideIcon } from "lucide-react";
 
-const steps = [
-  {
-    icon: MessageCircle,
-    step: "01",
-    title: "Forstå hvad der gik galt",
-    text: "Censoren giver en mundtlig tilbagemelding direkte efter prøven. Lyt nøje - det er præcist de punkter vi arbejder videre med.",
-  },
-  {
-    icon: Target,
-    step: "02",
-    title: "Fokuseret gennemgang med din kørelærer",
-    text: "Vi gennemgår fejlene konkret og laver en plan for de næste lektioner. Ingen generel kørsel - kun det der manglede.",
-  },
-  {
-    icon: CalendarCheck,
-    step: "03",
-    title: "Book en ny prøve og kør den roligt",
-    text: "Du kan booke en ny prøve inden for få uger. De fleste elever består ved anden forsøg - med den rette forberedelse.",
-  },
-];
-
-const facts = [
-  { value: "~40%", label: "dumper første gang" },
-  { value: "2–3 uger", label: "til næste prøve" },
-  { value: "1–3", label: "ekstra lektioner typisk nok" },
-];
+// Icons are UI concerns — not translatable, mapped by index
+const STEP_ICONS: LucideIcon[] = [MessageCircle, Target, CalendarCheck];
+const STEP_NUMBERS = ["01", "02", "03"];
 
 const ExamFailSection = () => {
   const { t } = useTranslation();
 
+  const steps = t("examFail.steps", { returnObjects: true }) as {
+    title: string;
+    text: string;
+  }[];
+
+  const facts = t("examFail.facts", { returnObjects: true }) as {
+    value: string;
+    label: string;
+  }[];
+
   return (
     <section
-      className="py-20 md:py-28 lg:py-40 max-w-7xl mx-auto"
+      className="py-20 md:py-28 lg:py-40 "
       style={{ backgroundColor: "var(--color-bg)" }}
     >
-      <div className="px-6">
+      <div className="px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
+          {/* Left: intro + facts */}
           <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
             <span
               className="inline-block font-semibold text-sm uppercase tracking-widest pr-4 pt-2 rounded-full"
@@ -57,23 +44,24 @@ const ExamFailSection = () => {
                 backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
               }}
             >
-              Ingen panik
+              {t("examFail.badge")}
             </span>
 
             <h2
               className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-6 mb-6 leading-tight"
               style={{ color: "var(--color-text)" }}
             >
-              Ikke bestået?
+              {t("examFail.title")}
             </h2>
 
             <p
               className="normal-text text-lg mb-8"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Det sker for mange - og det er ikke enden på verden. Næsten 40% dumper til køreprøven første gang. Det vigtigste er at forstå præcist hvad der gik galt og rette det målrettet.
+              {t("examFail.description")}
             </p>
 
+            {/* Stat cards */}
             <div className="grid grid-cols-3 gap-4">
               {facts.map((f, i) => (
                 <div
@@ -101,13 +89,14 @@ const ExamFailSection = () => {
             </div>
           </div>
 
+          {/* Right: step cards */}
           <div className="space-y-4">
             {steps.map((s, index) => {
-              const Icon = s.icon;
+              const Icon = STEP_ICONS[index];
               const isLast = index === steps.length - 1;
 
               return (
-                <div key={s.step} className="relative">
+                <div key={index} className="relative">
                   <div
                     className="rounded-2xl border-2 px-6 py-5 flex items-start gap-4"
                     style={{
@@ -127,7 +116,7 @@ const ExamFailSection = () => {
                           className="text-xs font-bold uppercase tracking-widest"
                           style={{ color: "var(--color-yellow)" }}
                         >
-                          Trin {s.step}
+                          {t("examFail.stepLabel")} {STEP_NUMBERS[index]}
                         </span>
                       </div>
                       <h4
@@ -154,8 +143,6 @@ const ExamFailSection = () => {
                 </div>
               );
             })}
-
-         
           </div>
 
         </div>

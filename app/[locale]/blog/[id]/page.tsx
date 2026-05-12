@@ -1,13 +1,36 @@
 import BlogPostPage from "../../../components/blog/BlogPostPage";
 
 export async function generateStaticParams() {
-  const res = await fetch("https://lønbæks.dk/api/blog.php");
-  const data = await res.json();
+  try {
+    const res = await fetch("https://lønbæks.dk/api/blog.php");
 
-  return data.blogs.map((post: { id: number }) => ({
-    locale: "da",
-    id: String(post.id),
-  }));
+    if (!res.ok) {
+      console.error("Failed fetch:", res.status);
+
+      return [{ locale: "da", id: "1" }];
+    }
+
+    const data = await res.json();
+
+    const blogs = Array.isArray(data)
+      ? data
+      : Array.isArray(data.blogs)
+      ? data.blogs
+      : [];
+
+    if (blogs.length === 0) {
+      return [{ locale: "da", id: "1" }];
+    }
+
+    return blogs.map((post: { id: number | string }) => ({
+      locale: "da",
+      id: String(post.id),
+    }));
+  } catch (err) {
+    console.error("generateStaticParams error:", err);
+
+    return [{ locale: "da", id: "1" }];
+  }
 }
 
 export default function Page() {

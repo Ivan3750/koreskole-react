@@ -16,45 +16,45 @@ import {
 const items = [
   {
     icon: BookOpen,
-    title: "Teori",
-    description: "Ubegrænset undervisning indtil du er klar til teoriprøven.",
-    detail: "Ubegrænset",
+    titleKey: "prices.package.itemsData.theory.title",
+    descriptionKey: "prices.package.itemsData.theory.description",
+    detailKey: "prices.package.itemsData.theory.detail",
   },
   {
     icon: Car,
-    title: "Manøvrebane",
-    description: "Kørsel på manøvrebane (kravlegården) til grundlæggende køreteknik.",
-    detail: "4 lektioner",
+    titleKey: "prices.package.itemsData.manovre.title",
+    descriptionKey: "prices.package.itemsData.manovre.description",
+    detailKey: "prices.package.itemsData.manovre.detail",
   },
   {
     icon: Gauge,
-    title: "Kørelektioner",
-    description: "Praktiske kørelektioner af 45 minutters varighed med godkendt kørelærer.",
-    detail: "16 lektioner",
+    titleKey: "prices.package.itemsData.lessons.title",
+    descriptionKey: "prices.package.itemsData.lessons.description",
+    detailKey: "prices.package.itemsData.lessons.detail",
   },
   {
     icon: Snowflake,
-    title: "Køreteknisk anlæg",
-    description: "Lektioner på glatbanen - træn kontrol i kritiske situationer.",
-    detail: "4 lektioner",
+    titleKey: "prices.package.itemsData.snow.title",
+    descriptionKey: "prices.package.itemsData.snow.description",
+    detailKey: "prices.package.itemsData.snow.detail",
   },
   {
     icon: KeyRound,
-    title: "Leje af skolevogn",
-    description: "Brug af skolevogn til selve køreprøven er inkluderet.",
-    detail: "Inkluderet",
+    titleKey: "prices.package.itemsData.car.title",
+    descriptionKey: "prices.package.itemsData.car.description",
+    detailKey: "prices.package.itemsData.car.detail",
   },
   {
     icon: FileText,
-    title: "Teoriprøvegebyr",
-    description: "Administrationsgebyr til bestilling af din teoriprøve.",
-    detail: "Inkluderet",
+    titleKey: "prices.package.itemsData.theoryFee.title",
+    descriptionKey: "prices.package.itemsData.theoryFee.description",
+    detailKey: "prices.package.itemsData.theoryFee.detail",
   },
   {
     icon: ClipboardList,
-    title: "Kørekortansøgning",
-    description: "Behandling af din kørekortansøgning hos Borgerservice.",
-    detail: "Inkluderet",
+    titleKey: "prices.package.itemsData.application.title",
+    descriptionKey: "prices.package.itemsData.application.description",
+    detailKey: "prices.package.itemsData.application.detail",
   },
 ];
 
@@ -63,7 +63,6 @@ function PackageSection() {
 
   return (
     <section>
-
       <div className="text-center mb-12">
         <span
           className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-6"
@@ -72,14 +71,16 @@ function PackageSection() {
             backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
           }}
         >
-          Dit forløb
+          {t("prices.package.badge", "Dit forløb")}
         </span>
+
         <h2
           className="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
           style={{ color: "var(--color-text)" }}
         >
-          Hvad indeholder lovpakken?
+          {t("prices.package.title", "Hvad indeholder lovpakken?")}
         </h2>
+
         <p
           className="mt-4 text-lg max-w-2xl mx-auto"
           style={{ color: "var(--color-text-secondary)" }}
@@ -99,11 +100,18 @@ function PackageSection() {
             backgroundColor: "rgba(var(--color-yellow-rgb), 0.06)",
           }}
         >
-          <span className="text-xs font-bold uppercase tracking-widest col-start-2" style={{ color: "var(--color-text-secondary)" }}>
-            Hvad er inkluderet
+          <span
+            className="text-xs font-bold uppercase tracking-widest col-start-2"
+            style={{ color: "var(--color-text-secondary)" }}
+          >
+            {t("prices.package.headers.included", "Hvad er inkluderet")}
           </span>
-          <span className="text-xs font-bold uppercase tracking-widest text-right" style={{ color: "var(--color-text-secondary)" }}>
-            Mængde
+
+          <span
+            className="text-xs font-bold uppercase tracking-widest text-right"
+            style={{ color: "var(--color-text-secondary)" }}
+          >
+            {t("prices.package.headers.amount", "Mængde")}
           </span>
         </div>
 
@@ -118,7 +126,9 @@ function PackageSection() {
               style={{
                 borderBottom: isLast ? "none" : "2px solid var(--color-border)",
                 backgroundColor:
-                  i % 2 === 0 ? "var(--color-bg)" : "rgba(var(--color-yellow-rgb), 0.015)",
+                  i % 2 === 0
+                    ? "var(--color-bg)"
+                    : "rgba(var(--color-yellow-rgb), 0.015)",
               }}
             >
               <div
@@ -132,11 +142,18 @@ function PackageSection() {
               </div>
 
               <div className="min-w-0">
-                <span className="block font-semibold text-sm" style={{ color: "var(--color-text)" }}>
-                  {item.title}
+                <span
+                  className="block font-semibold text-sm"
+                  style={{ color: "var(--color-text)" }}
+                >
+                  {t(item.titleKey)}
                 </span>
-                <span className="block text-xs mt-0.5 leading-snug" style={{ color: "var(--color-text-secondary)" }}>
-                  {item.description}
+
+                <span
+                  className="block text-xs mt-0.5 leading-snug"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  {t(item.descriptionKey)}
                 </span>
               </div>
 
@@ -147,15 +164,12 @@ function PackageSection() {
                   color: "#fff",
                 }}
               >
-                {item.detail}
+                {t(item.detailKey)}
               </span>
             </div>
           );
         })}
       </div>
-
-     
-
     </section>
   );
 }

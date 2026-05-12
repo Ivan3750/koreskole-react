@@ -12,6 +12,12 @@
     "about_paragraph2": "With many years of experience in Vejle and the surrounding area, we have helped thousands of students safely through their driving license journey. Our local knowledge and personal guidance give you the best conditions for success.",
     "about_paragraph3": "Become a safe and confident driver with Lønbæks Driving School in Vejle. Sign up today and start your driving education immediately!"
   },
+    "instructorsBlock": {
+    "label": "Driving Instructors",
+    "heading": "Meet Your Driving Instructors",
+    "description": "Our driving instructors are experienced, patient, and dedicated to providing you with the best possible instruction.",
+    "experience": "years of experience"
+  },
   "holdstart": {
     "title_label": "Course start",
     "heading": "Choose your course",
@@ -97,6 +103,11 @@
       "theory": "By appointment",
       "driving": "Flexible times",
       "phone": "08:00 - 19:00"
+    },
+    "hoursLabel": {
+      "theory": "Theory Instruction",
+      "driving": "Driving",
+      "phone": "Phone"
     }
   },
   "footer": {
@@ -150,30 +161,89 @@
     "subtitle": "Choose a class that fits your schedule. We offer evening and morning classes with small groups and personal instruction all the way to your Category B driving license in Vejle. Spots available – sign up today."
   },
   "prices": {
-    "meeting": {
-      "badge": "Free information meeting",
-      "title": "Get an overview of the entire driving course",
-      "text": "Before you start your driving course we invite you to a free information meeting where we explain the whole process.",
-      "imageAlt": "Information meeting",
-      "cta": "Sign up for meeting",
+     "meeting": {
+      "badge": "Free consultation",
+      "title": "Book a meeting at the school",
+      "text": "We invite you to a free, no-obligation meeting where we go through your child's needs and how we can help. Together we find the right solution.",
+      "imageAlt": "Inside the school",
+      "studentQuote": {
+        "label": "Student about the meeting",
+        "text": "I didn't know where to start. After the meeting everything was clear."
+      },
+      "info": {
+        "duration": "Approx. 30 minutes",
+        "location": "At the school",
+        "price": "Free"
+      },
+      "nextAvailable": {
+        "label": "Next available meeting:",
+        "value": "within 3 days"
+      },
+      "cta": "Book a free meeting",
       "features": [
-        { "title": "Course overview", "text": "We explain the full process from theory to driving test." },
-        { "title": "Ask questions", "text": "You can ask about lessons, schedule and requirements." },
-        { "title": "Meet the instructor", "text": "Meet your instructor and learn about the lessons." },
-        { "title": "No obligations", "text": "The meeting is free and without commitment." }
+        {
+          "title": "Personal guidance",
+          "text": "We review your child's situation and find the right path forward together."
+        },
+        {
+          "title": "No obligations",
+          "text": "The meeting is completely free and you are not bound to anything afterwards."
+        },
+        {
+          "title": "Concrete plan",
+          "text": "You leave with a clear overview of what the next steps look like."
+        },
+        {
+          "title": "Meet the teachers",
+          "text": "Get to know the people who will be teaching your child."
+        }
       ]
     },
-    "package": {
-      "title": "What does the legal package include?",
-      "text": "The package includes all mandatory elements required for a driving licence in Denmark.",
-      "items": [
-        { "title": "Theory lessons", "text": "Learn traffic rules and safety." },
-        { "title": "Driving lessons", "text": "Practical driving training." },
-        { "title": "Manoeuvre track", "text": "Training on closed course." },
-        { "title": "Driving Technique Course", "text": "Braking exercises on both dry and slippery roads." },
-        { "title": "Theory test", "text": "Preparation for official theory exam." },
-        { "title": "Driving test", "text": "Final practical driving exam." }
-      ]
+     "package": {
+      "badge": "Your course",
+      "title": "What is included in the package?",
+      "text": "Everything you need from start to driving test – all in one package.",
+      "headers": {
+        "included": "What's included",
+        "amount": "Quantity"
+      },
+      "itemsData": {
+        "theory": {
+          "title": "Theory",
+          "description": "Unlimited lessons until you are ready for the theory test.",
+          "detail": "Unlimited"
+        },
+        "manovre": {
+          "title": "Manoeuvre course",
+          "description": "Basic driving skills training on a closed training ground.",
+          "detail": "4 lessons"
+        },
+        "lessons": {
+          "title": "Driving lessons",
+          "description": "Practical 45-minute driving lessons with certified instructor.",
+          "detail": "16 lessons"
+        },
+        "snow": {
+          "title": "Skid training",
+          "description": "Training on slippery road conditions for full vehicle control.",
+          "detail": "4 lessons"
+        },
+        "car": {
+          "title": "School car rental",
+          "description": "Use of a school car for the driving test is included.",
+          "detail": "Included"
+        },
+        "theoryFee": {
+          "title": "Theory test fee",
+          "description": "Administrative fee for booking your theory test.",
+          "detail": "Included"
+        },
+        "application": {
+          "title": "License application",
+          "description": "Processing of your driving license application at the municipality.",
+          "detail": "Included"
+        }
+      }
     },
     "recovery": {
       "badge": "License recovery",
@@ -498,5 +568,295 @@
       { "name": "Clara Jensen", "age": 21, "text": "The instructors are very patient and always give great tips. I highly recommend this school to anyone learning to drive.", "rating": 5 },
       { "name": "Leonard Bahro", "age": 23, "text": "Fantastic staff and great cars for lessons. I passed without any problems and always felt safe during lessons.", "rating": 5 }
     ]
+  },
+  "gear": {
+    "badge": "Car & Transmission",
+    "title": "Manual or automatic?",
+    "description": "Both options have advantages. Here is a direct comparison — so you can see what suits your situation.",
+    "tableHeaders": {
+      "topic": "What we compare",
+      "manual": "Manual transmission",
+      "auto": "Automatic"
+    },
+    "rows": [
+      {
+        "topic": "Easy to learn",
+        "manual": {
+          "value": "Harder",
+          "note": "Clutch and gear shifting takes getting used to"
+        },
+        "auto": {
+          "value": "Easier",
+          "note": "No clutch — more focus on traffic"
+        }
+      },
+      {
+        "topic": "Which cars you can drive",
+        "manual": {
+          "value": "All cars",
+          "note": "Manual and automatic"
+        },
+        "auto": {
+          "value": "Automatic only",
+          "note": "Unless you add code 148 afterwards"
+        }
+      },
+      {
+        "topic": "Future-proof",
+        "manual": {
+          "value": "Partially",
+          "note": "Fewer new cars are manual"
+        },
+        "auto": {
+          "value": "Yes",
+          "note": "Electric and hybrid cars are always automatic"
+        }
+      },
+      {
+        "topic": "Time to pass",
+        "manual": {
+          "value": "Longer course",
+          "note": "More things to master at once"
+        },
+        "auto": {
+          "value": "Shorter course",
+          "note": "Typically faster to pass"
+        }
+      },
+      {
+        "topic": "Buying used cars",
+        "manual": {
+          "value": "Large selection",
+          "note": "Many cheap used cars are manual"
+        },
+        "auto": {
+          "value": "Smaller selection",
+          "note": "Used automatics are usually more expensive"
+        }
+      }
+    ],
+    "choosers": [
+      {
+        "type": "Manual",
+        "fits": [
+          "You want the freedom to drive any car",
+          "You are considering buying an older manual car",
+          "You like having full control over the vehicle"
+        ]
+      },
+      {
+        "type": "Automatic",
+        "fits": [
+          "You want to complete the course quickly",
+          "You plan to drive an electric or hybrid car",
+          "You want to focus on traffic rather than technique"
+        ]
+      }
+    ],
+    "chooserLabel": "Choose {{type}} if you…"
+  },
+  "licenseCodes": {
+    "badge": "Official codes",
+    "title": "What do the codes on your licence mean?",
+    "description": "Your Danish driving licence may contain codes describing rights, conditions, or restrictions. Click on a code to understand what it means for you.",
+    "codeLabel": "Code",
+    "relevantLabel": "Relevant",
+    "link78to148": "Want the right to drive manual? See code 148",
+    "codes": [
+      {
+        "code": "78",
+        "label": "Automatic only",
+        "description": "Issued when you have passed your driving test in an automatic car. The licence restricts you to vehicles with automatic transmission only.",
+        "note": "This is the standard code for all our students — you drive a VW Golf GTE."
+      },
+      {
+        "code": "148",
+        "label": "Right to drive manual",
+        "description": "Grants you the right to drive a manual car even though you originally passed in an automatic. Requires 7 hours of supplementary lessons with an approved driving instructor.",
+        "note": "If you want full freedom — both automatic and manual — you can add code 148 afterwards."
+      },
+      {
+        "code": "141",
+        "label": "Accompanied driving (age 17)",
+        "description": "Added for 17-year-olds who have passed their driving test. The code indicates a requirement for an accompanying driver until the young person turns 18.",
+        "note": "Only applies to students who start their licence at age 17."
+      },
+      {
+        "code": "100",
+        "label": "Administrative restriction",
+        "description": "An administrative code that may appear in special cases. The content depends on the specific case and is determined by the police or the Danish Road Directorate.",
+        "note": "This code is rare and will always be explained upon issue."
+      }
+    ]
+  },
+  "theoryPractice": {
+    "badge": "Preparation",
+    "title": "We help you all the way to the theory test",
+    "text1": "You don't need to sit alone with the theory book. We go through everything important with you — and give you access to practice tests you can take whenever it suits you.",
+    "text2": "The practice tests are structured exactly like the real exam — same format, same difficulty, same types of questions.",
+    "features": [
+      {
+        "title": "Theory from the first lesson",
+        "text": "We go through the theory in a structured way from the start — so you understand the rules, not just memorise them."
+      },
+      {
+        "title": "Access to practice tests",
+        "text": "As our student you get access to practice tests you can take from home — as many times as you like, at your own pace."
+      },
+      {
+        "title": "At least 3 mock tests",
+        "text": "We recommend a minimum of 3 run-throughs of the official mock test — spread over several days, not the night before."
+      }
+    ],
+    "officialLink": {
+      "title": "Official practice test",
+      "subtitle": "The Danish Road Directorate"
+    }
+  },
+  "theoryMistakes": {
+    "badge": "Avoid the mistakes",
+    "title": "The most common mistakes in the theory test",
+    "description": "Most mistakes are not about lack of knowledge — but about attention, pace, and understanding of combined situations.",
+    "mistakes": [
+      {
+        "title": "Misreading situation images",
+        "description": "You see the image but miss the cyclist at the edge, the child behind the parked car, or the sign partially hidden by branches. Scan the whole image — not just the centre."
+      },
+      {
+        "title": "Answering too quickly under time pressure",
+        "description": "You know the answer — but click the wrong one. The theory test gives plenty of time per question. Always read all the answer options, even if the first one seems obvious."
+      },
+      {
+        "title": "Right of way at intersections",
+        "description": "Many know the rules in isolation but fail when they are combined in a specific situation. Shark teeth, dashed lines, and positioning in roundabouts are often tested together."
+      },
+      {
+        "title": "Misinterpreting road signs",
+        "description": "Signs that look alike visually can have very different meanings. Supplementary signs below the main sign are often overlooked and completely change the message."
+      },
+      {
+        "title": "Positioning and turning",
+        "description": "Questions about correct positioning before a turn, lane changes, and especially on multi-lane roads are classic traps — the rules are precise and require understanding."
+      },
+      {
+        "title": "Alcohol and blood alcohol limits",
+        "description": "Many do not remember the exact limits for new and experienced drivers, or when a driving ban takes effect. This is concrete knowledge that is tested directly."
+      }
+    ]
+  },
+  "theoryTransition": {
+    "checkLabel": "Check before you book the test",
+    "checklist": [
+      "You have understood right of way and positioning at intersections",
+      "You have recognised and practised situation images",
+      "You have taken at least 3 mock tests without time pressure"
+    ],
+    "reminder": {
+      "prefix": "Remember: ",
+      "text": "You must have passed the theory test before you can book your final driving test. Valid for 18 months after passing."
+    },
+    "badge": "Next step",
+    "title": "Passed the theory?",
+    "text": "Well done. Now the practical part begins — and here completely different rules apply. Read what you can expect at the actual driving test in Vejle.",
+    "cta": "Read about the driving test"
+  },
+    "examChecklist": {
+    "title": "8 things the examiner looks for",
+    "description": "The examiner uses a fixed checklist throughout the entire driving test. Know the points before you get behind the wheel — so you know exactly what is being assessed.",
+    "items": [
+      {
+        "title": "Mirror use and shoulder check",
+        "text": "Active use of all mirrors and turned shoulder when changing lanes and turning."
+      },
+      {
+        "title": "Road positioning",
+        "text": "Correct positioning before turns, in roundabouts, and on multi-lane roads."
+      },
+      {
+        "title": "Speed adjustment",
+        "text": "Keep the limit — and reduce speed in good time at junctions and uncertain situations."
+      },
+      {
+        "title": "Reaction to the unexpected",
+        "text": "Do you spot and react correctly to cyclists, pedestrians, and cars that brake suddenly?"
+      },
+      {
+        "title": "Signalling in time",
+        "text": "Signals given well in advance — not at the same time as turning. Clear and timely signalling."
+      },
+      {
+        "title": "Right of way and junction behaviour",
+        "text": "Mistakes at junctions are the most common cause of failure. The examiner watches every junction closely."
+      },
+      {
+        "title": "Turns and reversing manoeuvres",
+        "text": "Calm and controlled execution counts more than speed. Typically a three-point turn."
+      },
+      {
+        "title": "Interaction with other road users",
+        "text": "Considerate and clear behaviour towards cyclists, pedestrians, and other drivers."
+      }
+    ]
+  },
+  "examFail": {
+    "badge": "No panic",
+    "title": "Not passed?",
+    "description": "It happens to many — and it is not the end of the world. Nearly 40% fail their driving test the first time. The most important thing is to understand exactly what went wrong and correct it in a targeted way.",
+    "stepLabel": "Step",
+    "facts": [
+      {
+        "value": "~40%",
+        "label": "fail the first time"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "until the next test"
+      },
+      {
+        "value": "1–3",
+        "label": "extra lessons typically enough"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Understand what went wrong",
+        "text": "The examiner gives verbal feedback immediately after the test. Listen carefully — those are exactly the points we work on next."
+      },
+      {
+        "title": "Focused review with your instructor",
+        "text": "We go through the mistakes specifically and make a plan for the next lessons. No general driving — only what was missing."
+      },
+      {
+        "title": "Book a new test and drive it calmly",
+        "text": "You can book a new test within a few weeks. Most students pass on the second attempt — with the right preparation."
+      }
+    ]
+  },
+   "blogPage": {
+    "categories": {
+      "all": "All articles"
+    },
+    "title": "Tips and news about driving",
+    "description": "Get insight into the theory test, driving test, and traffic rules.",
+    "readMore": "Read more",
+    "loading": "Loading articles...",
+    "noArticles": {
+      "title": "No articles found",
+      "text": "There are no blogs yet."
+    }
+  },
+  "blogPost": {
+    "back": "Back",
+    "backToBlog": "← Back to blog",
+    "updated": "Updated",
+    "moreArticles": "More articles",
+    "noRelated": "No other articles yet.",
+    "notFound": "Article not found",
+    "loading": "Loading article…",
+    "cta": {
+      "title": "Ready to start?",
+      "text": "Book your first driving lesson today.",
+      "button": "Contact us"
+    }
   }
 }

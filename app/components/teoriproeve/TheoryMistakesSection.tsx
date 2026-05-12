@@ -4,54 +4,19 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";
 import { Eye, Clock, MapPin, FileText, AlertTriangle, Navigation } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
-const mistakes = [
-  {
-    icon: Eye,
-    number: "01",
-    title: "Fejllæsning af situationsbilleder",
-    description:
-      "Du ser billedet men overser cyklisten i kanten, barnet bag den parkerede bil eller skiltet delvist skjult af grene. Scan hele billedet - ikke bare midten.",
-  },
-  {
-    icon: Clock,
-    number: "02",
-    title: "For hurtige svar under tidspres",
-    description:
-      "Du ved svaret - men klikker forkert. Teoriprøven har god tid per spørgsmål. Læs altid alle svarmuligheder igennem, selv hvis det første virker oplagt.",
-  },
-  {
-    icon: MapPin,
-    number: "03",
-    title: "Vigepligt i vejkryds",
-    description:
-      "Mange kan reglerne isoleret, men fejler når de kombineres i en konkret situation. Hajtænder, stiplede linjer og placering i rundkørsler testes ofte sammen.",
-  },
-  {
-    icon: FileText,
-    number: "04",
-    title: "Fejlfortolkning af færdselstavler",
-    description:
-      "Tavler der ligner hinanden visuelt kan have vidt forskellig betydning. Især supplerende tavler under hovedtavlen overses ofte og ændrer budskabet fuldstændig.",
-  },
-  {
-    icon: Navigation,
-    number: "05",
-    title: "Placering og svingning",
-    description:
-      "Spørgsmål om korrekt placering inden sving, vognbaneskift og særligt ved flerstrækede veje er klassiske fælder - reglerne er præcise og kræver forståelse.",
-  },
-  {
-    icon: AlertTriangle,
-    number: "06",
-    title: "Alkohol- og promillegrænser",
-    description:
-      "Mange husker ikke de nøjagtige grænser for nye og erfarne bilister, eller hvornår kørselsforbud træder i kraft. Det er konkret viden der testes direkte.",
-  },
-];
+// Icons are UI concerns — not translatable, mapped by index
+const MISTAKE_ICONS: LucideIcon[] = [Eye, Clock, MapPin, FileText, Navigation, AlertTriangle];
+const MISTAKE_NUMBERS = ["01", "02", "03", "04", "05", "06"];
 
 const TheoryMistakesSection = () => {
   const { t } = useTranslation();
+
+  const mistakes = t("theoryMistakes.mistakes", { returnObjects: true }) as {
+    title: string;
+    description: string;
+  }[];
 
   return (
     <section
@@ -60,6 +25,7 @@ const TheoryMistakesSection = () => {
     >
       <div className="max-w-7xl mx-auto px-6">
 
+        {/* Header */}
         <div className="text-center mb-16">
           <span
             className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-6"
@@ -68,54 +34,56 @@ const TheoryMistakesSection = () => {
               backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)",
             }}
           >
-            Undgå fejlene
+            {t("theoryMistakes.badge")}
           </span>
           <h2
             className="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
             style={{ color: "var(--color-text)" }}
           >
-            De mest almindelige fejl til teoriprøven
+            {t("theoryMistakes.title")}
           </h2>
           <p
             className="mt-4 text-lg max-w-2xl mx-auto"
             style={{ color: "var(--color-text-secondary)" }}
           >
-            De fleste fejl handler ikke om manglende viden - men om opmærksomhed, tempo og forståelse af kombinerede situationer.
+            {t("theoryMistakes.description")}
           </p>
         </div>
 
+        {/* Mistake cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {mistakes.map((m, index) => {
-            const Icon = m.icon;
-            const isFirst = index === 0;
+            const Icon = MISTAKE_ICONS[index];
 
             return (
               <div
-                key={m.number}
+                key={index}
                 className="rounded-2xl border-2 p-6 flex flex-col gap-4"
                 style={{
-                  borderColor: isFirst ? "var(--color-yellow)" : "var(--color-border)",
-                  backgroundColor: isFirst ? "rgba(var(--color-yellow-rgb), 0.03)" : "var(--color-bg)",
+                  borderColor:  "var(--color-border)",
+                  backgroundColor: "var(--color-bg)",
                 }}
               >
                 <div className="flex items-center gap-3">
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{
-                      backgroundColor: isFirst ? "var(--color-yellow)" : "rgba(var(--color-yellow-rgb), 0.08)",
-                      border: isFirst ? "none" : "2px solid var(--color-border)",
+                      backgroundColor: "rgba(var(--color-yellow-rgb), 0.08)",
+                      border: "2px solid var(--color-border)",
                     }}
                   >
                     <Icon
                       className="w-4 h-4"
-                      style={{ color: isFirst ? "#fff" : "var(--color-text-secondary)" }}
+                      style={{ color:  "var(--color-text-secondary)" }}
                     />
                   </div>
                   <span
                     className="text-sm font-bold uppercase tracking-widest"
-                    style={{ color: isFirst ? "var(--color-yellow)" : "var(--color-text-secondary)" }}
+                    style={{
+                      color:"var(--color-text-secondary)",
+                    }}
                   >
-                    {m.number}
+                    {MISTAKE_NUMBERS[index]}
                   </span>
                 </div>
 
