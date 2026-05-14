@@ -6,7 +6,7 @@ import "@/app/i18n";
 import { Eye, Clock, MapPin, FileText, AlertTriangle, Navigation } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
-// Icons are UI concerns — not translatable, mapped by index
+// Icons are UI concerns - not translatable, mapped by index
 const MISTAKE_ICONS: LucideIcon[] = [Eye, Clock, MapPin, FileText, Navigation, AlertTriangle];
 const MISTAKE_NUMBERS = ["01", "02", "03", "04", "05", "06"];
 

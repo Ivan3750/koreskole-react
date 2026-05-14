@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import "@/app/i18n";
 import { MonitorPlay, BookOpen, RotateCcw, ExternalLink } from "lucide-react";
 
-// Icons are UI concerns — not translatable, mapped by index
+// Icons are UI concerns - not translatable, mapped by index
 const FEATURE_ICONS = [BookOpen, MonitorPlay, RotateCcw];
 
 const TheoryPracticeSection = () => {

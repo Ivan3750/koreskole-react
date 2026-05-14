@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
-// Icons are UI concerns — not translatable, mapped by index
+// Icons are UI concerns - not translatable, mapped by index
 const STEP_ICONS: LucideIcon[] = [MessageCircle, Target, CalendarCheck];
 const STEP_NUMBERS = ["01", "02", "03"];
 

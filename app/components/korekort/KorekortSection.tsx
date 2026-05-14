@@ -67,7 +67,7 @@ export default function KorekortSection() {
             >
               {t("meet.cta.book")} 
             </Link> */}
-            <Button locale={"da"} label={t("meet.cta.book")}></Button>
+            <Button link={withLocale("/")} label={t("meet.cta.book")}></Button>
 
           
           </div>

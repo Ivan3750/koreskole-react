@@ -158,7 +158,7 @@ function MeetingSection({
             className="px-8 py-4 rounded-2xl font-semibold text-base transition-all duration-200 hover:opacity-90"
             style={{
               backgroundColor: "var(--color-yellow)",
-              color: "#fff",
+              color: "black",
               boxShadow: "0 4px 24px rgba(var(--color-yellow-rgb), 0.3)",
             }}
           >

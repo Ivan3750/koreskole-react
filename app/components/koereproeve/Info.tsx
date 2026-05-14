@@ -21,7 +21,6 @@ const Info = () => {
       <div className="px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* TEXT SECTION */}
           <div className="max-w-xl mx-auto lg:mx-0 order-2 lg:order-1 text-center lg:text-left">
 
             <span
@@ -90,7 +89,6 @@ const Info = () => {
             </p>
           </div>
 
-          {/* IMAGE SECTION */}
           <div className="order-1 lg:order-2">
             <div className="relative">
               <div

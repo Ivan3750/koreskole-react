@@ -14,7 +14,7 @@ const GearSection = () => {
     auto: { value: string; note: string; ok?: boolean };
   }[];
 
-  // ok flags are data, not translations — keep them co-located with the component
+  // ok flags are data, not translations - keep them co-located with the component
   const okFlags = [
     { manual: false, auto: true },
     { manual: true, auto: false },

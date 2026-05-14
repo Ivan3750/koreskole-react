@@ -12,7 +12,7 @@
     "about_paragraph2": "With many years of experience in Vejle and the surrounding area, we have helped thousands of students safely through their driving license journey. Our local knowledge and personal guidance give you the best conditions for success.",
     "about_paragraph3": "Become a safe and confident driver with Lønbæks Driving School in Vejle. Sign up today and start your driving education immediately!"
   },
-    "instructorsBlock": {
+  "instructorsBlock": {
     "label": "Driving Instructors",
     "heading": "Meet Your Driving Instructors",
     "description": "Our driving instructors are experienced, patient, and dedicated to providing you with the best possible instruction.",
@@ -39,9 +39,21 @@
         "She also teaches eco-friendly driving, trains motorcyclists, and offers lessons in English – making her the ideal instructor for international students in Vejle."
       ],
       "features": [
-        { "title": "Personal Approach", "desc": "Lessons tailored to each individual student", "icon": "heart" },
-        { "title": "Extensive Experience", "desc": "From beginners to experienced drivers", "icon": "shield" },
-        { "title": "English Lessons Available", "desc": "Full driving instruction in English", "icon": "clock" }
+        {
+          "title": "Personal Approach",
+          "desc": "Lessons tailored to each individual student",
+          "icon": "heart"
+        },
+        {
+          "title": "Extensive Experience",
+          "desc": "From beginners to experienced drivers",
+          "icon": "shield"
+        },
+        {
+          "title": "English Lessons Available",
+          "desc": "Full driving instruction in English",
+          "icon": "clock"
+        }
       ],
       "experience_years": "30+ years",
       "experience_label": "Experience"
@@ -56,9 +68,21 @@
         "He works with driving style evaluation for experienced drivers and has contributed to projects involving the development of driving simulators, including collaboration with OUH."
       ],
       "features": [
-        { "title": "Experienced Instructor", "desc": "Support for both new and experienced drivers", "icon": "heart" },
-        { "title": "Structured Teaching", "desc": "Safe and effective learning process", "icon": "clock" },
-        { "title": "Advanced Expertise", "desc": "Simulator and advanced driving training", "icon": "shield" }
+        {
+          "title": "Experienced Instructor",
+          "desc": "Support for both new and experienced drivers",
+          "icon": "heart"
+        },
+        {
+          "title": "Structured Teaching",
+          "desc": "Safe and effective learning process",
+          "icon": "clock"
+        },
+        {
+          "title": "Advanced Expertise",
+          "desc": "Simulator and advanced driving training",
+          "icon": "shield"
+        }
       ],
       "experience_years": "40+ years",
       "experience_label": "Experience"
@@ -69,12 +93,30 @@
     "heading": "Everything you need for your driving license",
     "description": "We offer a complete driving education with a focus on safety, quality, and personal guidance.",
     "items": [
-      { "title": "Theory Lessons", "description": "Comprehensive theoretical lessons with modern materials and engaging teaching." },
-      { "title": "Driving Lessons", "description": "Practical driving lessons in modern cars with an experienced instructor." },
-      { "title": "Skid Control Course", "description": "Mandatory course at a driving facility for safe driving in all weather conditions." },
-      { "title": "First Aid Course", "description": "Vital first aid – learn how to act correctly in emergencies." },
-      { "title": "Flexible Schedule", "description": "We adapt lessons to your daily life with flexible meeting times." },
-      { "title": "High Pass Rate", "description": "Quality teaching giving you the best conditions to pass." }
+      {
+        "title": "Theory Lessons",
+        "description": "Comprehensive theoretical lessons with modern materials and engaging teaching."
+      },
+      {
+        "title": "Driving Lessons",
+        "description": "Practical driving lessons in modern cars with an experienced instructor."
+      },
+      {
+        "title": "Skid Control Course",
+        "description": "Mandatory course at a driving facility for safe driving in all weather conditions."
+      },
+      {
+        "title": "First Aid Course",
+        "description": "Vital first aid – learn how to act correctly in emergencies."
+      },
+      {
+        "title": "Flexible Schedule",
+        "description": "We adapt lessons to your daily life with flexible meeting times."
+      },
+      {
+        "title": "High Pass Rate",
+        "description": "Quality teaching giving you the best conditions to pass."
+      }
     ]
   },
   "bookingForm": {
@@ -123,16 +165,40 @@
     "copyright": "All rights reserved.",
     "tagline": "Driving school in Vejle since 1985",
     "navItems": [
-      { "label": "Course Start", "href": "/holdstart-vejle" },
-      { "label": "About Us", "href": "/om-os" },
-      { "label": "Blog", "href": "/blog" },
-      { "label": "Contact", "href": "/kontakt" }
+      {
+        "label": "Course Start",
+        "href": "/holdstart-vejle"
+      },
+      {
+        "label": "About Us",
+        "href": "/om-os"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      },
+      {
+        "label": "Contact",
+        "href": "/kontakt"
+      }
     ],
     "footerItems": [
-      { "label": "Program", "href": "/koerekort-b/forloeb" },
-      { "label": "Driving License", "href": "/koerekort-b/koerekort" },
-      { "label": "Theory Exam", "href": "/koerekort-b/teoriproeve" },
-      { "label": "Driving Test", "href": "/koerekort-b/koereproeve" }
+      {
+        "label": "Program",
+        "href": "/koerekort-b/forloeb"
+      },
+      {
+        "label": "Driving License",
+        "href": "/koerekort-b/koerekort"
+      },
+      {
+        "label": "Theory Exam",
+        "href": "/koerekort-b/teoriproeve"
+      },
+      {
+        "label": "Driving Test",
+        "href": "/koerekort-b/koereproeve"
+      }
     ]
   },
   "header": {
@@ -142,16 +208,40 @@
       {
         "label": "Driving License B",
         "children": [
-          { "label": "Program", "href": "/koerekort-b/forloeb" },
-          { "label": "Driving License", "href": "/koerekort-b/koerekort" },
-          { "label": "Theory Exam", "href": "/koerekort-b/teoriproeve" },
-          { "label": "Driving Test", "href": "/koerekort-b/koereproeve" }
+          {
+            "label": "Program",
+            "href": "/koerekort-b/forloeb"
+          },
+          {
+            "label": "Driving License",
+            "href": "/koerekort-b/koerekort"
+          },
+          {
+            "label": "Theory Exam",
+            "href": "/koerekort-b/teoriproeve"
+          },
+          {
+            "label": "Driving Test",
+            "href": "/koerekort-b/koereproeve"
+          }
         ]
       },
-      { "label": "Course Start", "href": "/holdstart-vejle" },
-      { "label": "About Us", "href": "/om-os" },
-      { "label": "Blog", "href": "/blog" },
-      { "label": "Contact", "href": "/kontakt" }
+      {
+        "label": "Course Start",
+        "href": "/holdstart-vejle"
+      },
+      {
+        "label": "About Us",
+        "href": "/om-os"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      },
+      {
+        "label": "Contact",
+        "href": "/kontakt"
+      }
     ],
     "cta": "Join a class",
     "menu": "Menu"
@@ -161,7 +251,7 @@
     "subtitle": "Choose a class that fits your schedule. We offer evening and morning classes with small groups and personal instruction all the way to your Category B driving license in Vejle. Spots available – sign up today."
   },
   "prices": {
-     "meeting": {
+    "meeting": {
       "badge": "Free consultation",
       "title": "Book a meeting at the school",
       "text": "We invite you to a free, no-obligation meeting where we go through your child's needs and how we can help. Together we find the right solution.",
@@ -199,7 +289,7 @@
         }
       ]
     },
-     "package": {
+    "package": {
       "badge": "Your course",
       "title": "What is included in the package?",
       "text": "Everything you need from start to driving test – all in one package.",
@@ -267,9 +357,18 @@
     "title": "What is category B driving license?",
     "description": "Category B is the standard car driving license in Denmark, allowing you to drive regular passenger cars. It is the most popular license category and your path to freedom on the road.",
     "features": [
-      { "title": "Drive cars up to 3,500 kg", "text": "With a category B license, you may drive regular passenger cars with up to 8 seats in addition to the driver." },
-      { "title": "Trailer allowed", "text": "You may tow a light trailer as long as the total weight does not exceed 3,500 kg." },
-      { "title": "Minimum age: 16 years and 9 months", "text": "You must be 17 years old to obtain a category B license, but you can start the training at 16 years and 9 months." }
+      {
+        "title": "Drive cars up to 3,500 kg",
+        "text": "With a category B license, you may drive regular passenger cars with up to 8 seats in addition to the driver."
+      },
+      {
+        "title": "Trailer allowed",
+        "text": "You may tow a light trailer as long as the total weight does not exceed 3,500 kg."
+      },
+      {
+        "title": "Minimum age: 16 years and 9 months",
+        "text": "You must be 17 years old to obtain a category B license, but you can start the training at 16 years and 9 months."
+      }
     ],
     "closing": "At Lønbæks Driving School in Vejle, we guide you safely through the entire process – from theory classes to the day you receive your license. Start your journey toward Category B today!",
     "imageAltMain": "Category B driving education",
@@ -279,24 +378,72 @@
     "title": "Your path to your driver's license",
     "subtitle": "8 clear steps from your first meeting to holding your license.",
     "steps": [
-      { "number": "01", "title": "Intro meeting & registration", "description": "Start with a non-binding meeting to understand the process. After registration, you receive your lesson plan and instructor." },
-      { "number": "02", "title": "Theory lessons", "description": "Theory once a week with unlimited access – so you feel fully prepared for the test." },
-      { "number": "03", "title": "First aid & medical certificate", "description": "8 hours of traffic-related first aid plus a medical certificate before the theory test." },
-      { "number": "04", "title": "Closed driving track", "description": "Your first driving experience on a closed track, learning basic vehicle control." },
-      { "number": "05", "title": "Driving in traffic", "description": "Drive in real traffic and turn theory into practice with your instructor." },
-      { "number": "06", "title": "Slippery track training", "description": "Practice braking, control, and risk situations in a safe environment." },
-      { "number": "07", "title": "Theory test", "description": "Online practice and final exam at the test center." },
-      { "number": "08", "title": "Driving test", "description": "The final test – pass and receive your driver's license." }
+      {
+        "number": "01",
+        "title": "Intro meeting & registration",
+        "description": "Start with a non-binding meeting to understand the process. After registration, you receive your lesson plan and instructor."
+      },
+      {
+        "number": "02",
+        "title": "Theory lessons",
+        "description": "Theory once a week with unlimited access – so you feel fully prepared for the test."
+      },
+      {
+        "number": "03",
+        "title": "First aid & medical certificate",
+        "description": "8 hours of traffic-related first aid plus a medical certificate before the theory test."
+      },
+      {
+        "number": "04",
+        "title": "Closed driving track",
+        "description": "Your first driving experience on a closed track, learning basic vehicle control."
+      },
+      {
+        "number": "05",
+        "title": "Driving in traffic",
+        "description": "Drive in real traffic and turn theory into practice with your instructor."
+      },
+      {
+        "number": "06",
+        "title": "Slippery track training",
+        "description": "Practice braking, control, and risk situations in a safe environment."
+      },
+      {
+        "number": "07",
+        "title": "Theory test",
+        "description": "Online practice and final exam at the test center."
+      },
+      {
+        "number": "08",
+        "title": "Driving test",
+        "description": "The final test – pass and receive your driver's license."
+      }
     ]
   },
   "strategy": {
     "title": "How we ensure your success",
     "subtitle": "Four concrete steps that make the difference between passing and failing",
     "steps": [
-      { "number": "01", "title": "Individual assessment", "description": "We adapt the lessons to your learning style and needs, so you progress at your own pace." },
-      { "number": "02", "title": "Mock test", "description": "We drive almost the same test route under realistic conditions, so you know exactly what to expect." },
-      { "number": "03", "title": "Examiner training", "description": "We teach you exactly what the examiner looks for and how to score points during the test." },
-      { "number": "04", "title": "Stress management", "description": "Mental preparation and techniques to stay calm so nerves do not take over on the day." }
+      {
+        "number": "01",
+        "title": "Individual assessment",
+        "description": "We adapt the lessons to your learning style and needs, so you progress at your own pace."
+      },
+      {
+        "number": "02",
+        "title": "Mock test",
+        "description": "We drive almost the same test route under realistic conditions, so you know exactly what to expect."
+      },
+      {
+        "number": "03",
+        "title": "Examiner training",
+        "description": "We teach you exactly what the examiner looks for and how to score points during the test."
+      },
+      {
+        "number": "04",
+        "title": "Stress management",
+        "description": "Mental preparation and techniques to stay calm so nerves do not take over on the day."
+      }
     ]
   },
   "faq": {
@@ -304,13 +451,38 @@
     "title": "Frequently Asked Questions",
     "subtitle": "Quick answers to the most common questions.",
     "items": [
-      { "question": "How long does it take to get a driver's license?", "answer": "It depends on how quickly you complete the theory and driving lessons, but most people get their driver's license within 3–6 months." },
-      { "question": "Do you offer both manual and automatic transmission?", "answer": "Yes, we provide lessons in both manual and automatic transmission cars." },
-      { "question": "Can I get a driver's license if I am under 18?", "answer": "Yes, you can start theory and driving lessons from the age of 16 years and 9 months, but the practical test can only be taken at 17. When driving at 17, there are rules about having a supervising adult in the car." },
-      { "question": "How do the tests work?", "answer": "You must pass both a theoretical test and a practical driving test. We help you prepare for both." },
-      { "question": "Can I pay in installments?", "answer": "Yes, we offer flexible payment plans so you can pay for the driver's license in several installments without extra fees." },
-      { "question": "What happens if I don't pass the first time?", "answer": "No panic! You can sign up for a retest. We offer additional lessons to make sure you are ready next time. However, there will be a new fee to the Danish Road Traffic Authority, and if it is the driving test, there will also be a new payment for the car and the instructor's time." },
-      { "question": "Can I take a break during the course?", "answer": "Yes, you can. You are welcome to take a break from your lessons if needed and continue later. Contact us, and we will help you plan the rest of your course." }
+      {
+        "question": "How long does it take to get a driver's license?",
+        "answer": "It depends on how quickly you complete the theory and driving lessons, but most people get their driver's license within 3–6 months."
+      },
+      {
+        "question": "Do you offer both manual and automatic transmission?",
+        "answer": "Yes, we provide lessons in both manual and automatic transmission cars."
+      },
+      {
+        "question": "Can I get a driver's license if I am under 18?",
+        "answer": "Yes, you can start theory and driving lessons from the age of 16 years and 9 months, but the practical test can only be taken at 17. When driving at 17, there are rules about having a supervising adult in the car."
+      },
+      {
+        "question": "How do the tests work?",
+        "answer": "You must pass both a theoretical test and a practical driving test. We help you prepare for both."
+      },
+      {
+        "question": "Can I pay in installments?",
+        "answer": "Yes, we offer flexible payment plans so you can pay for the driver's license in several installments without extra fees."
+      },
+      {
+        "question": "What happens if I don't pass the first time?",
+        "answer": "No panic! You can sign up for a retest. We offer additional lessons to make sure you are ready next time. However, there will be a new fee to the Danish Road Traffic Authority, and if it is the driving test, there will also be a new payment for the car and the instructor's time."
+      },
+      {
+        "question": "Can I take a break during the course?",
+        "answer": "Yes, you can. You are welcome to take a break from your lessons if needed and continue later. Contact us, and we will help you plan the rest of your course."
+      },
+      {
+        "question": "Is Lønbæks Køreskole the same as 'gul bil driving school' in Vejle?",
+        "answer": "Yes, some users search for 'gul bil driving school in Vejle'. It refers to Lønbæks Køreskole, which is our official name."
+      }
     ]
   },
   "licenseB": {
@@ -337,10 +509,22 @@
     "extras": {
       "title": "Additional Lessons",
       "items": [
-        { "name": "Extra driving lesson (45 min)", "price": "395 DKK" },
-        { "name": "Extra driving lesson (90 min)", "price": "750 DKK" },
-        { "name": "New practical test", "price": "690 DKK" },
-        { "name": "New theory test", "price": "170 DKK" }
+        {
+          "name": "Extra driving lesson (45 min)",
+          "price": "395 DKK"
+        },
+        {
+          "name": "Extra driving lesson (90 min)",
+          "price": "750 DKK"
+        },
+        {
+          "name": "New practical test",
+          "price": "690 DKK"
+        },
+        {
+          "name": "New theory test",
+          "price": "170 DKK"
+        }
       ]
     },
     "payment": {
@@ -352,7 +536,11 @@
     "benefits": {
       "title": "Why Choose Us?",
       "description": "We focus on quality, personal instruction, and a high pass rate. Modern cars and experienced instructors ensure you get the best possible start.",
-      "items": ["High pass rate", "Personal instruction", "Modern vehicles"]
+      "items": [
+        "High pass rate",
+        "Personal instruction",
+        "Modern vehicles"
+      ]
     }
   },
   "theory": {
@@ -369,10 +557,22 @@
       "cta": "Read more"
     },
     "stats": [
-      { "title": "25 Questions", "text": "Questions about traffic signs, positioning and risk assessment." },
-      { "title": "Max 5 Mistakes", "text": "You must answer at least 20 correctly." },
-      { "title": "25 Minutes", "text": "The test lasts 25 minutes." },
-      { "title": "Digital Exam", "text": "Multiple choice with images." }
+      {
+        "title": "25 Questions",
+        "text": "Questions about traffic signs, positioning and risk assessment."
+      },
+      {
+        "title": "Max 5 Mistakes",
+        "text": "You must answer at least 20 correctly."
+      },
+      {
+        "title": "25 Minutes",
+        "text": "The test lasts 25 minutes."
+      },
+      {
+        "title": "Digital Exam",
+        "text": "Multiple choice with images."
+      }
     ],
     "how": {
       "title": "How does the theory test work?",
@@ -509,6 +709,18 @@
       "title": "Blog – Tips and Guides for Driving License B in Vejle",
       "description": "Read our blog with tips, advice, and guides to pass your Category B driving license in Vejle. Theory test, driving test, traffic rules, and local conditions.",
       "keywords": "driving license B tips Vejle, theory test guide Denmark, driving test advice, traffic rules Denmark, driving blog Vejle, learn to drive safely Denmark"
+    },
+    "gul_bil": {
+      "title": "Gul bil driving school in Vejle – that is Lønbæks Køreskole",
+      "description": "Looking for the driving school with the yellow car in Vejle? That is Lønbæks Køreskole. Book a free meeting and get started with your licence.",
+      "keywords": [
+        "gul bil køreskole vejle",
+        "køreskole gul bil",
+        "gul bil vejle kørekort",
+        "lønbæks køreskole",
+        "køreskole vejle",
+        "kørekort vejle automatgear"
+      ]
     }
   },
   "blog": {
@@ -550,7 +762,7 @@
       "Modern cars and experienced driving instructors"
     ],
     "cta": {
-      "book": "Book free information session",
+      "book": "Book information session",
       "see": "See driving course"
     },
     "imageAlt": "Driving lesson"
@@ -561,18 +773,48 @@
     "subtitle": "Honest experiences from students who got their license with us.",
     "years": "years",
     "items": [
-      { "name": "Ivan Kohan", "age": 17, "text": "This is the best driving school. The cars are very comfortable to drive, and the instructors are incredibly patient and always ready to help. They explain everything clearly and are always available when you have doubts. I can absolutely recommend this driving school.", "rating": 5 },
-      { "name": "Thomas Nielsen", "age": 22, "text": "Great driving school with flexible schedules. I could easily fit lessons into my studies, and the instructors are very helpful.", "rating": 5 },
-      { "name": "Sofie Pedersen", "age": 18, "text": "I was nervous at first, but Anna Marie created a safe environment. The calm and structured teaching made it much easier to learn.", "rating": 5 },
-      { "name": "Alexander Madsen", "age": 20, "text": "Excellent driving school! Both theory and practical lessons were well organized. I felt well prepared for the test.", "rating": 5 },
-      { "name": "Clara Jensen", "age": 21, "text": "The instructors are very patient and always give great tips. I highly recommend this school to anyone learning to drive.", "rating": 5 },
-      { "name": "Leonard Bahro", "age": 23, "text": "Fantastic staff and great cars for lessons. I passed without any problems and always felt safe during lessons.", "rating": 5 }
+      {
+        "name": "Ivan Kohan",
+        "age": 17,
+        "text": "This is the best driving school. The cars are very comfortable to drive, and the instructors are incredibly patient and always ready to help. They explain everything clearly and are always available when you have doubts. I can absolutely recommend this driving school.",
+        "rating": 5
+      },
+      {
+        "name": "Thomas Nielsen",
+        "age": 22,
+        "text": "Great driving school with flexible schedules. I could easily fit lessons into my studies, and the instructors are very helpful.",
+        "rating": 5
+      },
+      {
+        "name": "Sofie Pedersen",
+        "age": 18,
+        "text": "I was nervous at first, but Anna Marie created a safe environment. The calm and structured teaching made it much easier to learn.",
+        "rating": 5
+      },
+      {
+        "name": "Alexander Madsen",
+        "age": 20,
+        "text": "Excellent driving school! Both theory and practical lessons were well organized. I felt well prepared for the test.",
+        "rating": 5
+      },
+      {
+        "name": "Clara Jensen",
+        "age": 21,
+        "text": "The instructors are very patient and always give great tips. I highly recommend this school to anyone learning to drive.",
+        "rating": 5
+      },
+      {
+        "name": "Leonard Bahro",
+        "age": 23,
+        "text": "Fantastic staff and great cars for lessons. I passed without any problems and always felt safe during lessons.",
+        "rating": 5
+      }
     ]
   },
   "gear": {
     "badge": "Car & Transmission",
     "title": "Manual or automatic?",
-    "description": "Both options have advantages. Here is a direct comparison — so you can see what suits your situation.",
+    "description": "Both options have advantages. Here is a direct comparison - so you can see what suits your situation.",
     "tableHeaders": {
       "topic": "What we compare",
       "manual": "Manual transmission",
@@ -587,7 +829,7 @@
         },
         "auto": {
           "value": "Easier",
-          "note": "No clutch — more focus on traffic"
+          "note": "No clutch - more focus on traffic"
         }
       },
       {
@@ -667,13 +909,13 @@
         "code": "78",
         "label": "Automatic only",
         "description": "Issued when you have passed your driving test in an automatic car. The licence restricts you to vehicles with automatic transmission only.",
-        "note": "This is the standard code for all our students — you drive a VW Golf GTE."
+        "note": "This is the standard code for all our students - you drive a VW Golf GTE."
       },
       {
         "code": "148",
         "label": "Right to drive manual",
         "description": "Grants you the right to drive a manual car even though you originally passed in an automatic. Requires 7 hours of supplementary lessons with an approved driving instructor.",
-        "note": "If you want full freedom — both automatic and manual — you can add code 148 afterwards."
+        "note": "If you want full freedom - both automatic and manual - you can add code 148 afterwards."
       },
       {
         "code": "141",
@@ -692,20 +934,20 @@
   "theoryPractice": {
     "badge": "Preparation",
     "title": "We help you all the way to the theory test",
-    "text1": "You don't need to sit alone with the theory book. We go through everything important with you — and give you access to practice tests you can take whenever it suits you.",
-    "text2": "The practice tests are structured exactly like the real exam — same format, same difficulty, same types of questions.",
+    "text1": "You don't need to sit alone with the theory book. We go through everything important with you - and give you access to practice tests you can take whenever it suits you.",
+    "text2": "The practice tests are structured exactly like the real exam - same format, same difficulty, same types of questions.",
     "features": [
       {
         "title": "Theory from the first lesson",
-        "text": "We go through the theory in a structured way from the start — so you understand the rules, not just memorise them."
+        "text": "We go through the theory in a structured way from the start - so you understand the rules, not just memorise them."
       },
       {
         "title": "Access to practice tests",
-        "text": "As our student you get access to practice tests you can take from home — as many times as you like, at your own pace."
+        "text": "As our student you get access to practice tests you can take from home - as many times as you like, at your own pace."
       },
       {
         "title": "At least 3 mock tests",
-        "text": "We recommend a minimum of 3 run-throughs of the official mock test — spread over several days, not the night before."
+        "text": "We recommend a minimum of 3 run-throughs of the official mock test - spread over several days, not the night before."
       }
     ],
     "officialLink": {
@@ -716,15 +958,15 @@
   "theoryMistakes": {
     "badge": "Avoid the mistakes",
     "title": "The most common mistakes in the theory test",
-    "description": "Most mistakes are not about lack of knowledge — but about attention, pace, and understanding of combined situations.",
+    "description": "Most mistakes are not about lack of knowledge - but about attention, pace, and understanding of combined situations.",
     "mistakes": [
       {
         "title": "Misreading situation images",
-        "description": "You see the image but miss the cyclist at the edge, the child behind the parked car, or the sign partially hidden by branches. Scan the whole image — not just the centre."
+        "description": "You see the image but miss the cyclist at the edge, the child behind the parked car, or the sign partially hidden by branches. Scan the whole image - not just the centre."
       },
       {
         "title": "Answering too quickly under time pressure",
-        "description": "You know the answer — but click the wrong one. The theory test gives plenty of time per question. Always read all the answer options, even if the first one seems obvious."
+        "description": "You know the answer - but click the wrong one. The theory test gives plenty of time per question. Always read all the answer options, even if the first one seems obvious."
       },
       {
         "title": "Right of way at intersections",
@@ -736,7 +978,7 @@
       },
       {
         "title": "Positioning and turning",
-        "description": "Questions about correct positioning before a turn, lane changes, and especially on multi-lane roads are classic traps — the rules are precise and require understanding."
+        "description": "Questions about correct positioning before a turn, lane changes, and especially on multi-lane roads are classic traps - the rules are precise and require understanding."
       },
       {
         "title": "Alcohol and blood alcohol limits",
@@ -757,12 +999,12 @@
     },
     "badge": "Next step",
     "title": "Passed the theory?",
-    "text": "Well done. Now the practical part begins — and here completely different rules apply. Read what you can expect at the actual driving test in Vejle.",
+    "text": "Well done. Now the practical part begins - and here completely different rules apply. Read what you can expect at the actual driving test in Vejle.",
     "cta": "Read about the driving test"
   },
-    "examChecklist": {
+  "examChecklist": {
     "title": "8 things the examiner looks for",
-    "description": "The examiner uses a fixed checklist throughout the entire driving test. Know the points before you get behind the wheel — so you know exactly what is being assessed.",
+    "description": "The examiner uses a fixed checklist throughout the entire driving test. Know the points before you get behind the wheel - so you know exactly what is being assessed.",
     "items": [
       {
         "title": "Mirror use and shoulder check",
@@ -774,7 +1016,7 @@
       },
       {
         "title": "Speed adjustment",
-        "text": "Keep the limit — and reduce speed in good time at junctions and uncertain situations."
+        "text": "Keep the limit - and reduce speed in good time at junctions and uncertain situations."
       },
       {
         "title": "Reaction to the unexpected",
@@ -782,7 +1024,7 @@
       },
       {
         "title": "Signalling in time",
-        "text": "Signals given well in advance — not at the same time as turning. Clear and timely signalling."
+        "text": "Signals given well in advance - not at the same time as turning. Clear and timely signalling."
       },
       {
         "title": "Right of way and junction behaviour",
@@ -801,7 +1043,7 @@
   "examFail": {
     "badge": "No panic",
     "title": "Not passed?",
-    "description": "It happens to many — and it is not the end of the world. Nearly 40% fail their driving test the first time. The most important thing is to understand exactly what went wrong and correct it in a targeted way.",
+    "description": "It happens to many - and it is not the end of the world. Nearly 40% fail their driving test the first time. The most important thing is to understand exactly what went wrong and correct it in a targeted way.",
     "stepLabel": "Step",
     "facts": [
       {
@@ -820,19 +1062,19 @@
     "steps": [
       {
         "title": "Understand what went wrong",
-        "text": "The examiner gives verbal feedback immediately after the test. Listen carefully — those are exactly the points we work on next."
+        "text": "The examiner gives verbal feedback immediately after the test. Listen carefully - those are exactly the points we work on next."
       },
       {
         "title": "Focused review with your instructor",
-        "text": "We go through the mistakes specifically and make a plan for the next lessons. No general driving — only what was missing."
+        "text": "We go through the mistakes specifically and make a plan for the next lessons. No general driving - only what was missing."
       },
       {
         "title": "Book a new test and drive it calmly",
-        "text": "You can book a new test within a few weeks. Most students pass on the second attempt — with the right preparation."
+        "text": "You can book a new test within a few weeks. Most students pass on the second attempt - with the right preparation."
       }
     ]
   },
-   "blogPage": {
+  "blogPage": {
     "categories": {
       "all": "All articles"
     },
@@ -858,5 +1100,130 @@
       "text": "Book your first driving lesson today.",
       "button": "Contact us"
     }
+  },
+"gulBil": {
+    "hero": {
+      "title": "Looking for the \"yellow car driving school\"?",
+      "subtitle": "That is us - Lønbæks Køreskole in Vejle."
+    },
+    "intro": "Many know us as the driving school with the yellow car - and that is not so strange. Our car is yellow, we are based in Vejle, and we have helped thousands of students get their licence since 1985. The official name is Lønbæks Køreskole, but no matter what you search for, you end up in the same place.",
+    "whyBadge": "Behind the name",
+    "whyTitle": "Why do people search for \"gul bil\"?",
+    "whyText1": "Some remember us from the street. Others heard about us from a friend who mentioned the driving school with the yellow car in Vejle. It is one of those nicknames that just sticks.",
+    "whyText2": "We did not choose the name ourselves - but we are fine with it. And if you landed here, you found what you were looking for.",
+    "aboutBadge": "Since 1985",
+    "aboutTitle": "Lønbæks Køreskole in Vejle",
+    "aboutText": "At Lønbæks Køreskole you get a personal driving education focused on both learning and wellbeing. Lessons are conducted at a calm pace so you feel well prepared for both the theory and practical test. With many years of experience in Vejle, we have helped thousands of students safely through their licence journey.",
+    "aboutStats": [
+      {
+        "value": "30+",
+        "label": "Years of experience"
+      },
+      {
+        "value": "2",
+        "label": "Experienced instructors"
+      },
+      {
+        "value": "High",
+        "label": "Pass rate"
+      }
+    ],
+    "instructorsBadge": "Meet your instructors",
+    "instructorsTitle": "Experienced and dedicated",
+    "instructors": [
+      {
+        "name": "Anna Marie Lønbæk",
+        "years": "30+ years experience",
+        "bio": "Anna Marie has been a driving instructor in Vejle since 1996 and has trained thousands of students. Her philosophy is simple: teaching should take place in a relaxed atmosphere to create the best conditions for learning.",
+        "tags": [
+          "Personal approach",
+          "Teaching in English",
+          "Motorcycle instructor"
+        ]
+      },
+      {
+        "name": "Michael Lønbæk",
+        "years": "40+ years experience",
+        "bio": "Michael has been a driving instructor since 1985 and is known for his calm and structured approach. He has extensive experience on driving technique courses and works with driving style evaluation for experienced drivers.",
+        "tags": [
+          "Driving technique course",
+          "Driving style evaluation",
+          "Simulator experience"
+        ]
+      }
+    ],
+    "carsBadge": "School cars",
+    "carsTitle": "Modern cars with full equipment",
+    "cars": [
+      {
+        "name": "VW Golf GTE",
+        "year": "2021 model",
+        "text": "The Golf GTE is an excellent school car with automatic transmission and all modern safety equipment. Students can focus on driving itself rather than technique - and will be ready for the new driving education requirements taking effect 1 July 2026."
+      },
+      {
+        "name": "Volkswagen Taigo",
+        "year": "2025 model",
+        "text": "The Taigo is a stylish and technologically updated teaching car. Its compact size makes it ideal for city driving and longer trips, while modern assistance systems and dual controls ensure a safe and comfortable learning experience."
+      }
+    ],
+    "strategyBadge": "How we secure your success",
+    "strategyTitle": "Four steps that make the difference",
+    "strategySteps": [
+      {
+        "number": "01",
+        "title": "Individual assessment",
+        "text": "We adapt lessons to your learning style and needs so you develop at your own pace."
+      },
+      {
+        "number": "02",
+        "title": "Mock test",
+        "text": "We drive almost the same test route under realistic conditions, so you know exactly what to expect."
+      },
+      {
+        "number": "03",
+        "title": "Examiner training",
+        "text": "We teach you exactly what the examiner looks for and how to score points during the test."
+      },
+      {
+        "number": "04",
+        "title": "Stress management",
+        "text": "Mental preparation and techniques to stay calm so nerves do not take over on the day."
+      }
+    ],
+    "ctaBadge": "Get started",
+    "ctaTitle": "Book a free meeting at the school",
+    "ctaText": "About 30 minutes. We go through your situation and make a plan. You pay nothing and commit to nothing.",
+    "ctaItems": [
+      "Personal guidance",
+      "No obligations",
+      "Concrete plan",
+      "Meet the instructors"
+    ],
+    "ctaButton": "Book a free meeting",
+    "ctaAvailable": "Next available meeting:",
+    "ctaAvailableValue": "within 3 days",
+    "exploreTitle": "Explore more",
+    "exploreLinks": [
+      {
+        "label": "Our course",
+        "href": "/koerekort-b/forloeb",
+        "desc": "From theory to driving test"
+      },
+      {
+        "label": "The theory test",
+        "href": "/koerekort-b/teori",
+        "desc": "Preparation and practice tests"
+      },
+      {
+        "label": "Prices",
+        "href": "/priser",
+        "desc": "Prices and packages"
+      },
+      {
+        "label": "Contact us",
+        "href": "/kontakt",
+        "desc": "Book a meeting or ask a question"
+      }
+    ]
   }
 }

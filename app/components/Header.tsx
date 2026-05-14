@@ -108,14 +108,13 @@ export const Header = () => {
             })}
           </nav>
 
-          {/* RIGHT SIDE */}
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <SwitchLanguage />
 
             <Button
               label={t("header.cta")}
-              locale={locale}
+              link={withLocale("holdstart-vejle")}
             />
 
             <button

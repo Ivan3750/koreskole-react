@@ -67,6 +67,12 @@ function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "DrivingSchool",
     name: "Lønbæks Køreskole",
+    alternateName: [
+      "gul bil",
+      "gul bil vejle",
+      "gull bil",
+      "køreskole gul bil"
+    ],
     description:
       "Køreskole i Vejle med høj beståelsesrate og personlig undervisning siden 1985.",
     url: BASE_URL,

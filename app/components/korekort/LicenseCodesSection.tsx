@@ -6,7 +6,7 @@ import "@/app/i18n";
 import { Lock, Unlock, UserCheck, ShieldAlert, ArrowRight, Info } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
-// Icon and type are UI concerns — not translatable, kept in component
+// Icon and type are UI concerns - not translatable, kept in component
 const CODE_META: Record<string, { icon: LucideIcon; type: string }> = {
   "78":  { icon: Lock,       type: "restriction" },
   "148": { icon: Unlock,     type: "upgrade"     },

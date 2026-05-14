@@ -117,7 +117,7 @@ const BookingForm: React.FC<BookingFormProps> = ({
             color: "var(--color-text-secondary)",
           }}
         >
-          {holdDays} — {holdDate} kl. {holdTime}
+          {holdDays} - {holdDate} kl. {holdTime}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">

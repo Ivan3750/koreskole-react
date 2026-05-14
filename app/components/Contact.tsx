@@ -229,7 +229,7 @@ const Contact = () => {
               type="submit"
               disabled={loading}
               className="w-full py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition disabled:opacity-60"
-              style={{ background: "var(--color-yellow)", color: "white" }}
+              style={{ background: "var(--color-yellow)", color: "black" }}
             >
               {loading ? <Spinner /> : "Send"}
             </button>

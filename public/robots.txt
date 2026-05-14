@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://lønbæks.dk
+
+# Sitemaps
+Sitemap: https://lønbæks.dk/sitemap.xml

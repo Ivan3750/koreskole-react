@@ -5,10 +5,18 @@ import { useTranslation } from "react-i18next";
 import "@/app/i18n";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import Button from "../ux/Button";
+import { useParams } from "next/navigation";
 
 const TheoryTransitionSection = () => {
+    const params = useParams();
   const { t } = useTranslation();
+ const locale = params?.locale as string;
 
+  const withLocale = (path: string) => {
+    if (!locale) return path;
+    return `/${locale}${path.startsWith("/") ? path : `/${path}`}`;
+  };
   const checklist = t("theoryTransition.checklist", { returnObjects: true }) as string[];
 
   return (
@@ -109,18 +117,11 @@ const TheoryTransitionSection = () => {
                 {t("theoryTransition.text")}
               </p>
 
-              <Link
-                href="/koerekort-b/koerekort"
-                className="inline-flex items-center gap-3 px-7 py-4 rounded-2xl font-semibold text-base transition-all duration-200 hover:opacity-90 self-start"
-                style={{
-                  backgroundColor: "var(--color-yellow)",
-                  color: "#fff",
-                  boxShadow: "0 4px 24px rgba(var(--color-yellow-rgb), 0.3)",
-                }}
-              >
-                {t("theoryTransition.cta")}
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              <Button
+                link={withLocale("/koerekort-b/koereproeve")}
+                label={t("theoryTransition.cta")}
+              ></Button>
+             
             </div>
 
           </div>

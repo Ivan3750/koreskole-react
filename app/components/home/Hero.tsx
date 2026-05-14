@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import school from "@/app/assets/image.png";
+import Button from "../ux/Button";
  const Hero = () => {
   const { t } = useTranslation();
   const params = useParams();
@@ -51,16 +52,11 @@ import school from "@/app/assets/image.png";
 
           <div className="flex flex-wrap gap-4 pt-4">
             
-            <Link
-              href={withLocale("/koerekort-b/koerkort")}
-              className="py-3 px-10 rounded-lg font-semibold"
-              style={{
-                backgroundColor: "#facc15",
-                color: "#000",
-              }}
+            <Button
+              link={withLocale("/koerekort-b/koerkort")}
+              label={t("home.learn_more")}           
             >
-              {t("home.sign_up")}
-            </Link>
+            </Button>
 
 
           </div>

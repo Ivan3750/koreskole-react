@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
-// Icons are UI concerns — not translatable, mapped by index
+// Icons are UI concerns - not translatable, mapped by index
 const ITEM_ICONS: LucideIcon[] = [
   Eye,
   Navigation,
