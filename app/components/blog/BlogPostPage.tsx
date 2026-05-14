@@ -17,6 +17,13 @@ type Blog = {
 };
 
 export default function BlogPostPage() {
+    const params = useParams();
+  const locale = params?.locale as string;
+
+  const withLocale = (path: string) => {
+    if (!locale) return path;
+    return `/${locale}${path.startsWith("/") ? path : `/${path}`}`;
+  };
   const { t, i18n } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
@@ -96,7 +103,7 @@ export default function BlogPostPage() {
             {error || t("blogPost.notFound")}
           </h1>
           <Link
-            href="/blog"
+            href={withLocale("/blog")}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all"
             style={{ backgroundColor: "var(--color-yellow)", color: "white" }}
           >
@@ -219,7 +226,7 @@ export default function BlogPostPage() {
                   return (
                     <Link
                       key={rel.id}
-                      href={`/blog/${rel.id}`}
+                      href={withLocale(`/blog/${rel.id}`)}
                       className="group flex gap-4 p-4 rounded-2xl border-2 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
                       style={{ borderColor: "var(--color-border)", backgroundColor: "var(--color-bg)" }}
                     >
@@ -258,7 +265,7 @@ export default function BlogPostPage() {
                   <h3 className="font-bold text-lg mb-2">{t("blogPost.cta.title")}</h3>
                   <p className="text-sm mb-4 opacity-90">{t("blogPost.cta.text")}</p>
                   <Link
-                    href="/kontakt"
+                    href={withLocale("/kontakt")}
                     className="inline-block bg-white font-semibold text-sm px-5 py-2.5 rounded-full transition-opacity hover:opacity-90"
                     style={{ color: "var(--color-yellow)" }}
                   >

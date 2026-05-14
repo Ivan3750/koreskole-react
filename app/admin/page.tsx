@@ -64,8 +64,6 @@ export default function AdminPage() {
         return <CoursesPage onLogout={logout} />;
       case "blog":
         return <BlogPage />;
-      case "contacts":
-        return <ContactsPage />;
       case "password":
         return <PasswordPage />;
     }

@@ -332,67 +332,123 @@ export default function BlogPage() {
   return (
     <>
       <style>{`
-        .ProseMirror {
-          outline: none;
-          min-height: 300px;
-          padding: 1.25rem;
-          cursor: text;
-          color: var(--color-text);
-        }
+     .ProseMirror {
+  outline: none;
+  min-height: 300px;
+  padding: 1.25rem;
+  cursor: text;
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 1rem;
+}
 
-        .ProseMirror p {
-          color: var(--color-text);
-        }
+/* Paragraphs */
 
-        .ProseMirror h1,
-        .ProseMirror h2,
-        .ProseMirror h3,
-        .ProseMirror h4 {
-          color: var(--color-text);
-        }
+.ProseMirror p {
+  margin: 0.75rem 0;
+  color: var(--color-text);
+}
 
-        .ProseMirror strong {
-          color: var(--color-text);
-        }
+/* Headings */
 
-        .ProseMirror ul,
-        .ProseMirror ol {
-          padding-left: 1.5rem;
-        }
+.ProseMirror h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
 
-        .ProseMirror img {
-          max-width: 100%;
-          border-radius: 16px;
-          margin: 1rem 0;
-        }
+.ProseMirror h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
 
-        .ProseMirror a {
-          color: var(--color-primary);
-        }
+.ProseMirror h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
 
-        .ProseMirror blockquote {
-          border-left: 3px solid var(--color-border);
-          padding-left: 1rem;
-          color: var(--color-text-secondary);
-        }
+/* Bold / italic */
 
-        .prose {
-          color: var(--color-text);
-        }
+.ProseMirror strong {
+  font-weight: 700;
+  color: var(--color-text);
+}
 
-        .prose h1,
-        .prose h2,
-        .prose h3,
-        .prose h4,
-        .prose p,
-        .prose strong,
-        .prose li {
-          color: var(--color-text);
-        }
+.ProseMirror em {
+  font-style: italic;
+}
 
-        .prose a {
-          color: var(--color-primary);
-        }
+/* Lists */
+
+.ProseMirror ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.ProseMirror li {
+  margin: 0.4rem 0;
+}
+
+/* Images */
+
+.ProseMirror img {
+  max-width: 100%;
+  border-radius: 16px;
+  margin: 1.25rem 0;
+}
+
+/* Links */
+
+.ProseMirror a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Blockquote */
+
+.ProseMirror blockquote {
+  border-left: 4px solid var(--color-border);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Code */
+
+.ProseMirror code {
+  background: rgba(255,255,255,0.08);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.ProseMirror pre {
+  background: #111;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
       `}</style>
 
       <div
