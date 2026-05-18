@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
@@ -17,17 +16,22 @@ type Blog = {
 };
 
 export default function BlogPostPage() {
-    const params = useParams();
+  const params = useParams();
   const locale = params?.locale as string;
 
   const withLocale = (path: string) => {
     if (!locale) return path;
     return `/${locale}${path.startsWith("/") ? path : `/${path}`}`;
   };
+
   const { t, i18n } = useTranslation();
-  const { id } = useParams<{ id: string }>();
   const router = useRouter();
 
+  const rawSlug = params?.slug;
+  const slugId = Array.isArray(rawSlug) ? rawSlug[0] : (rawSlug as string | undefined);
+  const paramId = params?.id as string | undefined;
+
+const [id, setId] = useState<string | undefined>(undefined);
   const [post, setPost] = useState<Blog | null>(null);
   const [related, setRelated] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
@@ -40,20 +44,28 @@ export default function BlogPostPage() {
       year: "numeric",
     });
 
+
+
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    const parts = window.location.pathname.split("/").filter(Boolean);
+    const blogIndex = parts.indexOf("blog");
+    if (blogIndex !== -1 && parts[blogIndex + 1]) {
+      setId(parts[blogIndex + 1]);
+    }
+  }
+}, []);
+
   useEffect(() => {
     if (!id) return;
-
     const fetchPost = async () => {
       try {
         setLoading(true);
         setError(null);
-
         const res = await fetch(`${BASE_URL}/blog.php?id=${id}`, { credentials: "include" });
         if (!res.ok) throw new Error(t("blogPost.notFound"));
-
         const data: Blog = await res.json();
         setPost(data);
-
         const allRes = await fetch(`${BASE_URL}/blog.php`, { credentials: "include" });
         const allData = await allRes.json();
         setRelated((allData.blogs as Blog[]).filter((b) => b.id !== data.id).slice(0, 4));
@@ -63,7 +75,6 @@ export default function BlogPostPage() {
         setLoading(false);
       }
     };
-
     fetchPost();
   }, [id]);
 
@@ -139,11 +150,8 @@ export default function BlogPostPage() {
         .blog-content img { max-width: 100%; border-radius: 12px; margin: 1em 0; display: block; }
         .blog-content hr { border: none; border-top: 2px solid var(--color-border); margin: 2em 0; }
       `}</style>
-
       <section className="py-16 md:py-24" style={{ backgroundColor: "var(--color-bg)" }}>
         <div className="max-w-7xl mx-auto px-6">
-
-          {/* Back button */}
           <div className="mb-10">
             <button
               onClick={() => router.back()}
@@ -156,10 +164,7 @@ export default function BlogPostPage() {
               {t("blogPost.back")}
             </button>
           </div>
-
           <div className="grid lg:grid-cols-3 gap-12">
-
-            {/* Article */}
             <article className="lg:col-span-2">
               {coverSrc && (
                 <div
@@ -169,8 +174,6 @@ export default function BlogPostPage() {
                   <img src={coverSrc} alt={post.title} className="w-full h-full object-cover" />
                 </div>
               )}
-
-              {/* Meta */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center gap-1.5 text-sm" style={{ color: "var(--color-text-secondary)" }}>
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -178,7 +181,6 @@ export default function BlogPostPage() {
                   </svg>
                   {formatDate(post.created_at)}
                 </div>
-
                 {post.updated_at && post.updated_at !== post.created_at && (
                   <>
                     <span style={{ color: "var(--color-border)" }}>·</span>
@@ -188,41 +190,33 @@ export default function BlogPostPage() {
                   </>
                 )}
               </div>
-
               <h1
                 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8"
                 style={{ color: "var(--color-text)" }}
               >
                 {post.title}
               </h1>
-
               <div className="h-1 w-16 rounded-full mb-8" style={{ backgroundColor: "var(--color-yellow)" }} />
-
               <div
                 className="blog-content text-base md:text-lg"
                 style={{ color: "var(--color-text)" }}
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             </article>
-
-            {/* Sidebar */}
             <aside className="lg:col-span-1 space-y-6">
               <div className="sticky top-24 space-y-6">
                 <h2 className="font-bold text-lg" style={{ color: "var(--color-text)" }}>
                   {t("blogPost.moreArticles")}
                 </h2>
-
                 {related.length === 0 && (
                   <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
                     {t("blogPost.noRelated")}
                   </p>
                 )}
-
                 {related.map((rel) => {
                   const relCover = rel.image
                     ? rel.image.startsWith("/uploads/") ? `${BASE_URL}${rel.image}` : rel.image
                     : null;
-
                   return (
                     <Link
                       key={rel.id}
@@ -244,7 +238,6 @@ export default function BlogPostPage() {
                           </svg>
                         </div>
                       )}
-
                       <div className="flex-1 min-w-0">
                         <h3 className="font-semibold text-sm leading-snug line-clamp-2 mb-1" style={{ color: "var(--color-text)" }}>
                           {rel.title}
@@ -256,8 +249,6 @@ export default function BlogPostPage() {
                     </Link>
                   );
                 })}
-
-                {/* CTA card */}
                 <div
                   className="rounded-2xl p-6 text-center"
                   style={{ backgroundColor: "var(--color-yellow)", color: "white" }}
@@ -274,7 +265,6 @@ export default function BlogPostPage() {
                 </div>
               </div>
             </aside>
-
           </div>
         </div>
       </section>

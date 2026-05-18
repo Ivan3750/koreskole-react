@@ -6,7 +6,7 @@ const WebHjerte = ({ className = "" }) => {
       href="https://webhjerte.dk"
       target="_blank"
       rel="noopener noreferrer"
-      className={`flex items-center justify-center gap-1 pt-5 text-xs text-neutral-400 hover:text-neutral-600 transition-colors ${className}`}
+      className={`flex items-center mb-10 justify-center gap-1 pt-5 text-xs text-neutral-400 hover:text-neutral-600 transition-colors ${className}`}
     >
       <span>Made by</span>
 

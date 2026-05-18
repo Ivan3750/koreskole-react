@@ -53,7 +53,7 @@ import Button from "../ux/Button";
           <div className="flex flex-wrap gap-4 pt-4">
             
             <Button
-              link={withLocale("/koerekort-b/koerkort")}
+              link={withLocale("/koerekort-b/koerekort")}
               label={t("home.learn_more")}           
             >
             </Button>

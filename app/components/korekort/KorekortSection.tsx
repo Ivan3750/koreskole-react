@@ -1,20 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "@/app/i18n";
+
 import school from "../../assets/school_inside_2.jpeg";
-import Button from "../ux/Button";
+import BookingForm from "../BookingForm";
 
 export default function KorekortSection() {
   const { t, i18n } = useTranslation();
   const params = useParams();
   const locale = params?.locale as string;
 
-   useEffect(() => {
+  const [showBooking, setShowBooking] = useState(false);
+
+  useEffect(() => {
     if (locale && i18n.language !== locale) {
       i18n.changeLanguage(locale);
     }
@@ -30,8 +32,9 @@ export default function KorekortSection() {
   return (
     <section className="py-28" style={{ background: "var(--color-bg)" }}>
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-        
-         <div className="space-y-6">
+
+        {/* TEXT CONTENT */}
+        <div className="space-y-6">
           <span className="text-sm font-semibold uppercase tracking-wider text-yellow-500">
             {t("meet.subtitle")}
           </span>
@@ -58,18 +61,20 @@ export default function KorekortSection() {
             ))}
           </ul>
 
-     
+          {/* BOOK BUTTON */}
           <div className="flex gap-4 pt-4">
-            {/* <Link
-              href={withLocale("/hold-")}
-              className="px-8 py-4 rounded-xl font-semibold"
-              style={{ background: "var(--color-yellow)", color: "#000" }}
+            <button
+              onClick={() => setShowBooking(true)}
+              className="px-6 py-3 font-semibold transition-all duration-200 hover:opacity-90 active:scale-[0.99]"
+              style={{
+                background: "var(--color-primary)",
+                color: "#111",
+                borderRadius: "calc(var(--radius) - 6px)",
+                boxShadow: "var(--shadow-1)",
+              }}
             >
-              {t("meet.cta.book")} 
-            </Link> */}
-            <Button link={withLocale("/")} label={t("meet.cta.book")}></Button>
-
-          
+              {t("meet.cta.book")}
+            </button>
           </div>
         </div>
 
@@ -82,8 +87,18 @@ export default function KorekortSection() {
             className="object-cover"
           />
         </div>
-
       </div>
+
+      {/* BOOKING MODAL */}
+      {showBooking && (
+        <BookingForm
+          holdId={1}
+          holdDate="20-05-2026"
+          holdTime="16:00"
+          holdDays="Mandag"
+          onClose={() => setShowBooking(false)}
+        />
+      )}
     </section>
   );
 }

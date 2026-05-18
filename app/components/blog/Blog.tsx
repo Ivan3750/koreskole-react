@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";
 import { BASE_URL } from "@/app/lib/api";
+import { useParams } from "next/navigation";
 
 type Blog = {
   id: number;
@@ -16,6 +17,13 @@ type Blog = {
 };
 
 const BlogPage = () => {
+     const params = useParams();
+    const locale = params?.locale as string;
+  
+    const withLocale = (path: string) => {
+      if (!locale) return path;
+      return `/${locale}${path.startsWith("/") ? path : `/${path}`}`;
+    };
   const { t, i18n } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -117,7 +125,7 @@ const BlogPage = () => {
               : null;
 
             return (
-              <Link key={post.id} href={`/blog/${post.id}`} className="group">
+              <Link key={post.id} href={withLocale(`/blog/${post.id}`)} className="group">
                 <div
                   className="rounded-3xl border-2 overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                   style={{ borderColor: "var(--color-border)", backgroundColor: "var(--color-bg)" }}

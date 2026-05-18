@@ -39,14 +39,23 @@ $email    = trim($data['email']);
 $phone    = trim($data['phone'] ?? '');
 $birthday = trim($data['birthday'] ?? '');
 
+$hold_date = trim($data['hold_date'] ?? '');
+$hold_time = trim($data['hold_time'] ?? '');
+$hold_days = trim($data['hold_days'] ?? '');
+
 $html = "
 <h2>📩 Ny booking</h2>
-<p><b>Hold ID:</b> {$hold_id}</p>
-<p><b>Navn:</b> {$name}</p>
-<p><b>Email:</b> {$email}</p>
-<p><b>Telefon:</b> {$phone}</p>
-<p><b>Fødselsdag:</b> {$birthday}</p>
-<p><b>Dato:</b> " . date('Y-m-d H:i:s') . "</p>
+<table style='border-collapse:collapse;font-family:sans-serif;font-size:15px;'>
+  <tr><td style='padding:6px 12px;color:#888;'>Hold ID</td>      <td style='padding:6px 12px;'><b>{$hold_id}</b></td></tr>
+  <tr><td style='padding:6px 12px;color:#888;'>Hold</td>         <td style='padding:6px 12px;'><b>{$hold_days}</b></td></tr>
+  <tr><td style='padding:6px 12px;color:#888;'>Dato</td>         <td style='padding:6px 12px;'><b>{$hold_date}</b></td></tr>
+  <tr><td style='padding:6px 12px;color:#888;'>Tidspunkt</td>    <td style='padding:6px 12px;'><b>kl. {$hold_time}</b></td></tr>
+  <tr><td style='padding:6px 12px;color:#888;'>Navn</td>         <td style='padding:6px 12px;'>{$name}</td></tr>
+  <tr><td style='padding:6px 12px;color:#888;'>Email</td>        <td style='padding:6px 12px;'>{$email}</td></tr>
+  <tr><td style='padding:6px 12px;color:#888;'>Telefon</td>      <td style='padding:6px 12px;'>{$phone}</td></tr>
+  <tr><td style='padding:6px 12px;color:#888;'>Fødselsdag</td>   <td style='padding:6px 12px;'>{$birthday}</td></tr>
+  <tr><td style='padding:6px 12px;color:#888;'>Indsendt</td>     <td style='padding:6px 12px;'>" . date('d.m.Y H:i') . "</td></tr>
+</table>
 ";
 
 $mailer = new Mailer($config);

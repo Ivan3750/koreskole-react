@@ -131,7 +131,12 @@
     "submit": "Tilmeld hold",
     "success": "Booking lykkedes!",
     "error": "Noget gik galt.",
-    "serverError": "Serverfejl."
+    "serverError": "Serverfejl.",
+    "consentRequired": "Du skal acceptere vores betingelser for at fortsætte.",
+"consentPrefix": "Jeg har læst og accepterer",
+"consentPrivacy": "privatlivspolitikken",
+"consentAnd": "og",
+"consentTerms": "handelsbetingelserne"
   },
   "contact": {
     "label": "Kontakt",
@@ -745,7 +750,7 @@
       "name": "Volkswagen Taigo",
       "year_label": "Årgang",
       "year": "2025",
-      "description": "Volkswagen Taigo er en stilfuld og teknologisk opdateret undervisningsbil. Den kompakte størrelse gør den perfekt til både bykørsel og længere ture, mens moderne assistentsystemer og dobbeltbetjening sikrer en sikker og behagelig læringsoplevelse."
+      "description": "VW Taigo er en rigtig god skolevogn for dem der vil lære at køre med manuelt gear eller dem der vil opnå kode 148 ved at modtage mindst 7 lektioner i kørsel med manuelt gear.  VW Taigo er enkel og let at betjene både i forhold til gear og kobling og den er også nem at manøvrere med fordi den har en rigtig fin størrelse. VW Taigo har også det meste sikkerhedsudstyr moderne biler er forsynet med med henblik på at opnå bedre trafiksikkerhed på vejene.  Det er vigtigt du lærer at forholde dig til moderne assistentsystemer som fremtidens biler vil være forsynet med."
     }
   },
   "meet": {
@@ -1221,5 +1226,134 @@
         "desc": "Book møde eller stil spørgsmål"
       }
     ]
-  }
+  },
+  "privatlivspolitik": {
+  "label": "Juridisk",
+  "heading": "Privatlivspolitik",
+  "intro": "Vi behandler dine personoplysninger med omhu og i overensstemmelse med GDPR og dansk databeskyttelseslov.",
+
+  "general": {
+    "title": "1. Generelt",
+    "p1": "Lønbæks Køreskole tager beskyttelsen af dine personoplysninger alvorligt. Vi indsamler kun de oplysninger, der er nødvendige for at kunne besvare din henvendelse og aftale dit forløb."
+  },
+
+  "controller": {
+    "title": "2. Dataansvarlig",
+    "p1": "Den dataansvarlige for behandlingen af dine personoplysninger er:",
+    "details": "Lønbæks Køreskole\nVestre Engvej 7, 7100 Vejle\nCVR: 43426087\nTlf.: 20 76 03 33\nE-mail: hello@lønbæks.dk"
+  },
+
+  "collected": {
+    "title": "3. Hvilke oplysninger indsamler vi?",
+    "p1": "Når du udfylder en formular på vores hjemmeside, indsamler vi følgende oplysninger:",
+    "list": [
+      "Fornavn og efternavn",
+      "Fødselsdato",
+      "E-mailadresse",
+      "Telefonnummer",
+      "Din besked (fx hvilken kursustype du er interesseret i)"
+    ],
+    "p2": "Vi indsamler ikke cookies, CPR-nummer eller betalingsoplysninger via hjemmesiden. Alle yderligere oplysninger indhentes udelukkende ved personligt fremmøde i køreskolen."
+  },
+
+  "purpose": {
+    "title": "4. Formål",
+    "list": [
+      "At besvare din henvendelse",
+      "At kontakte dig vedrørende tilmelding og kursusforløb",
+      "At forstå, hvilken kursusgruppe du ønsker at tilmelde dig"
+    ]
+  },
+
+  "legal": {
+    "title": "5. Retsgrundlag",
+    "p1": "Behandlingen sker på baggrund af dit samtykke (GDPR art. 6, stk. 1, litra a) samt med henblik på at indgå eller opfylde en aftale med dig (GDPR art. 6, stk. 1, litra b)."
+  },
+
+  "sharing": {
+    "title": "6. Videregivelse",
+    "p1": "Vi videregiver ikke dine personoplysninger til tredjepart. Oplysningerne overføres ikke til lande uden for EU/EØS."
+  },
+
+  "retention": {
+    "title": "7. Opbevaring",
+    "p1": "Vi opbevarer dine oplysninger, så længe det er nødvendigt til det formål, de er indsamlet til. Oplysninger fra henvendelser uden efterfølgende tilmelding slettes senest 2 år efter seneste kontakt."
+  },
+
+  "rights": {
+    "title": "8. Dine rettigheder",
+    "p1": "Du har til enhver tid ret til at:",
+    "list": [
+      "Få indsigt i de oplysninger, vi behandler om dig",
+      "Få urigtige oplysninger rettet",
+      "Få dine oplysninger slettet",
+      "Trække dit samtykke tilbage"
+    ],
+    "contact": "Kontakt os på hello@lønbæks.dk for at gøre brug af dine rettigheder. Vi besvarer din henvendelse inden for 30 dage."
+  },
+
+  "supervisory": {
+    "title": "9. Klage til Datatilsynet",
+    "p1": "Mener du, at vi behandler dine oplysninger i strid med lovgivningen, kan du klage til:",
+    "address": "Datatilsynet\nCarl Jacobsens Vej 35, 2500 Valby\nTlf.: 33 19 32 00\nE-mail: dt@datatilsynet.dk\nWeb: datatilsynet.dk"
+  },
+
+  "updated": "Senest opdateret: 19/05/2026"
+},
+"handelsbetingelser": {
+  "label": "Juridisk",
+  "heading": "Handelsbetingelser",
+  "intro": "Disse betingelser gælder for alle ydelser leveret af Lønbæks Køreskole. Ved tilmelding accepterer du betingelserne i deres helhed.",
+
+  "general": {
+    "title": "1. Generelt",
+    "p1": "Handelsbetingelserne er underlagt dansk lovgivning og gælder for alle køb og ydelser hos Lønbæks Køreskole."
+  },
+
+  "services": {
+    "title": "2. Ydelser",
+    "p1": "Lønbæks Køreskole udbyder køreundervisning til kørekort kategori B (bil), herunder teorilektioner, praktisk køreundervisning, manøvrebane og glatbaneøvelse samt forberedelse til teori- og køreprøve."
+  },
+
+  "language": {
+    "title": "3. Undervisningssprog",
+    "p1": "Undervisningen tilbydes på dansk eller engelsk efter aftale. Vi forbeholder os ret til at afslutte et forløb, hvis kommunikationen ikke fungerer tilfredsstillende i undervisningssituationen."
+  },
+
+  "enrollment": {
+    "title": "4. Tilmelding",
+    "p1": "Du kan tilmelde dig ved at udfylde kontaktformularen på vores hjemmeside eller ved at kontakte os direkte. Vi vender tilbage for at aftale det videre forløb.",
+    "p2": "Alle praktiske og økonomiske detaljer aftales ved personligt fremmøde i køreskolen. Du skal være fyldt 18 år for at indgå aftalen. Er du under 18 år, kræves forudgående samtykke fra en forælder eller værge."
+  },
+
+  "payment": {
+    "title": "5. Pris og betaling",
+    "p1": "Priser oplyses ved personlig henvendelse i køreskolen. Betaling sker kontant eller via bankoverførsel til det kontonummer, vi oplyser ved fremmøde. Vi modtager ikke betaling via hjemmesiden."
+  },
+
+  "practical": {
+    "title": "6. Praktiske forhold",
+    "p1": "Alle øvrige forhold vedrørende forløbet — herunder afbud, fravær, pauser og konsekvenser ved udeblivelse — gennemgås og aftales ved opstart i køreskolen."
+  },
+
+  "withdrawal": {
+    "title": "7. Fortrydelsesret",
+    "p1": "Som forbruger har du 14 dages fortrydelsesret fra aftaledatoen, jf. forbrugeraftalelovens kapitel 4. For at gøre brug af fortrydelsesretten skal du kontakte os skriftligt inden fristens udløb på hello@lønbæks.dk.",
+    "p2": "Har undervisningen påbegyndt med dit samtykke, opkræves du for de ydelser, der allerede er leveret."
+  },
+
+  "reviews": {
+    "title": "8. Anmeldelser",
+    "p1": "Efter endt forløb kan vi bede dig om at afgive en frivillig anmeldelse af din oplevelse hos os. Det er helt op til dig, om du ønsker at deltage."
+  },
+
+  "complaints": {
+    "title": "9. Reklamationer og klageadgang",
+    "p1": "Er du utilfreds med en ydelse, bedes du kontakte os direkte på hello@lønbæks.dk. Kan vi ikke nå til enighed, kan du klage til:",
+    "address": "Ankenævn for Køreundervisning\nIndustrivej 21, 4000 Roskilde\nTlf.: 63 33 10 59\nE-mail: kontakt@ankesag.dk\nWeb: ankesag.dk",
+    "eu": "Har du bopæl i et andet EU-land, kan du klage via EU-Kommissionens klageportal"
+  },
+
+  "updated": "Senest opdateret: 19/05/2026"
+}
 }

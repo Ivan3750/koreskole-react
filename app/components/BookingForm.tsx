@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 import "@/app/i18n";
 import { BASE_URL } from "@/app/lib/api";
 
@@ -20,7 +21,8 @@ const BookingForm: React.FC<BookingFormProps> = ({
   holdDays,
   onClose,
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language || "da";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -29,6 +31,7 @@ const BookingForm: React.FC<BookingFormProps> = ({
     birthday: "",
   });
 
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<null | "success" | "error">(null);
   const [message, setMessage] = useState("");
 
@@ -42,13 +45,19 @@ const BookingForm: React.FC<BookingFormProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email) {
+    if (!formData.name) {
       setStatus("error");
-      setMessage(
-        !formData.name
-          ? t("bookingForm.nameRequired")
-          : t("bookingForm.emailRequired")
-      );
+      setMessage(t("bookingForm.nameRequired"));
+      return;
+    }
+    if (!formData.email) {
+      setStatus("error");
+      setMessage(t("bookingForm.emailRequired"));
+      return;
+    }
+    if (!consent) {
+      setStatus("error");
+      setMessage(t("bookingForm.consentRequired"));
       return;
     }
 
@@ -60,6 +69,9 @@ const BookingForm: React.FC<BookingFormProps> = ({
         },
         body: JSON.stringify({
           hold_id: holdId,
+          hold_date: holdDate,
+          hold_time: holdTime,
+          hold_days: holdDays,
           ...formData,
         }),
       });
@@ -100,9 +112,7 @@ const BookingForm: React.FC<BookingFormProps> = ({
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-xl transition-opacity hover:opacity-70"
-          style={{
-            color: "var(--color-text-secondary)",
-          }}
+          style={{ color: "var(--color-text-secondary)" }}
         >
           ×
         </button>
@@ -113,9 +123,7 @@ const BookingForm: React.FC<BookingFormProps> = ({
 
         <p
           className="text-sm mb-6"
-          style={{
-            color: "var(--color-text-secondary)",
-          }}
+          style={{ color: "var(--color-text-secondary)" }}
         >
           {holdDays} - {holdDate} kl. {holdTime}
         </p>
@@ -128,7 +136,6 @@ const BookingForm: React.FC<BookingFormProps> = ({
             value={formData.name}
             onChange={handleChange}
           />
-
           <FormField
             label={`${t("bookingForm.email")} *`}
             name="email"
@@ -136,7 +143,6 @@ const BookingForm: React.FC<BookingFormProps> = ({
             value={formData.email}
             onChange={handleChange}
           />
-
           <FormField
             label={t("bookingForm.phone")}
             name="phone"
@@ -144,7 +150,6 @@ const BookingForm: React.FC<BookingFormProps> = ({
             value={formData.phone}
             onChange={handleChange}
           />
-
           <FormField
             label={t("bookingForm.birthday")}
             name="birthday"
@@ -153,14 +158,46 @@ const BookingForm: React.FC<BookingFormProps> = ({
             onChange={handleChange}
           />
 
+          {/* ── Consent checkbox ── */}
+          <label className="flex items-start gap-3 cursor-pointer pt-1">
+            <input
+              type="checkbox"
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              className="mt-1 shrink-0 w-4 h-4 cursor-pointer accent-yellow-400"
+            />
+            <span
+              className="text-sm leading-relaxed"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
+              {t("bookingForm.consentPrefix")}{" "}
+              <Link
+                href={`/${locale}/privatlivspolitik`}
+                target="_blank"
+                className="underline underline-offset-2 transition-opacity hover:opacity-70"
+                style={{ color: "var(--color-text)" }}
+              >
+                {t("bookingForm.consentPrivacy")}
+              </Link>{" "}
+              {t("bookingForm.consentAnd")}{" "}
+              <Link
+                href={`/${locale}/handelsbetingelser`}
+                target="_blank"
+                className="underline underline-offset-2 transition-opacity hover:opacity-70"
+                style={{ color: "var(--color-text)" }}
+              >
+                {t("bookingForm.consentTerms")}
+              </Link>
+              .
+            </span>
+          </label>
+
           {status && (
             <p
               className="text-sm font-medium"
               style={{
                 color:
-                  status === "success"
-                    ? "#22c55e"
-                    : "var(--color-danger)",
+                  status === "success" ? "#22c55e" : "var(--color-danger)",
               }}
             >
               {message}
@@ -204,13 +241,10 @@ const FormField: React.FC<FormFieldProps> = ({
     <div>
       <label
         className="block text-sm font-semibold mb-2"
-        style={{
-          color: "var(--color-text)",
-        }}
+        style={{ color: "var(--color-text)" }}
       >
         {label}
       </label>
-
       <input
         type={type}
         name={name}
@@ -225,8 +259,7 @@ const FormField: React.FC<FormFieldProps> = ({
         }}
         onFocus={(e) => {
           e.target.style.border = "1px solid var(--color-primary)";
-          e.target.style.boxShadow =
-            "0 0 0 3px rgba(242, 183, 5, 0.15)";
+          e.target.style.boxShadow = "0 0 0 3px rgba(242, 183, 5, 0.15)";
         }}
         onBlur={(e) => {
           e.target.style.border = "1px solid var(--color-border)";
@@ -238,3 +271,14 @@ const FormField: React.FC<FormFieldProps> = ({
 };
 
 export default BookingForm;
+
+/* ═══════════════════════════════════════════════════════════════
+   НОВІ КЛЮЧІ — додай до існуючого "bookingForm" в da.json / en.json
+═══════════════════════════════════════════════════════════════
+
+── da.json ─────────────────────────────────────────────────────
+
+
+── en.json ─────────────────────────────────────────────────────
+
+*/

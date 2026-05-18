@@ -131,7 +131,12 @@
     "submit": "Join Course",
     "success": "Booking successful!",
     "error": "Something went wrong.",
-    "serverError": "Server error."
+    "serverError": "Server error.",
+    "consentRequired": "You must accept our terms to continue.",
+"consentPrefix": "I have read and accept the",
+"consentPrivacy": "privacy policy",
+"consentAnd": "and",
+"consentTerms": "terms & conditions"
   },
   "contact": {
     "label": "Contact",
@@ -750,7 +755,7 @@
       "name": "Volkswagen Taigo",
       "year_label": "Model Year",
       "year": "2025",
-      "description": "The Volkswagen Taigo is a stylish and technologically advanced training vehicle. Its compact size makes it perfect for both city driving and longer trips, while modern assist systems and dual controls provide a safe and comfortable learning experience."
+      "description": "The VW Taigo is an excellent driving school car for those who want to learn how to drive with a manual transmission, or for those who wish to obtain code 148 by completing at least 7 driving lessons with a manual gearbox. The VW Taigo is simple and easy to operate, both in terms of gear shifting and clutch control. It is also easy to maneuver thanks to its practical size. In addition, the VW Taigo is equipped with most of the safety features found in modern cars, helping to improve road safety. It is important that you learn how to deal with modern driver assistance systems, as future cars will increasingly be equipped with these technologies."
     }
   },
   "meet": {
@@ -1226,5 +1231,134 @@
         "desc": "Book a meeting or ask a question"
       }
     ]
-  }
+  },
+  "privatlivspolitik": {
+  "label": "Legal",
+  "heading": "Privacy Policy",
+  "intro": "We handle your personal data with care and in accordance with the GDPR and Danish data protection law.",
+
+  "general": {
+    "title": "1. General",
+    "p1": "Lønbæks Køreskole takes the protection of your personal data seriously. We only collect information that is necessary to respond to your enquiry and arrange your course."
+  },
+
+  "controller": {
+    "title": "2. Data controller",
+    "p1": "The data controller responsible for processing your personal data is:",
+    "details": "Lønbæks Køreskole\nVestre Engvej 7, 7100 Vejle\nCVR: 43426087\nPhone: 20 76 03 33\nEmail: hello@lønbæks.dk"
+  },
+
+  "collected": {
+    "title": "3. What data do we collect?",
+    "p1": "When you fill in a form on our website, we collect the following information:",
+    "list": [
+      "First and last name",
+      "Date of birth",
+      "Email address",
+      "Phone number",
+      "Your message (e.g. which course type you are interested in)"
+    ],
+    "p2": "We do not collect cookies, CPR numbers or payment information via the website. All further information is collected solely at a personal visit to the driving school."
+  },
+
+  "purpose": {
+    "title": "4. Purpose",
+    "list": [
+      "To respond to your enquiry",
+      "To contact you regarding enrolment and your course",
+      "To understand which course group you wish to join"
+    ]
+  },
+
+  "legal": {
+    "title": "5. Legal basis",
+    "p1": "Processing is based on your consent (GDPR art. 6(1)(a)) and for the purpose of entering into or fulfilling an agreement with you (GDPR art. 6(1)(b))."
+  },
+
+  "sharing": {
+    "title": "6. Sharing of data",
+    "p1": "We do not share your personal data with third parties. Your data is not transferred to countries outside the EU/EEA."
+  },
+
+  "retention": {
+    "title": "7. Retention",
+    "p1": "We retain your data for as long as necessary for the purpose for which it was collected. Data from enquiries without subsequent enrolment is deleted no later than 2 years after the last contact."
+  },
+
+  "rights": {
+    "title": "8. Your rights",
+    "p1": "You have the right at any time to:",
+    "list": [
+      "Access the data we hold about you",
+      "Have inaccurate data corrected",
+      "Have your data deleted",
+      "Withdraw your consent"
+    ],
+    "contact": "Contact us at hello@lønbæks.dk to exercise your rights. We will respond within 30 days."
+  },
+
+  "supervisory": {
+    "title": "9. Complaints to the supervisory authority",
+    "p1": "If you believe we are processing your data unlawfully, you may lodge a complaint with:",
+    "address": "Datatilsynet (Danish Data Protection Agency)\nCarl Jacobsens Vej 35, 2500 Valby\nPhone: +45 33 19 32 00\nEmail: dt@datatilsynet.dk\nWeb: datatilsynet.dk"
+  },
+
+  "updated": "Last updated: 19/05/2026"
+},
+"handelsbetingelser": {
+  "label": "Legal",
+  "heading": "Terms & Conditions",
+  "intro": "These terms apply to all services provided by Lønbæks Køreskole. By enrolling, you accept these terms in full.",
+
+  "general": {
+    "title": "1. General",
+    "p1": "These terms and conditions are governed by Danish law and apply to all purchases and services at Lønbæks Køreskole."
+  },
+
+  "services": {
+    "title": "2. Services",
+    "p1": "Lønbæks Køreskole offers driving instruction for category B (car) licences, including theory lessons, practical driving, manoeuvring course, skid-pan training and preparation for theory and driving tests."
+  },
+
+  "language": {
+    "title": "3. Language of instruction",
+    "p1": "Instruction is offered in Danish or English by arrangement. We reserve the right to terminate a course if communication is not working satisfactorily during lessons."
+  },
+
+  "enrollment": {
+    "title": "4. Enrolment",
+    "p1": "You can enrol by filling in the contact form on our website or by contacting us directly. We will get back to you to arrange the next steps.",
+    "p2": "All practical and financial details are agreed at a personal meeting at the driving school. You must be at least 18 years old to enter into the agreement. If you are under 18, prior consent from a parent or guardian is required."
+  },
+
+  "payment": {
+    "title": "5. Pricing & payment",
+    "p1": "Prices are provided upon personal enquiry at the driving school. Payment is made in cash or by bank transfer to the account number we provide at your visit. We do not accept payment via the website."
+  },
+
+  "practical": {
+    "title": "6. Practical matters",
+    "p1": "All other matters relating to your course — including cancellations, absences, breaks and consequences of non-attendance — are discussed and agreed at the start of your course at the driving school."
+  },
+
+  "withdrawal": {
+    "title": "7. Right of withdrawal",
+    "p1": "As a consumer, you have a 14-day right of withdrawal from the date of the agreement, pursuant to the Danish Consumer Contracts Act. To exercise this right, you must notify us in writing before the deadline at hello@lønbæks.dk.",
+    "p2": "If instruction has begun with your consent, you will be charged for services already delivered."
+  },
+
+  "reviews": {
+    "title": "8. Reviews",
+    "p1": "After completing your course, we may ask you to leave a voluntary review of your experience. It is entirely up to you whether you wish to participate."
+  },
+
+  "complaints": {
+    "title": "9. Complaints & dispute resolution",
+    "p1": "If you are dissatisfied with a service, please contact us directly at hello@lønbæks.dk. If we cannot reach an agreement, you may submit a complaint to:",
+    "address": "Ankenævn for Køreundervisning\nIndustrivej 21, 4000 Roskilde\nPhone: +45 63 33 10 59\nEmail: kontakt@ankesag.dk\nWeb: ankesag.dk",
+    "eu": "If you reside in another EU country, you may submit a complaint via the European Commission's online dispute resolution platform"
+  },
+
+  "updated": "Last updated: 19/05/2026"
+}
 }
