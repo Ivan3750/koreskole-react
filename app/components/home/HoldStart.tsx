@@ -59,7 +59,7 @@ const Holdstart = () => {
   }
 
   return (
-    <section className="py-24 max-w-6xl m-auto">
+    <section className="py-24 max-w-6xl m-auto px-6">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {holds.map((hold) => {
           return (

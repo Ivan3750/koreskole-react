@@ -30,7 +30,7 @@ const getOffset = (index: number, active: number, total: number) => {
 const cardStyle = (offset: number): React.CSSProperties => {
   if (Math.abs(offset) > 1) return { display: "none" };
   return {
-    transform: `translateX(${offset * 60}%) translateY(${offset !== 0 ? 10 : 0}px) scale(${offset === 0 ? 1 : 0.89})`,
+    transform: `translateX(${offset * 55}%) translateY(${offset !== 0 ? 12 : 0}px) scale(${offset === 0 ? 1 : 0.88})`,
     opacity: offset === 0 ? 1 : 0.45,
     zIndex: offset === 0 ? 10 : 4,
     filter: offset === 0 ? "none" : "blur(1px)",
@@ -50,11 +50,11 @@ const exitStyle = (dir: Direction): React.CSSProperties => ({
 
  
 const Stars = ({ rating }: { rating: number }) => (
-  <div className="flex gap-0.5 mb-3">
+  <div className="flex gap-1 mb-4">
     {Array.from({ length: 5 }).map((_, i) => (
       <Star
         key={i}
-        className="w-3.5 h-3.5 fill-current"
+        className="w-4 h-4 fill-current"
         style={{
           color: i < rating ? "var(--color-yellow)" : "var(--color-border)",
           opacity: i < rating ? 1 : 0.35,
@@ -66,7 +66,7 @@ const Stars = ({ rating }: { rating: number }) => (
 
 const Avatar = ({ name }: { name: string }) => (
   <div
-    className="w-8 h-8 rounded-full flex items-center justify-center font-semibold text-xs flex-shrink-0"
+    className="w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm flex-shrink-0"
     style={{ backgroundColor: "var(--color-yellow-bg)", color: "var(--color-yellow)" }}
   >
     {name.charAt(0)}
@@ -85,7 +85,7 @@ const NavButton = ({
   <button
     onClick={onClick}
     aria-label={label}
-    className="w-8 h-8 rounded-full flex items-center justify-center border transition-all hover:scale-110 active:scale-95"
+    className="w-9 h-9 rounded-full flex items-center justify-center border transition-all hover:scale-110 active:scale-95"
     style={{
       borderColor: "var(--color-border)",
       color: "var(--color-text-secondary)",
@@ -155,7 +155,7 @@ const Testimonials = () => {
 
         <div className="text-center max-w-xl mx-auto mb-12">
           <span
-    className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4"
+            className="inline-block font-semibold text-sm uppercase tracking-widest px-4 py-2 rounded-full mb-4"
             style={{ color: "var(--color-yellow)", backgroundColor: "rgba(var(--color-yellow-rgb), 0.1)" }}
           >
             {t("testimonials.label")}
@@ -166,8 +166,9 @@ const Testimonials = () => {
           >
             {t("testimonials.title")}
           </h2>
-                    <p className="text-lg leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-{t("testimonials.subtitle")}</p>
+          <p className="text-lg leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+            {t("testimonials.subtitle")}
+          </p>
         </div>
 
         {/* Carousel */}
@@ -178,7 +179,7 @@ const Testimonials = () => {
           aria-roledescription="carousel"
           aria-label={t("testimonials.label")}
         >
-          <div className="relative w-full max-w-sm mx-auto" style={{ height: 200 }}>
+          <div className="relative w-full max-w-md mx-auto" style={{ height: 300 }}>
             {testimonials.map((item, index) => {
               const offset = getOffset(index, active, total);
               const isActive = offset === 0;
@@ -186,7 +187,7 @@ const Testimonials = () => {
               return (
                 <div
                   key={index}
-                  className="absolute inset-0 rounded-xl p-5 border flex flex-col justify-between transition-all"
+                  className="absolute inset-0 rounded-2xl p-7 border flex flex-col justify-between transition-all"
                   aria-hidden={!isActive}
                   style={{
                     backgroundColor: "var(--color-bg-elevated)",
@@ -197,7 +198,7 @@ const Testimonials = () => {
                   onClick={() => !isActive && (offset > 0 ? next() : prev())}
                 >
                   <span
-                    className="absolute top-3 right-4 text-5xl font-serif leading-none opacity-[0.08] pointer-events-none"
+                    className="absolute top-4 right-5 text-6xl font-serif leading-none opacity-[0.08] pointer-events-none"
                     style={{ color: "var(--color-yellow)" }}
                     aria-hidden
                   >
@@ -207,19 +208,19 @@ const Testimonials = () => {
                   <Stars rating={item.rating} />
 
                   <p
-                    className="text-xs leading-relaxed mb-4 line-clamp-3"
+                    className="text-sm leading-relaxed mb-5 line-clamp-4"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
                     {item.text}
                   </p>
 
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-3">
                     <Avatar name={item.name} />
                     <div>
-                      <p className="text-xs font-semibold" style={{ color: "var(--color-text)" }}>
+                      <p className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>
                         {item.name}
                       </p>
-                      <p className="text-[11px]" style={{ color: "var(--color-text-secondary)" }}>
+                      <p className="text-xs" style={{ color: "var(--color-text-secondary)" }}>
                         {item.age} {t("testimonials.years")}
                       </p>
                     </div>
@@ -231,9 +232,9 @@ const Testimonials = () => {
         </div>
 
         {/* Controls: prev / dots / next */}
-        <div className="flex items-center justify-center gap-4 mt-8">
+        <div className="flex items-center justify-center gap-4 mt-10">
           <NavButton onClick={prev} label="Previous">
-            <ChevronLeft className="w-3.5 h-3.5" />
+            <ChevronLeft className="w-4 h-4" />
           </NavButton>
 
           <div className="flex gap-1.5 items-center">
@@ -254,7 +255,7 @@ const Testimonials = () => {
           </div>
 
           <NavButton onClick={next} label="Next">
-            <ChevronRight className="w-3.5 h-3.5" />
+            <ChevronRight className="w-4 h-4" />
           </NavButton>
         </div>
 

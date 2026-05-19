@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import "@/app/i18n";
 
-import school from "../../assets/school_inside_2.jpeg";
+import school from "../../assets/school_inside_2.webp";
 import BookingForm from "../BookingForm";
 
 export default function KorekortSection() {

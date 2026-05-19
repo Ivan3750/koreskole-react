@@ -1360,5 +1360,15 @@
   },
 
   "updated": "Last updated: 19/05/2026"
-}
+},
+"validation": {
+    "nameTooShort": "Min 2 characters",
+    "nameInvalidChars": "Invalid characters in name",
+    "emailInvalid": "Invalid email address",
+    "phoneTooShort": "Phone must be 7–15 digits",
+    "phoneInvalidFormat": "Invalid phone format",
+    "dateInvalid": "Invalid date",
+    "ageTooYoung": "You must be at least 16 years old",
+    "dateOutOfRange": "Invalid birth date"
+  }
 }

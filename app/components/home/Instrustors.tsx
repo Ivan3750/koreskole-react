@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Michael_Lønbæk_img from "../../assets/Michael_Lønbæk.jpeg";
+import Michael_Lønbæk_img from "../../assets/Michael_Lønbæk.webp";
 import Anna_Marie_Lønbæk_img from "../../assets/gulbil_3.jpeg";
 import { useTranslation } from "react-i18next";
 
@@ -60,8 +60,8 @@ const Instructors = () => {
                   {p.exp}   {t("instructorsBlock.experience")}
                 </p>
                 <h3 className="text-2xl font-bold text-white leading-tight">{p.name}</h3>
-                <p className="text-lg font-semibold text-white/40">{p.title}</p>
-              </div>
+{/*                 <p className="text-lg font-semibold text-white/40">{p.title}</p>
+ */}              </div>
             </div>
           ))}
         </div>

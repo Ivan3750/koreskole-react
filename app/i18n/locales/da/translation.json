@@ -776,7 +776,7 @@
     "items": [
       {
         "name": "Ivan Kohan",
-        "age": 17,
+        "age": 18,
         "text": "Det er den bedste køreskole. Bilerne er meget behagelige at køre i, og instruktørerne er utroligt tålmodige og altid klar til at hjælpe. De forklarer alt på et letforståeligt sprog og står altid klar til at hjælpe, når man er i tvivl. Jeg kan uden tvivl anbefale denne køreskole.",
         "rating": 5
       },
@@ -1355,5 +1355,15 @@
   },
 
   "updated": "Senest opdateret: 19/05/2026"
-}
+},
+"validation": {
+    "nameTooShort": "Minimum 2 tegn",
+    "nameInvalidChars": "Ugyldige tegn i navn",
+    "emailInvalid": "Ugyldig e-mailadresse",
+    "phoneTooShort": "Telefon skal have 7–15 cifre",
+    "phoneInvalidFormat": "Ugyldigt telefonnummer format",
+    "dateInvalid": "Ugyldig dato",
+    "ageTooYoung": "Du skal være mindst 16 år gammel",
+    "dateOutOfRange": "Ugyldig fødselsdato"
+  }
 }
