@@ -122,6 +122,7 @@
   },
   "bookingForm": {
     "heading": "Book Course",
+        "bookingForm": "Book information session",
     "name": "Name",
     "email": "Email",
     "phone": "Phone",
@@ -769,9 +770,12 @@
     ],
     "cta": {
       "book": "Book information session",
-      "see": "See driving course"
+      "see": "See driving course",
+      "noMeeting": "No information sessions"
+
     },
-    "imageAlt": "Driving lesson"
+    "imageAlt": "Driving lesson",
+    "nextMeeting": "Next meeting"
   },
   "testimonials": {
     "label": "Testimonials",

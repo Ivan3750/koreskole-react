@@ -2,7 +2,12 @@
 import { useTranslation } from "react-i18next";
 import "@/app/i18n";
 
-const Section = ({ title, children }) => (
+interface SectionProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+const Section = ({ title, children }: SectionProps) => (
   <div className="mb-10">
     <h2
       className="font-display text-xl md:text-2xl font-bold mb-4"
@@ -29,7 +34,6 @@ const HandelsbetingelserPage = () => {
     >
       <div className="px-6 max-w-4xl mx-auto">
 
-        {/* ── Header ── */}
         <div className="mb-14 text-center lg:text-left">
           <span
             className="font-semibold text-sm uppercase tracking-widest"
@@ -51,55 +55,45 @@ const HandelsbetingelserPage = () => {
           </p>
         </div>
 
-        {/* Divider */}
         <div
           className="w-16 h-1 rounded mb-14"
           style={{ backgroundColor: "var(--color-yellow)" }}
         />
 
-        {/* 1. Generelt */}
         <Section title={t("handelsbetingelser.general.title")}>
           <p>{t("handelsbetingelser.general.p1")}</p>
         </Section>
 
-        {/* 2. Ydelser */}
         <Section title={t("handelsbetingelser.services.title")}>
           <p>{t("handelsbetingelser.services.p1")}</p>
         </Section>
 
-        {/* 3. Undervisningssprog */}
         <Section title={t("handelsbetingelser.language.title")}>
           <p>{t("handelsbetingelser.language.p1")}</p>
         </Section>
 
-        {/* 4. Tilmelding */}
         <Section title={t("handelsbetingelser.enrollment.title")}>
           <p>{t("handelsbetingelser.enrollment.p1")}</p>
           <p>{t("handelsbetingelser.enrollment.p2")}</p>
         </Section>
 
-        {/* 5. Pris og betaling */}
         <Section title={t("handelsbetingelser.payment.title")}>
           <p>{t("handelsbetingelser.payment.p1")}</p>
         </Section>
 
-        {/* 6. Praktiske forhold */}
         <Section title={t("handelsbetingelser.practical.title")}>
           <p>{t("handelsbetingelser.practical.p1")}</p>
         </Section>
 
-        {/* 7. Fortrydelsesret */}
         <Section title={t("handelsbetingelser.withdrawal.title")}>
           <p>{t("handelsbetingelser.withdrawal.p1")}</p>
           <p>{t("handelsbetingelser.withdrawal.p2")}</p>
         </Section>
 
-        {/* 8. Anmeldelser */}
         <Section title={t("handelsbetingelser.reviews.title")}>
           <p>{t("handelsbetingelser.reviews.p1")}</p>
         </Section>
 
-        {/* 9. Reklamationer og klageadgang */}
         <Section title={t("handelsbetingelser.complaints.title")}>
           <p>{t("handelsbetingelser.complaints.p1")}</p>
           <address
@@ -114,7 +108,6 @@ const HandelsbetingelserPage = () => {
           <p className="pt-2">{t("handelsbetingelser.complaints.eu")}</p>
         </Section>
 
-        {/* Footer note */}
         <p
           className="text-sm mt-12 pt-6 border-t"
           style={{
@@ -131,13 +124,4 @@ const HandelsbetingelserPage = () => {
 
 export default HandelsbetingelserPage;
 
-/* ═══════════════════════════════════════════════════════════════
-   TRANSLATION KEYS — kopier til da.json og en.json
-═══════════════════════════════════════════════════════════════
-
-── da.json ─────────────────────────────────────────────────────
-
-
-── en.json ─────────────────────────────────────────────────────
-
-*/
+ 

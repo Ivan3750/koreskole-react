@@ -5,7 +5,7 @@ import HoldStart from "../components/home/HoldStart";
 import Instructors from "../components/home/Instrustors";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
-import KorekortSection from "../components/korekort/KorekortSection";
+import KorekortSection from "../components/home/KorekortSection";
 
 import type { Metadata } from "next";
 

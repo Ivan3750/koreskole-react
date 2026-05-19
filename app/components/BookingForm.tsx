@@ -7,18 +7,20 @@ import Link from "next/link";
 import "@/app/i18n";
 import { BASE_URL } from "@/app/lib/api";
 
+type BookingVariant = "course" | "meeting";
+
 interface BookingFormProps {
-  holdId: number;
-  holdDate: string;
-  holdTime: string;
-  holdDays: string;
+  variant: BookingVariant;
+  holdId?: number;
+  holdDate?: string;
+  holdTime?: string;
+  holdDays?: string;
+  meetingDate?: string;
+  meetingTime?: string;
   onClose: () => void;
 }
 
-interface Toast {
-  type: "success" | "error";
-  message: string;
-}
+interface Toast { type: "success" | "error"; message: string; }
 
 const validateName = (name: string, t: TFunction): string | null => {
   if (!name.trim()) return null;
@@ -56,51 +58,41 @@ const validateBirthday = (birthday: string, t: TFunction): string | null => {
 
 const ToastNotification: React.FC<{ toast: Toast; onDismiss: () => void }> = ({ toast, onDismiss }) => {
   useEffect(() => {
-    const timer = setTimeout(onDismiss, 4500);
-    return () => clearTimeout(timer);
+    const t = setTimeout(onDismiss, 4500);
+    return () => clearTimeout(t);
   }, [onDismiss]);
 
   return (
     <>
       <style>{`
         @keyframes slideInRight {
-          from { opacity: 0; transform: translateX(40px) scale(0.95); }
-          to   { opacity: 1; transform: translateX(0) scale(1); }
+          from { opacity:0; transform:translateX(40px) scale(0.95); }
+          to   { opacity:1; transform:translateX(0) scale(1); }
         }
       `}</style>
       <div
         style={{
-          position: "fixed",
-          top: "24px",
-          right: "24px",
-          zIndex: 9999,
-          display: "flex",
-          alignItems: "flex-start",
-          gap: "12px",
-          padding: "16px 20px",
-          borderRadius: "12px",
-          maxWidth: "360px",
+          position: "fixed", top: 24, right: 24, zIndex: 9999,
+          display: "flex", alignItems: "flex-start", gap: 12,
+          padding: "16px 20px", borderRadius: 12, maxWidth: 360,
           boxShadow: "0 8px 32px rgba(0,0,0,0.22)",
           background: toast.type === "success" ? "#0f2a1a" : "#2a0f0f",
           border: `1px solid ${toast.type === "success" ? "#22c55e44" : "#ef444444"}`,
           animation: "slideInRight 0.3s cubic-bezier(0.34,1.56,0.64,1)",
         }}
       >
-        <span style={{ fontSize: "20px", flexShrink: 0, marginTop: "1px" }}>
+        <span style={{ fontSize: 20, flexShrink: 0, marginTop: 1 }}>
           {toast.type === "success" ? "✓" : "✕"}
         </span>
         <div style={{ flex: 1 }}>
-          <p style={{ margin: 0, fontWeight: 600, fontSize: "14px", color: toast.type === "success" ? "#4ade80" : "#f87171" }}>
+          <p style={{ margin: 0, fontWeight: 600, fontSize: 14, color: toast.type === "success" ? "#4ade80" : "#f87171" }}>
             {toast.type === "success" ? "Success" : "Error"}
           </p>
-          <p style={{ margin: "2px 0 0", fontSize: "13px", color: "#ccc", lineHeight: 1.4 }}>
+          <p style={{ margin: "2px 0 0", fontSize: 13, color: "#ccc", lineHeight: 1.4 }}>
             {toast.message}
           </p>
         </div>
-        <button
-          onClick={onDismiss}
-          style={{ background: "none", border: "none", color: "#666", cursor: "pointer", fontSize: "16px", padding: "0", lineHeight: 1, flexShrink: 0 }}
-        >
+        <button onClick={onDismiss} style={{ background: "none", border: "none", color: "#666", cursor: "pointer", fontSize: 16, padding: 0, lineHeight: 1, flexShrink: 0 }}>
           ×
         </button>
       </div>
@@ -108,62 +100,77 @@ const ToastNotification: React.FC<{ toast: Toast; onDismiss: () => void }> = ({ 
   );
 };
 
-const BookingForm: React.FC<BookingFormProps> = ({ holdId, holdDate, holdTime, holdDays, onClose }) => {
+const BookingForm: React.FC<BookingFormProps> = ({
+  variant,
+  holdId, holdDate, holdTime, holdDays,
+  meetingDate, meetingTime,
+  onClose,
+}) => {
   const { t, i18n } = useTranslation();
   const locale = i18n.language || "da";
 
+  const isCourse  = variant === "course";
+  const isMeeting = variant === "meeting";
+
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", birthday: "" });
-  const [touched, setTouched] = useState({ name: false, email: false, phone: false, birthday: false });
-  const [consent, setConsent] = useState(false);
+  const [touched, setTouched]   = useState({ name: false, email: false, phone: false, birthday: false });
+  const [consent, setConsent]   = useState(false);
   const [consentTouched, setConsentTouched] = useState(false);
-  const [toast, setToast] = useState<Toast | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [toast, setToast]       = useState<Toast | null>(null);
+  const [loading, setLoading]   = useState(false);
 
   const errors = {
-    name: validateName(formData.name, t),
-    email: validateEmail(formData.email, t),
-    phone: validatePhone(formData.phone, t),
+    name:     validateName(formData.name, t),
+    email:    validateEmail(formData.email, t),
+    phone:    validatePhone(formData.phone, t),
     birthday: validateBirthday(formData.birthday, t),
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
-  const handleBlur = (name: keyof typeof touched) => {
+  const handleBlur = (name: keyof typeof touched) =>
     setTouched((prev) => ({ ...prev, [name]: true }));
-  };
 
-  const showToast = (type: "success" | "error", message: string) => {
+  const showToast = (type: "success" | "error", message: string) =>
     setToast({ type, message });
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setTouched({ name: true, email: true, phone: true, birthday: true });
     setConsentTouched(true);
 
-    if (!formData.name.trim()) { showToast("error", t("bookingForm.nameRequired")); return; }
-    if (errors.name) { showToast("error", errors.name); return; }
+    if (!formData.name.trim())  { showToast("error", t("bookingForm.nameRequired")); return; }
+    if (errors.name)            { showToast("error", errors.name); return; }
     if (!formData.email.trim()) { showToast("error", t("bookingForm.emailRequired")); return; }
-    if (errors.email) { showToast("error", errors.email); return; }
-    if (errors.phone) { showToast("error", errors.phone); return; }
-    if (errors.birthday) { showToast("error", errors.birthday); return; }
-    if (!consent) { showToast("error", t("bookingForm.consentRequired")); return; }
+    if (errors.email)           { showToast("error", errors.email); return; }
+    if (errors.phone)           { showToast("error", errors.phone); return; }
+    if (errors.birthday)        { showToast("error", errors.birthday); return; }
+    if (!consent)               { showToast("error", t("bookingForm.consentRequired")); return; }
 
     setLoading(true);
+
     try {
-      const res = await fetch(`${BASE_URL}/book.php`, {
+      const endpoint = isCourse
+        ? `${BASE_URL}/book.php`
+        : `${BASE_URL}/book-meeting.php`;
+
+      const payload = isCourse
+        ? { hold_id: holdId, hold_date: holdDate, hold_time: holdTime, hold_days: holdDays, ...formData }
+        : { meeting_date: meetingDate, ...formData };
+
+      const res  = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ hold_id: holdId, hold_date: holdDate, hold_time: holdTime, hold_days: holdDays, ...formData }),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
+
       if (res.ok) {
         showToast("success", t("bookingForm.success"));
         setTimeout(onClose, 2000);
       } else {
-        showToast("error", data.error || t("bookingForm.error"));
+        showToast("error", data.message || t("bookingForm.error"));
       }
     } catch {
       showToast("error", t("bookingForm.serverError"));
@@ -177,6 +184,12 @@ const BookingForm: React.FC<BookingFormProps> = ({ holdId, holdDate, holdTime, h
     d.setFullYear(d.getFullYear() - 16);
     return d.toISOString().split("T")[0];
   })();
+
+  const infoLine = isCourse
+    ? `${holdDays} · ${holdDate} · kl. ${holdTime}`
+    : meetingDate
+    ? `${meetingDate}${meetingTime ? ` · kl. ${meetingTime}` : ""}`
+    : null;
 
   return (
     <>
@@ -204,46 +217,21 @@ const BookingForm: React.FC<BookingFormProps> = ({ holdId, holdDate, holdTime, h
             ×
           </button>
 
-          <h2 className="text-2xl font-bold mb-3">{t("bookingForm.heading")}</h2>
+          <h2 className="text-2xl font-bold mb-1">
+            {isCourse ? t("bookingForm.heading") : t("bookingForm.headingMeeting")}
+          </h2>
+
+          {infoLine && (
+            <p className="text-sm mb-4" style={{ color: "var(--color-text-secondary)" }}>
+              {infoLine}
+            </p>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-            <FormField
-              label={`${t("bookingForm.name")} *`}
-              name="name"
-              type="text"
-              value={formData.name}
-              onChange={handleChange}
-              onFieldBlur={() => handleBlur("name")}
-              error={touched.name ? errors.name : null}
-            />
-            <FormField
-              label={`${t("bookingForm.email")} *`}
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              onFieldBlur={() => handleBlur("email")}
-              error={touched.email ? errors.email : null}
-            />
-            <FormField
-              label={t("bookingForm.phone")}
-              name="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handleChange}
-              onFieldBlur={() => handleBlur("phone")}
-              error={touched.phone ? errors.phone : null}
-            />
-            <FormField
-              label={t("bookingForm.birthday")}
-              name="birthday"
-              type="date"
-              value={formData.birthday}
-              onChange={handleChange}
-              onFieldBlur={() => handleBlur("birthday")}
-              error={touched.birthday ? errors.birthday : null}
-              max={maxBirthdayDate}
-            />
+            <FormField label={`${t("bookingForm.name")} *`}  name="name"     type="text"  value={formData.name}     onChange={handleChange} onFieldBlur={() => handleBlur("name")}     error={touched.name     ? errors.name     : null} />
+            <FormField label={`${t("bookingForm.email")} *`} name="email"    type="email" value={formData.email}    onChange={handleChange} onFieldBlur={() => handleBlur("email")}    error={touched.email    ? errors.email    : null} />
+            <FormField label={t("bookingForm.phone")}        name="phone"    type="tel"   value={formData.phone}    onChange={handleChange} onFieldBlur={() => handleBlur("phone")}    error={touched.phone    ? errors.phone    : null} />
+            <FormField label={t("bookingForm.birthday")}     name="birthday" type="date"  value={formData.birthday} onChange={handleChange} onFieldBlur={() => handleBlur("birthday")} error={touched.birthday ? errors.birthday : null} max={maxBirthdayDate} />
 
             <label className="flex items-start gap-3 cursor-pointer pt-1">
               <input
@@ -260,13 +248,12 @@ const BookingForm: React.FC<BookingFormProps> = ({ holdId, holdDate, holdTime, h
                 {t("bookingForm.consentAnd")}{" "}
                 <Link href={`/${locale}/handelsbetingelser`} target="_blank" className="underline underline-offset-2 transition-opacity hover:opacity-70" style={{ color: "var(--color-text)" }}>
                   {t("bookingForm.consentTerms")}
-                </Link>
-                .
+                </Link>.
               </span>
             </label>
 
             {consentTouched && !consent && (
-              <p className="text-xs" style={{ color: "var(--color-danger)", marginTop: "2px" }}>
+              <p className="text-xs" style={{ color: "var(--color-danger)", marginTop: 2 }}>
                 {t("bookingForm.consentRequired")}
               </p>
             )}
@@ -293,23 +280,18 @@ const BookingForm: React.FC<BookingFormProps> = ({ holdId, holdDate, holdTime, h
 };
 
 interface FormFieldProps {
-  label: string;
-  name: string;
-  type: string;
-  value: string;
+  label: string; name: string; type: string; value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onFieldBlur: () => void;
-  error: string | null;
-  max?: string;
+  onFieldBlur: () => void; error: string | null; max?: string;
 }
 
-const FormField: React.FC<FormFieldProps> = ({ label, name, type, value, onChange, onFieldBlur, error, max }) => {
+const FormField: React.FC<FormFieldProps> = ({
+  label, name, type, value, onChange, onFieldBlur, error, max,
+}) => {
   const [focused, setFocused] = useState(false);
-
   const borderColor = focused
     ? error ? "var(--color-danger)" : "var(--color-primary)"
     : error ? "var(--color-danger)" : "var(--color-border)";
-
   const boxShadow = focused
     ? error ? "0 0 0 3px rgba(239,68,68,0.15)" : "0 0 0 3px rgba(242,183,5,0.15)"
     : "none";
@@ -320,10 +302,7 @@ const FormField: React.FC<FormFieldProps> = ({ label, name, type, value, onChang
         {label}
       </label>
       <input
-        type={type}
-        name={name}
-        value={value}
-        max={max}
+        type={type} name={name} value={value} max={max}
         onChange={onChange}
         onFocus={() => setFocused(true)}
         onBlur={() => { setFocused(false); onFieldBlur(); }}

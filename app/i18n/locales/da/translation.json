@@ -122,6 +122,7 @@
   },
   "bookingForm": {
     "heading": "Book hold",
+    "bookingForm": "Book informationsmøde",
     "name": "Navn",
     "email": "Email",
     "phone": "Telefon",
@@ -764,9 +765,11 @@
     ],
     "cta": {
       "book": "Book informationsmøde",
-      "see": "Se kørekortforløb"
+      "see": "Se kørekortforløb",
+      "noMeeting": "Ingen møder planlagt"
     },
-    "imageAlt": "Køretime"
+    "imageAlt": "Køretime",
+    "nextMeeting": "Næste møde"
   },
   "testimonials": {
     "label": "Anmeldelser",

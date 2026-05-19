@@ -8,9 +8,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-/* =========================
-   GET ALL BLOGS
-========================= */
+ 
 if ($method === 'GET' && !isset($_GET['id'])) {
 
     $stmt = $pdo->query("
@@ -25,9 +23,7 @@ if ($method === 'GET' && !isset($_GET['id'])) {
     exit;
 }
 
-/* =========================
-   GET SINGLE BLOG
-========================= */
+
 if ($method === 'GET' && isset($_GET['id'])) {
 
     $id = (int) $_GET['id'];

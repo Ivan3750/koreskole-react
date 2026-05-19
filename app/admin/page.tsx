@@ -8,8 +8,13 @@ import PasswordPage from "../components/admin/PasswordPage";
 import LoginPage from "../components/admin/LoginPage";
 import { BASE_URL } from "@/app/lib/api";
 import ThemeToggle from "../theme/ThemeToggle";
+import ReviewsPage from "../components/admin/ReviewsPage";
 
-type Page = "courses" | "blog" | "contacts" | "password";
+type Page =
+  | "courses"
+  | "blog"
+  | "password"
+  | "reviews"
 
 export default function AdminPage() {
   const [activePage, setActivePage] = useState<Page>("courses");
@@ -54,8 +59,8 @@ export default function AdminPage() {
   const pageLabels: Record<Page, string> = {
     courses: "Kurser",
     blog: "Blog",
-    contacts: "Kontakter",
     password: "Adgangskode",
+    reviews: "Anmeldelser",
   };
 
   const renderPage = () => {
@@ -66,31 +71,34 @@ export default function AdminPage() {
         return <BlogPage />;
       case "password":
         return <PasswordPage />;
+      case "reviews":
+        return <ReviewsPage onLogout={logout} />;
+
     }
   };
 
   return (
     <div className="flex min-h-screen">
-            <div className="w-64 bg-black text-white p-6 flex flex-col">
-                <h2 className="text-xl font-bold mb-8">Admin Panel</h2>
+      <div className="w-64 bg-black text-white p-6 flex flex-col">
+        <h2 className="text-xl font-bold mb-8">Admin Panel</h2>
         <nav className="flex-1 space-y-2">
-          {(["courses", "blog", "contacts", "password"] as Page[]).map(
-            (page) => (
-              <div
-                key={page}
-                onClick={() => setActivePage(page)}
-                className={`cursor-pointer px-3 py-2 rounded transition-colors ${
-                  activePage === page
-                    ? "bg-white text-black font-semibold"
-                    : "hover:bg-gray-800"
-                }`}
-              >
-                {pageLabels[page]}
-              </div>
-            ),
-          )}
+          {(
+            ["courses", "blog", "password", "reviews"] as Page[]
+          ).map((page) => (
+            <div
+              key={page}
+              onClick={() => setActivePage(page)}
+              className={`cursor-pointer px-3 py-2 rounded transition-colors ${
+                activePage === page
+                  ? "bg-white text-black font-semibold"
+                  : "hover:bg-gray-800"
+              }`}
+            >
+              {pageLabels[page]}
+            </div>
+          ))}
         </nav>
-          <ThemeToggle/>
+        <ThemeToggle />
         <button
           onClick={logout}
           className="mt-auto bg-red-600 hover:bg-red-700 w-full p-2 rounded transition-colors"
@@ -99,7 +107,12 @@ export default function AdminPage() {
         </button>
       </div>
 
-      <div className="flex-1 p-10 overflow-auto" style={{ backgroundColor: "var(--color-bg-layout)" }}>{renderPage()}</div>
+      <div
+        className="flex-1 p-10 overflow-auto"
+        style={{ backgroundColor: "var(--color-bg-layout)" }}
+      >
+        {renderPage()}
+      </div>
     </div>
   );
 }
